@@ -1,0 +1,1201 @@
+[
+	{
+		"id":"apprentice",
+		"desc":"appentice to a notable wizard",
+		"title":"Apprentice",
+		"actname":"Apprenticeship",
+		"actdesc":"Become an apprentice.",
+		"require":"research",
+		"disable":["cleanstables"],
+		"warn":false,
+		"log":{
+			"name":"Apprentice",
+			"desc":"After paying a small fee, you became apprenticed to a local wizard."
+		},
+		"cost":{
+			"research":10,
+			"gold":20
+		},
+		"effect":{
+			"research.max":10,
+			"player.exp":5,
+			"sp":1
+		}
+
+	},
+	{
+		"id":"falconer",
+		"title":"falconer",
+		"tags":"t_job",
+		"actdesc":"Tend your master's owls and falcons.",
+		"require":"apprentice",
+		"need":"animals",
+		"cost":{
+			"gold":100,
+			"research":100,
+			"arcana":1
+		},
+		"effect":{
+			"evt_helper":true,
+			"sp":1.25,
+			"lore.max":1,
+			"gold.rate":0.07,
+			"animals.rate":0.2,
+			"nature.max":1,
+			"nature.rate":0.1,
+			"player.exp":10
+		}
+	},
+	{
+		"id":"herbalist",
+		"title":"herbalist",
+		"tags":"t_job",
+		"actdesc":"Gather herbs for your master's potions and alchemy.",
+		"require":"apprentice",
+		"need":"herbalism",
+		"cost":{
+			"gold":100,
+			"research":100,
+			"arcana":1
+		},
+		"effect":{
+			"evt_helper":true,
+			"sp":1.5,
+			"lore.max":1,
+			"gold.rate":0.08,
+			"herbalism.rate":0.2,
+			"alchemy.rate":0.1,
+			"player.exp":10
+		}
+	},
+	{
+		"id":"scribe",
+		"title":"scribe",
+		"tags":"t_job",
+		"actdesc":"Become your master's personal scribe.",
+		"require":"scribescroll",
+		"cost":{
+			"gold":100,
+			"research":100,
+			"arcana":1
+		},
+		"effect":{
+			"lore.max":1.5,
+			"evt_helper":true,
+			"arcana.rate":0.0001,
+			"research.max":10,
+			"sp":1,
+			"gold.rate":0.1,
+			"lore.rate":0.2
+		}
+	},
+{
+	"id":"neophyte",
+	"title":"neophyte",
+	"actdesc":"The final step on the twisting stairwell of apprenticeship.",
+	"require":"(g.evt_helper>0)&&g.research.max>=125&&g.spellbook.value>0",
+	"log":{
+		"name":"Neophyte",
+		"desc":"Your master has decided you are ready to take the next step on the path of wizardry."
+	},
+	"flavor":"Why does Master charge so many fees?",
+	"cost":{
+		"gold":150,
+		"research":175,
+		"arcana":3
+	},
+	"effect":{
+		"research.max":10,
+		"arcana.rate":0.0001,
+		"sp":1,
+		"lore.max":1,
+		"lore.rate":0.2,
+		"player.exp":10
+	}
+},
+{
+	"id":"adept",
+	"name":"Adept",
+	"title":"adept",
+	"tags":"t_tier0",
+	"desc":"Your master behind you, you set off into the world alone. You had better find a new place to stay.",
+	"mod":"tier0"
+},
+
+{
+	"id":"magician",
+	"title":"magician",
+	"tags":"t_tier1",
+	"desc":"Magic in its purest form.",
+	"actname":"The Prestige",
+	"actdesc":"Pursue the path of pure magic.",
+	"require":"g.tier0>0&&g.lore>=10",
+	"cost":{
+		"research":700,
+		"arcana":11,
+		"gold":500
+	},
+	"effect":{
+		"sp":1
+	},
+	"mod":{
+		"tier1":true,
+		"research.max":100,
+		"lore.max":1,
+		"lore.rate":"5%",
+		"astronomy.max":1,
+		"languages.max":1,
+		"arcana.rate":0.001,
+		"mana.max":2,
+		"mana.rate":0.02
+	}
+},
+{
+	"id":"darkmagician",
+	"title":"dark magician",
+	"tags":"t_tier1",
+	"desc":"A devotee of black magic.",
+	"require":"g.tier0>0&&(g.evilamt>=10||g.evil>0)",
+	"cost":{
+		"research":400,
+		"arcana":10,
+		"gold":300,
+		"bones":10
+	},
+	"effect":{
+
+		"sp":1
+	},
+	"mod":{
+		"tier1":true,
+		"evilamt":5,
+		"research.max":100,
+		"demonology.max":2,
+		"lore.max":1,
+		"lore.rate":"5%",
+		"mana.max":1,
+		"mana.rate":0.01,
+		"shadowlore.max":1,
+		"shadowlore.rate":"0.1+5%"
+	}
+},
+
+{
+	"id":"reanimator",
+	"tags":"t_tier1",
+	"title":"reanimator",
+	"desc":"Create and ressurect living materials.",
+	"require":"g.tier0>0&&g.reanimation>2",
+	"cost":{
+		"research":300,
+		"bones":10,
+		"bonedust":10,
+		"arcana":7
+	},
+	"effect":{
+		"sp":2
+	},
+	"mod":{
+		"tier1":true,
+		"mana.max":1,
+		"research.max":10,
+		"embalming.max":1,
+		"reanimation.max":3,
+		"shadowlore.max":2,
+		"potions.max":3,
+		"spiritlore.max":2
+	}, "flavor":"even the dead have their uses"
+},
+
+{
+	"id":"witch",
+	"title":"witch",
+	"tags":"t_tier1",
+	"desc":"Witch",
+	"name":"witchcraft",
+	"actname":"The Craft",
+	"actdesc":"Enter into the practice of witchcraft.",
+	"require":"g.tier0>0&&g.animals>=2&&g.herbalism>=3&&g.potions>=3",
+	"flavor":"'what is't you do?' 'a deed without a name'",
+	"cost":{
+		"research":350,
+		"gold":200,
+		"arcana":9
+	},
+	"disable":[],
+	"effect":{
+
+		"sp":2
+
+	},
+	"mod":{
+		"tier1":true,
+		"witchcraft":true,
+		"research.max":10,
+		"naturelore.max":1,
+		"naturelore.rate":"10%",
+		"animals.max":1,
+		"animals.rate":"10%",
+		"potions.max":2,
+		"potions.rate":"15%",
+		"spiritlore.max":2
+	}
+},
+{
+	"id":"trickster",
+	"name":"arcane trickster",
+	"title":"arcane trickster",
+	"desc":"Use magic for deceit and trickery.",
+	"buyname":"Path of Trickery",
+	"tags":"t_tier1",
+	"require":"g.trickery>=4&&g.tier0>0",
+	"cost":{
+		"research":250,
+		"gems":10,
+		"gold":300,
+		"arcana":5
+	},
+	"effect":{
+
+		"sp":3
+	},
+	"mod":{
+		"tier1":true,
+		"gold.max":10,
+		"research.max":2,
+		"trickery.max":2,
+		"trickery.rate":"10%",
+		"conjuration.max":1,
+		"mana.max":2,
+		"chaos.max":3,
+		"chaos.rate":0.1,
+		"potions.max":1,
+		"spiritlore.max":1
+	}
+},
+{
+	"id":"madcap",
+	"name":"mystic madcap",
+	"title":"arcane trickster",
+	"desc":"A penchant for chaos",
+	"tags":"t_tier2",
+	"require":"g.trickery>=7&&g.tier1>0",
+	"cost":{
+		"research":777,
+		"gems":7,
+		"tomes":7,
+		"gold":777,
+		"arcana":7
+	},
+	"effect":{
+		"sp":3
+	},
+	"mod":{
+		"tier2":true,
+		"gold.max":50,
+		"trickery.max":2,
+		"trickery.rate":"10%",
+		"conjuration.max":1,
+		"lore.max":1,
+		"potions.max":1,
+		"mysticism.max":1,
+		"mysticism.rate":"5%"
+	}
+},
+{
+	"id":"bonemonger",
+	"title":"bone monger",
+	"tags":"t_tier2",
+	"desc":"extend your life with the spare parts of the dead.",
+	"require":"g.tier1>0&&g.reanimator>=1&&g.evil>0",
+	"cost":{
+		"research":700,
+		"bones":10,
+		"bonedust":10,
+		"arcana":7
+	},
+	"effect":{
+		"sp":2
+	},
+	"mod":{
+		"tier2":true,
+		"evilamt":10,
+		"research.max":10,
+		"embalming.max":1,
+		"reanimation.max":2,
+		"shadowlore.max":3,
+		"potions.max":2,
+		"spiritlore.max":2
+	}, "flavor":"even the dead have their uses"
+},
+{
+	"id":"thanophage",
+	"title":"thanophage",
+	"tags":"t_tier3",
+	"desc":"extend your life with the spare parts of the dead.",
+	"require":"g.tier2>0&&g.evil>0",
+	"cost":{
+		"research":1000,
+		"bones":50,
+		"bodies":10,
+		"bonedust":25,
+		"arcana":10
+	},
+	"effect":{
+
+		"sp":2
+	},
+	"mod":{
+		"tier3":true,
+		"evilamt":20,
+		"lore.max":2,
+		"research.max":25,
+		"embalming.max":1,
+		"reanimation.max":2,
+		"reanimation.rate":"5%",
+		"shadowlore.max":2,
+		"shadowlore.rate":"5%"
+	}
+},
+{
+
+	"id":"battlemage",
+	"name":"battle mage",
+	"title":"Battlemage",
+	"tags":"t_tier2",
+	"actdesc":"Pursue the path of battle.",
+	"require":"g.tier1>0&&g.player.level>=10&&g.armory>0",
+	"cost":{
+		"research":750,
+		"arcana":7,
+		"gold":400
+	},
+	"effect":{
+		"sp":1
+	},
+	"mod":{
+		"tier2":true,
+		"research.max":-50,
+		"mana.max":1,
+		"mana.rate":0.1,
+		"firelore.max":2,
+		"firelore.rate":0.1,
+		"earthlore.max":1
+	}
+
+},
+{
+	"id":"dreadlord",
+	"title":"dreadlord",
+	"desc":"harbinger of destruction",
+	"tags":"t_tier3",
+	"require":"g.tier2>0&&g.evil>0&&g.hp>=100&&g.player.level>=17",
+	"cost":{
+		"research":1000,
+		"bones":100,
+		"bodies":50,
+		"arcana":10
+	},
+	"effect":{
+
+		"sp":1
+	},
+	"mod":{
+		"tier3":true,
+		"player.tohit":"10%",
+		"hp.max":"10%",
+		"shadowlore.max":2,
+		"shadowlore.rate":"1%",
+		"arcanebody.max":1,
+		"arcanebody2.max":1
+	}
+
+},
+{
+	"id":"warlock",
+	"title":"warlock",
+	"tags":"t_tier4",
+	"desc":"master of demons and demonic magic",
+	"require":"g.tier3>0&&g.evil>0&&g.demonology>=10",
+	"cost":{
+		"research":4000,
+		"souls":50,
+		"arcana":15,
+		"tomes":10,
+		"runestones":5
+	},
+	"effect":{
+
+		"sp":1
+	},
+	"mod":{
+		"tier4":true,
+		"anatomy.max":3,
+		"lore.rate":"10%",
+		"lore.max":2,
+		"firelore.max":1,
+		"firelore.rate":0.2,
+		"shadowlore.max":2,
+		"demonology.max":3
+	}
+
+},
+{
+
+	"id":"bloodmage",
+	"name":"blood mage",
+	"title":"blood mage",
+	"tags":"t_tier3",
+	"desc":"the magic in your veins",
+	"require":"g.tier2>0&&(g.battlemage>0||g.hp.max>150)",
+	"cost":{
+		"research":1500,
+		"arcana":8,
+		"gold":700,
+		"bloodgem":15
+	},
+	"effect":{
+
+		"sp":1
+	},
+	"mod":{
+		"tier3":true,
+		"research.max":-50,
+		"bloodgem.max":10,
+		"mana.max":1,
+		"mana.rate":0.1,
+		"anatomy.max":3,
+		"anatomy.rate":"10%",
+		"earthlore.max":2,
+		"earthlore.rate":"5%",
+		"waterlore.max":1,
+		"waterlore.rate":"5%"
+	}
+
+},
+{
+	"id":"summoner",
+	"title":"summoner",
+	"tags":"t_tier3",
+	"desc":"alone or in company, the summoner is never without an army.",
+	"require":"g.minions>4&&g.tier2>0&&g.lore>=20",
+	"cost":{
+		"research":1000,
+		"arcana":15,
+		"tomes":5
+	},
+	"effect":{
+
+		"sp":1
+	},
+	"mod":{
+		"tier3":true,
+		"minions.max":1,
+		"charms.max":1,
+		"lore.max":2,
+		"lore.rate":"5%",
+		"mana.max":2,
+		"summoning.max":4,
+		"summoning.rate":"20%"
+	},"flavor":"i'd like to introduce you to some friends"
+
+},
+{
+	"id":"warden",
+	"title":"warden",
+	"desc":"a keeper of the forests, mountains, and hills",
+	"tags":"t_tier2",
+	"require":"g.tier1>0&&g.naturelore>=12",
+	"cost":{
+		"research":1000,
+		"naturegem":10,
+		"herbs":50,
+		"arcana":10
+	},
+	"effect":{
+		"sp":1
+	},
+	"mod":{
+		"tier2":true,
+		"research.max":5,
+		"naturelore.max":3,
+		"naturelore.rate":"1+15%",
+		"animals.max":3,
+		"potions.max":1
+	}
+},
+{
+	"id":"alchemist",
+	"title":"alchemist",
+	"tags":"t_tier2",
+	"desc":"an alchemist uses magical knowledge to craft wonders.",
+	"require":"g.tier1>0&&g.potions>=4&&g.alchemy>=5",
+	"cost":{
+		"research":2000,
+		"managem":5,
+		"firegem":2,
+		"watergem":2,
+		"earthgem":2,
+		"arcana":10
+	},
+	"effect":{
+		"sp":3
+	},
+	"mod":{
+		"tier2":true,
+		"research.max":100,
+		"crafting.max":3,
+		"crafting.rate":0.3,
+		"potions.max":3,
+		"potions.rate":"5%",
+		"alchemy.max":3,
+		"alchemy.rate":"5%",
+		"lore.max":1,
+		"lore.rate":0.3
+	}
+},
+{
+	"id":"enchanter",
+	"title":"enchanter",
+	"desc":"A master of charms and enchantments.",
+	"require":"g.tier1>0&&g.enchanting>=6&&g.charms>=3",
+	"tags":"t_tier2",
+	"cost":{
+		"research":1200,
+		"managem":10,
+		"tomes":5,
+		"arcana":12
+	},
+	"effect":{
+		"sp":2
+	},
+	"mod":{
+		"tier2":true,
+		"research.max":15,
+		"enchanting.max":3,
+		"arcana.max":2,
+		"naturelore.max":2,
+		"mana.max":3,
+		"airlore.max":2,
+		"waterlore.max":2
+	}
+},
+{
+	"id":"geomancer",
+	"title":"geomancer",
+	"desc":"lord of rocks.",
+	"tags":"t_tier2",
+	"actdesc":"Become a geomancer.",
+	"require":"g.tier1>0&&g.earthlore>=10",
+	"cost":{
+		"research":750,
+		"arcana":10,
+		"tomes":5,
+		"earthgem":10
+	},
+	"effect":{
+		"sp":2
+	},
+	"mod":{
+		"tier2":true,
+		"earthlore.max":2,
+		"earthlore.rate":"10%",
+		"stamina.max":"10%",
+		"mana.max":2
+	},
+	"flavor":"your empire of dirt"
+},
+{
+	"id":"pyromancer",
+	"title":"pyromancer",
+	"desc":"shaper of fire",
+	"tags":"t_tier2",
+	"name":"pyromancy",
+	"actdesc":"Become a pyromancer.",
+	"require":"g.tier1>0&&g.firelore>=10",
+	"cost":{
+		"research":750,
+		"arcana":10,
+		"tomes":5,
+		"firegem":10
+	},
+	"effect":{
+		"sp":2
+	},
+	"mod":{
+		"tier2":true,
+		"firelore.max":2,
+		"firelore.rate":"10%",
+		"dodge":"10%",
+		"mana.max":2
+	},
+	"flavor":""
+},
+{
+	"id":"hydromancer",
+	"title":"hydromancer",
+	"desc":"master of water",
+	"tags":"t_tier2",
+	"name":"hydromancy",
+	"actdesc":"Become a hydromancer.",
+	"require":"g.tier1>0&&g.waterlore>=10",
+	"cost":{
+		"research":1000,
+		"arcana":10,
+		"tomes":5,
+		"watergem":10
+	},
+	"effect":{
+
+		"sp":2
+	},
+	"mod":{
+		"tier2":true,
+		"waterlore.max":2,
+		"waterlore.rate":"10%",
+		"dodge":"10%",
+		"mana.max":2
+	},
+	"flavor":""
+},
+{
+	"id":"windmage",
+	"title":"wind mage",
+	"desc":"to walk on the wind",
+	"tags":"t_tier2",
+	"name":"wind mage",
+	"actdesc":"Become a wind.",
+	"require":"g.tier1>0&&g.airlore>=10",
+	"cost":{
+		"research":1000,
+		"arcana":10,
+		"tomes":5,
+		"airgem":10
+	},
+	"effect":{
+
+		"sp":2
+	},
+	"mod":{
+		"tier2":true,
+		"airlore.max":2,
+		"airlore.rate":"10%",
+		"dodge":"10%",
+		"mana.max":2
+	},
+	"flavor":"there's a storm coming"
+},
+{
+	"id":"stormcaller",
+	"require":"g.hydromancer>0||g.windmage>0",
+	"tags":"t_tier3",
+	"cost":{
+		"research":3000,
+		"arcana":20,
+		"airgem":10,
+		"watergem":10,
+		"tomes":10
+	},
+	"effect":{
+
+		"sp":1
+	},
+	"mod":{
+		"tier3":true,
+		"lore.max":1,
+		"mana.max":2,
+		"airlore.max":3,
+		"waterlore.max":3,
+		"airlore.rate":"15%",
+		"waterlore.rate":"15%"
+	},
+	"flavor":"I am the storm"
+},
+{
+	"id":"elementalist",
+	"title":"elementalist",
+	"desc":"Master of elemental forces.",
+	"require":"g.tier0>0&&g.airlore>2&&g.firelore>2&&g.earthlore>2&&g.waterlore>2",
+	"tags":"t_tier1",
+	"cost":{
+		"arcana":12,
+		"research":1000,
+		"codices":20
+	},
+	"effect":{
+
+		"sp":1
+	},
+	"mod":{
+		"tier1":true,
+		"research.max":5,
+		"elemental.max":2,
+		"elemental.rate":0.2
+	}
+},
+{
+	"id":"sorcerer",
+	"title":"sorcerer",
+	"desc":"A wielder of raw magical power.",
+	"require":"g.tier3>0&&(g.earthlore>=15||g.waterlore>=15||g.firelore>=15)&&(g.elementalist+g.highelemental)>0",
+	"tags":"t_tier4",
+	"disable":[],
+	"cost":{
+		"research":3000,
+		"managem":5,
+		"firegem":10,
+		"earthgem":10,
+		"watergem":10,
+		"arcana":20
+	},
+	"effect":{
+
+		"sp":1
+	},
+	"mod":{
+		"tier4":true,
+		"lore.max":1,
+		"mana.max":1,
+		"earthlore.max":2,
+		"earthlore.rate":"10%",
+		"waterlore.max":2,
+		"waterlore.rate":"10%",
+		"firelore.max":2,
+		"firelore.rate":"10%"
+	}
+},
+{
+	"id":"druid",
+	"title":"druid",
+	"desc":"a spellcaster dedicated to the natural world",
+	"tags":"t_tier3",
+	"require":"g.tier2>0&&g.naturelore>=15",
+	"cost":{
+		"research":1000,
+		"naturegem":20,
+		"herbs":25,
+		"arcana":15
+	},
+	"effect":{
+
+		"sp":1
+	},
+	"mod":{
+		"tier3":true,
+		"naturelore.max":3,
+		"naturelore.rate":"0.2+5%",
+		"animals.max":2,
+		"herbalism.max":2,
+		"herbalism.rate":"10%",
+		"potions.max":1,
+		"potions.rate":0.4
+	}
+},
+{
+	"id":"highelemental",
+	"title":"high elemental",
+	"tags":"t_tier3",
+	"desc":"Lord of the elements",
+	"require":"g.tier2>0&&g.airlore>7&&g.firelore>7&&g.waterlore>7&&g.earthlore>7",
+	"cost":{
+		"tomes":10,
+		"airgem":20,
+		"firegem":20,
+		"earthgem":20,
+		"watergem":20
+	},
+	"effect":{
+
+		"sp":2
+	},
+	"mod":{
+		"tier3":true,
+		"airlore.max":2,
+		"firelore.max":2,
+		"earthlore.max":2,
+		"waterlore.max":2,
+		"research.max":25,
+		"elemental.max":2,
+		"elemental.rate":0.2
+	}
+},
+{
+	"id":"oracle",
+	"title":"oracle",
+	"tags":"t_tier1",
+	"desc":"A diviner.",
+	"require":"g.tier0>0&&g.spiritlore>=5&&g.divination>=5",
+	"cost":{
+		"research":750,
+		"gems":10,
+		"codices":10,
+		"arcana":5
+	},
+	"effect":{
+
+		"sp":2
+	},
+	"mod":{
+		"tier1":true,
+		"virtue":1,
+		"research.max":15,
+		"lore.max":2,
+		"scrying.max":2,
+		"mana.max":3,
+		"divination.max":2,
+		"divination.rate":0.1,
+		"airlore.max":1,
+		"spiritlore.max":1,
+		"spiritlore.rate":0.1
+	}
+},
+{
+	"id":"seer",
+	"title":"seer",
+	"desc":"A diviner.",
+	"require":"g.tier1>0&&g.divination>=10",
+	"tags":"t_tier2",
+	"cost":{
+		"tomes":5,
+		"arcana":10,
+		"research":2000
+	},
+	"effect":{
+
+		"sp":2
+	},
+	"mod":{
+		"tier2":true,
+		"virtue":5,
+		"lore.max":2,
+		"mana.max":3,
+		"divination.max":2,
+		"scrying.max":2,
+		"spiritlore.max":2,
+		"spiritlore.rate":0.1
+	}
+},
+{
+	"id":"mage",
+	"title":"mage",
+	"desc":"member of an arcane order.",
+	"tags":"t_tier2",
+	"require":"g.tier1>0&&g.lore>20",
+	"cost":{
+		"research":2000,
+		"arcana":10,
+		"tomes":1
+	},
+	"effect":{
+
+		"sp":2
+	},
+	"mod":{
+		"tier2":true,
+		"research.max":40,
+		"lore.max":2,
+		"lore.rate":0.4,
+		"mana.max":3
+	}
+},
+{
+	"id":"doomsayer",
+	"title":"doomsayer",
+	"desc":"harbinger of ruin",
+	"require":"g.tier2>0&&g.spirit>=12&&g.divination>=12",
+	"tags":"t_tier3",
+	"cost":{
+		"research":1000,
+		"arcana":15,
+		"tomes":7
+	},
+	"effect":{
+		"sp":2
+	},
+	"mod":{
+		"tier3":true,
+		"spiritlore.max":2,
+		"divination.max":3,
+		"scrying.max":2,
+		"lore.max":2,
+		"lore.rate":"10%",
+		"mana.max":3
+	}
+},
+{
+	"id":"fey",
+	"title":"fey",
+	"desc":"a being of wild and natural magic",
+	"tags":"t_tier4",
+	"require":"g.tier3>0&&g.naturelore>=19&&(g.witch+g.druid+g.elementalist)>0",
+	"cost":{
+		"research":5000,
+
+		"naturegem":30,
+		"herbs":75,
+		"arcana":15,
+		"runestones":5
+	},
+	"effect":{
+
+		"sp":1
+	},
+	"mod":{
+		"tier4":true,
+		"research.max":"-5%",
+		"waterlore.max":2,
+		"earthlore.max":2,
+		"airlore.max":2,
+		"naturelore.max":3,
+		"naturelore.rate":"1+10%",
+		"animals.max":2,
+		"animals.rate":"1+10%",
+		"herbalism.max":2,
+		"herbalism.rate":"1+10%"
+	}
+},
+{
+	"id":"heresiarch",
+	"title":"heresiarch",
+	"desc":"a reckoning comes.",
+	"require":"g.tier4>0&&g.spirit>=15&&g.divination>=17",
+	"tags":"t_tier5",
+	"cost":{
+		"research":5000,
+		"arcana":20,
+		"tomes":15,
+		"spiritgem":20,
+		"runestones":10
+	},
+	"effect":{
+
+		"sp":2
+	},
+	"mod":{
+		"tier5":true,
+		"research.max":"-5%",
+		"spiritlore.max":3,
+		"spiritlore.rate":"12%",
+		"divination.max":3,
+		"divination.rate":"10%",
+		"scrying.max":2,
+		"lore.max":2,
+		"lore.rate":"10%"
+	},"flavor":"it waits in time"
+},
+{
+	"id":"thaumaturge",
+	"title":"thaumaturge",
+	"desc":"a maker of miracles",
+	"require":"g.tier3>0&&g.spirit>=15&&g.divination>=15",
+	"tags":"t_tier4",
+	"cost":{
+		"research":5000,
+		"arcana":25,
+		"tomes":7,
+		"spiritgem":20,
+		"runestones":5
+	},
+	"effect":{
+		"sp":2
+	},
+	"mod":{
+		"tier4":true,
+		"spiritlore.max":2,
+		"divination.max":3,
+		"spellcraft.max":2,
+		"spellcraft.rate":"0.3+5%",
+		"lore.max":2,
+		"light.max":2,
+		"light.rate":"0.2+5%",
+		"lore.rate":"0.4+5%",
+		"mana.max":3
+	}
+},
+{
+	"id":"necromancer",
+	"title":"necromancer",
+	"tags":"t_tier4",
+	"desc":"master of death magic",
+	"require":"g.tier3>0&&g.evil>0&&g.shadowlore>=17",
+	"cost":{
+		"research":2000,
+		"bones":100,
+		"bodies":50,
+		"souls":40,
+		"arcana":10,
+		"runestones":5
+	},
+	"effect":{
+		"sp":2
+	},
+	"mod":{
+		"tier4":true,
+		"research.max":"50-2%",
+		"embalming.max":1,
+		"reanimation.max":2,
+		"reanimation.rate":"10%",
+		"shadowlore.max":2,
+		"shadowlore.rate":"0.2+5%",
+		"potions.max":1,
+		"necromancy.max":3,
+		"necromancy.rate":"10%",
+		"spiritlore.max":2,
+		"spiritlore.rate":"10%"
+	}
+},
+{
+	"id":"wizard",
+	"title":"wizard",
+	"desc":"raw magic power",
+	"tags":"t_tier4",
+	"require":"g.tier3>0&&g.lore>=25",
+	"cost":{
+		"research":5000,
+
+		"arcana":25,
+		"tomes":10,
+		"runestones":5
+	},
+	"effect":{
+		"sp":2
+	},
+	"mod":{
+		"tier4":true,
+		"research.max":"40-5%",
+		"languages.max":2,
+		"conjuration.max":1,
+		"crafting.max":1,
+		"lore.max":3,
+		"spellcraft.max":3,
+		"spellcraft.rate":0.5,
+		"lore.rate":"10%",
+		"mana.max":3
+	}
+},
+{
+	"id":"dhrunic wizard",
+	"title":"dhrunic wizard",
+	"desc":"raw magic power",
+	"tags":"t_tier5",
+	"require":"g.tier4>0&&g.lore>=30",
+	"cost":{
+		"research":20000,
+		"arcana":25,
+
+		"tomes":30,
+		"runestones":10
+	},
+	"effect":{
+		"sp":3
+	},
+	"mod":{
+		"tier5":true,
+		"research.max":"-25%",
+		"languages.max":2,
+		"firelore.max":1,
+		"waterlore.max":1,
+		"airlore.max":1,
+		"lightlore.max":1,
+		"crafting.max":2,
+		"lore.max":5,
+		"lore.rate":"20%",
+		"mana.max":3
+	},"flavor":"In the end it was three Thule Wizards and The Necromancer who brought the locks to heel."
+},
+{
+	"id":"kell",
+	"title":"kell",
+	"desc":"immortal spirits of nature, even the weakest Kell could rival wizards",
+	"tags":"t_tier5",
+	"require":"g.tier4>0&&g.naturelore>=23&&(g.witch+g.fey+g.highelemental)>0",
+	"cost":{
+		"research":15000,
+		"naturegem":50,
+		"herbs":75,
+		"arcana":20,
+		"runestones":15
+	},
+	"effect":{
+		"sp":2
+	},
+	"mod":{
+		"tier5":true,
+		"lore.max":2,
+		"research.max":"-17%",
+		"lore.rate":"10%",
+		"airlore.max":2,
+		"airlore.rate":"10%",
+		"naturelore.max":3,
+		"naturelore.rate":"15%",
+		"animals.max":2,
+		"animals.rate":"10%",
+		"herbalism.max":1,
+		"herbalism.rate":"15%"
+	},"flavor":"most preferred their glades and fens to the turmoils of the world"
+},
+{
+	"id":"greynecromancer",
+	"title":"grey necromancer",
+	"name":"grey necromancer",
+	"tags":"t_tier5",
+	"desc":"disciple of death",
+	"require":"g.tier4>0&&g.evil>0&&g.spiritlore>=15&&g.shadowlore>=24",
+	"cost":{
+		"research":17000,
+		"bones":100,
+		"bodies":50,
+		"souls":100,
+		"arcana":10,
+		"runestones":10
+	},
+	"effect":{
+		"sp":2
+	},
+	"mod":{
+		"tier5":true,
+		"research.max":"-14%",
+		"lore.max":2,
+		"lore.rate":"10%",
+		"embalming.max":2,
+		"necromancy.max":3,
+		"necromancy.rate":"10%",
+		"reanimation.max":3,
+		"reanimation.rate":"10%",
+		"shadowlore.max":2,
+		"shadowlore.rate":"5%",
+		"spiritlore.max":2,
+		"spiritlore.rate":"10%"
+	}
+},
+{
+		"id":"archlock",
+		"title":"archlock",
+		"desc":"master of demons and demonic magic",
+		"tags":"t_tier5",
+		"require":"g.warlock>0&&g.demonology>=20",
+		"cost":{
+			"research":15000,
+
+			"souls":75,
+			"bodies":10,
+			"tomes":25,
+			"arcana":25,
+			"runestones":10
+		},
+		"effect":{
+			"sp":2
+		},"mod":{
+			"tier5":true,
+			"lore.max":2,
+			"research.max":"-14%",
+			"lore.rate":"10%",
+			"firelore.max":3,
+			"firelore.rate":"20%",
+			"demonology.max":5,
+			"demonology.rate":"20%"
+		},"flavor":"in the War of the Locks the Seven raged for power and Dhrune trembled in their wake."
+
+	}
+
+]

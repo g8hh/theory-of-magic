@@ -1,0 +1,385 @@
+[
+	{
+		"id":"gold",
+		"desc":"Gold Coins",
+		"locked":false,
+		"max":5
+	},
+	{
+		"id":"research",
+		"desc":"Research into the Arcane",
+		"max":10
+	},
+	{
+		"id":"arcana",
+		"school":"arcane",
+		"desc":"Profound mystical knowledge",
+		"max":0
+	},
+	{
+
+		"id":"bones",
+		"desc":"human bones.",
+		"max":10
+
+	},
+	{
+
+		"id":"skull",
+		"desc":"human skull.",
+		"max":5
+
+	},
+	{
+
+		"id":"bonedust",
+		"name":"bone dust",
+		"desc":"The dust of human bones.",
+		"max":10
+	},
+	{
+		"id":"scrolls",
+		"desc":"Scroll of arcane lore",
+		"max":10,
+		"mod":{
+			"research.rate":0.005,
+			"research.max":1
+		}
+	},
+	{
+
+		"id":"starcharts",
+		"desc":"a map of the stars",
+		"max":10,
+		"mod":{
+			"research.max":1,
+			"astronomy.max":0.1,
+			"astronomy.rate":0.02,
+			"planeslore.max":0.05,
+			"planeslore.rate":0.02
+		}
+
+	},
+	{
+
+		"id":"runestones",
+		"name":"rune stones",
+		"desc":"runes carved on pieces of stone.",
+		"max":10,
+		"mod":{
+			"research.max":"1%",
+			"runes.rate":0.1,
+			"runes.max":0.03
+		}, "flavor":""
+
+	},
+	{
+
+		"id":"firerune",
+		"name":"flame runes",
+		"desc":"rune ingrained with lines of fire",
+		"max":10,
+		"mod":{
+			"research.max":10
+		}, "flavor":""
+
+	},
+	{
+
+		"id":"waterrune",
+		"name":"water runes",
+		"desc":"rune etched in flowing water",
+		"max":10,
+		"mod":{
+			"research.max":10
+		}, "flavor":""
+
+	},
+	{
+
+		"id":"airrune",
+		"name":"air runes",
+		"desc":"rune etched with solid air",
+		"max":10,
+		"mod":{
+			"research.max":10
+		}, "flavor":""
+
+	},
+	{
+
+		"id":"earthrune",
+		"name":"earth runes",
+		"desc":"rune ingrained with moonstone",
+		"max":10,
+		"mod":{
+			"research.max":10
+		}, "flavor":""
+
+	},
+	{
+		"id":"bodies",
+		"desc":"bodies for necromatic magic",
+		"max":1,
+		"mod":{
+			"dissection.rate":0.01,
+			"embalming.rate":0.01
+		}
+	},
+	{
+		"id":"souls",
+		"desc":"imprisoned souls of living creatures.",
+		"max":1,
+		"mod":{
+			"shadow.rate":0.001,
+			"spirit.rate":0.001,
+			"spiritlore.rate":0.01
+		},
+		"flavor":"is it wrong?"
+	},
+	{
+		"id":"schematic",
+		"name":"schematic",
+		"desc":" Schematic of Thurn the Artificer",
+		"flavor":"If only you could find an original.",
+		"mod":{
+			"crafting.max":0.1,
+			"crafting.rate":"1%"
+		}
+	},
+	{
+		"id":"codices",
+		"name":"Codices",
+		"desc":"Codex of arcane lore",
+		"max":10,
+		"mod":{
+			"research.rate":0.07,
+			"research.max":5,
+			"lore.rate":0.1
+		}
+
+	},
+	{
+		"id":"tomes",
+		"name":"Tomes",
+		"desc":"A hefty tome of knowledge.",
+		"max":5,
+		"mod":{
+			"research.max":5,
+			"arcana.rate":0.001,
+			"lore.rate":0.1,
+			"lore.max":0.1
+		}
+
+	},
+	{
+		"id":"gems",
+		"desc":"Various fine gemstones.",
+		"max":5
+	},
+	{
+
+		"id":"managem",
+		"tags":"gem",
+		"name":"arcane gem",
+		"desc":"Gem infused with arcane energy.",
+		"max":2
+	},
+	{
+		"id":"firegem",
+		"tags":"gem",
+		"name":"fire gem",
+		"desc":"Gem imbued with the essence of fire.",
+		"max":2
+	},
+	{
+		"id":"watergem",
+		"tags":"gem",
+		"name":"water gem",
+		"desc":"Gem imbued with the essence of water.",
+		"max":2
+	},
+	{
+		"id":"naturegem",
+		"tags":"gem",
+		"name":"nature gem",
+		"desc":"physical essence of life.",
+		"max":2,
+		"flavor":"the force from the beginning"
+	},
+	{
+		"id":"earthgem",
+		"tags":"gem",
+		"name":"earth gem",
+		"desc":"Gem imbued with the essence of earth.",
+		"max":2
+	},
+	{
+		"id":"airgem",
+		"tags":"gem",
+		"name":"air gem",
+		"desc":"Gem imbued with the essence of air.",
+		"max":2
+	},
+	{
+		"id":"shadowgem",
+		"tags":"gem",
+		"name":"shadow gem",
+		"desc":"Gem imbued with the essence of darkness.",
+		"max":2
+	},
+	{
+		"id":"lightgem",
+		"tags":"gem",
+		"name":"light gem",
+		"desc":"Gem imbued with the essence of light.",
+		"max":2
+	},
+	{
+		"id":"spiritgem",
+		"tags":"gem",
+		"name":"spirit gem",
+		"desc":"Gem imbued with raw spirit.",
+		"max":2
+	},
+	{
+		"id":"bloodgem",
+		"tags":"gem",
+		"name":"blood gem",
+		"desc":"a little magic and a lot of blood",
+		"max":2,
+		"mod":{
+			"hp.max":1
+		}
+	},
+	{
+		"id":"ichor",
+		"tags":"reagent",
+		"desc":"The blood of gods.",
+		"flavor":"the secret courtesy that courses like ichor",
+		"max":5
+	},
+	{
+
+		"id":"herbs",
+		"desc":"Special plants for potions and alchemy.",
+		"max":10
+	},
+	{
+		"id":"sulphur",
+		"desc":"principle of fire.",
+		"max":10
+	},
+	{
+		"id":"mercury",
+		"desc":"principle of metal.",
+		"max":10
+	},
+	{
+		"id":"space",
+		"name":"floor space",
+		"desc":"Space Available",
+		"zerosum":true,
+		"max":0
+
+	},
+	{
+		"id":"mana",
+		"tags":"manas",
+		"desc":"raw magical energy",
+		"unit":false,
+		"require":"g.arcana>=1",
+		"name":"mana",
+		"max":5
+	},
+	{
+		"id":"fire",
+		"require":"firelore",
+		"unit":false,
+		"tags":"manas,elemental",
+		"desc":"Fire Mana",
+		"max":0
+	},
+	{
+		"id":"air",
+		"require":"airlore",
+		"unit":false,
+		"tags":"manas,elemental",
+		"desc":"Air Mana",
+		"max":0
+	},
+	{
+		"id":"earth",
+		"unit":false,
+		"tags":"manas,elemental",
+		"require":"earthlore",
+		"desc":"Earth Mana",
+		"max":0
+	},
+	{
+		"id":"water",
+		"unit":false,
+		"tags":"manas,elemental",
+		"desc":"Water Mana",
+		"require":"waterlore",
+		"max":0
+	},
+	{
+		"id":"nature",
+		"tags":"manas",
+		"unit":false,
+		"require":"naturelore",
+		"desc":"Nature Mana",
+		"max":0
+	},
+	{
+		"id":"shadow",
+		"name":"shadow",
+		"tags":"manas",
+		"unit":false,
+		"require":"shadowlore",
+		"desc":"Shadow mana",
+		"max":0
+	},
+	{
+		"id":"light",
+		"tags":"manas",
+		"unit":false,
+		"require":"lightlore",
+		"desc":"Light mana",
+		"max":0
+	},
+	{
+
+		"id":"spirit",
+		"tags":"manas",
+		"unit":false,
+		"desc":"Spirit mana",
+		"require":"spiritlore",
+		"max":0
+	},
+	{
+		"id":"tempus",
+		"require":"chronomancy",
+		"tags":"manas",
+		"unit":false,
+		"desc":"Time incarnate. If only...",
+		"max":0
+	},
+	{
+		"id":"chaos",
+		"tags":"manas",
+		"unit":false,
+		"desc":"Chaos incarnate. No current use.",
+		"max":0
+	},
+	{
+		"id":"void",
+		"tags":"manas",
+		"unit":false,
+		"desc":"nothingness. No current use.",
+		"flavor":"",
+		"max":0
+	}
+
+]

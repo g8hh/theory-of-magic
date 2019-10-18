@@ -1,0 +1,726 @@
+[
+
+	{
+		"id":"crafting",
+		"need":"workspace",
+		"desc":"an absolutely vital skill for a wizard to craft arcane items.",
+		"buy":{
+			"research":20
+		},
+		"run":{
+			"stamina":0.5
+		},
+		"result":{
+			"sp":0.1
+		},
+		"mod":{
+			"research.max":1
+		}
+	},
+	{
+		"id":"lore",
+		"school":"arcane",
+		"tags":"t_school",
+		"verb":"reading lore",
+		"desc":"nothing is more important to a wizard than the depth of their lore.",
+		"locked":false,
+		"buy":{
+			"research":20
+		},
+		"run":{
+			"stamina":0.2
+		},
+		"result":{
+			"arcana":1
+		},
+		"mod":{
+			"research.max":5,
+			"spelllist.max":0.5,
+			"arcana.max":1
+		}
+
+	},
+	{
+		"id":"spellcraft",
+		"school":"arcane",
+		"verb":"studying spells",
+		"desc":"the ability to build greater spells from lesser is what separates a practitioner from a master.",
+		"require":"g.tier2>0&&g.lore>=15",
+		"buy":{
+			"sp":5
+		},
+		"run":{
+			"stamina":0.2,
+			"research":5
+		},
+		"mod":{
+			"research.max":5,
+			"scraft":1,
+			"userSpells.max":0.7
+
+		}
+
+	},
+	{
+
+		"id":"concentrate",
+		"name":"concentration",
+		"desc":"keep your mind and nerves sharp under pressure.",
+		"verb":"concentrating",
+		"require":"(g.mustylibrary+g.loc_spring)>=2",
+		"run":{
+			"stamina":0.2
+		},
+		"mod":{
+			"stress.max":1
+		}
+
+	},
+	{
+
+		"id":"composure",
+		"name":"composure",
+		"desc":"remain unfazed under strain.",
+		"require":"g.concentrate>=4",
+		"run":{
+			"stamina":0.3
+		},
+		"mod":{
+			"stress.rate":-0.1
+		}
+
+	},
+	{
+		"id":"trickery",
+		"school":"arcane",
+		"verb":"scheming",
+		"require":"g.prestidigitation>15",
+		"run":{
+			"stamina":0.2,
+			"gold":1
+		},
+		"result":{
+			"sp":0.2,
+			"arcana":0.5
+		},
+		"mod":{
+			"luck":0.4,
+			"dodge":0.4
+		},"flavor":"sufficiently advanced sleight of hand is indistinguishable from magic"
+
+	},
+	{
+		"id":"conjuration",
+		"school":"arcane",
+		"verb":"conjuring",
+		"desc":"",
+		"require":"g.lore>=7&&g.divination>3",
+		"run":{
+			"stamina":0.2,
+			"spirit":0.2
+		},
+		"result":{
+			"arcana":0.2,
+			"sp":0.05
+		},
+		"mod":{
+			"research.max":1,
+			"summoning.max":0.2,
+			"summoning.rate":0.1
+		},"flavor":"who knows where things come from? they just appear."
+
+	},
+	{
+		"id":"runes",
+		"name":"runic lore",
+		"school":"arcane",
+		"verb":"translating",
+		"desc":"study ancient dhrunic runes.",
+		"require":"g.tier1>0&&g.lore>=10&&g.dwarfbook>0",
+		"buy":{
+			"sp":3
+		},
+		"run":{
+			"stamina":0.2,
+			"research":1
+		},
+		"result":{
+			"arcana":0.1,
+			"sp":0.05
+		},
+		"mod":{
+			"research.max":5,
+			"languages.rate":"0.1+2%",
+			"languages.max":0.2,
+			"lore.rate":0.1,
+			"lore.max":0.2
+		},"flavor":""
+
+	},
+	{
+		"id":"animals",
+		"name":"animal handling",
+		"need":"t_pets",
+		"run":{
+			"stamina":0.5
+		},
+		"result":{
+			"sp":0.05,
+			"research":5
+		},
+		"mod":{
+			"research.max":1
+		},
+		"flavor":"Tend the rabbits. Or horses."
+	},
+	{
+		"id":"magicbeasts",
+		"name":"magic beasts",
+		"require":"g.animals>=7&&g.naturelore>=5",
+		"desc":"",
+		"run":{
+			"stamina":0.7
+		},
+		"effect":{
+			"naturelore.exp":1
+		},
+		"result":{
+			"sp":0.05
+		},
+		"mod":{
+			"minions.maxAllies":0.25,
+			"research.max":5
+		}
+
+	},
+	{
+		"id":"charms",
+		"require":"g.enchanting>=5&&g.lore>=10",
+		"run":{
+			"stamina":0.3
+		},
+		"result":{
+			"sp":0.05
+		},"mod":{
+			"research.max":1,
+			"minions.max":"10%",
+			"minions.maxAllies":1
+		}
+	},
+	{
+		"id":"herbalism",
+		"school":"nature",
+		"require":"lore",
+		"need":"taggarden",
+		"run":{
+			"stamina":0.25
+		},
+		"result":{
+			"sp":0.05
+		},
+		"mod":{
+			"research.max":2,
+			"herbs.max":2
+		}
+	},
+	{
+
+		"id":"weaving",
+		"require":"loom",
+		"run":{
+			"stamina":0.5
+		},
+		"result":{
+			"sp":0.05
+		},
+		"mod":{
+			"crafting.max":0.2,
+			"crafting.rate":"0.1+1%"
+		}
+
+	},
+	{
+		"id":"languages",
+		"school":"lore",
+		"require":"lore",
+		"desc":"books and scrolls are written in many obscure languages. learn as many as possible.",
+		"verb":"linguisticizing",
+		"buy":{
+			"research":10
+		},
+		"run":{
+			"stamina":0.2
+		},
+		"effect":{
+			"research":0.1
+		},
+		"result":{
+			"sp":0.05
+		},
+		"mod":{
+			"research.max":5,
+			"lore.rate":0.1
+		}
+
+	},
+	{
+		"id":"history",
+		"require":"g.languages>7",
+		"desc":"the knowledge of what has come before reveals what is yet possible.",
+		"verb":"historicizing",
+		"run":{
+			"stamina":0.2
+		},
+		"effect":{
+			"research":0.5
+		},
+		"result":{
+			"sp":0.05
+		},
+		"mod":{
+			"research.max":10,
+			"arcana.max":0.5,
+			"languages.rate":"1%"
+		}
+
+	},
+	{
+
+		"id":"anatomy",
+		"require":"g.neophyte>=0&&g.lore>=6",
+		"school":["nature","shadow","light"],
+		"desc":"the study of physical form.",
+		"run":{
+			"stamina":0.5
+		},
+		"result":{
+			"sp":0.05
+		},
+		"mod":{
+			"research.max":1,
+			"hp.max":1,
+			"hp.rate":0.2
+		}
+
+	},
+	{
+
+		"id":"dissection",
+		"need":"g.anatomy>=3",
+		"school":"shadow",
+		"run":{
+			"stamina":0.5
+		},
+		"result":{
+			"sp":0.1,
+			"bones":1
+		},
+		"mod":{
+			"research.max":1
+		}
+
+	},
+	{
+
+		"id":"embalming",
+		"require":"g.dissection>=3",
+		"school":"shadow",
+		"run":{
+			"stamina":0.5
+		},
+		"result":{
+			"sp":0.05
+		},
+		"mod":{
+			"research.max":1,
+			"shadow.rate":0.01
+		}
+
+	},
+	{
+
+		"id":"summoning",
+		"require":"g.tier1>0",
+		"school":"arcane",
+		"buy":{
+			"sp":2
+		},
+		"run":{
+			"stamina":0.7
+		},
+		"mod":{
+			"minions.maxAllies":1,
+			"research.max":5,
+			"minions.max":0.5
+		}
+
+	},
+	{
+
+		"id":"divination",
+		"desc":"the art of foretelling",
+		"require":["g.spiritlore>=6||g.mysticism>=5"],
+		"need":"spiritsource",
+		"school":"spirit",
+		"run":{
+			"stamina":0.4
+		},
+		"effect":{
+			"arcana":0.001
+		},
+		"result":{
+			"sp":0.05
+		},
+		"mod":{
+			"research.max":1,
+			"spirit.rate":0.01
+		}
+
+	},
+	{
+		"id":"lightlore",
+		"tags":"t_school",
+		"name":"lumenology",
+		"school":"light",
+		"desc":"study of pure light",
+		"need":"lightsource",
+		"run":{
+			"stamina":0.4
+		},
+		"mod":{
+			"research.max":1,
+			"light.max":1,
+			"light.rate":0.01
+		},
+		"flavor":"the light fantastic"
+
+	},
+	{
+		"id":"shadowlore",
+		"tags":"t_school",
+		"require":"g.dissection>=3||g.evil>0",
+		"school":"shadow",
+		"need":"shadowsource",
+		"run":{
+			"stamina":0.5
+		},
+		"mod":{
+			"research.max":1,
+			"shadow.max":1,
+			"shadow.rate":0.01
+		}
+	},
+	{
+
+		"id":"spiritlore",
+		"tags":"t_school",
+		"name":"spirit lore",
+		"desc":"seeing the unseen",
+		"require":"g.lore>=6",
+		"need":"spiritsource",
+		"school":"spirit",
+		"run":{
+			"stamina":0.4
+		},
+		"mod":{
+			"research.max":1,
+			"spirit.max":1,
+			"spirit.rate":0.01
+		}
+
+	},
+	{
+		"id":"firelore",
+		"tags":"t_school,elemental",
+		"name":"pyromancy",
+		"desc":"the investigation of fire",
+		"need":"firesource",
+		"run":{
+			"stamina":0.4,
+			"hp":0.2
+		},
+		"mod":{
+			"research.max":1,
+			"fire.max":1,
+			"fire.rate":0.01
+		},
+		"flavor":"dry is good and wind is better"
+
+	},
+	{
+		"id":"earthlore",
+		"name":"minerology",
+		"tags":"t_school,elemental",
+		"need":"earthsource",
+		"run":{
+			"stamina":0.4
+		},
+		"mod":{
+			"research.max":1,
+			"earth":{
+				"max":1,
+				"rate":0.01
+			}
+		}
+	},
+	{
+		"id":"waterlore",
+		"name":"water lore",
+		"desc":"the study of water",
+		"verb":"studying water",
+		"tags":"elemental,t_school",
+		"need":"watersource",
+		"run":{
+			"stamina":0.4
+		},
+		"mod":{
+			"research.max":1,
+			"water":{
+				"max":1,
+				"rate":0.01
+			}
+		}
+
+	},
+	{
+		"id":"airlore",
+		"name":"air lore",
+		"desc":"the study of air",
+		"verb":"studying air",
+		"tags":"elemental,t_school",
+		"need":"airsource",
+		"run":{
+			"stamina":0.3
+		},
+		"mod":{
+			"research.max":1,
+			"air":{
+				"max":1,
+				"rate":0.01
+			}
+		}
+
+	},
+	{
+		"id":"naturelore",
+		"name":"nature lore",
+		"verb":"observing nature",
+		"tags":"t_school",
+		"require":"g.herbalism>=3",
+		"run":{
+			"stamina":0.4
+		},
+		"mod":{
+			"research.max":1,
+			"nature":{
+				"max":1,
+				"rate":0.01
+			}
+		}
+
+	},
+	{
+
+		"id":"demonology",
+		"require":"tier1",
+		"buy":{
+			"sp":2
+		},
+		"run":{
+			"stamina":0.4,
+			"hp":1
+		},
+		"result":{
+			"sp":0.1
+		},
+		"mod":{
+			"arcana.max":0.1,
+			"lore.rate":0.2,
+			"research.max":1
+		}
+
+	},
+	{
+
+		"id":"reanimation",
+		"require":"g.evil>0&&g.embalming>=3",
+		"school":["shadow"],
+		"run":{
+			"stamina":0.5,
+			"shadow":0.1
+		},
+		"result":{
+			"sp":0.05
+		},
+		"mod":{
+			"shadow.rate":0.01,
+			"minions.maxAllies":0.2
+		}
+
+	},
+	{
+
+		"id":"necromancy",
+		"require":"g.evil>0&&g.reanimation>=7&&g.souls.max>0",
+		"school":"shadow",
+		"desc":"forbidden death magic.",
+		"run":{
+			"stamina":0.4,
+			"shadow":0.5
+		},
+		"result":{
+			"sp":0.05
+		},
+		"mod":{
+			"shadow.rate":0.01
+		}
+
+	},
+	{
+		"id":"potions",
+		"require":"g.crafting>=3&&g.alchemy>=1&&g.herbalism>=2",
+		"need":["workspace","potsource"],
+		"run":{
+			"stamina":0.5
+		},
+		"result":{
+			"sp":0.05
+		},
+		"mod":{
+			"research.max":2
+		}
+	},
+	{
+		"id":"enchanting",
+		"require":"g.tier0>0&&g.lore>=7",
+		"desc":"imbue mundane gems and items with magical properties.",
+		"run":{
+			"stamina":0.4,
+			"research":1
+		},
+		"result":{
+			"sp":0.05,
+			"arcana":0.1
+		}
+	},
+	{
+		"id":"alchemy",
+		"school":"elemental",
+		"require":"g.herbalism>=3",
+		"run":{
+			"stamina":0.5
+		},
+		"result":{
+			"sp":0.1,
+			"research":5
+		},
+		"mod":{
+			"research.max":2
+		}
+	},
+	{
+		"id":"astronomy",
+		"require":"starsource",
+		"run":{
+			"stamina":0.5
+		},
+		"result":{
+			"sp":0.05
+		},
+		"mod":{
+			"research.max":2
+		}
+	},
+	{
+		"id":"mysticism",
+		"require":"g.lore>=8",
+		"desc":"the ability to sense the flow and flux of arcane energies.",
+		"run":{
+			"stamina":0.5
+		},
+		"mod":{
+			"mana.max":0.5,
+			"arcana.rate":0.001,
+			"manas.rate":0.02
+		}
+	},
+	{
+
+		"id":"planeslore",
+		"name":"planes lore",
+		"require":"g.astronomy>=5&&g.tier1>0",
+		"desc":"farther than the stars and closer than your fingertips",
+		"buy":{
+			"sp":2
+		},
+		"run":{
+			"stamina":0.7,
+			"research":1,
+			"mana":0.1
+		},
+		"mod":{
+			"dist":"5%",
+			"arcana.max":1,
+			"research.max":1
+		}, "flavor":"there is no safe distance"
+
+	},
+	{
+
+		"id":"voidlore",
+		"name":"void lore",
+		"require":"g.planeslore>=10&&g.tier5>=0",
+		"desc":"the absence of all things",
+		"buy":{
+			"sp":5
+		},
+		"run":{
+			"stamina":0.7,
+			"research":5,
+			"arcana":0.1
+		},
+		"mod":{
+			"space.max":"2%",
+			"dist":"1%",
+			"research.max":1
+		}, "flavor":"what could go wrong?"
+
+	},
+	{
+		"id":"chronomancy",
+		"require":"tier3",
+		"need":"timesource",
+		"tags":"t_school",
+		"desc":"There must be a way...",
+		"buy":{
+			"sp":5
+		},
+		"run":{
+			"stamina":0.3,
+			"research":1,
+			"mana":1
+		},
+		"mod":{
+			"tempus.max":1,
+			"tempus.rate":0.001
+		},"flavor":"too much to do, so little time."
+
+	},
+	{
+		"id":"scrying",
+		"require":"g.divination>5",
+		"run":{
+			"stamina":0.5
+		},
+		"effect":{
+			"arcana":0.001
+		},
+		"mod":{
+			"mana.max":0.2,
+			"research.max":1,
+			"dist":"1%",
+			"arcana.max":0.2
+		}
+	}
+
+]

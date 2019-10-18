@@ -1,0 +1,432 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Arcanum</title>
+	<link href="./css/main.css" rel="stylesheet" type="text/css">
+	<meta charset="UTF-8">
+	<meta name="keywords" content="idle, clicker, idle clicker, game, wizard, arcane, rpg, fun, browser, javascript" />
+	<meta name="description" content="magic idle clicker for rpg enthusiasts" />
+	<meta name="author" content="lerping lemur" />
+
+	<!-- WEBFONT LOADING -->
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+	<script>
+		WebFont.load({
+			google: {
+				families: ['Open Sans']
+			},
+			active:e=>{
+			}
+		});
+	</script>-->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+	<div id="vueRoot"></div>
+</body>
+<script src="dist/wizrobe.dist.bundle.js"></script>
+<style type="text/css">
+/*
+@author         gokiburikin
+*/
+
+:root {
+        --action-button-width: 128px;
+        --background-color: #FAFAFA;
+        --button-text-color: #000C;
+        --action-button-border-color: #000C;
+        --accent-color-hover: #Dba659;
+        --accent-color-active: #797979;
+        --quiet-text-color: #888;
+        --very-quiet-text-color: #AAA;
+        --separator-color: #AAA;
+        --list-entry-background: #00000007;
+        --list-entry-border-radius: 8px;
+        --header-background-color: #EEE;
+        --compact-small-font: 1.0em;
+        --compact-medium-font: 1.0em;
+        --popup-background-color: #FAFAFAEE;
+        --popup-border: 2px solid #646464;
+        --subtle-border-radius: 4px;
+    }
+    :root body.darkmode {
+        --button-text-color: #FFF;
+        --action-button-border-color: #FFF;
+    }
+    :root body.compact {
+        --comfy-gap: 0;
+        --tiny-gap: 0.1em;
+        --small-gap: 0.25em;
+        --medium-gap: 0.4em;
+        --large-gap: 0.5em;
+        --compact-small-font: 0.75em;
+        --compact-small-font: 0.9em;
+    }
+
+    * { box-sizing: border-box; }
+
+
+
+    /* General Changes */
+
+    div.div-hr { border: none; margin: 0; }
+    .table-head { border: none; }
+
+
+    /* Main Layout */
+
+    div.full:first-child { display: flex; margin: 0; }
+    body div.full div.top-bar { border-bottom: 1px solid var(--separator-color); margin: 0; padding:0;}
+    body div.full div.top-bar .load-opts { display: flex; align-items: center; width: unset; }
+    body div.full div.game-main { flex: 1; margin-top: 0; max-height: unset; min-height: 0; }
+    body div.full div.game-mid { border-left: 1px solid var(--separator-color); border-right: 1px solid var(--separator-color); margin: 0; }
+    body div.full div.game-mid .menu-content {
+        margin: 0; min-height: 0; max-height: unset; overflow-y: auto;
+        border-top: none;
+    }
+    body div.full div.game-mid .menu-items { border-bottom: 1px solid var(--separator-color); margin: 0; padding: var(--small-gap); text-transform: capitalize; }
+    body { overflow: hidden; margin: 0; background: var(--background-color); }
+    .game-mid .menu-content { padding:0; }
+
+    .full .item-popup {
+        position: fixed; /*background: var(--popup-background-color);*/
+        border: var(--popup-border); border-radius: var(--subtle-border-radius);
+        opacity: 1.0;
+    }
+    .top-bar { min-height: 60px; }
+    button { color: var(--button-text-color); border: 1px solid #0006; }
+    button { outline: none; }
+    button:disabled { opacity: 0.3; color: unset; }
+    .action-btn { border: 2px solid transparent; padding: 1px; }
+    .action-btn.running { border: 2px dashed #000; }
+    body.darkmode .action-btn.running { border: 2px dashed var(--action-button-border-color); }
+    .checks > span { flex: 1; }
+
+    /*.items div.dot-view { display: flex; flex-flow: row; justify-content: flex-start; }*/
+
+
+
+
+
+    /* Top Bar */
+
+    body div.full div.top-bar { margin: 0; padding: var(--comfy-gap); }
+    body div.full div.top-bar .items { margin: 0; flex: 1; }
+    body div.full div.top-bar .items div.dot-view {
+        display: grid; grid-auto-columns: 1fr; grid-template-rows: 1fr;  grid-auto-flow: column;
+        grid-gap: 1px; margin: var(--small-gap);
+    }
+    body div.full div.top-bar .items div.dot-view .dot {
+        flex: 1; margin: 0; padding: 0.1em; font-size: 0.75em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+        border: none; outline: 1px solid #AAA;
+    }
+    body div.full div.top-bar .load-opts .text-button { max-height: unset; }
+    body div.full div.top-bar .link-bar { margin: 0; flex-grow: unset; }
+
+
+
+    /* Action List */
+
+    .game-mid .menu-content .main-actions > div.action-list,
+    .game-mid .menu-content .main-actions > div.upgrade-list {
+        margin: 0; padding: var(--medium-gap);
+        display: grid; grid-template-columns: repeat( auto-fit, var(--action-button-width) );
+    }
+
+    .game-mid .menu-content .main-actions > div.action-list .runnable button:hover {background: var(--accent-color-hover); }
+    .game-mid .menu-content .main-actions > div.action-list .runnable button:active {background: var(--accent-color-active); }
+    .game-mid .menu-content .action-btn { margin: 0; max-width: unset; width: 100%; }
+    .game-mid .menu-content .action-btn:not(.locked) { display:flex; }
+    .game-mid .menu-content .action-btn button {
+        flex: 1; word-break: break-word; text-transform: capitalize;
+        min-height: 3em;
+    }
+
+    body.compact .game-mid .menu-content .action-btn button { min-height: 1em; }
+
+
+
+
+
+    /* Bars */
+
+    /*div.bar { border: 2px solid #000; overflow: hidden; padding: unset; position: relative; background: #000A; }*/
+    div.bar {
+        position: relative;
+        border: 2px solid #000; box-sizing: content-box;
+        margin: 0;
+        overflow: hidden; padding: unset; background: #0001; height: 24px; min-height: unset;
+    }
+    div.bar .bar-text {
+        font-size: 1.0rem; position: absolute; top:50%; right: var(--tiny-gap); transform: translate( 0, -50% );
+        text-align: right; padding: 0 0.5em; color: #000; background: #FFF8; border-radius: 4px;
+        line-height: 16px;
+    }
+
+	.darkmode div.bar .bar-text {
+	color: var( --progbar-dark-text );
+}
+
+    body.compact div.bar .fill { border-radius: 0 4px 4px 0; }
+    body.compact div.bar { height: 14px; border-radius: 6px; }
+    body.compact div.bar .bar-text { font-size: 0.7rem; line-height: 10px; }
+
+    .wrapped-btn { margin: unset; min-width: unset; padding: 2px; }
+
+
+
+
+    /* Log */
+
+    .game-main div.log-view {
+        display: flex; border-left: 1px solid var(--separator-color); min-width: 200px;
+        margin: 0px;
+    }
+    .game-main div.log-view div.top-span { max-height: unset; margin: 0; border-bottom: 1px solid var(--separator-color) }
+    .game-main div.log-view div.top-span .checks {
+        display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr;
+        height: 50px; align-items: center;
+        font-size: 0.8em;
+    }
+    .game-main div.log-view div.top-span .checks span { flex-basis: 50%; overflow: hidden; white-space: nowrap; }
+    .game-main div.log-view .outlog {
+        overflow-y: auto; flex-direction: column;
+        max-height: unset; flex: 1; font-size: var(--compact-small-font);
+    }
+
+
+
+
+    /* Home */
+
+    .full div.home-view .furniture .item-table {
+        text-transform: capitalize; overflow-y: scroll;
+        flex: 1; min-height: 0; width: 100%; max-width: 400px;
+        display: flex; flex-direction: column;
+    }
+    .full div.home-view .furniture .item-table tr { display: flex; padding: var(--small-gap); }
+    .full div.home-view .furniture .item-table tr:first-child {
+        position: sticky; top: 0; background: var(--header-background-color); z-index: 1;
+    }
+    .full div.home-view .furniture .item-table tr > *:nth-child(1) { flex-basis: 20%; }
+    .full div.home-view .furniture .item-table tr > *:nth-child(2) { flex-basis: 40%; }
+    .full div.home-view .furniture .item-table tr > *:nth-child(3) { flex-basis: 20%; }
+    .full div.home-view .furniture .item-table tr button { margin: 0; font-size: 0.75em; }
+
+    /* Main */
+
+
+
+
+    /* Adventure */
+
+    .menu-content div.adventure {
+        padding: 0; margin: 0;
+        display: flex; flex-flow: column;
+        min-height: 0; height: 100%;
+        box-sizing: border-box; overflow: hidden;
+    }
+    .menu-content div.adventure { min-height: unset; margin: 0; overflow: hidden; flex: 1; }
+    .menu-content div.adventure .dungeon-list { overflow-y: auto;  padding: var(--small-gap); flex: 2; }
+    .menu-content div.adventure .log {
+        margin: 0; flex: 1; font-size: var(--compact-small-font); border-left: 1px solid var(--separator-color);
+        display:  flex; flex-direction: column;
+    }
+    .menu-content div.adventure .log span { padding: var(--small-gap); }
+    .menu-content div.adventure .log .outlog { overflow-y: auto; overflow-x: hidden; }
+    .menu-content div.adventure .active-dungeon { padding: var(--small-gap);}
+    .menu-content div.filter-box{ margin: 0; padding: var(--small-gap); display: flex; align-items: center; }
+
+
+
+    /* Dungeons */
+
+    .menu-content div.adventure > div.locales {
+        /*display: flex; flex-flow: row wrap; justify-content: space-around;*/
+        display: grid;
+        grid-template-columns: repeat( auto-fit, 256px ); grid-gap: var(--small-gap); grid-auto-rows: min-content;
+        padding: var(--medium-gap);
+        border-top: 1px solid var(--separator-color);
+    }
+    .menu-content div.adventure > div.locales .locale {
+        padding: var(--medium-gap);
+        border-radius: var(--list-entry-border-radius);
+        display: flex; flex-flow: column; height: 100%;
+    }
+    .menu-content div.adventure > div.locales .locale > span:nth-child(1) {
+        display: flex; flex-flow: row; justify-content: space-between; flex: 1;
+    }
+
+    body.compact .menu-content div.adventure > div.locales { grid-template-columns: minmax( 200px, 1fr) repeat( auto-fit, minmax( 200px, 1fr) ); }
+    body.compact .menu-content div.adventure > div.locales .locale { background: var(--list-entry-background); }
+    body.compact .menu-content div.adventure > div.locales .locale .bar { border: none;}
+
+
+
+    /* Combat */
+
+    .adventure .inv.item-table { overflow-y: auto; min-height: 0; display: flex; flex-direction: column; margin: 0; padding: var(--small-gap); }
+    .adventure .inv.item-table tr { display:flex; padding: 0.1em; }
+    .adventure .inv.item-table tr td { padding: 0; }
+    .adventure .inv.item-table tr td:first-child { flex: 1; }
+    .adventure .inv.item-table tr td button { margin: var(--tiny-gap); padding: var(--small-gap) 0.5em;  }
+    .adventure .inv.item-table:empty { display: none; }
+    .adventure .combat {
+        border-top: 1px solid var(--separator-color); border-bottom: 1px solid var(--separator-color);
+        flex-flow: row; display: flex; flex-direction: row; width: unset;
+    }
+    .adventure .combat .group {
+        border: none;
+        margin: 0; padding: var(--small-gap); flex: 1; max-width: unset;
+    }
+    .adventure .combat .group > span { border-bottom: 1px solid var(--separator-color); }
+    .adventure .combat .group > div { margin: var(--small-gap); }
+
+    .adventure div.raid-bottom { padding: 0; }
+    .adventure div.raid-bottom > .inv { flex-basis: 50%; margin: 0; box-sizing: border-box; }
+    .adventure div.raid-bottom > .log { flex-basis: 50%; margin: 0; }
+
+
+
+
+
+    /* Skills */
+
+    .full div.skills { padding: 0; }
+
+    .full div.subs {
+        /*display: flex; flex-flow: row wrap; width: 100%; justify-content: space-evenly; */
+        display: grid; grid-template-columns: repeat( auto-fit, minmax( 256px, 1fr) );
+        margin: 0; padding: var(--medium-gap); overflow-x: hidden; gap: var(--small-gap);
+        width: 100%; justify-content: space-between;
+    }
+
+    .full div.subs div.skill {
+        margin-bottom: 0; width: unset; flex-basis: 45%; box-sizing: border-box;
+        padding: var(--medium-gap); text-transform: capitalize; font-size: var(--compact-small-font);
+         border-radius: var(--list-entry-border-radius);
+    }
+    .full div.sub div.skill button { font-size: 0.75em; }
+    .full div.sub div.skill > div {
+        font-size: 0.75em; position: relative; text-align: right; display: flex; flex: 1;  align-items: center;
+    }
+    .full div.subs div.skill > div > div { flex: 1; }
+    .full div.subs div.skill .separate { display: flex; }
+    .full div.subs div.skill .separate span:first-child { text-overflow: ellipsis; white-space: nowrap; overflow:hidden;}
+    .full div.subs div.skill .separate span:nth-child(2) {
+        flex-basis: 50%; display: flex;
+        align-items: center; justify-content: space-between;
+        color: var(--quiet-text-color);
+    }
+
+    body.compact .full div.subs { justify-content: center;}
+    body.compact .full div.subs div.skill { background: var(--list-entry-background); }
+    body.compact .full div.subs div.skill > div > div .bar { max-height: 6px; background: #0001; border: none; margin: 0.5em }
+
+
+
+    /* Vitals */
+
+    .full div.vitals {
+        text-transform: capitalize;
+        margin: 0; padding: 0;
+        min-width: 200px; overflow-y :auto; overflow-x: hidden;
+    }
+    .full div.vitals .bars { display: flex; flex-flow: column; }
+    .full div.vitals .bars tr { display: flex; align-items: center; }
+    .full div.vitals .bars tr td:nth-child(2) div { display: flex; flex-flow: column; justify-content: center; }
+    .full div.vitals .bars tr:first-child { min-height: 4em; }
+    .full div.vitals .bars tr:not(:first-child) { padding: var(--small-gap) var(--small-gap); }
+    .full div.vitals .bars tr td:nth-child(1) { flex-basis: 50%; }
+
+    .runnable button:hover { background: #dba659; }
+    .text-button:hover { background-color: rgb(194, 194, 194); }
+    .text-button:active { background-color: rgb(121, 121, 121); }
+
+
+    .skill div:last-child { color: #999; text-align: center; }
+    body.compact .skill div:last-child { display: flex; }
+    .menu-items .menu-item { color: #000; }
+    body.darkmode .menu-items .menu-item { color: #FFF; }
+    .menu-items .menu-item u { color: #999; }
+    .menu-items .menu-item:hover, .menu-items .menu-item u:hover { color: #33F; }
+    .dungeon > span:first-child { flex-basis: 40%; }
+    .dungeon button { white-space: nowrap; }
+
+
+
+    table.equip {
+        /*display: flex; flex-direction: column;*/
+        flex-basis: 65%; overflow-y: auto;
+        display: grid; grid-template-columns: 1fr; grid-gap: var(--small-gap); padding: var(--small-gap);
+
+    }
+    table.equip .equip-slot {
+        display: flex;height: unset; flex-flow: column; margin: 0; padding: var(--small-gap);
+    }
+    table.equip .equip-slot .slot-item {
+        display: flex; flex-flow: column; text-indent: 1em;
+    }
+
+
+
+    /* Player */
+
+
+
+    /* Spellbook */
+
+
+
+    .full div.spellbook .filters {
+        order: 1; flex-flow: row wrap; display: flex; text-align: center;
+        border-bottom: 1px solid var(--separator-color);
+        margin: 0; padding: var(--small-gap); line-height: 2em; justify-content: flex-start;
+    }
+    .full div.spellbook div.filters div { box-sizing: border-box; margin: 0; }
+    .full div.spellbook div.filters div:nth-child(1),
+    .full div.spellbook div.filters div:nth-child(2) {
+        flex-basis: 50%;
+    }
+    .full div.spellbook div.filters input[type=text] { padding: var(--small-gap) 0 var(--small-gap) 0; }
+    .full div.spellbook div.filters > div input[type=text],
+    .full div.spellbook div.filters > div input[type=number] {
+        flex: 1; margin-right: 1em; margin-left: 1em; min-width: unset; max-width: unset; width: 0;
+    }
+    .full div.spellbook div.filters > div { display: flex; align-items: center; }
+    .full div.spellbook div.filters > div label { flex-basis: 20%; }
+    .full div.spellbook div.filters > div input { min-width: 0; padding: 0; text-indent: var(--small-gap); }
+    .full div.spellbook div.filters div.checks { margin: 0; padding: 0 0.5em; flex-basis: unset; }
+
+
+
+
+
+    /* Beastiary */
+
+    .game-mid .menu-content > div.bestiary { padding: 0; margin: 0; }
+    .game-mid .menu-content > div.bestiary .char-list { padding: 0; margin: 0; }
+
+    /* Minions */
+
+    div.bestiary[data-v-ee7d6c4a] {
+        display: flex;
+        flex-flow: column;
+    }
+
+    /* Resources */
+
+
+    .game-main div.resource-list { margin: 0; padding: var(--small-gap); min-width: 200px; max-width: unset; }
+    .game-main div.resource-list .item-name:not(.locked) { display: flex; }
+    .game-main div.resource-list .item-name td:first-child { flex: 1; }
+    .game-main div.resource-list tr { padding: var(--tiny-gap);}
+    .game-main div.resource-list tr td:first-child { color:  #999; }
+    .game-main div.resource-list tr td:last-child { text-align: right; }
+
+</style>
+
+</html>
