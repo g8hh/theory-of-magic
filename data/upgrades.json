@@ -72,7 +72,7 @@
 			"arcana":1
 		},
 		"mod":{
-			"dist":350,
+			"dist":355,
 			"spirit.max":1,
 			"spirit.rate":0.1
 		}
@@ -120,7 +120,7 @@
 			"gold":100
 		},
 		"mod":{
-			"dist":10
+			"dist":15
 		}
 
 	},
@@ -135,7 +135,7 @@
 			"gold":200
 		},
 		"mod":{
-			"dist":25
+			"dist":30
 		}
 
 	},
@@ -151,7 +151,7 @@
 			"gems":2
 		},
 		"mod":{
-			"dist":50
+			"dist":55
 		}
 
 	},
@@ -167,7 +167,7 @@
 			"gems":5
 		},
 		"mod":{
-			"dist":95
+			"dist":100
 		}
 
 	},
@@ -186,7 +186,7 @@
 			"bonedust":20
 		},
 		"mod":{
-			"dist":266
+			"dist":270
 		}
 
 	},
@@ -210,16 +210,31 @@
 
 	},
 	{
+		"id":"fly",
+		"desc":"fly on the wind",
+		"require":"g.airlore>=20",
+		"slot":"mount",
+		"buy":{
+			"arcana":15,
+			"research":10000,
+			"airgem":15
+		},
+		"mod":{
+			"dist":525
+		}
+
+	},
+	{
 		"id":"firechariot",
 		"name":"chariot of fire",
 		"desc":"",
-		"require":"g.firelore>30||g.lightlore>=30",
+		"require":"g.firelore>=20||g.lightlore>20",
 		"slot":"mount",
 		"buy":{
-			"research":1000,
-			"arcana":5,
-			"lightgem":5,
-			"firegem":5
+			"research":10000,
+			"arcana":15,
+			"lightgem":15,
+			"firegem":15
 		},
 		"mod":{
 			"dist":550
@@ -239,7 +254,7 @@
 			"gems":5
 		},
 		"mod":{
-			"dist":300
+			"dist":320
 		}
 
 	},
@@ -1784,7 +1799,7 @@
 	{
 		"id":"solidifier",
 		"name":"crystal solidifier",
-		"require":"g.alchemy>=10",
+		"require":"g.alchemy>=7",
 		"cost":{
 			"research":500,
 			"codices":10
@@ -1812,7 +1827,7 @@
 	},
 	{
 		"id":"pot",
-		"name":"Cooking Pot",
+		"name":"cooking pot",
 		"desc":"standard cooking pot.",
 		"tags":"potsource",
 		"need":"firesource",
@@ -1827,7 +1842,7 @@
 	},
 	{
 		"id":"cauldron",
-		"name":"Cauldron",
+		"name":"cauldron",
 		"desc":"Like a cooking pot, but larger.",
 		"tags":"potsource",
 		"require":["tier0","firesource"],

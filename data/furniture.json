@@ -1153,11 +1153,12 @@
 		"id":"potroom",
 		"name":"potions room",
 		"desc":"room for preparing and brewing potions",
+		"require":"potions",
 		"tags":"potsource",
 		"cost":{
 			"space":20,
-			"gold":500,
-			"research":700
+			"gold":3000,
+			"research":3000
 		},
 		"mod":{
 			"potions.max":2,
@@ -1231,7 +1232,7 @@
 	},
 	{
 		"id":"library",
-		"desc":"",
+		"desc":"the most important part of a proper wizard's stronghold.",
 		"require":"g.codices>=100",
 		"cost":{
 			"gold":500,
@@ -1251,7 +1252,7 @@
 	},
 	{
 		"id":"ziggurat",
-		"desc":"vast mound of earth.",
+		"desc":"a vast mound of earth dedicated to occult practices.",
 		"require":"tier4",
 		"cost":{
 			"gold":300,
@@ -1259,12 +1260,17 @@
 			"space":100
 		},
 		"mod":{
-			"airlore.max":1,
-			"airlore.rate":0.1,
+			"voidlore.max":1,
 			"astronomy.max":2,
 			"astronomy.rate":0.2,
+			"airlore.max":1,
+			"airlore.rate":"1%",
 			"earthlore.max":3,
-			"earthlore.rate":0.4
+			"earthlore.rate":0.4,
+			"planeslore.max":2,
+			"planeslore.rate":"1%",
+			"scrying.max":1,
+			"scrying.rate":"5%"
 		}
 
 	},

@@ -1,7 +1,7 @@
 [
 	{
 		"id":"apprentice",
-		"desc":"appentice to a notable wizard",
+		"desc":"apprentice to a notable wizard",
 		"title":"Apprentice",
 		"actname":"Apprenticeship",
 		"actdesc":"Become an apprentice.",
@@ -893,6 +893,8 @@
 	"mod":{
 		"tier2":true,
 		"research.max":40,
+		"firelore.max":1,
+		"mysticism.max":2,
 		"lore.max":2,
 		"lore.rate":0.4,
 		"mana.max":3
@@ -1094,12 +1096,14 @@
 		"research.max":"-25%",
 		"languages.max":2,
 		"firelore.max":1,
+		"firelore.rate":"1%",
 		"waterlore.max":1,
 		"airlore.max":1,
+		"airlore.rate":"1%",
 		"lightlore.max":1,
 		"crafting.max":2,
 		"lore.max":5,
-		"lore.rate":"20%",
+		"lore.rate":"10%",
 		"mana.max":3
 	},"flavor":"In the end it was three Thule Wizards and The Necromancer who brought the locks to heel."
 },

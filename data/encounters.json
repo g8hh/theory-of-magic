@@ -29,7 +29,7 @@
 		"desc":"water suffused with enchantments",
 		"effect":{
 			"bf":"-1~2",
-			"nature.exp":1,
+			"naturelore.exp":1,
 			"waterlore.exp":1,
 			"arcana":0.001
 		}
@@ -41,7 +41,7 @@
 		"desc":"a tree by a magic spring exhibits surprising qualities",
 		"effect":{
 			"bf":"-1~2",
-			"nature.exp":2,
+			"naturelore.exp":2,
 			"herbalism.exp":1
 		}
 	},

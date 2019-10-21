@@ -531,7 +531,7 @@
 	{
 		"id":"charredkeep",
 		"name":"charred keep",
-		"desc":"its smouldering ruins have once more begun to burn.",
+		"desc":"its smouldering ruins once more begin to burn.",
 		"level":18,
 		"run":{
 			"stamina":2.5
@@ -564,6 +564,7 @@
 		"desc":"they say the roots of the mountain extend deeper than its heights.",
 		"level":25,
 		"length":100,
+		"require":"g.player.level>20&&g.mtgorborung>0",
 		"run":{
 			"stamina":3
 		},
@@ -574,8 +575,8 @@
 			"tomes":2
 		},
 		"boss":{
-			"cthulhu":50,
-			"gorborung":100
+			"50":"cthulhu",
+			"100":"gorborung"
 		},
 		"enemies":[
 			["stonegolem","stonegolem"],

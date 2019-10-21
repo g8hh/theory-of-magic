@@ -111,7 +111,7 @@
 		"id":"shop",
 		"desc":"A small shop in a bustling city.",
 		"cost":850,
-		"require":"g.tier0&&g.arcana.max>=12",
+		"require":"g.tier0>0&&g.crafting>=9",
 		"mod":{
 			"minions.max":1,
 			"gem.max":1,
@@ -126,7 +126,7 @@
 		"id":"inn",
 		"desc":"A quiet inn for hosting wayfarers.",
 		"cost":2000,
-		"require":"g.tier0&&g.languages>=7",
+		"require":"g.tier0>0&&g.languages>=7",
 		"mod":{
 			"minions.max":5,
 			"space.max":50,
@@ -163,7 +163,7 @@
 		"id":"halftimber",
 		"name":"half-timber house",
 		"desc":"A vast home of rustic design",
-		"cost":2750,
+		"cost":3000,
 		"require":"g.tier1>0&&g.arcana>=10",
 		"mod":{
 			"minions.max":12,
@@ -332,7 +332,8 @@
 	{
 
 		"id":"idrasil tree",
-		"desc":"a seedling of Yggdrasil is a tree to rival mountains.",
+		"name":"lesser idrasil",
+		"desc":"The seedlings of Yggdrasil become trees to rival mountains.",
 		"tags":"outdoors",
 		"cost":{
 			"gems":30,
@@ -342,7 +343,8 @@
 		"mod":{
 			"minions.max":10,
 			"space.max":300,
-			"naturelore.max":2,
+			"naturelore.max":3,
+			"naturelore.rate":"2%",
 			"airlore.max":1,
 			"fire.rate":"-3%"
 		}

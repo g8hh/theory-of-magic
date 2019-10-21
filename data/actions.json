@@ -484,23 +484,23 @@
 	{
 		"id":"magicadvice",
 		"name":"advise notables",
-		"desc":"from worried village councils to bumbling barons, they all require your advise",
+		"desc":"from worried village councils to bumbling barons, they all require your advice",
 		"require":"(g.witch+g.magician)>0",
 		"cost":{
 			"stamina":0.3
 		},
 		"at":{
 
-			"50":{ "effect.gold":0.15 },
+			"50":{ "effect.gold":0.1 },
 			"150":{ "effect.gold":0.1 },
-			"500":{ "effect.gold":0.4 },
-			"1500":{ "effect.gold":1 }
+			"500":{ "effect.gold":0.3 },
+			"1500":{ "effect.gold":0.5 }
 
 		},
 		"effect":{
 			"virtue":0.1,
 			"evilamt":-0.01,
-			"gold":0.45
+			"gold":0.35
 		},"flavor":"whether they know it or not"
 
 	},
@@ -515,13 +515,18 @@
 			"gold":50
 		},
 		"effect":{
-			"bones":"5%",
+			"trickery.exp":2,
+			"conjuration.exp":2,
+			"bones":"14%",
 			"skull":"5%",
-			"gems":"5%",
-			"firegem":"0.5%",
-			"earthgem":"0.5%",
-			"airgem":"0.5%",
-			"watergem":"0.5%"
+			"gems":"20%",
+			"bodies":"1%",
+			"managem":"7%",
+			"firegem":"1%",
+			"earthgem":"1%",
+			"airgem":"1%",
+			"watergem":"1%",
+			"runestones":"1%"
 		},
 		"flavor":"an ordinary wizard's cap"
 	},

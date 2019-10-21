@@ -2236,7 +2236,10 @@
 			"dot":{
 				"name":"blind",
 				"kind":"blind",
-				"tohit":-3
+				"duration":20,
+				"mod":{
+					"tohit":-3
+				}
 			}
 		},"loot":{"lightgem":"10%"},
 		"immune":"fire,light"
@@ -3044,7 +3047,7 @@
 		"id":"karnivex",
         "level":19,
         "evil":27,
-		"desc":"the weakest of the warlocks built his reputation upon slaughter.",
+		"desc":"the weakest of the Archlocks built his reputation upon sheer slaughter.",
 		"flavor":"subtlety was lost on karnivex.",
         "hp":1200,
         "tohit":20,

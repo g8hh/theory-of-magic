@@ -1884,7 +1884,9 @@
 				"id":"blind",
 				"kind":"light",
 				"duration":60,
-				"tohit":-30
+				"mod":{
+					"tohit":-30
+				}
 			}
 		}
 	},

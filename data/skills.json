@@ -669,7 +669,7 @@
 
 		"id":"voidlore",
 		"name":"void lore",
-		"require":"g.planeslore>=10&&g.tier5>=0",
+		"require":"g.planeslore>=10&&g.tier5>0",
 		"desc":"the absence of all things",
 		"buy":{
 			"sp":5
