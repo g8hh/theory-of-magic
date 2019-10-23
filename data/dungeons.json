@@ -429,7 +429,7 @@
 	{
 		"id":"catacrypts",
 		"name":"the catacrypts",
-		"desc":"Old Mirthemgnar dug its dungeons til they joined the hollows beneath the world. In terror they sealed them forever.",
+		"desc":"Old Mirthemgnar dug its dungeons til they joined the hollows beneath the world. In terror they sealed them forever. Or so they thought.",
 		"require":["mtgorborung", "tier3"],
 		"level":15,
 		"run":{

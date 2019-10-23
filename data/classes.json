@@ -276,7 +276,7 @@
 {
 	"id":"madcap",
 	"name":"mystic madcap",
-	"title":"arcane trickster",
+	"title":"mystic madcap",
 	"desc":"A penchant for chaos",
 	"tags":"t_tier2",
 	"require":"g.trickery>=7&&g.tier1>0",
@@ -664,7 +664,7 @@
 	"desc":"to walk on the wind",
 	"tags":"t_tier2",
 	"name":"wind mage",
-	"actdesc":"Become a wind.",
+	"actdesc":"Become a windmage.",
 	"require":"g.tier1>0&&g.airlore>=10",
 	"cost":{
 		"research":1000,
@@ -880,7 +880,7 @@
 	"title":"mage",
 	"desc":"member of an arcane order.",
 	"tags":"t_tier2",
-	"require":"g.tier1>0&&g.lore>20",
+	"require":"g.tier1>0&&g.lore>=17",
 	"cost":{
 		"research":2000,
 		"arcana":10,

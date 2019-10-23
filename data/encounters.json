@@ -347,7 +347,7 @@
 
 	},
 	{
-		"id":"encpidwig",
+		"id":"enc_pidwig",
 		"name":"talk to pidwig",
 		"desc":"pidwig is sparse with words, but has seem many mysteries in his travels.",
 		"effect":{

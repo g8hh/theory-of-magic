@@ -109,7 +109,8 @@
 		"val":0
 	},
 	{
-		"id":"notoriety",
+		"id":"fame",
+		"name":"notoriety",
 		"hidden":"true",
 		"tags":"Your reputation in the world",
 		"val":0

@@ -150,12 +150,58 @@
 		"use":"heal3"
 	},
 	{
+		"id":"pot_truestrike",
+		"name":"true striking",
+		"level":10,
+		"buy":{
+			"gold":500,
+			"tomes":3,
+			"research":500
+		},
+		"cost":{
+			"spiritgem":1,
+			"ichor":1
+		},
+		"use":{
+			"dot":{
+				"mod":{
+					"player.tohit":25
+				},
+				"duration":1800
+			}
+		}
+
+	},
+	{
+		"id":"pot_serenity",
+		"name":"serenity",
+		"level":11,
+		"buy":{
+			"gold":500,
+			"tomes":5,
+			"research":500
+		},
+		"cost":{
+			"lightgem":1,
+			"ichor":1
+		},
+		"use":{
+			"dot":{
+				"mod":{
+					"stress.rate":-2
+				},
+				"duration":1800
+			}
+		}
+
+	},
+	{
 		"id":"pot_godsblood",
 		"name":"god's blood",
 		"level":12,
 		"buy":{
 			"gold":500,
-			"tomes":1,
+			"tomes":5,
 			"research":500
 		},
 		"cost":{

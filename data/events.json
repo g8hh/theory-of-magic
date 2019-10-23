@@ -163,7 +163,7 @@
 	},
 	{
 		"id":"tier6",
-		"name":"Magic of Ages",
+		"name":"Ageless Magic",
 		"desc":"ages of the world come and go; only these endure.",
 		"lock":"t_tier6",
 		"effect":{

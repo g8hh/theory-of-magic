@@ -618,8 +618,8 @@
 		"tags":"timesource",
 		"require":"g.lore>=20",
 		"cost":{
-			"gems":1,
-			"research":200
+			"managem":1,
+			"research":5000
 		},
 		"mod":{
 			"research.max":5,
@@ -1020,7 +1020,7 @@
 		"cost":{
 			"research":1000,
 			"airgem":15,
-			"tomes":3
+			"tomes":5
 		},
 		"mod":{
 			"player.resist.air":15
@@ -1904,13 +1904,13 @@
 		"id":"siegeperilous",
 		"name":"siege perilous",
 		"desc":"the fabled seat of destiny",
-		"require":"g.notoriety>=100",
+		"require":"g.fame>=100",
 		"cost":{
 			"gold":4000,
 			"gems":30
 		},
 		"effect":{
-			"notoriety":5
+			"fame":5
 		},
 		"mod":{
 			"allies.max":4,

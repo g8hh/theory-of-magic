@@ -587,11 +587,9 @@
 			"id":"pumpbomb",
 			"name":"pumpkin bomb",
 			"level":3,
-			"require":"evt_halloween",
-			"school":"event",
 			"buy":{
 
-				"jacklanterns":1,
+				"jacklantern":1,
 				"research":100
 
 			},
@@ -599,7 +597,8 @@
 				"pumpkins":1
 			},
 			"attack":{
-				"damage":"5~20"
+				"damage":"5~20",
+				"kind":"spooky"
 			}
 
 		}
