@@ -96,6 +96,7 @@ var cnItems = {
     'You buy a strange scroll from a travelling peddlar. If you could only decipher the cryptic symbols.': '你从一个流动小贩那里买了一幅奇怪的画卷。但愿你能破译这些神秘的符号。',
     'Choose': '选择',
     'class': '课程',
+	'job, class': '职业，课程',
     'hp': '生命',
     'scrolls': '卷轴',
     'sell': '出售',
@@ -162,6 +163,7 @@ var cnItems = {
     'Become an apprentice.': '成为一个学徒。',
     'rune pouch': '符文袋',
     'Run Errands': '跑腿',
+	'running errands': '正在跑腿',
     'Do Chores': '做家务',
     'filch pumpkins': '窃取南瓜',
     'cot': '婴儿床',
@@ -264,18 +266,20 @@ var cnItems = {
     'Run Errands Improved': '跑腿奖励提升',
     'crafting': '制造',
     'an absolutely vital skill for a wizard to craft arcane items.': '对巫师来说，拥有制造奥术物品的能力是极其重要的。',
-    'workspace': '可以工作的地方',
+    'workspace': '工作区',
     'rest stamina': '耐力恢复',
     'garden': '花园',
     'languages': '语言',
     'max arcana': '奥秘上限',
     'wax candle': '蜡烛',
+	'candle': '火烛',
     'A tiny glowing candle.': '一根小小的发光的蜡烛。',
     'You no take candle!': '你不能拿走我的蜡烛！',
     'restless nights': '不眠之夜',
     'continue working even while idle': '即使有空闲时间也要不停工作',
     'a good apprentice knows there are 30 hours to the day.': '优秀的学徒明白，一天有30个小时。',
     'focus': '专注',
+	'focus Improved': '专注已升级',
     'quicken your skills with magic energy.': '用魔法来加速增强你的能力。',
     'Focus': '专注',
     'Profound mystical knowledge': '深奥的神秘知识',
@@ -294,6 +298,7 @@ var cnItems = {
     'Become your master\'s personal scribe.': '成为你导师的私人抄写员。',
     'raw magical energy': '原始的魔法能量',
     'Bind Spellbook': '装订魔法书',
+	'binding spells': '装订魔法书',
     'The portal to true magic.': '通往真正魔法之门。',
     'prestidigitation': '变戏法',
     'Why study when you can perform parlor tricks for coin?': '既然你能通过表演一些小把戏来赚钱，那你为什么要学习呢？',
@@ -509,6 +514,7 @@ var cnItems = {
     'purchase cost': '购买费用',
     'linguisticizing': '语言化',
     'reading lore': '阅读知识',
+	'\n\n		progress': '进度',
     '': '',
     '': '',
     '': '',
@@ -598,6 +604,7 @@ var cnPrefix = {
 	'Skill Unlocked: ': '技能解锁：',
 	'Home Unlocked: ': '住房解锁：',
 	'Dungeon Unlocked: ': '地牢解锁：',
+	'Potion Unlocked: ': '药剂解锁：',
 }
 
 //需处理的后缀
@@ -627,7 +634,8 @@ var cnExcludeWhole = [
     /^(\d+(\.\d+)?(e[+\-]?\d+)?\/s)?.?\(?([+\-]?(\d+(\.\d+)?(e[+\-]?\d+)?)?)?\/s\stot$/, //2.177e+6/s (+4.01+4/s tot
 ];
 var cnExcludePostfix = [
-    /(🎃)?:?\s*\-?x?\d+(\.\d+)?(e[+\-]?\d+)?\s*$/, //12.34e+4
+	/:?\s*\d+\s*\/\s*\d+\s*/,
+    /(🎃)?:?\s*\(?\-?x?\d+(\.\d+)?(e[+\-]?\d+)?\s*$/, //12.34e+4
     /:?\s*x?\d+(\.\d+)?[A-Za-z]{0,2}$/, //: 12.34K, x1.5
 	/:?\s*\d+%\s*/, //12%
 ]
@@ -638,10 +646,7 @@ var cnExcludePostfix = [
 //小数点：([\d\.]+)
 //原样输出的字段：(.+)
 var cnRegReplace = new Map([
-    [/^\n\n		progress: (.+)$/, '进度：$1'],
-    [/^lvl: (.+)$/, '等级：$1'],
-    [/^Cost: (\d+) RP$/, '成本：$1 皇家点数'],
-    [/^Usages: (\d+)\/$/, '用途：$1\/'],
-    [/^workers: (\d+)\/$/, '工人：$1\/'],
+    //[/^Usages: (\d+)\/$/, '用途：$1\/'],
+    //[/^workers: (\d+)\/$/, '工人：$1\/'],
 
 ]);
