@@ -324,7 +324,7 @@ var cnItems = {
     'Memorized': '已记忆',
     'Level': '等级',
     'Remove': '移除',
-    'Alternate Wizard classes of this tier will be locked.': '这一层的Alternate Wizard classes将被锁定。',
+    'Alternate Wizard classes of this tier will be locked.': '这一层的其它巫师课程将被锁定。',
     'Confirm': '确认',
     'Cancel': '取消',
     'In return for your new services, your master grants you a small allowance for your studies. The position does require of course, some initial fees...': '作为对你新服务的回报，你的主人会给你一小笔钱去学习。当然，这个职位需要一些初始费用……',
@@ -515,13 +515,14 @@ var cnItems = {
     'linguisticizing': '语言化',
     'reading lore': '阅读知识',
 	'\n\n		progress': '进度',
-    '': '',
-    '': '',
-    '': '',
-    '': '',
-    '': '',
-    '': '',
-    '': '',
+    'damage': '伤害',
+    'dot': '标记',
+    'spiritsource': '精神源泉',
+    'spirit': '精神',
+	'max spirit': '精神上限',
+    'school': '流派',	//游戏里应该是指水、火、气、光等这些魔法分类
+    'spirit gem': '精神宝石',
+    'Enter': '进入',
     '': '',
     '': '',
     '': '',
@@ -634,7 +635,9 @@ var cnExcludeWhole = [
     /^(\d+(\.\d+)?(e[+\-]?\d+)?\/s)?.?\(?([+\-]?(\d+(\.\d+)?(e[+\-]?\d+)?)?)?\/s\stot$/, //2.177e+6/s (+4.01+4/s tot
 ];
 var cnExcludePostfix = [
-	/:?\s*\d+\s*\/\s*\d+\s*/,
+	/:?\s*\d+(\.\d+)?\s*~\s*\d+(\.\d+)?/,  // : 1.5 ~ 2.5
+	/:?\s*\d+\s*\/\s*\d+\s*/,	// : 13 / 14
+	/:?\s*\d+(\.\d+)?,\s\+?\d+(\.\d+)?/, // : 0.1, +1
     /(🎃)?:?\s*\(?\-?x?\d+(\.\d+)?(e[+\-]?\d+)?\s*$/, //12.34e+4
     /:?\s*x?\d+(\.\d+)?[A-Za-z]{0,2}$/, //: 12.34K, x1.5
 	/:?\s*\d+%\s*/, //12%
