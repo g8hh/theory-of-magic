@@ -13,6 +13,7 @@ var cnItems = {
 
     //未分类：
     'Adept': '熟练',
+	'adept': '熟练',
     'advise notables': '通知著名人士',
     'abstraction': '抽象',
     'Clean Stables': '清理马厩',
@@ -40,7 +41,7 @@ var cnItems = {
     'manas': '法力',
     'get save': '下载存档',
     'event': '事件',
-    '[Drop Save]': '[下载的存档拖到这读档]',
+    '[Drop Save]': '[读档]',
     'souls': '灵魂',
     'Stop All': '全部停止',
     'study': '学习',
@@ -189,6 +190,8 @@ var cnItems = {
     'slot: rest': '插槽：休息',
     'bones': '骨头',
     'chant': '歌唱',
+	'\n		chant': '歌唱',
+	'chanting': '歌唱中',
     'cauldron': '坩埚',
     'Buy': '购买',
     'chest': '胸部',
@@ -292,6 +295,7 @@ var cnItems = {
     'bind codex': '装订成册',
     'Codices': '手册',
     'codices': '手册',
+	'max Codices': '手册上限',
     'Codex of arcane lore': '关于奥术知识的手册',
     'internalize a vast amount of existing knowledge.': '将大量的现有知识吸收成为你的一部分',
     'latticed shelves for easy scroll storage.': '架子上有一个个格子，便于储存卷轴',
@@ -526,7 +530,7 @@ var cnItems = {
     'spiritsource': '精神源泉',
     'spirit': '精神',
 	'max spirit': '精神上限',
-    'school': '流派',	//游戏里应该是指水、火、气、光等这些魔法分类
+    'school': '学院派',	//游戏里应该是指水、火、气、光等这些魔法分类
     'spirit gem': '精神宝石',
     'Enter': '进入',
     'Retreat': '撤退',
@@ -573,6 +577,33 @@ var cnItems = {
     'max pyromancy': '火焰知识上限',
     'max shadowlore': '暗影知识上限',
     'brass candelabra': '黄铜烛台',
+    'the knowledge of what has come before reveals what is yet possible.': '对过去发生的事情的认识可以预测将要发生的事情',
+    'history': '历史',
+    'Pace your home as you comtemplate the arcane.': '在家中踱步思索奥术',
+    'pace': '踱步',
+    'pace Improved': '踱步提升',
+    'pacing': '踱步中',
+    'lemurian lexicon': '狐猴词典',
+    'interpret the strange whisperings of spirits': '解释精怪们的耳语',
+    'sylvan syllabary': '树精音节',
+    'card deck': '卡座',
+    'ceaseless bellows': '不竭风笛',
+    'windchime': '风铃',
+    'crystal solidifier': '晶体固化剂',
+    'tend animals': '照料动物',
+    'occult endurance': '神秘耐力',
+    '': '',
+    '': '',
+    '': '',
+    '': '',
+    '': '',
+    '': '',
+    '': '',
+    '': '',
+    '': '',
+    '': '',
+    '': '',
+    '': '',
     '': '',
     '': '',
     '': '',
@@ -651,7 +682,7 @@ var cnExcludePostfix = [
 	/:?\s*\d+(\.\d+)?\s*~\s*\d+(\.\d+)?/,  // : 1.5 ~ 2.5
 	/:?\s*\d+\s*\/\s*\d+\s*/,	// : 13 / 14
 	/:?\s*\d+(\.\d+)?,\s\+?\d+(\.\d+)?/, // : 0.1, +1
-    /(🎃)?:?\s*\(?\-?x?\d+(\.\d+)?(e[+\-]?\d+)?\s*$/, //12.34e+4
+    /(🎃)?:?\s*\(?[+\-]?x?\d+(\.\d+)?(e[+\-]?\d+)?\s*$/, //12.34e+4
     /:?\s*x?\d+(\.\d+)?[A-Za-z]{0,2}$/, //: 12.34K, x1.5
 	/:?\s*\d+%\s*/, //12%
 ]
