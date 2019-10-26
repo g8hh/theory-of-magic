@@ -613,7 +613,7 @@ var cnItems = {
     'some books have no end': '有些书写着写着就太监了',
     'max water lore': '水流知识上限',
     'bottomless pitcher': '无底瓶子',
-    'celestial globe': '天体球',
+    'celestial globe': '天象仪',
     'cellar': '地窖',
     'chirography': '书法',
     'wateraffinity': '水性亲和',
