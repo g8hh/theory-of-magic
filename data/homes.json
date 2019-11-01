@@ -113,8 +113,8 @@
 		"cost":850,
 		"require":"g.tier0>0&&g.crafting>=9",
 		"mod":{
-			"minions.max":1,
-			"gem.max":1,
+			"minions.max":2,
+			"magicgems.max":1,
 			"space.max":25,
 			"gold.rate":0.2,
 			"gold.max":25,
@@ -142,7 +142,7 @@
 		"cost":950,
 		"require":"g.tier0>0&&g.naturelore>=7",
 		"mod":{
-			"minions.max":7,
+			"minions.max":5,
 			"space.max":30,
 			"nature.max":1,
 			"nature.rate":0.1
@@ -155,7 +155,7 @@
 		"cost":2000,
 		"require":"g.tier1>0&&g.arcana>=10",
 		"mod":{
-			"minions.max":10,
+			"minions.max":5,
 			"space.max":65
 		}
 	},
@@ -166,7 +166,7 @@
 		"cost":3000,
 		"require":"g.tier1>0&&g.arcana>=10",
 		"mod":{
-			"minions.max":12,
+			"minions.max":7,
 			"space.max":75
 		}
 	},
@@ -230,9 +230,9 @@
 		"mod":{
 			"minions.max":10,
 			"space.max":110,
-			"runes.max":2,
+			"runelore.max":2,
 			"demonology.max":1,
-			"runes.rate":"10%",
+			"runelore.rate":"10%",
 			"spiritlore.max":1,
 			"spiritlore.rate":0.1,
 			"lore.rate":"10%"
@@ -266,7 +266,7 @@
 	},
 	{
 		"id":"cataract",
-		"desc":"A secret cavern behind a waterfall.",
+		"desc":"A deep hollow hidden behind a waterfall.",
 		"require":"g.water>=15&&g.naturelore>=10",
 		"cost":{
 			"gold":1000,
@@ -275,14 +275,14 @@
 		"mod":{
 			"minions.max":4,
 			"space.max":70,
-			"research.rate":-0.7,
+			"research.rate":"-10%",
 			"waterlore.max":2,
 			"waterlore.rate":0.2,
 			"naturelore.max":1,
 			"naturelore.rate":0.1,
 			"earthlore.max":1,
-			"lightlore.max":-1,
-			"lightlore.rate":"-2%"
+			"lightlore.max":-2,
+			"lightlore.rate":"-5%"
 		},
 		"lock":["latticewindow"]
 
@@ -351,7 +351,7 @@
 	},
 	{
 		"id":"palace",
-		"desc":"luxurious, spawling estate to advance your studies in maximum comfort.",
+		"desc":"luxurious, sprawling estate to advance your studies in maximum comfort.",
 		"cost":10000,
 		"require":"tier2",
 		"mod":{
@@ -459,6 +459,7 @@
 		"mod":{
 			"minions.max":20,
 			"space.max":420,
+			"naturelore.max":1,
 			"enchanting.max":2,
 			"enchanting.rate":"10%"
 		}

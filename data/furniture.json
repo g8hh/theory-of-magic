@@ -134,7 +134,7 @@
 		},
 		"mod":{
 			"inv.max":1,
-			"gem.max":2,
+			"magicgems.max":2,
 			"gold.max":200,
 			"gems.max":10
 		}
@@ -150,7 +150,7 @@
 		},
 		"mod":{
 			"inv.max":2,
-			"gem.max":10,
+			"magicgems.max":10,
 			"gembox.max":5,
 			"gold.max":1800,
 			"gems.max":20
@@ -169,7 +169,7 @@
 		},
 		"mod":{
 			"inv.max":3,
-			"gem.max":20,
+			"magicgems.max":20,
 			"gembox.max":10,
 			"gold.max":4000,
 			"gems.max":50
@@ -320,7 +320,7 @@
 		"name":"potted milkweed",
 		"locked":false,
 		"desc":"Really brightens up the place.",
-		"tags":"taggarden",
+		"tags":"t_garden",
 		"repeat":true,
 		"cost":{
 			"gold":25,
@@ -335,7 +335,7 @@
 		"id":"creepingvine",
 		"name":"creeping vine",
 		"desc":"a quickly growing plant",
-		"tags":"taggarden",
+		"tags":"t_garden",
 		"require":"g.herbalism>=4",
 		"max":5,
 		"cost":{
@@ -474,8 +474,9 @@
 		"mod":{
 			"starcharts.max":1,
 			"codices":{
-				"mod.research.max":0.5,
-				"max":15
+				"max":15,
+				"mod.research.max":0.5
+
 			},
 			"tomes.max":1
 		}
@@ -520,7 +521,7 @@
 		"name":"cloud chamber",
 		"tags":"airsource",
 		"desc":"A chamber of swirling vapours for study.",
-		"require":"g.adept>0&&g.airlore>=5",
+		"require":"g.tier0>0&&g.airlore>=5",
 		"max":3,
 		"cost":{
 			"gold":500,
@@ -574,7 +575,7 @@
 		"name":"basin",
 		"tags":"watersource",
 		"desc":"Basin of water.",
-		"require":"evt_helper",
+		"require":"apprentice",
 		"repeat":true,
 		"cost":{
 			"gold":50,
@@ -715,7 +716,7 @@
 	{
 		"id":"smstables",
 		"name":"stables",
-		"require":"g.tier2>0||g.animals>=6",
+		"require":"g.tier2>0||(g.tier1>0&&g.animals>=6)",
 		"tags":"stables",
 		"cost":{
 			"space":10,
@@ -923,6 +924,26 @@
 		}
 	},
 	{
+		"id":"baneanvil",
+		"name":"bloodbane's anvil",
+		"require":"g.crafting>=14",
+		"need":"workshop",
+		"desc":"Great spells are often forged on iron.",
+		"sym":"⭐",
+		"cost":{
+			"space":5,
+			"research":10000,
+			"tomes":10
+		},
+		"mod":{
+			"spellcraft.max":2,
+			"spellcraft.rate":"5%",
+			"enchanting.max":2
+		},
+		"flavor":"Forsaking war and violence, Bloodbane devoted himself to crafting new forms of magic."
+
+	},
+	{
 		"id":"casket",
 		"desc":"simple container for preserving bodies.",
 		"require":"g.tier0>0&&g.embalming>=5&&g.crafting>=5",
@@ -985,7 +1006,27 @@
 			"codices.max":100,
 			"lore.rate":0.2,
 			"research.max":100,
-			"research.rate":0.05
+			"scrolls.rate":0.05
+		}
+
+	},
+	{
+		"id":"arcanestudy",
+		"name":"enchanted study",
+		"desc":"A study enchanted with magic.",
+		"require":"g.codices>=100&&g.enchanting>=6",
+		"cost":{
+			"studyroom":1,
+			"gold":1000,
+			"research":1000,
+			"space":20
+		},
+		"mod":{
+			"tomes.rate":0.002,
+			"codices.rate":-0.001,
+			"starcharts.max":50,
+			"codices.max":100,
+			"scrolls.rate":0.05
 		}
 
 	},
@@ -1015,7 +1056,7 @@
 	{
 		"id":"garden",
 		"desc":"A small garden by your home.",
-		"tags":"naturesource,taggarden",
+		"tags":"naturesource,t_garden",
 		"require":"(g.witch+g.druid+g.fey+g.kell)>0",
 		"max":3,
 		"cost":{
@@ -1031,6 +1072,77 @@
 			"nature.max":1,
 			"nature.rate":0.3,
 			"naturelore.rate":0.2
+		}
+
+	},
+	{
+		"id":"liquifier",
+		"name":"arcane alembic",
+		"repeat":true,
+		"require":"solidifier",
+		"desc":"a complex alchemical process drips arcane energy onto gemstones.",
+		"cost":{
+			"research":1000,
+			"gold":500,
+			"space":5
+		},
+		"mod":{
+			"arcana.rate":-0.001,
+			"managem.rate":0.01,
+			"gems.rate":-0.01
+		}
+
+	},
+	{
+		"id":"starweb",
+		"desc":"Motes of stars fall daily from the sky. One need only collect them.",
+		"require":"tier5",
+		"max":5,
+		"cost":{
+			"research":10000,
+			"starcharts":25,
+			"arcana":20,
+			"space":5
+		},
+		"mod":{
+			"sindel.rate":0.0001,
+			"airlore.max":1,
+			"airlore.rate":"1%"
+		}
+
+	},
+	{
+		"id":"starwell",
+		"name":"star well",
+		"desc":"Pools of light congeal softly in the basin.",
+		"require":"tier5",
+		"max":3,
+		"cost":{
+			"research":30000,
+			"starcharts":50,
+			"arcana":30,
+			"space":10
+		},
+		"mod":{
+			"sindel.rate":0.0005,
+			"waterlore.max":1,
+			"waterlore.rate":"1%"
+		}
+	},
+	{
+		"id":"runechest",
+		"name":"rune chest",
+		"desc":"A box carved from idrasil to hold the most potent runes",
+		"require":"g.runelore>=5",
+		"repeat":true,
+		"cost":{
+			"space":5,
+			"gold":2000,
+			"research":5000,
+			"gems":75
+		},
+		"mod":{
+			"t_runes.max":5
 		}
 
 	},
@@ -1072,6 +1184,7 @@
 
 		"id":"sandgarden",
 		"name":"sand garden",
+		"tags":"earthsource",
 		"desc":"rocks and sand form patterns of intricate design.",
 		"require":"g.earth.max>=5&&g.space.max>=50",
 		"cost":{
@@ -1129,7 +1242,7 @@
 		"id":"bottomlesspit",
 		"name":"bottomless pit",
 		"desc":"An endless hole in the ground.",
-		"require":"g.planeslore>=5&&g.space.max>=20&&g.tier3>0",
+		"require":"g.planeslore>=12&&g.space.max>=20&&g.tier4>0",
 		"cost":{
 			"space":5,
 			"gems":10,
@@ -1216,17 +1329,20 @@
 
 		"id":"workshop",
 		"tags":"workspace",
-		"desc":"A space suitable for crafting items.",
-		"require":"g.space.max>=50",
+		"desc":"A space suitable for crafting and enchanting items.",
+		"require":"g.space.max>=50&&(g.crafting>=7||g.enchanting>=7)",
 		"cost":{
 			"space":50,
-			"gold":500,
-			"research":25
+			"gold":1000,
+			"research":2500
 		},
 		"mod":{
-			"sp.rate":0.0001,
+			"sp.rate":0.001,
+			"ichor.rate":0.0005,
+			"liquifier.mod.managem.rate":"10%",
+			"enchanting.max":1,
 			"crafting.max":2,
-			"crafting.rate":0.2
+			"crafting.rate":0.4
 		}
 
 	},
@@ -1251,13 +1367,69 @@
 
 	},
 	{
+
+		"id":"lexyrinth",
+		"desc":"All libraries hold hidden doors into its halls. Unlocking them is the hard bit.",
+		"require":"g.library>0&&g.planeslore>=15",
+		"max":1,
+		"cost":{
+			"gate":1,
+			"gold":5000,
+			"research":10000,
+			"space":100
+		},
+		"mod":{
+			"tomes.rate":0.01,
+			"starcharts.max":50,
+			"tomes.mod.research.max":"5%",
+			"codices.max":100,
+			"scrolls.max":100,
+			"tomes.max":100
+		},"flavor":"its shelves extend beyond all sight."
+
+	},
+	{
+		"id":"gate",
+		"desc":"dhrunic gate",
+		"require":"g.planeslore>=20&&g.tier4>0",
+		"max":3,
+		"cost":{
+			"gold":5000,
+			"tomes":25,
+			"runestones":10,
+			"arcana":10,
+			"space":25
+		},
+		"mod":{
+			"voidlore.max":1,
+			"planeslore.max":1
+		}
+
+	},
+	{
+		"id":"nexus",
+		"desc":"a nexus between all worlds",
+		"max":1,
+		"cost":{
+			"gate":3,
+			"tomes":50,
+			"runestones":25,
+			"space":50
+		},
+		"mod":{
+			"magicgem.rate":0.01
+		}
+
+	},
+	{
 		"id":"ziggurat",
 		"desc":"a vast mound of earth dedicated to occult practices.",
 		"require":"tier4",
 		"cost":{
 			"gold":300,
 			"research":4000,
-			"space":100
+			"space":100,
+			"arcana":5
 		},
 		"mod":{
 			"voidlore.max":1,
@@ -1316,6 +1488,25 @@
 			"demonology.rate":"10%"
 		}
 
+	},
+	{
+
+		"id":"crypt",
+		"require":"g.necromancy>0&&g.ruinedcrypt>0",
+		"tags":"prison",
+		"cost":{
+			"research":5000,
+			"space":30,
+			"arcana":5
+		},
+		"mod":{
+			"bodies.max":25,
+			"bones.max":30,
+			"bonedust.max":20,
+			"necromancy.max":2,
+			"embalming.max":1,
+			"reanimation.max":1
+		}
 	},
 	{
 		"id":"dungeon",

@@ -4,7 +4,6 @@
 	--action-button-border-color: #000C;
 	--quiet-text-color: #888;
 	--very-quiet-text-color: #AAA;
-	--separator-color: #d8d8d8;
 	--accent-color-hover: #Dba659;
 	--accent-color-active: #797979;
 	--progbar-dark-text:#222;
@@ -12,15 +11,36 @@
 	--odd-list-color:#e5e5e5;
 	--action-btn-color: #fdc679;
 
+	--action-button-width: 128px;
+	--separator-color: #AAA;
+	--list-entry-background: #00000007;
+	--list-entry-border-radius: 8px;
+	--header-background-color: #EEE;
+	--compact-small-font: 1.0em;
+	--compact-medium-font: 1.0em;
+	--popup-background-color: #FAFAFAEE;
+	--popup-border: 2px solid #646464;
+	--subtle-border-radius: 4px;
+
+	--high-depth:30000;
+	--md-high:20000;
+	--md-depth:10000;
+	--low-depth:100;
+
+	--sm-padding:4px;
+	--md-padding:8px;
+	--rg-padding:12px;
+
 	--tiny-gap: 0.1em;
-	--small-gap: 0.35em;
-	--medium-gap: 0.65em;
-	--large-gap: 1.25em;
+	--sm-gap: 0.35em;
+	--md-gap: 0.65em;
+	--lg-gap: 1.25em;
 	--comfy-gap: 0.4em;
 
 }
 :root body.darkmode {
 	--header-background-color: rgb(58, 58, 58);
+	--background-color:#1a1a1a;
 	--button-text-color: #FFF;
 	--action-button-text-color:#aaa;
 	--action-button-border-color: #FFF;
@@ -28,6 +48,19 @@
 	--separator-color: #555;
 	--odd-list-color:#222;
 }
+
+:root body.compact {
+	--comfy-gap: 0;
+	--tiny-gap: 0.1em;
+	--sm-gap: 0.25em;
+	--md-gap: 0.4em;
+	--lg-gap: 0.5em;
+	--compact-small-font: 0.75em;
+	--compact-small-font: 0.9em;
+}
+
+
+* { box-sizing: border-box; }
 
 body {
 	font-family: 'Open Sans', sans-serif;
@@ -38,7 +71,6 @@ body {
 
 body.darkmode {
 
-	background:#1a1a1a;
 	color: #D7DADC;
 }
 
@@ -58,12 +90,15 @@ div.popup {
 	min-width:200px;
 	max-width:240px;
 	position: absolute;
-	z-index:20000;
+	opacity:1;
+	z-index:var(--high-depth);
 	left:50%;
 	top:20%;
 	align-self: center;
 	background:inherit;
+	background-clip: border-box;
 	padding:12px;
+	background-color: var( --background-color);
 	border: 1.5px solid rgb( 100, 100,100);
 	border-radius: 0.20rem;
 }
@@ -107,9 +142,7 @@ input[type="button"]:hover, button:hover, .text-button:hover {
 	background: var(--action-btn-color);
 }
 
-.runnable button:hover {
-	background:#Dba659;
-}
+.runnable button:hover { background: #dba659; }
 
 .darkmode .runnable button:hover {
 	background:rgb(197, 150, 79)
@@ -146,10 +179,11 @@ ul {
 }
 
 div.div-hr {
-	border-bottom: 1px solid black;
-	margin-bottom: 6px;
-	padding-bottom:2px;
+	background: var(--header-background-color); padding: var(--sm-gap);
+	border: none; margin: 0;
 }
+.table-head { border: none; }
+
 
 a {
 	color:inherit;
@@ -169,14 +203,74 @@ a {
 	display:inline-block;
 }
 
-.action-btn {
-	display:inline-block;
-	text-transform: capitalize;
-	margin: 4px;
-	border: 2px solid transparent;
-	padding: 1px;
-	max-width: 118px;
+div.config {
+	display:flex;
+	flex-flow: row-reverse nowrap;
+	position:sticky;
+	position: -webkit-sticky;
+	top:-2px;
+	margin:0;
+	padding: 0;
 }
+
+div.config button:after, button.config:after {
+	content:"\2699\00a0";
+}
+
+.inConfig button[disabled], .inConfig button {
+	pointer-events: none;
+}
+
+.float{
+	position:absolute;
+}
+
+.btnConfig.inConfig, .btnConfig.inConfig:hover {
+	background-color: var(--quiet-text-color);
+	display: unset;
+}
+
+.btnConfig, button.config {
+	font-size: 0.94rem;
+	padding: 0px;
+	margin:0px;
+	border:none;
+	background:unset;
+}
+
+
+.inConfig:hover {
+	background-color: var(--progbar-light-text);
+	cursor: default;
+}
+.configHiding {
+	text-decoration: line-through;
+}
+
+
+body.compact .action-btn button { min-height: 1em; }
+
+.action-btn.running { border: 2px dashed #000; }
+
+.action-btn {
+	text-transform: capitalize;
+	border: 2px solid transparent;
+	margin: 0;
+	padding: 1px;
+	width:100%;
+	max-width: 128px;
+}
+.action-btn:not(.locked) { display:flex; }
+
+.action-btn button {
+	flex: 1; word-break: break-word; text-transform: capitalize;
+	min-height: 3em;
+	padding: 2px;
+	font-size:0.9em;
+}
+
+body.darkmode .action-btn.running { border: 2px dashed var(--action-button-border-color); }
+.checks > span { flex: 1; }
 
 .action-btn.darkmode {
 	color: var(--action-button-text-color);
@@ -186,13 +280,7 @@ a {
 	padding: 1px;
 }
 
-.wrapped-btn {
-	margin:0px;
-	padding: 8px 4px;
-	min-width: 118px;
-	height:100%;
-	font-size:0.9em;
-}
+.hide { display:hide; }
 
 .locked { display:none;}
 
@@ -220,11 +308,6 @@ div.log-item {
 	border-color: rgb(100,100,100);
 }
 
-div.homes-view {
-	display:flex;
-	flex-direction: column;
-}
-
 .table-head {
 	border-bottom: 1px solid black;
 	padding-bottom: 4px;
@@ -244,17 +327,25 @@ div.homes-view {
 	display:flex;
 	flex-direction: row;
 	justify-content:space-between;
+	align-items: center;
 }
 
 .warn-text {
 	margin: 4px 0px;
 	color:rgb(216, 8, 8);
 }
-.note-text {
+
+.note-text, .popup-sect {
 	padding:0px;
 	margin:6px 0px;
 	font-style: italic;
 	font-size: 0.85em;
+}
+
+.popup-sect {
+	width:100%;
+	border-top: 2px solid var(--separator-color);
+	padding-top: var(--sm-gap);
 }
 
 div.stamina-bar {

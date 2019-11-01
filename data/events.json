@@ -62,12 +62,14 @@
 		"name":"Solitary Magic",
 		"desc":"Some say the study of magic doesn't truly begin until apprenticeship ends. People say a lot of things.",
 		"disable":["study", "chores","errands","leavemaster","slaymaster", "pestcontrol", "alcove", "atticbedroom"],
+		"lock":"t_tier0",
 		"effect":{
 			"innroom":true,
 			"sp":1,
 			"player.exp":15
 		},
 		"mod":{
+			"fame":1,
 			"research.max":15
 		}
 
@@ -83,6 +85,7 @@
 			"player.exp":15
 		},
 		"mod":{
+			"fame":2,
 			"crafting.max":1,
 			"arcanebody.max":1,
 			"occultendure.max":1,
@@ -99,6 +102,7 @@
 			"player.exp":25
 		},
 		"mod":{
+			"fame":3,
 			"lore.max":2,
 			"arcanebody.max":1,
 			"occultendure.max":1,
@@ -116,6 +120,7 @@
 			"player.exp":50
 		},
 		"mod":{
+			"fame":4,
 			"lore.max":3,
 			"crafting.max":2,
 			"arcanebody.max":1,
@@ -134,6 +139,7 @@
 			"player.exp":75
 		},
 		"mod":{
+			"fame":5,
 			"lore.max":4,
 			"crafting.max":2,
 			"arcanebody.max":1,
@@ -152,6 +158,7 @@
 			"player.exp":100
 		},
 		"mod":{
+			"fame":6,
 			"lore.max":4,
 			"crafting.max":2,
 			"arcanebody.max":1,
@@ -171,6 +178,7 @@
 			"player.exp":100
 		},
 		"mod":{
+			"fame":7,
 			"lore.max":3,
 			"crafting.max":4,
 			"arcanebody.max":1,
@@ -190,6 +198,7 @@
 			"player.exp":100
 		},
 		"mod":{
+			"fame":8,
 			"lore.max":4,
 			"crafting.max":2,
 			"arcanebody.max":1,
@@ -204,7 +213,7 @@
 		"id":"decent",
 		"require":"g.virtue>75&&g.evilamt<10",
 		"desc":"You are turning out to be an upstanding spellcaster.",
-		"effect":{
+		"mod":{
 			"light.rate":0.1
 		}
 
@@ -214,7 +223,8 @@
 		"id":"respectable",
 		"require":"g.virtue>350&&g.evilamt<20",
 		"desc":"You have become a respected personage in the magical world.",
-		"effect":{
+		"mod":{
+			"fame":1,
 			"light.rate":0.1
 		}
 
@@ -223,9 +233,9 @@
 
 		"id":"good",
 		"name":"virtuous",
-		"require":"g.virtue>750&&g.evil==0",
+		"require":"g.virtue>750&&g.evil<=0",
 		"desc":"Your actions have shown you to be a virtuous wizard.",
-		"effect":{
+		"mod":{
 			"light.max":1,
 			"lightlore.rate":0.1,
 			"lightlore.max":1
@@ -236,7 +246,7 @@
 		"id":"secretfire",
 		"name":"servant of the secret fire",
 		"desc":"",
-		"effect":{
+		"mod":{
 			"firelore.rate":0.2,
 			"firelore.max":1,
 			"lightlore.rate":0.2,
@@ -248,7 +258,7 @@
 		"id":"immoral",
 		"desc":"You have taken your first steps on the path of evil. It's a good thing.",
 		"require":"g.evilamt>=5",
-		"effect":{
+		"mod":{
 			"shadowlore.rate":0.2
 		}
 
@@ -257,7 +267,8 @@
 		"id":"wicked",
 		"desc":"Your wicked deeds put you on the sure path of evil. A few more steps, and there will be no turning back.",
 		"require":"g.evilamt>=250",
-		"effect":{
+		"mod":{
+			"fame":1,
 			"shadowlore.max":1,
 			"shadowlore.rate":0.2
 		}
@@ -269,7 +280,7 @@
 		"desc":"Freed of pitiful notions of right, and morality, the dark arts lie open before you.",
 		"require":"g.evilamt>500",
 		"disable":["light","good", "lightlore"],
-		"effect":{
+		"mod":{
 			"shadow.max":1,
 			"shadowlore":{
 				"max":1,

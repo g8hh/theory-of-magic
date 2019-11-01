@@ -1,0 +1,50 @@
+{
+
+	"module":"hall",
+	"sym":"🏰",
+
+	"data":{
+
+		"events":[
+			{
+
+				"id":"evt_hall",
+				"name":"Wizard's Hall",
+				"desc":"Across the aeons wizards gather in hidden halls to exchange lore and augment their powers."
+			}
+		],
+		"upgrades":[
+
+			{
+				"id":"expandhall",
+				"name":"expanded halls",
+				"max":3,
+				"cost":{
+					"prestige":50
+				},
+				"mod":{
+					"hall.max":1
+				}
+			}
+
+		],
+		"stats":[
+
+			{
+				"id":"prestige",
+				"name":"hall prestige",
+				"require":"evt_hall",
+				"stat":true,
+				"value":0,
+				"locked":false,
+				"mod":{
+					"skill.rate":"0.1%",
+					"stress.max":"0.1%"
+				}
+			}
+
+		]
+	}
+
+
+}

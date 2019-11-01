@@ -46,6 +46,7 @@
 		"verb":"studying spells",
 		"desc":"the ability to build greater spells from lesser is what separates a practitioner from a master.",
 		"require":"g.tier2>0&&g.lore>=15",
+		"level":8,
 		"buy":{
 			"sp":5
 		},
@@ -82,6 +83,7 @@
 		"name":"composure",
 		"desc":"remain unfazed under strain.",
 		"require":"g.concentrate>=4",
+		"level":3,
 		"run":{
 			"stamina":0.3
 		},
@@ -94,14 +96,17 @@
 		"id":"trickery",
 		"school":"arcane",
 		"verb":"scheming",
-		"require":"g.prestidigitation>15",
+		"require":"g.prestidigitation>25",
+		"buy":{
+			"sp":2
+		},
 		"run":{
 			"stamina":0.2,
 			"gold":1
 		},
 		"result":{
-			"sp":0.2,
-			"arcana":0.5
+			"sp":0.15,
+			"arcana":0.1
 		},
 		"mod":{
 			"luck":0.4,
@@ -131,12 +136,14 @@
 
 	},
 	{
-		"id":"runes",
+		"id":"runelore",
+		"alias":"runes",
 		"name":"runic lore",
 		"school":"arcane",
 		"verb":"translating",
 		"desc":"study ancient dhrunic runes.",
-		"require":"g.tier1>0&&g.lore>=10&&g.dwarfbook>0",
+		"require":"g.tier2>0&&g.dwarfbook>0",
+		"level":7,
 		"buy":{
 			"sp":3
 		},
@@ -178,6 +185,7 @@
 		"name":"magic beasts",
 		"require":"g.animals>=7&&g.naturelore>=5",
 		"desc":"",
+		"level":3,
 		"run":{
 			"stamina":0.7
 		},
@@ -196,6 +204,7 @@
 	{
 		"id":"charms",
 		"require":"g.enchanting>=5&&g.lore>=10",
+		"level":3,
 		"run":{
 			"stamina":0.3
 		},
@@ -211,7 +220,7 @@
 		"id":"herbalism",
 		"school":"nature",
 		"require":"lore",
-		"need":"taggarden",
+		"need":"t_garden",
 		"run":{
 			"stamina":0.25
 		},
@@ -226,7 +235,7 @@
 	{
 
 		"id":"weaving",
-		"require":"loom",
+		"need":"loom",
 		"run":{
 			"stamina":0.5
 		},
@@ -265,7 +274,8 @@
 	},
 	{
 		"id":"history",
-		"require":"g.languages>7",
+		"name":"world lore",
+		"require":"g.languages>=7",
 		"desc":"the knowledge of what has come before reveals what is yet possible.",
 		"verb":"historicizing",
 		"run":{
@@ -279,7 +289,7 @@
 		},
 		"mod":{
 			"research.max":10,
-			"arcana.max":0.5,
+			"arcana.max":0.1,
 			"languages.rate":"1%"
 		}
 
@@ -290,6 +300,7 @@
 		"require":"g.neophyte>=0&&g.lore>=6",
 		"school":["nature","shadow","light"],
 		"desc":"the study of physical form.",
+		"level":2,
 		"run":{
 			"stamina":0.5
 		},
@@ -342,6 +353,7 @@
 		"id":"summoning",
 		"require":"g.tier1>0",
 		"school":"arcane",
+		"level":4,
 		"buy":{
 			"sp":2
 		},
@@ -356,10 +368,52 @@
 
 	},
 	{
+		"id":"bloodlore",
+		"name":"blood magic",
+		"school":"blood",
+		"require":"(g.bloodmage+g.thanophage+g.alchemist)>0",
+		"level":5,
+		"buy":{
+			"sp":3
+		},
+		"run":{
+			"stamina":1,
+			"hp":1
+		},
+		"mod":{
+			"hp.max":10,
+			"hp.rate":0.1
+		}
+	},
+	{
+
+		"id":"bladelore",
+		"desc":"Incorporate martial weapons into your magic.",
+		"require":"g.spellblade>0||g.battlemage>0||g.dreadlord>0",
+		"need":"armssource",
+		"level":3,
+		"buy":{
+			"sp":2
+		},
+		"run":{
+			"stamina":0.6
+		},
+		"result":{
+			"sp":0.05
+		},
+		"mod":{
+			"player.bonuses.slash":1,
+			"player.bonuses.pierce":1,
+			"player.hits.slash":1,
+			"player.hits.pierce":1
+		}
+
+	},
+	{
 
 		"id":"divination",
 		"desc":"the art of foretelling",
-		"require":["g.spiritlore>=6||g.mysticism>=5"],
+		"require":"g.spiritlore>=6||g.mysticism>=5",
 		"need":"spiritsource",
 		"school":"spirit",
 		"run":{
@@ -382,6 +436,7 @@
 		"tags":"t_school",
 		"name":"lumenology",
 		"school":"light",
+		"level":2,
 		"desc":"study of pure light",
 		"need":"lightsource",
 		"run":{
@@ -398,6 +453,7 @@
 	{
 		"id":"shadowlore",
 		"tags":"t_school",
+		"level":2,
 		"require":"g.dissection>=3||g.evil>0",
 		"school":"shadow",
 		"need":"shadowsource",
@@ -415,6 +471,7 @@
 		"id":"spiritlore",
 		"tags":"t_school",
 		"name":"spirit lore",
+		"level":2,
 		"desc":"seeing the unseen",
 		"require":"g.lore>=6",
 		"need":"spiritsource",
@@ -433,6 +490,7 @@
 		"id":"firelore",
 		"tags":"t_school,elemental",
 		"name":"pyromancy",
+		"level":2,
 		"desc":"the investigation of fire",
 		"need":"firesource",
 		"run":{
@@ -451,6 +509,7 @@
 		"id":"earthlore",
 		"name":"minerology",
 		"tags":"t_school,elemental",
+		"level":2,
 		"need":"earthsource",
 		"run":{
 			"stamina":0.4
@@ -469,6 +528,7 @@
 		"desc":"the study of water",
 		"verb":"studying water",
 		"tags":"elemental,t_school",
+		"level":2,
 		"need":"watersource",
 		"run":{
 			"stamina":0.4
@@ -488,6 +548,7 @@
 		"desc":"the study of air",
 		"verb":"studying air",
 		"tags":"elemental,t_school",
+		"level":2,
 		"need":"airsource",
 		"run":{
 			"stamina":0.3
@@ -506,6 +567,7 @@
 		"name":"nature lore",
 		"verb":"observing nature",
 		"tags":"t_school",
+		"level":2,
 		"require":"g.herbalism>=3",
 		"run":{
 			"stamina":0.4
@@ -520,9 +582,221 @@
 
 	},
 	{
+		"id":"firelore2",
+		"name":"fire mastery",
+		"desc":"a mastery of fire",
+		"level":10,
+		"require":"g.firelore>=10",
+		"buy":{
+			"sp":5,
+			"tomes":30,
+			"runestones":10
+		},
+		"run":{
+			"stamina":1,
+			"fire":0.5
+		},
+		"mod":{
+			"firerune.max":2,
+			"fire.max":1,
+			"fire.rate":"1%",
+			"player.bonuses.fire":1,
+			"player.hits.fire":1
+		}, "flavor":"dry is good and wind is better"
+
+	},
+	{
+		"id":"waterlore2",
+		"name":"water mastery",
+		"desc":"a mastery of water",
+		"require":"g.waterlore>=10",
+		"level":10,
+		"buy":{
+			"sp":5,
+			"tomes":30,
+			"runestones":10
+		},
+		"run":{
+			"stamina":1,
+			"water":0.5
+		},
+		"mod":{
+			"waterrune.max":2,
+			"water.max":1,
+			"water.rate":"1%",
+			"player.bonuses.water":1,
+			"player.hits.water":1
+		}
+
+	},
+	{
+		"id":"airlore2",
+		"name":"air mastery",
+		"desc":"a mastery of air",
+		"require":"g.airlore>=10",
+		"level":10,
+		"buy":{
+			"sp":5,
+			"tomes":30,
+			"runestones":10
+		},
+		"run":{
+			"stamina":1,
+			"air":0.5
+		},
+		"mod":{
+			"airrune.max":2,
+			"air.max":1,
+			"air.rate":"1%",
+			"player.bonuses.air":1,
+			"player.hits.air":1
+		}
+
+	},
+	{
+		"id":"earthlore2",
+		"name":"earth mastery",
+		"desc":"a mastery of earth",
+		"require":"g.earthlore>=10",
+		"level":10,
+		"buy":{
+			"sp":5,
+			"tomes":30,
+			"runestones":10
+		},
+		"run":{
+			"stamina":1,
+			"earth":0.5
+		},
+		"mod":{
+			"earthrune.max":2,
+			"earth.max":1,
+			"earth.rate":"1%",
+			"player.bonuses.earth":1,
+			"player.hits.earth":1
+		}
+
+	},
+	{
+		"id":"shadowlore2",
+		"name":"shadow mastery",
+		"desc":"a mastery of shadow",
+		"require":"g.shadowlore>=10",
+		"level":10,
+		"buy":{
+			"sp":5,
+			"tomes":30,
+			"runestones":10
+		},
+		"run":{
+			"stamina":1,
+			"shadow":0.5
+		},
+		"mod":{
+			"shadow.max":1,
+			"shadow.rate":"1%",
+			"player.bonuses.shadow":1,
+			"player.hits.shadow":1
+		}
+
+	},
+	{
+		"id":"lightlore2",
+		"name":"light mastery",
+		"desc":"a mastery of light",
+		"require":"g.lightlore>=10",
+		"level":10,
+		"buy":{
+			"sp":5,
+			"tomes":30,
+			"runestones":10
+		},
+		"run":{
+			"stamina":1,
+			"light":0.5
+		},
+		"mod":{
+			"light.max":1,
+			"light.rate":"1%",
+			"player.bonuses.light":1,
+			"player.hits.light":1
+		}
+
+	},
+	{
+		"id":"spiritlore2",
+		"name":"spirit mastery",
+		"desc":"a mastery of spirit",
+		"require":"g.spiritlore>=10",
+		"level":10,
+		"buy":{
+			"sp":5,
+			"tomes":30,
+			"runestones":10
+		},
+		"run":{
+			"stamina":1,
+			"spirit":0.5
+		},
+		"mod":{
+			"spirit.max":1,
+			"spirit.rate":"1%",
+			"player.bonuses.spirit":1,
+			"player.hits.spirit":1
+		}
+
+	},
+	{
+		"id":"manalore2",
+		"name":"arcane mastery",
+		"desc":"a mastery of pure magic",
+		"require":"g.lore>=20",
+		"level":10,
+		"buy":{
+			"sp":5,
+			"tomes":30,
+			"runestones":10
+		},
+		"run":{
+			"stamina":1,
+			"mana":0.5
+		},
+		"mod":{
+			"mana.max":1,
+			"mana.rate":"1%",
+			"player.bonuses.mana":1,
+			"player.hits.mana":1
+		}
+
+	},
+	{
+		"id":"naturelore2",
+		"name":"nature mastery",
+		"desc":"a mastery of nature",
+		"require":"g.naturelore>=10",
+		"level":10,
+		"buy":{
+			"sp":5,
+			"tomes":30,
+			"runestones":10
+		},
+		"run":{
+			"stamina":1,
+			"nature":0.5
+		},
+		"mod":{
+			"nature.max":1,
+			"nature.rate":"1%",
+			"player.bonuses.nature":1,
+			"player.hits.nature":1
+		}
+
+	},
+	{
 
 		"id":"demonology",
 		"require":"tier1",
+		"level":4,
 		"buy":{
 			"sp":2
 		},
@@ -561,9 +835,12 @@
 	{
 
 		"id":"necromancy",
-		"require":"g.evil>0&&g.reanimation>=7&&g.souls.max>0",
+		"require":"g.evil>0&&g.reanimation>=7&&g.souls.max>3",
 		"school":"shadow",
 		"desc":"forbidden death magic.",
+		"buy":{
+			"sp":3
+		},
 		"run":{
 			"stamina":0.4,
 			"shadow":0.5
@@ -578,7 +855,7 @@
 	},
 	{
 		"id":"potions",
-		"require":"g.crafting>=3&&g.alchemy>=1&&g.herbalism>=2",
+		"require":"g.crafting>=3&&g.alchemy>=1",
 		"need":["workspace","potsource"],
 		"run":{
 			"stamina":0.5
@@ -649,6 +926,7 @@
 		"id":"planeslore",
 		"name":"planes lore",
 		"require":"g.astronomy>=5&&g.tier1>0",
+		"level":6,
 		"desc":"farther than the stars and closer than your fingertips",
 		"buy":{
 			"sp":2
@@ -671,6 +949,7 @@
 		"name":"void lore",
 		"require":"g.planeslore>=10&&g.tier5>0",
 		"desc":"the absence of all things",
+		"level":15,
 		"buy":{
 			"sp":5
 		},
@@ -691,6 +970,7 @@
 		"require":"tier3",
 		"need":"timesource",
 		"tags":"t_school",
+		"level":12,
 		"desc":"There must be a way...",
 		"buy":{
 			"sp":5

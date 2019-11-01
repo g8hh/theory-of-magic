@@ -1,7 +1,7 @@
 [
 	{
 		"id":"cleanstables",
-		"name":"Clean Stables",
+		"name":"clean stables",
 		"desc":"working from home.",
 		"verb":"cleaning",
 		"locked":false,
@@ -9,13 +9,12 @@
 			"stamina":0.08
 		},
 		"effect":{
-			"virtue":0.1,
 			"gold":0.2
 		}, "flavor":"it's stable employment"
 	},
 	{
 		"id":"chores",
-		"name":"Do Chores",
+		"name":"do chores",
 		"desc":"standard apprentice work.",
 		"verb":"working",
 		"require":"apprentice",
@@ -31,7 +30,7 @@
 			"stamina":0.17
 		},
 		"effect":{
-			"virtue":0.1,
+			"virtue":0.03,
 			"gold":0.3
 		}
 	},
@@ -59,7 +58,7 @@
 	},
 	{
 		"id":"errands",
-		"name":"Run Errands",
+		"name":"run errands",
 		"desc":"standard apprentice work.",
 		"verb":"running errands",
 		"require":"apprentice",
@@ -149,7 +148,7 @@
 	{
 
 		"id":"spellbook",
-		"actname":"Bind Spellbook",
+		"actname":"bind spellbook",
 		"verb":"binding spells",
 		"require":"g.lore>=2&&g.crafting>=2&&g.languages>=1",
 		"desc":"The portal to true magic.",
@@ -183,7 +182,7 @@
 	{
 
 		"id":"service",
-		"name":"Offer Services",
+		"name":"offer services",
 		"desc":"Offer your magical services to the nearby townsfolk.",
 		"verb":"servicing",
 		"require":"adept",
@@ -210,7 +209,7 @@
 		"name":"tend animals",
 		"desc":"tend to sick and wounded animals in the wild",
 		"verb":"tending",
-		"require":"adept",
+		"require":"tier0",
 		"perpetual":true,
 		"at":{
 
@@ -233,7 +232,7 @@
 	{
 
 		"id":"spingold",
-		"name":"Spin Gold",
+		"name":"spin gold",
 		"desc":"Spin straw into gold",
 		"verb":"spinning",
 		"require":"g.weaving>=5&&g.loom>0&&g.enchanting>=3",
@@ -311,6 +310,11 @@
 			"stamina":0.5,
 			"shadow":0.2
 		},
+		"effect":{
+			"anatomy.exp":1,
+			"embalming.exp":1,
+			"reanimation.exp":1
+		},
 		"at":{
 			"10":{
 				"result.bones.max":1
@@ -324,6 +328,7 @@
 			}
 		},
 		"result":{
+			"bonedust":1,
 			"evilamt":1,
 			"bones":"2~5"
 		}
@@ -388,10 +393,10 @@
 	{
 
 		"id":"paidseance",
-		"name":"Hold Seance",
-		"verb":"communing",
-		"desc":"Commune with the dead relatives of patrons for a small fee.",
-		"require":["divination","spiritsource","adept"],
+		"name":"hold seance",
+		"verb":"holding seance",
+		"desc":"channel spirits for a small fee.",
+		"require":["divination","spiritsource","tier0"],
 		"perpetual":true,
 		"length":10,
 		"run":{
@@ -437,7 +442,7 @@
 	},
 	{
 		"id":"treatailments",
-		"name":"Treat Ailments",
+		"name":"treat ailments",
 		"desc":"Cure customers of magical ailments.",
 		"require":"g.neophyte>0&&g.anatomy>=3",
 		"cost":{
@@ -460,7 +465,7 @@
 	},
 	{
 		"id":"readpalms",
-		"name":"Read Palms",
+		"name":"read palms",
 		"verb":"reading palms",
 		"require":"g.divination>5||g.trickster>0",
 		"desc":"read palms for a small fee.",
@@ -535,7 +540,7 @@
 		"name":"gather herbs",
 		"desc":"Gather herbs used in potions and alchemy.",
 		"require":"g.herbalism>=2",
-		"need":"taggarden",
+		"need":"t_garden",
 		"cost":{
 			"stamina":0.3
 		},
@@ -610,7 +615,7 @@
 		"desc":"commune with natural forces",
 		"perpetual":true,
 		"require":"g.naturelore>=12",
-		"fill":[ "nature", "hp", "mana", "stamina","stress"],
+		"fill":[ "hp", "manas", "stamina","stress"],
 		"effect":{
 			"stress":-1.4,
 			"manas":{
@@ -634,7 +639,7 @@
 		"require":"(g.witch+g.thanophage)>0",
 		"need":"cauldron",
 		"desc":"how could you!?!",
-		"fill":[ "shadow", "hp", "mana", "stamina", "spirit", "stress" ],
+		"fill":[ "hp", "manas", "stamina", "stress" ],
 		"every":{
 			"100":{
 				"effect.hp":0.5,
@@ -664,16 +669,41 @@
 			"bodies":1
 		},
 		"run":{
-			"stamina":0.4
-
+			"stamina":0.8
 		},
 		"effect":{
-			"arcana":0.01,
+			"arcana":0.001,
 			"sp":0.0001,
 			"demonology.max":0.001,
 			"demonology.exp":1,
 			"spiritlore.max":0.001,
 			"spiritlore.exp":1
+		}
+
+	},
+	{
+
+		"id":"geas",
+		"desc":"undertake a quest to subdue a great evil.",
+		"require":"g.tier2>0&&g.evil<=0",
+		"length":100,
+		"cd":777,
+		"cost":{
+			"spirit":10,
+			"light":5
+		},
+		"run":{
+			"stamina":1,
+			"hp":2
+		},
+		"effect":{
+			"arcana":0.001,
+			"virtue":0.1,
+			"notoriety":0.002,
+			"history.max":0.001,
+			"history.exp":1,
+			"lightlore.max":0.001,
+			"lightlore.exp":1
 		}
 
 	},
@@ -700,10 +730,8 @@
 		"effect":{
 			"nature":0.3,
 			"naturelore.exp":0.1,
-			"naturelore":{
-				"max":0.001,
-				"rate":0.001
-			},
+			"naturelore.max":0.001,
+			"naturelore.rate":0.001,
 			"animals.exp":1,
 			"herbalism.exp":1
 		}, "flavor":"a tramp abroad"
@@ -713,7 +741,7 @@
 		"perpetual":true,
 		"verb":"pacing",
 		"desc":"Pace your home as you comtemplate the arcane.",
-		"require":"adept",
+		"require":"tier0",
 		"run":{
 			"stamina":0.4
 		},
@@ -741,7 +769,7 @@
 	},
 	{
 		"id":"buyscroll",
-		"name":"Buy scroll",
+		"name":"buy scroll",
 		"require":"g.gold>=10",
 		"cost":{
 			"gold":10
@@ -754,8 +782,8 @@
 	},
 	{
 		"id":"scribescroll",
-		"name":"Scribe Scroll",
-		"require":"g.crafting>=1&&g.mana>0",
+		"name":"scribe scroll",
+		"require":"g.crafting>=1&&g.lore>=1",
 		"cost":{
 			"research":10,
 			"mana":1
@@ -785,7 +813,7 @@
 
 		"id":"craftrune",
 		"name":"craft rune",
-		"require":"g.crafting>=14&&g.runes>=3",
+		"require":"g.crafting>=14&&g.runelore>=3",
 		"length":10,
 		"cost":{
 			"tomes":1,
@@ -886,7 +914,7 @@
 			"lore.exp":1
 		},
 		"run":{
-			"stamina":0.4
+			"stamina":0.7
 		},
 		"result":{
 			"tomes":1
@@ -901,15 +929,38 @@
 		"length":75,
 		"repeat":false,
 		"cost":{
+			"research":400,
 			"codices":10
 		},
 		"run":{
-			"research":1
+			"research":1,
+			"stamina":2
 		},
 		"mod":{
 			"player.damage":2,
 			"player.tohit":1
 		},"flavor":"what he lacked in depth, karnivex made up for with sheer destructive force"
+
+	},
+	{
+
+		"id":"markhulcodex",
+		"name":"markhul's codex",
+		"desc":"A dusty codex from the genezereth library.",
+		"repeat":false,
+		"length":75,
+		"cost":{
+			"tomes":5,
+			"managem":10,
+			"research":1000
+		},
+		"run":{
+			"stamina":2
+		},
+		"mod":{
+			"spellcraft.max":1,
+			"spellcraft.rate":0.1
+		}
 
 	},
 	{
@@ -990,7 +1041,8 @@
 			"bones":10
 		},
 		"run":{
-			"research":5
+			"research":5,
+			"stamina":1.4
 		},
 		"mod":{
 			"languages.max":3,
@@ -1012,7 +1064,8 @@
 			"tomes":5
 		},
 		"run":{
-			"research":1
+			"research":1,
+			"stamina":2
 		},
 		"mod":{
 			"player.resist.shadow":10,
@@ -1034,7 +1087,8 @@
 			"codices":25
 		},
 		"run":{
-			"research":2
+			"research":2,
+			"stamina":1
 		},
 		"mod":{
 			"research.max":10,
@@ -1043,7 +1097,7 @@
 			"fire.max":1,
 			"mana.max":1,
 			"mana.rate":0.1
-		},"flavor":"corivar called fazbit a mad crank. then came begging for his manuals."
+		},"flavor":"corivar called fazbit a mad crank. but tried to steal his manuals."
 
 	},
 	{
@@ -1080,7 +1134,8 @@
 			"gems":10
 		},
 		"run":{
-			"research":10
+			"research":10,
+			"stamina":3
 		},
 		"mod":{
 			"lore.max":1,
@@ -1129,7 +1184,7 @@
 	},
 	{
 		"id":"buygem",
-		"name":"Purchase Gem",
+		"name":"purchase gem",
 		"require":"g.tier0>0&&g.gold>100",
 		"cost":100,
 		"fill":"gems",
@@ -1139,7 +1194,7 @@
 	},
 	{
 		"id":"craftgem",
-		"name":"Craft Gem",
+		"name":"craft gem",
 		"desc":"Craft a gem from raw minerals.",
 		"require":"g.crafting>=7&&g.alchemy>=5",
 		"length":10,
@@ -1155,7 +1210,7 @@
 	},
 	{
 		"id":"sellgem",
-		"name":"Sell Gem",
+		"name":"sell gem",
 		"require":"g.gems>0",
 		"cost":{
 			"gems":1
@@ -1166,126 +1221,221 @@
 	},
 	{
 		"id":"imbuelifegem",
-		"name":"Imbue lifegem",
-		"require":"g.naturelore>=6",
+		"name":"imbue lifegem",
+		"require":"g.naturelore>=6&&g.enchanting>0",
+		"tags":"gemimbue",
 		"fill":"naturegem",
 		"cost":{
 			"herbs":10,
 			"gems":1,
 			"nature":5
 		},
-		"effect":{
+		"result":{
 			"naturegem":1
 		}
 	},
 	{
 		"id":"imbuemanagem",
-		"name":"Imbue gem (arcane)",
+		"name":"imbue gem (arcane)",
 		"require":"g.mana.max>=5&&g.enchanting>0",
 		"fill":"managem",
+		"tags":"gemimbue",
 		"cost":{
 			"gems":1,
 			"mana":5
 		},
-		"effect":{
+		"result":{
 			"managem":1
 		}
 	},
 	{
 		"id":"imbuebloodgem",
-		"name":"Coagulate Gem",
+		"name":"coagulate gem",
 		"require":"g.alchemy>=5&&g.anatomy>=5",
 		"fill":"bloodgem",
+		"tags":"gemimbue",
 		"cost":{
 			"gems":1,
 			"earth":1,
 			"water":1,
 			"hp":20
 		},
-		"effect":"bloodgem"
+		"result":"bloodgem"
 	},
 	{
 		"id":"imbuefiregem",
-		"name":"Imbue Gem (Fire)",
+		"name":"imbue gem (fire)",
 		"require":"g.fire.max>=4&&g.enchanting>2",
 		"fill":"firegem",
+		"tags":"gemimbue",
 		"cost":{
 			"gems":1,
 			"fire":5
 		},
-		"effect":"firegem"
+		"result":"firegem"
 	},
 	{
 		"id":"imbueairgem",
 		"name":"imbue gem (air)",
 		"require":"g.air.max>=4&&g.enchanting>2",
 		"fill":"airgem",
+		"tags":"gemimbue",
 		"cost":{
 			"gems":1,
 			"air":5
 		},
-		"effect":"airgem"
+		"result":"airgem"
 	},
 	{
 		"id":"imbueearthgem",
 		"name":"imbue stone",
 		"require":"g.earth.max>=4&&g.enchanting>2",
 		"fill":"earthgem",
+		"tags":"gemimbue",
 		"cost":{
 			"gems":1,
 			"earth":5
 		},
-		"effect":"earthgem"
+		"result":"earthgem"
 	},
 	{
 		"id":"imbuewatergem",
-		"name":"Imbue Gem (Water)",
+		"name":"imbue gem (water)",
 		"require":"g.water.max>=4&&g.enchanting>2",
 		"fill":"watergem",
+		"tags":"gemimbue",
 		"cost":{
 			"gems":1,
 			"water":5
 		},
-		"effect":"watergem"
+		"result":"watergem"
 	},
 	{
 		"id":"imbuelightgem",
 		"name":"imbue gem (light)",
 		"require":"g.light.max>=4&&g.enchanting>2",
 		"fill":"lightgem",
+		"tags":"gemimbue",
 		"cost":{
 			"gems":1,
 			"light":5
 		},
-		"effect":"lightgem"
+		"result":"lightgem"
 	},
 	{
 		"id":"imbueshadowgem",
-		"name":"Imbue gem (shadow)",
+		"name":"imbue gem (shadow)",
 		"require":"g.shadow.max>=4&&g.enchanting>2",
 		"fill":"shadowgem",
+		"tags":"gemimbue",
 		"cost":{
 			"gems":1,
 			"shadow":5
 		},
-		"effect":"shadowgem"
+		"result":"shadowgem"
 	},
 	{
 		"id":"imbuespiritgem",
-		"name":"Imbue gem (spirit)",
+		"name":"imbue gem (spirit)",
 		"require":"g.spirit.max>=4&&g.enchanting>2",
 		"fill":"spiritgem",
+		"tags":"gemimbue",
 		"cost":{
 			"gems":1,
 			"spirit":5
 		},
-		"effect":"spiritgem"
+		"result":"spiritgem"
+
+	},
+	{
+		"id":"craftfirerune",
+		"name":"craft rune (fire)",
+		"require":"g.fire.max>=10&&g.tier4>0",
+		"fill":"firerune",
+		"length":10,
+		"cost":{
+			"runestones":1,
+			"firegem":10,
+			"tomes":1
+		},
+		"run":{
+			"stamina":1
+		},
+		"result":"firerune"
+
+	},
+	{
+		"id":"craftearthrune",
+		"name":"craft rune (earth)",
+		"require":"g.earth.max>=10&&g.tier4>0",
+		"fill":"earthrune",
+		"length":10,
+		"cost":{
+			"runestones":1,
+			"earthgem":10,
+			"tomes":1
+		},
+		"run":{
+			"stamina":1
+		},
+		"result":"earthrune"
+
+	},
+	{
+		"id":"craftairrune",
+		"name":"craft rune (air)",
+		"require":"g.air.max>=10&&g.tier4>0",
+		"fill":"airrune",
+		"length":10,
+		"cost":{
+			"runestones":1,
+			"airgem":10,
+			"tomes":1
+		},
+		"run":{
+			"stamina":1
+		},
+		"result":"airrune"
+
+	},
+	{
+		"id":"craftwaterrune",
+		"name":"craft rune (water)",
+		"require":"g.water.max>=10&&g.tier4>0",
+		"fill":"waterrune",
+		"length":10,
+		"cost":{
+			"runestones":1,
+			"watergem":10,
+			"tomes":1
+		},
+		"run":{
+			"stamina":1
+		},
+		"result":"waterrune"
+
+	},
+	{
+		"id":"craftspiritrune",
+		"name":"craft rune (spirit)",
+		"require":"g.spirit.max>=999&&g.tier4>0",
+		"fill":"spiritrune",
+		"length":10,
+		"cost":{
+			"runestones":1,
+			"spiritgem":10,
+			"tomes":1
+		},
+		"run":{
+			"stamina":1
+		},
+		"result":"spiritrune"
 
 	},
 	{
 		"id":"sellscroll",
-		"name":"Sell Scroll",
-		"require":"g.scribescroll&&g.scrolls>=5",
+		"name":"sell scroll",
+		"require":"g.scribescroll>0&&g.scrolls>=5",
 		"cost":{
 			"scrolls":1
 		},
@@ -1324,9 +1474,10 @@
 	},
 	{
 		"id":"up_lich",
+		"name":"lich",
 		"actname":"rite of undeath",
 		"desc":"obtain immortality by becoming a lich",
-		"require":"g.crafting>=20&&g.necromancy>=30",
+		"require":"g.crafting>=20&&g.necromancy>=8",
 		"repeat":false,
 		"length":50,
 		"cost":{

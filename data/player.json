@@ -26,6 +26,7 @@
 	{
 		"id":"age",
 		"val":"15~25",
+		"stat":"true",
 		"locked":false
 	},
 	{
@@ -51,6 +52,7 @@
 		"id":"sp",
 		"name":"skill points",
 		"desc":"Spend to unlock new skills",
+		"stat":"true",
 		"val":0,
 		"locked":false
 	},
@@ -90,29 +92,41 @@
 		"id":"DR",
 		"name":"Damage reduction",
 		"desc":"Amount of damage subtracted from total.",
-		"val":5,
-		"max":5,
+		"val":0,
+		"stat":"true",
 		"unit":false,
 		"locked":false
 	},
 	{
+		"id":"points",
+		"desc":"hall points",
+		"hidden":true,
+		"stat":true,
+		"val":0
+	},
+	{
 		"id":"virtue",
 		"hidden":"true",
-		"tags":"Tendency to good",
+		"desc":"Tendency to good",
+		"stat":"true",
 		"val":0
 	},
 	{
 		"id":"evilamt",
 		"name":"evil",
 		"hidden":true,
+		"stat":"true",
 		"desc":"Tendency to evil",
 		"val":0
 	},
+
 	{
 		"id":"fame",
 		"name":"notoriety",
 		"hidden":"true",
-		"tags":"Your reputation in the world",
+		"stat":true,
+		"desc":"Your reputation in the world",
 		"val":0
 	}
+
 ]

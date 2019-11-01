@@ -82,7 +82,7 @@
 			"lgrat",
 			"badexperiment",
 			"ratskeleton",
-			"homonculus",
+			"homunculus",
 			"gremlin"
 		]
 	},
@@ -429,7 +429,7 @@
 	{
 		"id":"catacrypts",
 		"name":"the catacrypts",
-		"desc":"Old Mirthemgnar dug its dungeons til they joined the hollows beneath the world. In terror they sealed them forever. Or so they thought.",
+		"desc":"Old Mirthemgnar dug its dungeons til they joined the hollows beneath the world. In terror they sealed them forever. Or so they tried.",
 		"require":["mtgorborung", "tier3"],
 		"level":15,
 		"run":{
@@ -438,6 +438,7 @@
 		"length":10000,
 		"result":{
 			"title":"twice born",
+			"fame":3,
 			"gems":"30~50",
 			"gold":"1000~2000"
 		},
@@ -538,6 +539,7 @@
 		},
 		"length":100,
 		"result":{
+			"title":"lock slayer",
 			"gold":"300~500",
 			"ichor":3
 		},
@@ -565,6 +567,7 @@
 		"level":25,
 		"length":100,
 		"require":"g.player.level>20&&g.mtgorborung>0",
+		"dist":1200,
 		"run":{
 			"stamina":3
 		},
@@ -609,6 +612,7 @@
 			"stamina":1
 		},
 		"result":{
+			"title":"holy defiler",
 			"evilamt":10,
 			"gold":"150~275"
 		},

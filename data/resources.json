@@ -65,11 +65,12 @@
 		"id":"runestones",
 		"name":"rune stones",
 		"desc":"runes carved on pieces of stone.",
+		"tags":"t_runes",
 		"max":10,
 		"mod":{
 			"research.max":"1%",
-			"runes.rate":0.1,
-			"runes.max":0.03
+			"runelore.rate":0.1,
+			"runelore.max":0.03
 		}, "flavor":""
 
 	},
@@ -77,7 +78,8 @@
 
 		"id":"firerune",
 		"name":"flame runes",
-		"desc":"rune ingrained with lines of fire",
+		"tags":"t_runes",
+		"desc":"rune etched with lines of fire",
 		"max":10,
 		"mod":{
 			"research.max":10
@@ -88,7 +90,8 @@
 
 		"id":"waterrune",
 		"name":"water runes",
-		"desc":"rune etched in flowing water",
+		"tags":"t_runes",
+		"desc":"rune lined in flowing water",
 		"max":10,
 		"mod":{
 			"research.max":10
@@ -99,6 +102,7 @@
 
 		"id":"airrune",
 		"name":"air runes",
+		"tags":"t_runes",
 		"desc":"rune etched with solid air",
 		"max":10,
 		"mod":{
@@ -110,6 +114,7 @@
 
 		"id":"earthrune",
 		"name":"earth runes",
+		"tags":"t_runes",
 		"desc":"rune ingrained with moonstone",
 		"max":10,
 		"mod":{
@@ -180,28 +185,28 @@
 	{
 
 		"id":"managem",
-		"tags":"gem",
+		"tags":"magicgems",
 		"name":"arcane gem",
 		"desc":"Gem infused with arcane energy.",
 		"max":2
 	},
 	{
 		"id":"firegem",
-		"tags":"gem",
+		"tags":"magicgems",
 		"name":"fire gem",
 		"desc":"Gem imbued with the essence of fire.",
 		"max":2
 	},
 	{
 		"id":"watergem",
-		"tags":"gem",
+		"tags":"magicgems",
 		"name":"water gem",
 		"desc":"Gem imbued with the essence of water.",
 		"max":2
 	},
 	{
 		"id":"naturegem",
-		"tags":"gem",
+		"tags":"magicgems",
 		"name":"nature gem",
 		"desc":"physical essence of life.",
 		"max":2,
@@ -209,42 +214,42 @@
 	},
 	{
 		"id":"earthgem",
-		"tags":"gem",
+		"tags":"magicgems",
 		"name":"earth gem",
 		"desc":"Gem imbued with the essence of earth.",
 		"max":2
 	},
 	{
 		"id":"airgem",
-		"tags":"gem",
+		"tags":"magicgems",
 		"name":"air gem",
 		"desc":"Gem imbued with the essence of air.",
 		"max":2
 	},
 	{
 		"id":"shadowgem",
-		"tags":"gem",
+		"tags":"magicgems",
 		"name":"shadow gem",
 		"desc":"Gem imbued with the essence of darkness.",
 		"max":2
 	},
 	{
 		"id":"lightgem",
-		"tags":"gem",
+		"tags":"magicgems",
 		"name":"light gem",
 		"desc":"Gem imbued with the essence of light.",
 		"max":2
 	},
 	{
 		"id":"spiritgem",
-		"tags":"gem",
+		"tags":"magicgems",
 		"name":"spirit gem",
 		"desc":"Gem imbued with raw spirit.",
 		"max":2
 	},
 	{
 		"id":"bloodgem",
-		"tags":"gem",
+		"tags":"magicgems",
 		"name":"blood gem",
 		"desc":"a little magic and a lot of blood",
 		"max":2,
@@ -258,6 +263,19 @@
 		"desc":"The blood of gods.",
 		"flavor":"the secret courtesy that courses like ichor",
 		"max":5
+	},
+	{
+
+		"id":"sindel",
+		"name":"star shard",
+		"desc":"A glowing cinder of the stars.",
+		"flavor":"the pillars broke; the stars fell screaming from the sky",
+		"max":3,
+		"mod":{
+			"light.rate":0.1,
+			"player.resist.shadow":1
+		}
+
 	},
 	{
 
@@ -279,7 +297,7 @@
 		"id":"space",
 		"name":"floor space",
 		"desc":"Space Available",
-		"zerosum":true,
+		"reverse":true,
 		"max":0
 
 	},
@@ -288,7 +306,7 @@
 		"tags":"manas",
 		"desc":"raw magical energy",
 		"unit":false,
-		"require":"g.arcana>=1",
+		"require":"lore",
 		"name":"mana",
 		"max":5
 	},

@@ -119,7 +119,7 @@
 			"sash":"20%"
 		},
 		"resist":{
-			"poison":5
+			"poison":50
 		}
 
     },
@@ -174,7 +174,7 @@
 			"max":1
 		},
 		"resist":{
-			"earth":30
+			"earth":45
 		}
 	},
 	{
@@ -194,7 +194,7 @@
 			"scrolls":1,
 			"boots":"15%" },
 		"resist":{
-			"arcane":5
+			"mana":50
 		}
 
     },
@@ -213,7 +213,7 @@
 		}
 	},
 	{
-        "id":"homonculus",
+        "id":"homunculus",
         "level":1,
         "kind":"construct",
         "desc":"Must have escaped its jar.",
@@ -226,7 +226,7 @@
             "dmg":"0~2"
 		},
 		"resist":{
-			"arcane":20
+			"mana":50
 		}
 
     },
@@ -269,7 +269,7 @@
 		"defense":2,
 		"damage":"0~2.5",
 		"resist":{
-			"poison":10
+			"poison":75
 		}
 	},
 	{
@@ -433,7 +433,7 @@
 			"shortsword":"50%"
 		},
 		"resist":{
-			"shadow":5
+			"shadow":15
 		}
 	},
 	{
@@ -451,7 +451,7 @@
 			"pct":25
 		},
 		"resist":{
-			"arcane":10
+			"mana":10
 		}
 
 	},
@@ -465,16 +465,13 @@
 		"tohit":2,
 		"regen":0.5,
 		"defense":4,
-		"damage":"1~3",
-		"loot":{
-
-		}
+		"damage":"1~3"
 
 	},
 	{
 		"id":"scarab",
 		"level":4,
-		"desc":"massive shimmering beetle with projecting horn",
+		"desc":"massive shimmering beetle with a projecting horn",
 		"hp":5,
 		"defense":7,
 		"attack":{
@@ -880,7 +877,7 @@
         "attack":{
             "name":"zap",
 			"kind":"pierce",
-			"targets":"all",
+			"targets":"enemies",
             "dmg":"2~4"
 		},
 		"resist":{
@@ -893,7 +890,8 @@
     {
 		"id":"orcwarrior",
 		"name":"orc warrior",
-        "level":5,
+		"level":5,
+		"kind":"humanoid",
         "desc":"",
         "hp":17,
         "defense":15,
@@ -908,7 +906,7 @@
     {
         "id":"hobgoblin",
 		"level":5,
-		"kind":"goblin",
+		"kind":"humanoid",
         "desc":"",
         "evil":7,
         "hp":15,
@@ -918,7 +916,7 @@
             "name":"dagger",
             "kind":"pierce",
             "dmg":"1~5"
-        }, "loot":{}
+        }
 
 	},
 	{
@@ -937,7 +935,7 @@
             "dmg":"3~5"
 		},
 		"resist":{
-			"water":10
+			"water":15
 		}
 
     },
@@ -996,7 +994,7 @@
         "attack":{
             "name":"squelch",
 			"kind":"acid",
-			"targets":"all",
+			"targets":"enemies",
             "dmg":"2~4"
         }
 
@@ -1097,7 +1095,7 @@
             "dmg":"5~8"
 		},
 		"resist":{
-			"water":10,
+			"water":15,
 			"physical":20
 		}
 
@@ -1117,7 +1115,7 @@
             "dmg":"4~7"
 		},"loot":{"crocodiletears":5},
 		"resist":{
-			"water":10,
+			"water":15,
 			"nature":20
 		}
 
@@ -1297,8 +1295,7 @@
 			"dmg":"4~6"
 		},
 		"resist":{
-			"light":50,
-			"fire":10
+			"light":50
 		}
 	},
 	{
@@ -1319,10 +1316,11 @@
 		"id":"callodiper",
 		"biome":"cave",
         "level":5,
-        "desc":"their globed hands glow with pale, unearthly light.",
+		"desc":"their globed hands glow with pale, unearthly light.",
+		"kind":"humanoid",
         "hp":40,
         "attack":{
-			"targets":"all",
+			"targets":"enemies",
             "name":"light burst",
             "kind":"light",
             "dmg":"3~5"
@@ -1363,7 +1361,7 @@
         },
 		"loot":{},
 		"resist":{
-			"shadow":10
+			"shadow":15
 		}
 
     },
@@ -1381,7 +1379,7 @@
             "dmg":"3~8"
 		},
 		"resist":{
-			"arcane":15
+			"mana":15
 		}
 
 	},
@@ -1452,7 +1450,8 @@
         "level":6,
         "evil":10,
         "hp":43,
-        "defense":25,
+		"defense":25,
+		"kind":"humanoid",
         "tohit":2,
         "attack":{
             "name":"mace",
@@ -1476,7 +1475,7 @@
             "dmg":"2~5"
 		},
 		"resist":{
-			"shadow":10
+			"shadow":20
 		}
 
     },
@@ -1495,7 +1494,7 @@
             "dmg":"4~9"
 		},
 		"resist":{
-			"arcane":30
+			"mana":30
 		},"loot":{
 			"sword":1
 		}
@@ -1514,7 +1513,7 @@
             "name":"claws",
             "kind":"slash",
             "dmg":"5~14"
-        }, "loot":[]
+        }
 
     },
     {
@@ -1533,7 +1532,7 @@
             "dmg":"7~13"
 		},
 		"resist":{
-			"shadow":10
+			"shadow":15
 		}
 
     },
@@ -1613,7 +1612,8 @@
 		"id":"dwarp",
 		"biome":"cave",
         "level":7,
-        "desc":"its contorted purple body can hide in the smallest crevices.",
+		"desc":"its contorted purple body can hide in the smallest crevices.",
+		"kind":"humanoid",
         "hp":35,
 		"tohit":9,
 		"speed":9,
@@ -1628,7 +1628,8 @@
     {
         "id":"ogre",
         "level":7,
-        "flavor":"Ever wonder how orcs would look if they were three times as large?",
+		"flavor":"Ever wonder how orcs would look if they were three times as large?",
+		"kind":"giant",
         "hp":45,
         "tohit":8,
         "defense":20,
@@ -1642,7 +1643,8 @@
 	{
         "id":"frixie",
         "level":7,
-        "desc":"A nasty fey of cold disposition.",
+		"desc":"A nasty fey of cold disposition.",
+		"kind":"fey",
         "hp":35,
         "tohit":10,
 		"defense":17,
@@ -1651,7 +1653,10 @@
             "name":"frost bolt",
             "kind":"cold",
             "dmg":"4~17"
-        }
+        },"resist":{
+			"water":20,
+			"nature":30
+		}
 
     },
     {
@@ -1786,7 +1791,7 @@
 		},
 		"resist":{
 			"air":30,
-			"arcane":20
+			"mana":30
 		}
 
 	},
@@ -1805,7 +1810,7 @@
             "dmg":"9~17"
 		}, "loot":{"raw wood":5},
 		"resist":{
-			"nature":20
+			"nature":25
 		}
 
 	},
@@ -1824,8 +1829,7 @@
             "dmg":"2~11"
 		}, "loot":{"raw wood":5},
 		"resist":{
-			"earth":10,
-			"nature":10
+			"nature":15
 		}
 
 	},
@@ -1924,7 +1928,7 @@
     {
         "id":"unicorn",
         "level":9,
-        "kind":"magic beast",
+        "kind":"magicbeast",
         "evil":-17,
         "desc":"Its horn is full of magic.",
         "hp":77,
@@ -1975,7 +1979,7 @@
 		},
 		"resist":{
 			"spirit":20,
-			"shadow":10
+			"shadow":15
 		}
 
 	},
@@ -1991,11 +1995,11 @@
         "attack":{
             "name":"light",
 			"kind":"light",
-			"targets":"all",
+			"targets":"enemies",
             "dmg":"8~15"
 		},
 		"resist":{
-			"arcane":30
+			"mana":30
 		},"immune":"light"
 
     },
@@ -2004,7 +2008,7 @@
         "level":7,
         "desc":"It's more fire than bird.",
         "tohit":4,
-        "kind":"magic beast",
+        "kind":"magicbeast",
         "evil":-13,
         "hp":47,
         "defense":40,
@@ -2037,7 +2041,7 @@
         "level":8,
         "desc":"An avian terror of mythic repute.",
         "tohit":7,
-        "kind":"magic beast",
+        "kind":"magicbeast",
         "hp":41,
         "defense":32,
         "attack":{
@@ -2062,7 +2066,7 @@
         "attack":{
             "name":"seduction",
 			"kind":"sexy",
-			"targets":"all",
+			"targets":"enemies",
             "dmg":"5~8"
 		}, "loot":{"sulfur":10
 		}
@@ -2071,7 +2075,8 @@
     {
         "id":"medusa",
         "level":8,
-        "desc":"Kind of ugly.",
+		"desc":"Kind of ugly.",
+		"kind":"humanoid",
         "evil":20,
         "tohit":2,
         "hp":56,
@@ -2079,11 +2084,9 @@
         "attack":{
             "name":"stare",
 			"kind":"magic",
-			"targets":"all",
+			"targets":"enemies",
             "dmg":"17~25"
-        },"loot":{
-
-		}
+        }
 
 	},
 	{
@@ -2106,7 +2109,7 @@
 		"id":"direbear",
 		"name":"dire bear",
         "level":8,
-        "kind":"magic beast",
+        "kind":"magicbeast",
         "evil":17,
         "desc":"He's angrier now!!!",
         "hp":85,
@@ -2143,7 +2146,8 @@
         "id":"dullahan",
         "level":8,
         "evil":20,
-        "desc":"It doesn't have a head. But you do.",
+		"desc":"It doesn't have a head. But you do.",
+		"kind":"humanoid",
         "hp":55,
         "tohit":7,
         "defense":45,
@@ -2153,7 +2157,7 @@
             "dmg":"7~15"
 		}, "biome":["town","woods","plains"],
 		"resist":{
-			"spirit":20
+			"spirit":25
 		}
 
 	},
@@ -2161,7 +2165,8 @@
         "id":"naga",
         "level":8,
         "evil":12,
-        "desc":"From the waist up, it doesn't look that bad.",
+		"desc":"From the waist up, it doesn't look that bad.",
+		"kind":"humanoid",
         "hp":38,
         "tohit":8,
         "defense":48,
@@ -2175,9 +2180,7 @@
 				"dmg":"1~4",
 				"duration":5
 			}
-        }, "loot":{
-
-		}
+        }
 
     },
     {
@@ -2211,7 +2214,7 @@
         "hp":40,
         "defense":55,
         "attack":{
-			"targets":"all",
+			"targets":"enemies",
             "name":"scorch",
             "kind":"fire",
             "dmg":"5~15"
@@ -2229,7 +2232,7 @@
         "hp":30,
         "defense":65,
         "attack":{
-			"targets":"all",
+			"targets":"enemies",
             "name":"light",
             "kind":"light",
 			"dmg":"4~10",
@@ -2249,9 +2252,10 @@
 		"id":"cavetroll",
         "name":"cave troll",
         "level":9,
-        "evil":15,
+		"evil":15,
+		"kind":"giant",
         "biome":["hills","mountains"],
-        "flavor":"they have a cave troll...",
+		"flavor":"they have a cave troll...",
         "hp":90,
         "tohit":4,
 		"defense":35,
@@ -2288,14 +2292,14 @@
         "level":9,
         "kind":"demon",
         "evil":27,
-        "desc":"Oh my!",
+        "flavor":"Oh my!",
         "hp":69,
         "tohit":20,
         "defense":35,
         "attack":{
             "name":"seduction",
 			"kind":"sexy",
-			"targets":"all",
+			"targets":"enemies",
             "dmg":"9~13"
         }, "loot":{"sulfur":3}
 
@@ -2352,7 +2356,7 @@
         "attack":{
             "name":"lightning",
 			"kind":"light",
-			"targets":"all",
+			"targets":"enemies",
             "dmg":"13~25"
 		},"immune":"light,fire",
 		"loot":{
@@ -2367,7 +2371,8 @@
         "name":"mind slayer",
         "level":11,
         "evil":24,
-        "desc":"It licks your brain with its mind.",
+		"desc":"It licks your brain with its mind.",
+		"kind":"humanoid",
         "hp":49,
         "tohit":15,
         "defense":44,
@@ -2382,7 +2387,8 @@
 		"id":"lesserwyrm",
         "name":"lesser wyrm",
         "level":11,
-        "desc":"A cross between a worm and a dragon.",
+		"desc":"A cross between a worm and a dragon.",
+		"kind":"magicbeast",
         "tohit":5,
         "hp":80,
         "defense":42,
@@ -2396,7 +2402,7 @@
     {
         "id":"basilisk",
         "level":11,
-        "kind":"magic beast",
+        "kind":"magicbeast",
         "desc":"Touch, but don't look.",
         "tohit":5,
         "hp":64,
@@ -2434,7 +2440,7 @@
         "id":"troll",
         "level":11,
         "evil":25,
-        "desc":"tro lo lo.",
+        "flavor":"tro lo lo.",
         "hp":100,
         "tohit":3,
 		"defense":50,
@@ -2470,7 +2476,8 @@
 		"name":"desilla's concubine",
         "level":11,
         "evil":27,
-        "desc":"A devoted follower of the sorceress Desilla.",
+		"desc":"A devoted follower of the sorceress Desilla.",
+		"kind":"humanoid",
         "hp":90,
         "tohit":20,
         "defense":50,
@@ -2520,7 +2527,8 @@
         "id":"valkyrie",
         "level":12,
         "evil":-8,
-        "desc":"She'll take you to Valhalla.",
+		"desc":"She'll take you to Valhalla.",
+		"kind":"humanoid",
         "hp":155,
         "tohit":15,
         "defense":54,
@@ -2536,7 +2544,8 @@
         "level":12,
 		"evil":5,
 		"desc":"a towering giant of stone",
-        "flavor":"You should have stayed out of the cloudspine.",
+		"flavor":"You should have stayed out of the cloudspine.",
+		"kind":"giant",
         "hp":225,
         "tohit":10,
         "defense":50,
@@ -2665,7 +2674,9 @@
             "name":"pound",
             "kind":"blunt",
             "dmg":"20~30"
-        }, "loot":{}
+		}, "resist":{
+			"nature":30
+		}
     },
     {
         "id":"wyvern",
@@ -2679,7 +2690,7 @@
             "kind":"slash",
             "dmg":"20~30"
         },"resist":{
-			"air":30
+			"air":35
 		}
 
     },
@@ -2710,7 +2721,9 @@
             "name":"crush",
             "kind":"blunt",
             "dmg":"12~24"
-        }
+        },"resist":{
+			"earth":30
+		}
 
     },
     {
@@ -2807,11 +2820,11 @@
         "attack":{
             "name":"fire breath",
 			"kind":"fire",
-			"targets":"all",
+			"targets":"enemies",
             "dmg":"23~37"
         },"resist":{
 			"fire":50,
-			"light":15
+			"light":20
 		}
     },
     {
@@ -2819,26 +2832,26 @@
         "level":15,
         "kind":"beast",
         "desc":"",
-        "hp":225,
+        "hp":325,
         "tohit":15,
 		"defense":75,
 		"regen":1,
         "attack":{
             "name":"trample",
 			"kind":"blunt",
-			"targets":"all",
+			"targets":"enemies",
             "dmg":"17~27"
 		},
 		"resist":{
-			"nature":15,
-			"arcane":15,
-			"shadow":15,
-			"earth":15,
-			"physical":15,
-			"air":15,
-			"water":15,
-			"poison":15,
-			"fire":15
+			"nature":20,
+			"mana":20,
+			"shadow":20,
+			"earth":20,
+			"physical":20,
+			"air":20,
+			"water":20,
+			"poison":20,
+			"fire":20
 		}
 
     },
@@ -2860,7 +2873,7 @@
 			"leech":0.3
 		}, "loot":{"vampfang":"15%", "ichor":"5%"},
 		"resist":{
-			"shadow":30
+			"shadow":40
 		}
 
 	},
@@ -3041,24 +3054,52 @@
             "name":"fire breath",
             "kind":"fire",
             "dmg":"50~100"
-        }
+        },"resist":{
+			"fire":90
+		}
+
+	},
+	{
+		"id":"mythicvampire",
+        "name":"mythic vampire",
+        "level":19,
+        "kind":"undead",
+        "evil":60,
+        "desc":"",
+        "hp":175,
+        "tohit":25,
+		"defense":100,
+		"regen":15,
+        "attack":{
+            "name":"bite",
+            "kind":"shadow",
+			"dmg":"30~50",
+			"leech":0.5
+		}, "loot":{"vampfang":25},
+		"resist":{
+			"shadow":80
+		}
+
 	},
 	{
 		"id":"karnivex",
+		"name":"Karnivex the BloodLock",
         "level":19,
         "evil":27,
 		"desc":"the weakest of the Archlocks built his reputation upon sheer slaughter.",
 		"flavor":"subtlety was lost on karnivex.",
+		"kind":"humanoid",
+		"unique":true,
         "hp":1200,
         "tohit":20,
         "defense":110,
         "attack":[
 			{
 				"name":"fire storm",
-				"targets":"all",
+				"targets":"enemies",
 				"dot":{
 					"duration":20,
-					"dmg":"5~7"
+					"dmg":"7~10"
 				}
 			},
 			{
@@ -3072,20 +3113,25 @@
     },
 	{
 		"id":"desilla",
+		"name":"Desilla the Vicious",
         "level":20,
         "evil":27,
-        "desc":"Among the warlocks, desilla was the least inclined to conquest.",
+		"desc":"Among the warlocks, desilla was more inclined to indulgence than conquest.",
+		"kind":"humanoid",
         "hp":1500,
         "tohit":25,
-        "defense":100,
+		"defense":100,
+		"unique":true,
         "attack":[
 			{
 				"name":"red haze",
-				"targets":"all",
+				"targets":"enemies",
 				"dot":{
 					"id":"redhaze",
 					"duration":20,
-					"tohit":-10
+					"mod":{
+						"tohit":-10
+					}
 				}
 			},
 			{
@@ -3095,6 +3141,73 @@
 			}
 		], "loot":{
 			"max":20
+		}
+
+	},
+	{
+		"id":"bodias",
+		"name":"Bodias the Deathlock",
+        "level":25,
+        "evil":27,
+		"desc":"",
+		"kind":"humanoid",
+        "hp":2000,
+		"tohit":50,
+		"unique":true,
+        "defense":150,
+        "attack":[
+			{
+				"name":"quake",
+				"targets":"enemies",
+				"type":"earth",
+				"dot":{
+					"id":"quake",
+					"duration":30,
+					"dmg":"10~20",
+					"mod":{
+						"tohit":-10
+					}
+				}
+			},
+			{
+            	"name":"disintegrate",
+				"dmg":"35~70",
+				"kind":"demonic"
+			}
+		], "loot":{
+			"max":25
+		}
+
+	},
+	{
+		"id":"narz",
+		"name":"Narz, the Black Spindle",
+        "level":27,
+		"desc":"",
+		"kind":"humanoid",
+        "hp":1700,
+        "tohit":50,
+        "defense":200,
+        "attack":[
+			{
+				"name":"void orb",
+				"targets":"enemies",
+				"dot":{
+					"id":"redhaze",
+					"duration":20,
+					"mod":{
+						"tohit":-10
+					}
+				},
+				"kind":"void"
+			},
+			{
+            	"name":"void bolt",
+				"dmg":"55~150",
+				"kind":"void"
+			}
+		], "loot":{
+			"max":27
 		}
 
     },
@@ -3117,9 +3230,10 @@
 		"immune":"nature,poison"
 	},
 	{
-		"id":"avatar",
+		"id":"m_avatar",
+		"alias":"avatar",
         "level":23,
-        "kind":"celestial",
+        "kind":"diety",
         "desc":"incarnation of a god",
         "hp":500,
         "tohit":30,
@@ -3145,7 +3259,7 @@
         "attack":{
 			"name":"Madness",
 			"leech":0.25,
-			"targets":"all",
+			"targets":"enemies",
             "kind":"psychic",
             "dmg":"40~65"
         }
@@ -3181,7 +3295,7 @@
         "attack":{
 			"name":"gorboring",
 			"kind":"sonic",
-			"targets":"all",
+			"targets":"enemies",
             "dmg":"50~75"
         },"flavor":"most agree it's best the gorborung cannot be seen."
 	},
@@ -3220,21 +3334,6 @@
 			"kind":"blunt",
 			"dmg":"200~350"
 		},"immune":"earth"
-	},
-	{
-		"id":"primummobile",
-		"name":"primum mobile",
-		"level":100,
-		"kind":"diety",
-		"desc":"The force that moves the sun and stars",
-		"hp":10000,
-		"tohit":100,
-		"defense":1000,
-		"attack":{
-			"name":"deus ex",
-			"kind":"holy",
-			"dmg":750
-		}
 	}
 
 ]

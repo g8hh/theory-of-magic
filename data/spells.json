@@ -163,11 +163,34 @@
 
 	},
 	{
+		"id":"quell",
+		"level":15,
+		"school":"mana",
+		"require":"g.lore>=35",
+		"desc":"The full weight of a wizard's gaze is often overpowering.",
+		"cd":300,
+		"buy":{
+			"arcana":30
+		},
+		"cost":{
+			"mana":5
+		},
+		"attack":{
+			"targets":"enemies",
+			"dot":{
+				"duration":60,
+				"mod":{
+					"speed":-20
+				}
+			}
+		}
+	},
+	{
 		"id":"lifedrain",
 		"name":"drain life",
 		"level":12,
 		"school":"shadow",
-		"require":"g.necromancy>=5&&g.shadowlore>=25",
+		"require":"g.necromancy>=8&&g.shadowlore>=25",
 		"buy":{
 
 			"research":5000,
@@ -218,7 +241,7 @@
 		},
 		"attack":{
 			"dot":{
-				"targets":"all",
+				"targets":"enemies",
 				"kind":"shadow",
 				"duration":100,
 				"resist.shadow":-10
@@ -538,7 +561,7 @@
 			"mana":1
 		},
 		"attack":{
-			"targets":"all",
+			"targets":"enemies",
 			"damage":"0.75~1",
 			"kind":"arcane",
 			"tohit":1
@@ -951,7 +974,29 @@
 
 	},
 	{
+		"id":"mk_murder",
+		"name":"summon murder",
+		"require":"summoner",
+		"level":5,
+		"cd":150,
+		"buy":{
+			"research":1000,
+			"codices":10,
+			"managem":3
+		},
+		"cost":{
+			"mana":7
+		},
+		"effect":[
+			"raven",
+			"raven",
+			"raven",
+			"raven",
+			"raven"
+		]
 
+	},
+	{
 		"id":"prolight",
 		"name":"protection: light",
 		"school":"shadow",
@@ -1286,6 +1331,7 @@
 		"id":"magebolt",
 		"name":"mage bolt",
 		"level":9,
+		"require":"(g.mage+g.wizard+g.wizard2+g.highmage)>0",
 		"school":"mana",
 		"buy":{
 
@@ -1475,15 +1521,16 @@
 		"level":4,
 		"require":"trickster",
 		"desc":"curse all enemies with a streak of bad luck.",
+		"school":"chaos",
 		"buy":{
 			"research":1000,
 			"codices":10
 		},
 		"cost":{
-			"mana":3
+			"chaos":1
 		},
 		"attack":{
-			"targets":"all",
+			"targets":"enemies",
 			"dot":{
 				"id":"jinx",
 				"kind":"curse",
@@ -1634,6 +1681,181 @@
 		}
 	},
 	{
+		"id":"zap",
+		"level":3,
+		"desc":"An electric shock leaps from your fingers",
+		"require":"g.lightlore>=5||g.airlore>=5",
+		"school":"air",
+		"buy":{
+
+			"research":100,
+			"scrolls":10
+
+		},
+		"cost":{
+			"air":2
+		},
+		"at":{
+			"30":{
+				"attack.damage.max":1
+			},
+			"100":{
+				"attack.damage.min":1
+			},
+			"300":{
+				"attack.damage.max":2,
+				"attack.damage.min":2,
+				"attack.tohit":2
+			}
+		},
+		"attack":{
+			"damage":"1~2",
+			"tohit":5,
+			"kind":"air",
+			"dot":{
+				"name":"blind",
+				"duration":5,
+				"mod":{
+					"tohit":-2
+				}
+			}
+		}
+	},
+
+	{
+		"id":"elec1",
+		"name":"lightning",
+		"level":5,
+		"desc":"An arc of lightning flashes from the sky.",
+		"require":"g.airlore>=7&&g.zap>0",
+		"school":"air",
+		"buy":{
+
+			"research":500,
+			"codices":10,
+			"airgem":5,
+			"lightgem":5
+
+		},
+		"flavor":"shazaaam?",
+		"cost":{
+			"air":5
+		},
+		"at":{
+			"30":{
+				"attack.damage.max":2
+			},
+			"150":{
+				"attack.damage.min":2
+			},
+			"400":{
+				"attack.damage.max":3,
+				"attack.damage.min":2,
+				"attack.tohit":4
+			}
+		},
+		"attack":{
+			"damage":"7~15",
+			"tohit":7,
+			"kind":"air",
+			"dot":{
+				"name":"blind",
+				"duration":5,
+				"mod":{
+					"tohit":-4
+				}
+			}
+		}
+	},
+	{
+		"id":"elec2",
+		"name":"doublestrike",
+		"level":8,
+		"desc":"Twin arcs of lightning flash from the sky.",
+		"flavor":"sometimes lightning does strike twice.",
+		"require":"g.airlore>=9&&g.elec1>0",
+		"school":"air",
+		"buy":{
+
+			"research":1000,
+			"tomes":3,
+			"airgem":10
+
+		},
+		"cost":{
+			"air":5
+		},
+		"at":{
+			"30":{
+				"attack.damage.max":2
+			},
+			"100":{
+				"attack.damage.min":2
+			},
+			"300":{
+				"attack.damage.max":3,
+				"attack.damage.min":3,
+				"attack.tohit":5
+			}
+		},
+		"attack":{
+			"damage":"7~15",
+			"tohit":12,
+			"kind":"air",
+			"dot":{
+				"name":"blind",
+				"duration":5,
+				"damage":"7~15",
+				"mod":{
+					"tohit":-7
+				}
+			}
+		}
+	},
+	{
+		"id":"elec3",
+		"name":"thunderstrike",
+		"level":12,
+		"desc":"a blinding storm of lightning.",
+		"require":"g.airlore>=12&&g.elec2>0",
+		"school":"air",
+		"buy":{
+
+			"research":5000,
+			"tomes":10,
+			"airgem":15
+
+		},
+		"cost":{
+			"air":10
+		},
+		"at":{
+			"30":{
+				"attack.dot.damage.max":3
+			},
+			"100":{
+				"attack.dot.damage.min":3
+			},
+			"300":{
+				"attack.dot.damage.max":4,
+				"attack.dot.damage.min":4,
+				"attack.toHit":5
+			}
+		},
+		"attack":{
+			"tohit":15,
+			"dot":{
+				"targets":"enemies",
+				"kind":"air",
+				"duration":15,
+				"dmg":"7~15",
+				"mod":{
+					"tohit":-5
+				}
+			}
+		}
+	},
+	{
 		"id":"calming",
 		"name":"calming murmurs",
 		"level":2,
@@ -1714,6 +1936,60 @@
 		},"flavor":"don't lose your way"
 	},
 	{
+		"id":"kannadance",
+		"level":7,
+		"name":"kanna's dervish dance",
+		"school":"bladelore",
+		"sym":"⭐",
+		"require":"spellblade",
+		"desc":"Kanna's dance was strenuous or a mage, but deadly to enemies.",
+		"buy":{
+
+			"research":500,
+			"tomes":1,
+			"airgem":10
+
+		},
+		"cost":{
+			"air":8
+		},
+		"dot":{
+			"duration":60,
+			"mod":{
+				"stamina.max":40,
+				"stamina":40,
+				"stamina.rate":-2,
+				"dodge":15,
+				"player.tohit":10,
+				"player.damage":5
+			}
+		},"flavor":"she danced with the devil in the pale moonlight, blades gleaming and blurring like a single streak of silver"
+	},
+	{
+		"id":"unearth",
+		"desc":"raise precious stones from the ground.",
+		"school":"earth",
+		"level":3,
+		"buy":{
+
+			"research":300,
+			"codices":5,
+			"earthgem":5
+
+		},
+		"cost":{
+			"scrolls":1,
+			"earth":7
+		},
+		"dot":{
+			"duration":120,
+			"mod":{
+				"gems.rate":0.25
+			}
+		},"flavor":"hi-ho, hi-ho"
+
+	},
+	{
 		"id":"ironskin",
 		"name":"iron skin",
 		"desc":"hardens the skin of the caster.",
@@ -1725,8 +2001,8 @@
 		"buy":{
 
 			"research":750,
-			"codices":1,
-			"earthgem":3
+			"codices":5,
+			"earthgem":5
 
 		},
 		"cost":{
@@ -1751,7 +2027,7 @@
 
 			"research":1000,
 			"tomes":1,
-			"earthgem":5
+			"earthgem":10
 
 		},
 		"cost":{
@@ -1791,12 +2067,86 @@
 
 	},
 	{
+		"id":"tremor",
+		"level":5,
+		"desc":"The earth shakes beneath your enemies' feet",
+		"require":"mud",
+		"school":"earth",
+		"buy":{
+
+			"research":100,
+			"codices":30,
+			"earthgem":5
+
+		},
+		"cost":{
+			"earth":5
+		},
+		"at":{
+			"30":{
+				"attack.toHit":1
+			},
+			"100":{
+				"attack.damage.max":1,
+				"attack.toHit":2
+			},
+			"300":{
+				"attack.damage.max":2,
+				"attack.damage.min":1,
+				"attack.toHit":2
+			}
+		},
+		"attack":{
+			"tohit":2,
+			"targets":"enemies",
+			"kind":"earth",
+			"dot":{
+				"dmg":"2~3",
+				"duration":3,
+				"mod":{
+					"speed":-10
+				}
+			}
+		}
+	},
+	{
+		"id":"quake",
+		"alias":"earthquake",
+		"desc":"the earth shakes at your command",
+		"school":"earth",
+		"level":9,
+		"buy":{
+
+			"sp":1,
+			"research":1750,
+			"tomes":5,
+			"earthgem":10
+
+		},
+		"cost":{
+			"earth":5
+		},
+		"attack":{
+
+			"targets":"enemies",
+			"dot":{
+				"duration":30,
+				"dmg":"5~10",
+				"mod":{
+					"speed":-7
+				}
+			}
+
+		}
+
+	},
+	{
 
 		"id":"immunefire1",
-		"name":"quenchingsphere",
+		"name":"quenching sphere",
 		"school":"water",
 		"level":5,
-		"require":"g.player.level>=10&&g.waterlore>=15",
+		"require":"g.waterlore>=8",
 		"desc":"temporarily negate all fire damage",
 		"buy":{
 
@@ -1819,7 +2169,8 @@
 	},
 	{
 
-		"id":"magnificence",
+		"id":"splendor",
+		"alias":"magnificence",
 		"level":7,
 		"school":"light",
 		"desc":"",
@@ -1834,7 +2185,7 @@
 		"dot":{
 			"duration":60,
 			"mod":{
-				"tohit":5,
+				"player.tohit":5,
 				"hp.max":50,
 				"defense":10,
 				"speed":2
@@ -1879,7 +2230,7 @@
 			"light":5
 		},
 		"attack":{
-			"targets":"all",
+			"targets":"enemies",
 			"damage":"3~5",
 			"dot":{
 				"id":"blind",
@@ -1918,6 +2269,46 @@
 
 	},
 	{
+
+		"id":"hightide",
+		"name":"high tide",
+		"school":"water",
+		"level":6,
+		"desc":"flood the field of battle",
+		"cd":40,
+		"buy":{
+
+			"research":400,
+			"watergem":10,
+			"tomes":5
+
+		},
+		"cost":{
+			"water":5
+		},
+		"attack":{
+			"dot":{
+				"kind":"water",
+				"targets":"enemies",
+				"dmg":"3~7",
+				"duration":30,
+				"mod":{
+					"speed":-5,
+					"dodge":-10
+				}
+			}
+		},
+		"dot":{
+			"targets":"allies",
+			"duration":30,
+			"mod":{
+				"player.resist.water":50
+			}
+
+		}
+
+	},
+	{
 		"id":"cordyceps",
 		"level":7,
 		"school":"nature",
@@ -1934,9 +2325,8 @@
 			"nature":5
 		},
 		"attack":{
-			"targets":"all",
+			"targets":"enemies",
 			"dot":{
-				"id":"venom",
 				"kind":"poison",
 				"duration":45,
 				"damage":"7~11"
@@ -1964,6 +2354,68 @@
 		"effect":{
 			"hp":200
 		}
+	},
+	{
+
+		"id":"forceten",
+		"name":"force ten",
+		"school":"water",
+		"level":10,
+		"desc":"The storm before the calm.",
+		"buy":{
+
+			"research":4000,
+			"watergem":25,
+			"tomes":20
+
+		},
+		"cost":{
+			"water":8
+		},
+		"attack":{
+			"dot":{
+				"kind":"water",
+				"targets":"all",
+				"dmg":"20~30",
+				"duration":30
+			}
+		},
+		"dot":{
+			"targets":"allies",
+			"duration":30,
+			"mod":{
+				"player.resist.water":75
+			}
+
+		},"flavor":"the force without form"
+
+	},
+	{
+
+		"id":"immunefire2",
+		"name":"greater quenching sphere",
+		"school":"water",
+		"level":5,
+		"require":"g.waterlore>=15",
+		"desc":"temporarily negate all fire damage",
+		"buy":{
+
+			"research":4000,
+			"tomes":10
+
+		},
+		"cost":{
+			"water":7
+		},
+		"dot":{
+
+			"duration":100,
+			"mod":{
+				"player.immunities.fire":1
+			}
+
+		}
+
 	},
 	{
 		"id":"angelofdeath",

@@ -382,7 +382,7 @@
 		{
 			"id":"f_pumppatch",
 			"name":"pumpkin patch",
-			"tags":"taggarden,naturesource,spiritsource",
+			"tags":"t_garden,naturesource,spiritsource",
 			"desc":"a furrowed plot for growing pumpkins",
 			"require":"tier0",
 			"max":5,
@@ -609,7 +609,6 @@
 			"id":"hal_baroness",
 			"name":"bloody baroness",
 			"level":18,
-			"unique":true,
 			"kind":"human",
 			"desc":"A devotee of the immortal Night Queen, the bloody baroness extends her own life with harvests of blood.",
 			"hp":1000,
@@ -620,7 +619,7 @@
 				{
 					"name":"hideous laughter",
 					"kind":"madness",
-					"targets":"all",
+					"targets":"enemies",
 					"dmg":"10~15"
 				},
 				{
@@ -787,7 +786,7 @@
 			"attack":{
 			  "name":"seed storm",
 			  "kind":"necrotic",
-			  "targets":"all",
+			  "targets":"enemies",
 			  "dmg":"8~15"
 			},
 			"loot":{

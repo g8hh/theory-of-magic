@@ -55,8 +55,8 @@
 			"rage":"0~2"
 		},
 		"result":{
-			"research":0.5,
-			"arcana":0.02
+			"research":1,
+			"arcana":0.005
 		}
 	},
 	{
@@ -178,11 +178,14 @@
 		"name":"mummified remains",
 		"desc":"A corpse preserved by the stale air",
 		"effect":{
-			"bf":"-1~2",
+			"madness":"0~2",
+			"unease":"1~3",
 			"embalming.exp":1,
 			"spiritlore.exp":1,
-			"anatomy.exp":1,
-			"anatomy.max":0.01
+			"anatomy.exp":1
+		},
+		"result":{
+			"anatomy.max":0.001
 		},
 		"loot":{
 			"gold":"0~300",
@@ -197,11 +200,11 @@
 		"desc":"You've never seen such bones before.",
 		"effect":{
 			"bf":"-1~2",
-			"unease":"0~2",
-			"anatomy.exp":1,
-			"anatomy.max":0.01
+			"unease":"0~3",
+			"anatomy.exp":1
 		},
 		"result":{
+			"anatomy.max":0.001
 		}
 	},
 	{
@@ -250,7 +253,9 @@
 			"madness":"1~2",
 			"unease":"0~2",
 			"shadowlore.exp":1,
-			"spiritlore.exp":1,
+			"spiritlore.exp":1
+		},
+		"result":{
 			"spiritlore.max":0.001
 		}
 	},
@@ -289,14 +294,13 @@
 		"name":"black cat",
 		"desc":"A black cat is an omen to be studied seriously",
 		"effect":{
-			"unease":"1~2",
+			"unease":"1~4",
 			"rage":"2~4",
-			"spiritlore.max":0.001,
 			"divination.exp":1,
 			"scrying.exp":1
-
 		},
 		"result":{
+			"spiritlore.max":0.001,
 			"arcana":0.04
 		}
 
@@ -306,12 +310,14 @@
 		"name":"warding charm",
 		"desc":"A hanging charm wards away the borgles and grimstalks.",
 		"effect":{
-			"unease":"1~3",
-			"bf":"1~3",
+			"unease":"1~5",
+			"bf":"1~5",
 			"charms.exp":1,
-			"charms.max":0.01,
-			"enchanting.exp":1,
-			"enchanting.max":0.01
+			"enchanting.exp":1
+		},
+		"result":{
+			"enchanting.max":0.01,
+			"charms.max":0.01
 		}
 	},
 	{
@@ -322,11 +328,14 @@
 			"unease":"0~2",
 			"weary":"1~3",
 			"bf":"-1~2.5",
-			"potions.max":0.01,
 			"potions.exp":1,
 			"alchemy.exp":1,
 			"crafting.exp":1
-		},"loot":"hestiabrew"
+		},
+		"result":{
+			"potions.max":0.01
+		},
+		"loot":"hestiabrew"
 	},
 	{
 		"id":"enc_hestia",
@@ -335,13 +344,12 @@
 		"effect":{
 			"unease":"2~4",
 			"bf":"-2~3",
-			"potions.exp":0.001,
-			"herbalism.exp":1,
-			"scrying.max":0.001,
-			"history.max":0.001
-
+			"herbalism.exp":1
 		},
 		"result":{
+			"scrying.max":0.001,
+			"history.max":0.001,
+			"potions.exp":0.001,
 			"arcana":0.01
 		}
 
@@ -374,7 +382,7 @@
 			"rage":"0~2",
 			"madness":"0~2"
 		},
-		"loot":"gem",
+		"loot":"magicgems",
 		"flavor":"perhaps he could be induced to part with some..."
 
 	},
@@ -407,7 +415,7 @@
 	{
 		"id":"sombersunset",
 		"name":"somber sunset",
-		"desc":"the lapping waves in the dying sun hint at secrets just beyond your reach.",
+		"desc":"lapping waves in the dying sun hint at secrets just beyond your reach.",
 		"effect":{
 			"rage":"-1~-2",
 			"weary":"-1~-2",
@@ -514,6 +522,61 @@
 		"result":{
 			"earthlore.max":0.001
 		}
+	},
+	{
+		"id":"enc_statue4",
+		"name":"eldar statue",
+		"desc":"its weathered face has gazed upon the world since the Wind Age.",
+		"effect":{
+			"madness":1,
+			"bf":"3~7",
+			"unease":"3~7",
+			"history.exp":2
+		},
+		"result":{
+			"history.max":0.001
+		}
+	},
+	{
+		"id":"enc_sindel",
+		"name":"star shrine",
+		"desc":"a glowing star cinder embedded in a shrine.",
+		"effect":{
+			"lightlore.exp":1,
+			"bf":"2~5",
+			"unease":"1~5",
+			"history.exp":1
+		},
+		"result":{
+			"lightlore.max":0.001
+		},"flavor":"you can't seem to pry it loose."
+	},
+	{
+		"id":"enc_tenwick",
+		"name":"tenwick",
+		"desc":"Tenwick is often on the trail, but always glad to stop and trade tales.",
+		"effect":{
+			"scrying.exp":1,
+			"divination.exp":1,
+			"bf":"3~6",
+			"unease":"2~5"
+		},
+		"result":{
+		}
+	},
+	{
+		"id":"enc_wyrd",
+		"name":"wyrd sister",
+		"desc":"You meet the Wyrd sister Hecubah on the roadside.",
+		"effect":{
+			"scrying.exp":1,
+			"divination.exp":1,
+			"madness":2,
+			"bf":"3~7",
+			"unease":"2~4"
+		},
+		"result":{
+		},"flavor":"blank verse is always hard to interpret."
 	},
 	{
 		"id":"enc_gap",

@@ -196,6 +196,29 @@
 
 	},
 	{
+		"id":"pot_godspeed",
+		"name":"godspeed",
+		"level":15,
+		"buy":{
+			"gold":500,
+			"tomes":5,
+			"research":500
+		},
+		"cost":{
+			"airgem":1,
+			"ichor":1
+		},
+		"use":{
+			"dot":{
+				"mod":{
+					"speed":25
+				},
+				"duration":1800
+			}
+		}
+
+	},
+	{
 		"id":"pot_godsblood",
 		"name":"god's blood",
 		"level":12,

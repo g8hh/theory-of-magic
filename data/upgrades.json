@@ -183,7 +183,7 @@
 			"gold":400,
 			"bones":10,
 			"shadowgem":2,
-			"bonedust":20
+			"bonedust":25
 		},
 		"mod":{
 			"dist":270
@@ -395,7 +395,7 @@
 		"id":"pouch",
 		"desc":"Keep your money safe.",
 		"require":"g.gold>=5",
-		"max":2,
+		"max":3,
 		"cost":5,
 		"flavor":"seems a tad pricey for a bag.",
 		"mod":{
@@ -411,7 +411,7 @@
 		"cost":300,
 		"flavor":"who prices these bags?!",
 		"mod":{
-			"gem.max":1,
+			"magicgems.max":1,
 			"gems.max":5
 		}
 	},
@@ -420,14 +420,14 @@
 		"id":"gembox",
 		"name":"gem box",
 		"desc":"Finely crafted box for storing magic gems.",
-		"require":["tier0","gem"],
+		"require":["tier0","magicgems"],
 		"max":5,
 		"cost":{
 			"gems":15,
 			"gold":800
 		},
 		"mod":{
-			"gem.max":2,
+			"magicgems.max":2,
 			"gems.max":3
 		}
 	},
@@ -452,10 +452,10 @@
 		"id":"runebag",
 		"name":"rune pouch",
 		"desc":"pouch for holding runes",
-		"require":"g.runes>=5",
-		"max":1,
+		"require":"g.runelore>=5",
+		"max":5,
 		"cost":{
-			"gems":10,
+			"gems":50,
 			"research":1000
 		},
 		"mod":{
@@ -715,10 +715,12 @@
 		"cost":{
 			"herbs":4,
 			"nature":4,
-			"research":100
+			"research":100,
+			"arcana":1
 		},
 		"mod":{
-			"dodge":1
+			"dodge":1,
+			"luck":1
 		}
 
 	},
@@ -858,25 +860,28 @@
 		"id":"bagofholding",
 		"name":"bag of holding",
 		"require":"g.lore>10&&g.conjuration>7",
+		"desc":"You'll make your own bags, thank you.",
 		"max":1,
 		"cost":{
 			"gold":1000,
-			"research":500
+			"research":1000,
+			"arcana":1
 		},
 		"mod":{
 			"inv.max":4,
 			"gold.max":100,
 			"gems.max":20,
-			"gem.max":5
-		}
+			"magicgems.max":5
+		},"flavor":"the research costs a little more than you expected..."
 
 	},
 	{
 		"id":"deeppockets",
 		"name":"Deep Pockets",
 		"require":"g.hiddenpockets>0&&g.trickster>0&&g.conjuration>2",
-		"desc":"Lots of money.",
+		"desc":"Cheaper than buying pouches.",
 		"cost":{
+			"research":300,
 			"arcana":1
 		},
 		"mod":{
@@ -888,16 +893,51 @@
 	},
 	{
 
-		"id":"expedientretreat",
-		"name":"expedient retreat",
+		"id":"retreat",
+		"alias":"expedientretreat",
+		"name":"two-way portal",
 		"desc":"return to dungeons below your level after making a hasty exit.",
 		"require":"g.trickster>0||g.tier2>0",
 		"cost":{
-			"arcana":5,
-			"research":500
+			"arcana":10,
+			"research":2000
 		},
 		"mod":{
 			"player.retreat":1
+		}
+
+	},
+	{
+		"id":"gemcraft",
+		"require":"g.tier4>0&&g.crafting>=16",
+		"warn":true,
+		"cost":{
+			"research":7500,
+			"tomes":10,
+			"arcana":15,
+			"sp":5
+		},
+		"desc":"Imbue gems continuously as your current activity.",
+		"mod":{
+			"gemimbue.perpetual":true,
+			"gemimbue.length":5
+		}
+
+	},
+	{
+		"id":"advgems",
+		"name":"advanced gemcraft",
+		"require":"g.gemcraft>0&&g.crafting>=18",
+		"warn":true,
+		"cost":{
+			"research":10000,
+			"tomes":10,
+			"arcana":15,
+			"sp":10
+		},
+		"desc":"Improve the speed of your gem enchanting.",
+		"mod":{
+			"gemimbue.length":"-75%"
 		}
 
 	},
@@ -906,7 +946,7 @@
 		"desc":"earth affinity",
 		"require":"g.earth>10",
 		"cost":{
-			"research":300,
+			"research":3000,
 			"earthgem":10,
 			"tomes":1
 		},
@@ -921,7 +961,7 @@
 		"desc":"a natural resistance to most poisons.",
 		"require":"g.nature>10&&g.druid>0",
 		"cost":{
-			"research":500,
+			"research":3000,
 			"naturegem":10,
 			"tomes":1
 		},
@@ -936,7 +976,7 @@
 		"desc":"air affinity",
 		"require":"g.air>10",
 		"cost":{
-			"research":300,
+			"research":3000,
 			"airgem":10,
 			"tomes":1
 		},
@@ -950,12 +990,26 @@
 		"desc":"water affinity",
 		"require":"g.water>10",
 		"cost":{
-			"research":300,
+			"research":3000,
 			"watergem":10,
 			"tomes":1
 		},
 		"mod":{
 			"player.resist.water":5
+		}
+
+	},
+	{
+		"id":"fireaffinity",
+		"desc":"fire affinity",
+		"require":"g.fire>10",
+		"cost":{
+			"research":3000,
+			"firegem":10,
+			"tomes":1
+		},
+		"mod":{
+			"player.resist.fire":5
 		}
 
 	},
@@ -967,7 +1021,7 @@
 		"lock":["watersign","airsign","earthsign"],
 		"desc":"born under the celestial sign of fire",
 		"cost":{
-			"research":1000,
+			"research":5000,
 			"firegem":15,
 			"tomes":5
 		},
@@ -984,7 +1038,7 @@
 		"warn":true,
 		"desc":"born under the celestial sign of water",
 		"cost":{
-			"research":1000,
+			"research":5000,
 			"watergem":15,
 			"tomes":5
 		},
@@ -1001,7 +1055,7 @@
 		"warn":true,
 		"desc":"born under the celestial sign of earth",
 		"cost":{
-			"research":1000,
+			"research":5000,
 			"earthgem":15,
 			"tomes":5
 		},
@@ -1018,7 +1072,7 @@
 		"lock":["watersign","firesign","earthsign"],
 		"desc":"born under the celestial sign of wind",
 		"cost":{
-			"research":1000,
+			"research":5000,
 			"airgem":15,
 			"tomes":5
 		},
@@ -1028,26 +1082,12 @@
 
 	},
 	{
-		"id":"fireaffinity",
-		"desc":"fire affinity",
-		"require":"g.fire>10",
-		"cost":{
-			"research":300,
-			"firegem":10,
-			"tomes":1
-		},
-		"mod":{
-			"player.resist.fire":5
-		}
-
-	},
-	{
 		"id":"poisonveins",
 		"name":"poison veins",
 		"desc":"you do not fear poison",
 		"require":"g.poisonaffinity>0&&g.nature>14",
 		"cost":{
-			"research":500,
+			"research":5000,
 			"naturegem":15,
 			"tomes":5
 		},
@@ -1075,8 +1115,25 @@
 	},
 
 	{
+		"id":"guidingstar",
+		"name":"guiding star",
+		"require":"g.astronomy>=15&&g.evil<=0",
+		"desc":"a light in the heavens guides your way.",
+		"cost":{
+			"research":5000,
+			"arcana":15
+		},
+		"mod":{
+			"player.tohit":4,
+			"scrying.max":2,
+			"scrying.rate":"2%"
+		},"flavor":"Mornië alantië"
+
+	},
+
+	{
 		"id":"wishingwells",
-		"name":"Wishing wells",
+		"name":"wishing wells",
 		"require":"g.divination>=4&&g.fountain>0",
 		"cost":{
 			"gold":500,
@@ -1110,11 +1167,13 @@
 		"cost":{
 			"research":1000,
 			"tomes":5,
-			"bloodgem":5
+			"bloodgem":10,
+			"arcana":5,
+			"sp":1
 		},
 		"mod":{
 			"research.rate":-0.2,
-			"hp.rate":0.7
+			"hp.rate":0.5
 		}
 
 	},
@@ -1174,14 +1233,14 @@
 		"name":"dream catcher",
 		"desc":"you might not like what you catch.",
 		"tags":"spiritsource",
-		"require":"g.spirit>0&&g.crafting>=5",
+		"require":"g.crafting>=5",
+		"max":1,
 		"cost":{
 			"gold":50,
 			"research":50,
-			"spirit":2
+			"mana":2
 		},
 		"mod":{
-			"spirit.max":1,
 			"spirit.rate":0.01
 		}
 	},
@@ -1258,6 +1317,7 @@
 		},
 		"mod":{
 			"arcana.rate":0.0001,
+			"spirit.max":1,
 			"spirit.rate":0.01
 		}
 	},
@@ -1318,7 +1378,7 @@
 	{
 		"id":"specialization",
 		"desc":"specialize in a school of magic",
-		"require":"g.lore>100",
+		"require":"g.lore>999",
 		"max":1,
 		"cost":{
 			"tomes":1,
@@ -1432,7 +1492,9 @@
 		"warn":true,
 		"disable":"trickery",
 		"mod":{
-			"lightlore.max":2,
+			"lightlore.max":1,
+			"scrying.max":1,
+			"divination.max":1,
 			"lightlore.rate":"5%",
 			"player.tohit":2,
 			"player.defense":2,
@@ -1443,7 +1505,7 @@
 	{
 		"id":"fatalist",
 		"require":"(g.seer+g.oracle)>0&&g.tier5>0&&g.truesight>0",
-		"desc":"become the guiding hand of fate.",
+		"desc":"the guiding hand of fate.",
 		"cost":{
 			"tomes":20,
 			"research":2000,
@@ -1452,6 +1514,8 @@
 		"mod":{
 			"lightlore.max":2,
 			"lightlore.rate":"10%",
+			"divination.max":1,
+			"scrying.max":1,
 			"player.tohit":3,
 			"player.defense":3,
 			"dodge":3
@@ -1479,7 +1543,7 @@
 		"name":"occult endurance",
 		"max":3,
 		"desc":"expend your research to discover new sources of stamina.",
-		"require":"g.lore>=7&&g.tier0>0",
+		"require":"g.tier0>0",
 		"warn":true,
 		"cost":{
 			"research.max":25,
@@ -1498,8 +1562,8 @@
 		"max":1,
 		"require":"g.tier2>0&&g.player.level>=15",
 		"cost":{
-			"tomes":5,
-			"mana":10
+			"tomes":10,
+			"bloodgem":5
 		},"mod":{
 			"arcanebody.mod.hp.max":2
 		}
@@ -1508,9 +1572,9 @@
 
 		"id":"chirography",
 		"desc":"improve the efficacy of your scrolls by meticulous attention to penmanship.",
-		"require":"g.lore>10",
+		"require":"g.lore>12",
 		"cost":{
-			"research":300,
+			"research":700,
 			"mana":10
 		},
 		"mod":{
@@ -1543,18 +1607,17 @@
 	{
 		"id":"voidtouch",
 		"name":"touching the void",
-		"locked":true,
-		"require":"g.voidlore>=40",
+		"require":"g.voidlore>=7",
+		"desc":"Beyond the sphere of the planes lies a great void. Of its powers and dangers, the books are silent.",
 		"cost":{
-
+			"research":10000,
+			"tomes":30
 		},
 		"mod":{
 			"void.rate":0.01,
+			"stamina.rate":-0.5,
 			"voidlore.max":3,
 			"voidlore.rate":0.5
-		},
-		"effect":{
-
 		}
 	},
 	{
@@ -1676,9 +1739,7 @@
 			"arcana":1
 		},
 		"mod":{
-			"player.bonuses.fire":{
-				"damage":2
-			},
+			"player.bonuses.fire":2,
 			"firelore.max":1,
 			"firelore.rate":0.2,
 			"fire.rate":0.05
@@ -1720,9 +1781,7 @@
 			"arcana":5
 		},
 		"mod":{
-			"player.bonuses.earth":{
-				"damage":7
-			},
+			"player.bonuses.earth":7,
 			"stamina.max":1,
 			"earthlore.max":1,
 			"earthlore.rate":"10%",
@@ -1768,7 +1827,7 @@
 	{
 		"id":"mendicant",
 		"desc":"Sacrifice luxury for higher attainments.",
-		"need":"g.evil==0&&g.tier1>0&&g.gold.max>1000&&g.light.max>5",
+		"need":"g.evil<=0&&g.tier1>0&&g.gold.max>1000&&g.light.max>5",
 		"warn":true,
 		"cost":{
 		},
@@ -1805,8 +1864,24 @@
 			"codices":10
 		},
 		"mod":{
-			"gems.rate":0.01,
-			"gold.rate":-0.01
+			"gems.rate":0.02,
+			"gold.rate":-0.1
+		}
+
+	},
+	{
+		"id":"wildmarket",
+		"name":"goblin market",
+		"require":"(g.druid+g.fey+g.kell)>0",
+		"desc":"Sell your bounty to a magic market in the wild",
+		"cost":{
+			"herbs":50,
+			"research":3000,
+			"naturegem":10
+		},
+		"mod":{
+			"herbs.rate":-0.5,
+			"gold.rate":0.2
 		}
 
 	},
@@ -1881,7 +1956,7 @@
 		"require":"tier1",
 		"max":1,
 		"cost":{
-			"gold":200
+			"gold":500
 		},
 		"mod":{
 			"space.max":5
@@ -1894,7 +1969,7 @@
 		"desc":"Increase the size of your existing cellars.",
 		"require":"cellar",
 		"cost":{
-			"gold":200
+			"gold":700
 		},
 		"mod":{
 			"cellar.mod.space.max":5
@@ -1904,21 +1979,34 @@
 		"id":"siegeperilous",
 		"name":"siege perilous",
 		"desc":"the fabled seat of destiny",
-		"require":"g.fame>=100",
+		"require":"g.fame>=10",
 		"cost":{
 			"gold":4000,
 			"gems":30
 		},
-		"effect":{
-			"fame":5
-		},
 		"mod":{
+			"fame":1,
 			"allies.max":4,
 			"minions.max":2,
 			"lightlore.max":2,
 			"lightlore.rate":"10%"
 		}
 
+	},
+	{
+		"id":"up_runecrafter",
+		"name":"Hire Runecrafter",
+		"desc":"Hire a dwarf to craft runestones for you.",
+		"require":"g.evil<=0&&g.runelore>=5&&g.tier3>0",
+		"max":5,
+		"cost":{
+			"gems":100,
+			"space":5
+		},
+		"mod":{
+			"gold.rate":-0.5,
+			"runestones.rate":0.01
+		}
 	},
 	{
 
@@ -1929,7 +2017,8 @@
 		"cost":{
 			"space":5,
 			"gold":300,
-			"research":500
+			"tomes":1,
+			"research":1000
 		},
 		"mod":{
 			"gold.rate":0.1,
@@ -1945,8 +2034,8 @@
 		"require":"g.tier1>0&&g.earthlore>=3",
 		"max":1,
 		"cost":{
-			"gold":200,
-			"research":200
+			"gold":1000,
+			"research":500
 		},
 		"mod":{
 			"space.max":"25%"
@@ -1959,29 +2048,124 @@
 		"desc":"You see things before they happen",
 		"cost":{
 			"research":300,
-			"tomes":1
+			"arcana":5
 		},
 		"mod":{
 			"dodge":1
 		}
 	},
 	{
+		"id":"wizardhall",
+		"name":"wizard's hall",
+		"tags":"t_hall",
+		"slot":"hall",
+		"require":"g.tier5>0",
+		"desc":"Construct a Wizard's Hall.",
+		"buy":{
+			"research":50000,
+			"arcana":30,
+			"tomes":50,
+			"gold":20000
+		},
+		"mod":{
+			"t_runes.max":10,
+			"tomes.rate":0.003,
+			"sp.rate":0.0001,
+			"evt_hall":true
+		}
+
+	},
+
+	{
 		"id":"fireplane",
-		"slot":"homeplane",
-		"require":"g.tier5>0&&g.planeslore>=100",
+		"slot":"werry",
+		"name":"fire werry",
+		"desc":"a hidden pocket of the plane of ash and fire",
+		"require":"g.tier5>0&&g.gate>0&&g.firelore>=10",
 		"buy":{
 
-			"flamerune":10,
-			"gold":10000,
-			"tomes":10
+			"firerune":50,
+			"gold":15000,
+			"tomes":50,
+			"gate":1
 
 		},
 		"mod":{
 			"space.max":"30%",
 			"firelore.max":2,
-			"water.rate":"-5%",
+			"player.bonuses.water":-3,
+			"water.max":-2,
 			"player.resist.fire":"1+10%",
 			"player.bonuses.fire":5
+		}
+	},
+	{
+		"id":"waterplane",
+		"name":"water werry",
+		"slot":"werry",
+		"desc":"a pocket of the endless sea",
+		"require":"g.tier5>0&&g.gate>0&&g.waterlore>=10",
+		"buy":{
+
+			"waterrune":50,
+			"gold":15000,
+			"tomes":50,
+			"gate":1
+
+		},
+		"mod":{
+			"space.max":"30%",
+			"waterlore.max":2,
+			"player.bonuses.fire":-3,
+			"fire.max":-2,
+			"player.resist.water":"1+10%",
+			"player.bonuses.water":5
+		}
+	},
+	{
+		"id":"earthplane",
+		"name":"earth werry",
+		"desc":"a space carved from the plane of earth",
+		"slot":"werry",
+		"require":"g.tier5>0&&g.gate>0&&g.earthlore>=10",
+		"buy":{
+
+			"earthrune":50,
+			"gold":15000,
+			"tomes":50,
+			"gate":1
+
+		},
+		"mod":{
+			"space.max":"30%",
+			"earthlore.max":2,
+			"player.bonuses.air":-3,
+			"air.max":-2,
+			"player.resist.earth":"1+10%",
+			"player.bonuses.earth":5
+		}
+	},
+	{
+		"id":"airplane",
+		"name":"wind werry",
+		"desc":"an island floating in an endless sky",
+		"slot":"werry",
+		"require":"g.tier5>0&&g.gate>0&&g.airlore>=10",
+		"buy":{
+
+			"airrune":50,
+			"gold":15000,
+			"tomes":50,
+			"gate":1
+
+		},
+		"mod":{
+			"space.max":"30%",
+			"airlore.max":2,
+			"player.bonuses.earth":-3,
+			"earth.max":-2,
+			"player.resist.air":"1+10%",
+			"player.bonuses.air":5
 		}
 	}
 

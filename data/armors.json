@@ -29,8 +29,8 @@
     { "id":"collar", "armor":0, "slot":"neck", "cost":30 },
     { "id":"amulet", "armor":0, "slot":"neck", "cost":500 },
     { "id":"necklace", "armor":0, "slot":"neck", "cost":50 },
-    { "id":"band", "armor":0, "slot":"fingers", "kind":"ring", "cost":50 },
-    { "id":"loop", "armor":0, "slot":"fingers","kind":"ring", "cost":10 },
-    { "id":"ring", "armor":0, "slot":"fingers", "kind":"ring", "cost":100 }
+    { "id":"band", "armor":0, "slot":"fingers", "kind":"ring", "cost":50, "level":3 },
+    { "id":"loop", "armor":0, "slot":"fingers","kind":"ring", "cost":10, "level":1 },
+    { "id":"ring", "armor":0, "slot":"fingers", "kind":"ring", "level":5, "cost":100 }
 
 ]
