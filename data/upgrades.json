@@ -1986,7 +1986,7 @@
 		},
 		"mod":{
 			"fame":1,
-			"allies.max":4,
+			"minions.maxAllies":4,
 			"minions.max":2,
 			"lightlore.max":2,
 			"lightlore.rate":"10%"

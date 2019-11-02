@@ -1244,7 +1244,7 @@
 		"name":"high kell",
 		"desc":"the ranks of the kell range from the lesser fey and forest delki, to ancient spirits, old and indominable.",
 		"tags":"t_tier6",
-		"require":"(g.fey+g.kell)>0",
+		"require":"g.tier5>0&&(g.fey+g.kell)>0",
 		"cost":{
 			"research":15000,
 			"naturegem":50,
@@ -1300,7 +1300,7 @@
 		"name":"death lock",
 		"desc":"an unholy synthesis of wizardry and demonology.",
 		"tags":"t_tier6",
-		"require":"g.phylactory>0",
+		"require":"g.tier5>0&&g.phylactory>0",
 		"cost":{
 			"research":20000,
 			"souls":100,

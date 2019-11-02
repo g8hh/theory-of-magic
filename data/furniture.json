@@ -122,7 +122,7 @@
 	},
 	{
 		"id":"cache",
-		"name":"Buried cache",
+		"name":"buried cache",
 		"desc":"A cache of treasure buried in the ground, protected by enchantment.",
 		"need":["outdoors","g.enchanting>0"],
 		"max":3,

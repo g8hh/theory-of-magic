@@ -507,7 +507,7 @@
 	},
 	{
 		"id":"earthlore",
-		"name":"minerology",
+		"name":"geomancy",
 		"tags":"t_school,elemental",
 		"level":2,
 		"need":"earthsource",
@@ -544,7 +544,7 @@
 	},
 	{
 		"id":"airlore",
-		"name":"air lore",
+		"name":"wind lore",
 		"desc":"the study of air",
 		"verb":"studying air",
 		"tags":"elemental,t_school",

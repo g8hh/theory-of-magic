@@ -261,6 +261,9 @@
 	"loot":{
 
 	},
+	"result":{
+		"title":"Dhrunic Wayfarer"
+	},
 	"encs":[
 		"enc_statue2",
 		"strangebones",

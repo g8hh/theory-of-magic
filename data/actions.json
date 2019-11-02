@@ -685,7 +685,7 @@
 
 		"id":"geas",
 		"desc":"undertake a quest to subdue a great evil.",
-		"require":"g.tier2>0&&g.evil<=0",
+		"need":"g.tier2>0&&g.evil<=0",
 		"length":100,
 		"cd":777,
 		"cost":{
@@ -712,7 +712,7 @@
 		"perpetual":true,
 		"verb":"travelling",
 		"desc":"Travel the wide world.",
-		"require":"g.wagon>0||g.mendicant>0||g.camp>0",
+		"need":"g.wagon>0||g.mendicant>0||g.camp>0",
 		"run":{
 			"stamina":0.4
 		},
@@ -1221,7 +1221,7 @@
 	},
 	{
 		"id":"imbuelifegem",
-		"name":"imbue lifegem",
+		"name":"imbue lifegem (nature)",
 		"require":"g.naturelore>=6&&g.enchanting>0",
 		"tags":"gemimbue",
 		"fill":"naturegem",
@@ -1250,7 +1250,7 @@
 	},
 	{
 		"id":"imbuebloodgem",
-		"name":"coagulate gem",
+		"name":"coagulate gem (blood)",
 		"require":"g.alchemy>=5&&g.anatomy>=5",
 		"fill":"bloodgem",
 		"tags":"gemimbue",
@@ -1288,7 +1288,7 @@
 	},
 	{
 		"id":"imbueearthgem",
-		"name":"imbue stone",
+		"name":"imbue stone (earth)",
 		"require":"g.earth.max>=4&&g.enchanting>2",
 		"fill":"earthgem",
 		"tags":"gemimbue",
