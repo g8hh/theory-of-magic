@@ -501,7 +501,7 @@
 	{
 		"id":"ghostcompiler",
 		"name":"ghost compiler",
-		"desc":"an invisible spirit binds your scrolls into codicils.",
+		"desc":"an invisible spirit binds your scrolls into codices.",
 		"require":"g.tier1>0&&g.unseenscribe>0",
 		"max":3,
 		"cost":{
@@ -1995,7 +1995,8 @@
 	},
 	{
 		"id":"up_runecrafter",
-		"name":"Hire Runecrafter",
+		"actname":"Hire Runecrafter",
+		"name":"runecrafter",
 		"desc":"Hire a dwarf to craft runestones for you.",
 		"require":"g.evil<=0&&g.runelore>=5&&g.tier3>0",
 		"max":5,

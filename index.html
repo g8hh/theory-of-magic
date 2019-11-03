@@ -28,7 +28,7 @@
 <script src="chs.js?_t=201910241432"></script>
 <script src="//likexia.gitee.io/game/zh/core.js?_t=201910241432"></script>
 	<div id="vueRoot"></div>
-	<div style="position:relative;top:-48px;left:655px;">提示：游戏已更新至build#892<br>如右上版本号不对或其它异常问题请按Ctrl+F5刷新游戏<strong style="color:red">一次</strong></div>
+	<div style="position:relative;top:-48px;left:655px;">提示：游戏已更新至build#906<br>如右上版本号不对或其它异常问题请按Ctrl+F5刷新游戏<strong style="color:red">一次</strong></div>
 </body>
 <script src="dist/wizrobe.dist.bundle.js"></script>
 <!--客服 开始-->
@@ -47,25 +47,7 @@
 
     /* Main Layout */
 
-    div.full:first-child { display: flex; margin: 0; }
-    body div.full div.top-bar { border-bottom: 1px solid var(--separator-color); margin: 0; padding:0;}
-    body div.full div.top-bar .load-opts { display: flex; align-items: center; width: unset; }
-    body div.full div.game-main { flex: 1; margin-top: 0; max-height: unset; min-height: 0; }
-    body div.full div.game-mid { border-left: 1px solid var(--separator-color); border-right: 1px solid var(--separator-color); margin: 0; }
-    body div.full div.game-mid .menu-content {
-        margin: 0; min-height: 0; max-height: unset; overflow-y: auto;
-        border-top: none;
-    }
-    body div.full div.game-mid .menu-items { border-bottom: 1px solid var(--separator-color); margin: 0; padding: var(--sm-gap); text-transform: capitalize; }
-    body { overflow: hidden; margin: 0; background: var(--background-color); }
-    .game-mid .menu-content { padding:0; }
 
-    .full .item-popup {
-        position: fixed; /*background: var(--popup-background-color);*/
-        border: var(--popup-border); border-radius: var(--subtle-border-radius);
-        opacity: 1.0;
-    }
-    .top-bar { min-height: 60px; }
     button { color: var(--button-text-color); border: 1px solid #0006; }
     button { outline: none; }
     button:disabled { opacity: 0.3; color: unset; }
@@ -151,81 +133,6 @@
     }
 
     /* Main */
-
-
-
-
-    /* Adventure */
-
-    .menu-content div.adventure {
-        padding: 0; margin: 0;
-        display: flex; flex-flow: column;
-        min-height: 0; height: 100%;
-        box-sizing: border-box; overflow: hidden;
-    }
-    .menu-content div.adventure { min-height: unset; margin: 0; overflow: hidden; flex: 1; }
-    .menu-content div.adventure .dungeon-list { overflow-y: auto;  padding: var(--sm-gap); flex: 2; }
-    .menu-content div.adventure .log {
-        margin: 0; flex: 1; font-size: var(--compact-small-font); border-left: 1px solid var(--separator-color);
-        display:  flex; flex-direction: column;
-    }
-    .menu-content div.adventure .log span { padding: var(--sm-gap); }
-    .menu-content div.adventure .log .outlog { overflow-y: auto; overflow-x: hidden; }
-    .menu-content div.adventure .active-dungeon { padding: var(--sm-gap);}
-    .menu-content div.filter-box{ margin: 0; padding: var(--sm-gap); display: flex; align-items: center; }
-
-
-
-    /* Dungeons */
-
-    .menu-content div.adventure > div.locales {
-        /*display: flex; flex-flow: row wrap; justify-content: space-around;*/
-        display: grid;
-        grid-template-columns: repeat( auto-fit, 256px ); grid-gap: var(--sm-gap); grid-auto-rows: min-content;
-        padding: var(--md-gap);
-        border-top: 1px solid var(--separator-color);
-    }
-    .menu-content div.adventure > div.locales .locale {
-        padding: var(--md-gap);
-        border-radius: var(--list-entry-border-radius);
-        display: flex; flex-flow: column; height: 100%;
-    }
-    .menu-content div.adventure > div.locales .locale > span:nth-child(1) {
-        display: flex; flex-flow: row; justify-content: space-between; flex: 1;
-    }
-
-    body.compact .menu-content div.adventure > div.locales { grid-template-columns: minmax( 200px, 1fr) repeat( auto-fit, minmax( 200px, 1fr) ); }
-    body.compact .menu-content div.adventure > div.locales .locale { background: var(--list-entry-background); }
-    body.compact .menu-content div.adventure > div.locales .locale .bar { border: none;}
-
-
-
-    /* Combat */
-
-    .adventure .inv.item-table { overflow-y: auto; min-height: 0; display: flex; flex-direction: column; margin: 0; padding: var(--sm-gap); }
-    .adventure .inv.item-table tr { display:flex; padding: 0.1em; }
-    .adventure .inv.item-table tr td { padding: 0; }
-    .adventure .inv.item-table tr td:first-child { flex: 1; }
-    .adventure .inv.item-table tr td button { margin: var(--tiny-gap); padding: var(--sm-gap) 0.5em;  }
-    .adventure .inv.item-table:empty { display: none; }
-    .adventure .combat {
-        border-top: 1px solid var(--separator-color); border-bottom: 1px solid var(--separator-color);
-        flex-flow: row; display: flex; flex-direction: row; width: unset;
-    }
-    .adventure .combat .group {
-        border: none;
-        margin: 0; padding: var(--sm-gap); flex: 1; max-width: unset;
-    }
-    .adventure .combat .group > span { border-bottom: 1px solid var(--separator-color); }
-    .adventure .combat .group > div { margin: var(--sm-gap); }
-
-    .adventure div.raid-bottom { padding: 0; }
-    .adventure div.raid-bottom > .inv { flex-basis: 50%; margin: 0; box-sizing: border-box; }
-    .adventure div.raid-bottom > .log { flex-basis: 50%; margin: 0; }
-
-
-
-
 
     /* Skills */
 

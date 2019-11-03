@@ -3285,6 +3285,46 @@
 
 	},
 	{
+		"id":"strativax1",
+		"name":"strativax slumbering",
+        "level":24,
+		"desc":"",
+		"unique":true,
+		"kind":"dragon",
+		"defense":500,
+        "hp":10000
+
+	},
+	{
+		"id":"strativax2",
+		"name":"strativax waking",
+        "level":27,
+		"desc":"",
+		"unique":true,
+		"kind":"dragon",
+        "hp":5000,
+        "tohit":50,
+        "defense":300,
+		"attack":""
+
+	},
+	{
+		"id":"strativax3",
+		"name":"strativax enraged",
+        "level":27,
+		"desc":"",
+		"unique":true,
+		"kind":"dragon",
+        "hp":5000,
+        "tohit":50,
+        "defense":200,
+		"attack":"",
+		"loot":{
+			"max":27
+		}
+
+    },
+	{
 		"id":"gorborung",
 		"name":"The Gorborung",
 		"level":25,

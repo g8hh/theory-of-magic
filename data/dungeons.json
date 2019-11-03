@@ -479,7 +479,7 @@
 		"desc":"Veldran never did manage to carve a kingdom from the wreck of bodias' reign. But he did accrue a sizeable hoard.",
 		"level":12,
 		"run":{
-			"stamina":1.5
+			"stamina":2
 		},
 		"length":30,
 		"result":{
@@ -505,7 +505,7 @@
 		"require":"g.player.dist>=500",
 		"level":15,
 		"run":{
-			"stamina":2
+			"stamina":2.5
 		},
 		"length":75,
 		"result":{
@@ -535,7 +535,7 @@
 		"desc":"its smouldering ruins once more begin to burn.",
 		"level":18,
 		"run":{
-			"stamina":2.5
+			"stamina":3
 		},
 		"length":100,
 		"result":{
@@ -609,7 +609,7 @@
 		"level":17,
 		"length":50,
 		"run":{
-			"stamina":1
+			"stamina":2
 		},
 		"result":{
 			"title":"holy defiler",

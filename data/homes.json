@@ -381,7 +381,7 @@
 		"id":"cove",
 		"tags":"outdoors",
 		"desc":"Hidden Cove",
-		"require":"enchanter",
+		"require":"g.tier3>0&&g.enchanter>0",
 		"cost":3000,
 		"mod":{
 			"minions.max":20,
@@ -422,7 +422,7 @@
 	{
 		"id":"cavern",
 		"desc":"A wide and yawning cavern, deep beneath the earth",
-		"require":"g.tier1>0&&g.earthlore>=10",
+		"require":"g.tier2>0&&g.earthlore>=10",
 		"cost":{
 			"research":500,
 			"gold":3000,
@@ -450,7 +450,7 @@
 		"name":"Enchanted Grove",
 		"desc":"Enchanted Grove",
 		"tags":"outdoors",
-		"require":"g.enchanter>0||g.druid>0||g.witch>0",
+		"require":"g.tier3>0&&(g.enchanter+g.druid+g.witch)>0",
 		"cost":{
 			"gold":5000,
 			"research":2000,
@@ -469,7 +469,7 @@
 		"name":"Shrouded Isle",
 		"tags":"outdoors",
 		"desc":"A lonely isle at sea",
-		"require":"g.enchanter>0||g.druid>0||g.witch>0",
+		"require":"g.tier3>0&&(g.enchanter+g.druid+g.witch)>0",
 		"cost":{
 			"gold":5000,
 			"gems":50,

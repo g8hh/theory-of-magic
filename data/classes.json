@@ -88,7 +88,7 @@
 			"history.max":1,
 			"gold.rate":0.1,
 			"lore.rate":0.2
-		},"favor":"When I get a little money I buy books, and if any is left I buy food and clothes."
+		},"flavor":"When I get a little money I buy books, and if any is left I buy food and clothes."
 	},
 {
 	"id":"neophyte",
@@ -147,7 +147,7 @@
 	"desc":"You have no need of these dry tomes and musty old books.",
 	"buyname":"Forgo Studies",
 	"tags":"t_tier0",
-	"require":"g.study.valueOf()==0&&g.neophyte>0&&g.arcana>=5",
+	"require":"g.study<=0&&g.neophyte>0&&g.arcana>=5",
 	"cost":{
 		"arcana":7
 	},

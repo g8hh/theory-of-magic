@@ -174,6 +174,37 @@
 
 	},
 	{
+		"id":"enc_gnome",
+		"name":"affable gnome",
+		"desc":"A gnome is always more than willing to talk over a pint or a pipe.",
+		"effect":{
+			"weary":"0~2",
+			"bf":"1~2",
+			"spellcraft.exp":1,
+			"research":1,
+			"lore.exp":1
+		},
+		"result":{
+			"spellcraft.max":0.001
+		}
+
+	},
+	{
+		"id":"enc_gibber",
+		"name":"gibbering",
+		"desc":"They hide in small cracks and in return for a wicked deed, will reveal one secret.",
+		"effect":{
+			"weary":"0~2",
+			"madness":"0~2",
+			"mysticism.exp":1,
+			"research":1
+		},
+		"result":{
+			"arcana":0.01
+		},"flavor":"legend tells of a massive gibbering, who will answer any question in return for a murder."
+
+	},
+	{
 		"id":"enc_mummy",
 		"name":"mummified remains",
 		"desc":"A corpse preserved by the stale air",
@@ -538,12 +569,51 @@
 		}
 	},
 	{
+		"id":"enc_battle1",
+		"name":"ancient battlefield",
+		"desc":"blasted hills and scraps of armor still mark an ancient site of battle.",
+		"effect":{
+			"madness":0.5,
+			"weary":"2~7",
+			"unease":"2~5",
+			"history.exp":0.5
+		},
+		"result":{
+			"history.max":0.001
+		}
+	},
+	{
+		"id":"enc_mtpass",
+		"name":"thandhrun pass",
+		"desc":"Higher even than Gorboru, the passes of Thandhrun incessantly thunder.",
+		"effect":{
+			"madness":0.5,
+			"weary":"4~7",
+			"rage":"2~7"
+		},
+		"result":{
+			"dist":0.01
+		}
+	},
+	{
+		"id":"enc_oldstone",
+		"name":"the old stone",
+		"desc":"the massive head of stone and moss is said to be as old as the world itself.",
+		"effect":{
+			"unease":"3~4",
+			"bf":"0~-2",
+			"madness":"0~2",
+			"history.exp":2
+		},"flavor":"a voice seems to grumble from the ground."
+	},
+	{
 		"id":"enc_sindel",
 		"name":"star shrine",
 		"desc":"a glowing star cinder embedded in a shrine.",
 		"effect":{
 			"lightlore.exp":1,
 			"bf":"2~5",
+			"weary":"0~-2",
 			"unease":"1~5",
 			"history.exp":1
 		},

@@ -1370,7 +1370,7 @@
 
 		"id":"lexyrinth",
 		"desc":"All libraries hold hidden doors into its halls. Unlocking them is the hard bit.",
-		"require":"g.library>0&&g.planeslore>=15",
+		"require":"g.library>0&&g.planeslore>=20",
 		"max":1,
 		"cost":{
 			"gate":1,

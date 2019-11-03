@@ -24,6 +24,7 @@ Invoke-WebRequest -Uri "https://game312933.konggames.com/gamez/0031/2933/live/da
 Invoke-WebRequest -Uri "https://game312933.konggames.com/gamez/0031/2933/live/data/actions.json" -OutFile "data/actions.json"
 Invoke-WebRequest -Uri "https://game312933.konggames.com/gamez/0031/2933/live/data/upgrades.json" -OutFile "data/upgrades.json"
 Invoke-WebRequest -Uri "https://game312933.konggames.com/gamez/0031/2933/live/data/resources.json" -OutFile "data/resources.json"
+Invoke-WebRequest -Uri "https://game312933.konggames.com/gamez/0031/2933/live/data/items.json" -OutFile "data/items.json"
 Invoke-WebRequest -Uri "https://game312933.konggames.com/gamez/0031/2933/live/dist/dist/skills-ui.bundle.js" -OutFile "dist/dist/skills-ui.bundle.js"
 Invoke-WebRequest -Uri "https://game312933.konggames.com/gamez/0031/2933/live/dist/dist/player-ui.bundle.js" -OutFile "dist/dist/player-ui.bundle.js"
 Invoke-WebRequest -Uri "https://game312933.konggames.com/gamez/0031/2933/live/dist/dist/homes-ui.bundle.js" -OutFile "dist/dist/homes-ui.bundle.js"
@@ -36,3 +37,4 @@ Invoke-WebRequest -Uri "https://game312933.konggames.com/gamez/0031/2933/live/di
 Invoke-WebRequest -Uri "https://game312933.konggames.com/gamez/0031/2933/live/dist/dist/bestiary-ui.bundle.js" -OutFile "dist/dist/bestiary-ui.bundle.js"
 Invoke-WebRequest -Uri "https://game312933.konggames.com/gamez/0031/2933/live/dist/dist/minions-ui.bundle.js" -OutFile "dist/dist/minions-ui.bundle.js"
 Invoke-WebRequest -Uri "https://game312933.konggames.com/gamez/0031/2933/live/dist/dist/enchant-ui.bundle.js" -OutFile "dist/dist/enchant-ui.bundle.js"
+Invoke-WebRequest -Uri "https://game312933.konggames.com/gamez/0031/2933/live/css/main.css"  -OutFile "css/main.css"

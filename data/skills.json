@@ -310,7 +310,7 @@
 		"mod":{
 			"research.max":1,
 			"hp.max":1,
-			"hp.rate":0.2
+			"hp.rate":0.1
 		}
 
 	},

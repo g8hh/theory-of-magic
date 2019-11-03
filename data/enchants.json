@@ -402,7 +402,7 @@
 	},
 	{
 		"id":"en_scraft2",
-		"name":"spellcraft",
+		"name":"spellcraft II",
 		"adj":"of spells",
 		"desc":"increases your spellcrafting power",
 		"require":"g.en_scraft>0&&g.enchanting>=6",

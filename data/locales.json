@@ -108,6 +108,7 @@
 	"id":"pidwigcove",
 	"name":"pidwig's cove",
 	"level":9,
+	"require":"g.history>=3",
 	"length":25,
 	"desc":"The half-goblin Pidwig has sailed the waters around his bay for hundreds of years. In that time he has collected a myriad of interesting artifacts.",
 	"run":{
@@ -138,6 +139,7 @@
 	"id":"rithel",
 	"level":14,
 	"desc":"this tiny outpost in the center of thangmor outlasted even the pillars",
+	"require":"g.evil<=0&&g.history>=5",
 	"run":{
 		"stamina":0.2
 	},
@@ -150,6 +152,7 @@
 	},
 	"encs":[
 		"enc_chest2",
+		"enc_gnome",
 		"enc_primer2",
 		"enc_delki",
 		"brightvista"
@@ -235,6 +238,7 @@
 {
 	"id":"genezereth",
 	"level":15,
+	"require":"g.history>=6",
 	"length":100,
 	"sym":"📖",
 	"desc":"An ancient library at the bridge spanning Markhul's gap.",
@@ -258,6 +262,9 @@
 	"level":20,
 	"desc":"Tenwick's trail runs a circuit about the notable areas of Dhrune. On foot it takes the better part of a year to complete.",
 	"length":10000,
+	"run":{
+		"stamina":2
+	},
 	"loot":{
 
 	},
@@ -266,10 +273,14 @@
 	},
 	"encs":[
 		"enc_statue2",
+		"enc_battle1",
+		"enc_oldstone",
 		"strangebones",
+		"enc_gibber",
 		"hauntedglade",
 		"enc_statue4",
 		"brightvista",
+		"enc_mtpass",
 		"hiddencache",
 		"murkywater",
 		"sombersunset",
