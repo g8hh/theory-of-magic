@@ -663,6 +663,7 @@
 					"pct":"10%",
 					"id":"vorpal",
 					"name":"vorpal blade",
+					"level":10,
 					"type":"weapon",
 					"material":"quicksteel",
 					"tohit":10,

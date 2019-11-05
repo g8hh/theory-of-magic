@@ -637,7 +637,7 @@
 	{
 		"id":"enc_wyrd",
 		"name":"wyrd sister",
-		"desc":"You meet the Wyrd sister Hecubah on the roadside.",
+		"desc":"The Wyrd sister Hecubah waits by the roadside.",
 		"effect":{
 			"scrying.exp":1,
 			"divination.exp":1,

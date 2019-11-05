@@ -238,6 +238,7 @@
 	"effect":{
 		"sp":2
 	},
+	"locks":"pace",
 	"mod":{
 		"tier1":true,
 		"mana.max":1,
@@ -270,6 +271,7 @@
 		"sp":2
 
 	},
+	"locks":"pace",
 	"mod":{
 		"tier1":true,
 		"witchcraft":true,
@@ -296,6 +298,7 @@
 		"gold":300,
 		"arcana":5
 	},
+	"locks":"pace",
 	"effect":{
 
 		"sp":3
@@ -1270,7 +1273,7 @@
 		"name":"vile necromancer",
 		"tags":"t_tier6",
 		"desc":"In every epoch, Death appoints her viceroy.",
-		"require":"g.tier5>0&&g.evil>0&&g.spiritlore>=15&&g.shadowlore>=24",
+		"require":"g.tier5>0&&g.phylactory>0&&g.spiritlore>=15&&g.shadowlore>=24",
 		"cost":{
 			"research":17000,
 			"bones":100,

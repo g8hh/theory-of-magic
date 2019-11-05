@@ -949,7 +949,7 @@
 		"name":"void lore",
 		"require":"g.planeslore>=10&&g.tier5>0",
 		"desc":"the absence of all things",
-		"level":15,
+		"level":10,
 		"buy":{
 			"sp":5
 		},
@@ -970,7 +970,7 @@
 		"require":"tier3",
 		"need":"timesource",
 		"tags":"t_school",
-		"level":12,
+		"level":9,
 		"desc":"There must be a way...",
 		"buy":{
 			"sp":5

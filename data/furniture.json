@@ -277,6 +277,7 @@
 			"space":2
 		},
 		"mod":{
+			"scrolls.rate":0.001,
 			"research.max":5,
 			"languages.max":1,
 			"scrolls.max":10

@@ -3242,8 +3242,8 @@
 		"defense":120,
 		"regen":20,
         "attack":{
-            "name":"holy sword",
-            "kind":"holy",
+            "name":"holy shine",
+            "kind":"light",
             "dmg":"75~130"
         },"immune":"light"
 	},

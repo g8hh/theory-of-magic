@@ -1448,7 +1448,7 @@
 		"id":"phylactory",
 		"actname":"craft phylactory",
 		"desc":"rip out of a piece of your soul and store it in a magic gem.",
-		"require":"g.crafting>=20&&g.necromancy>=99",
+		"require":"g.crafting>=20&&g.necromancy>=8",
 		"length":50,
 		"repeat":false,
 		"cost":{
@@ -1465,6 +1465,7 @@
 			"mana":1
 		},
 		"mod":{
+			"necromancy.max":2,
 			"shadowlore.max":2,
 			"spiritlore.max":1,
 			"shadow.rate":"10%",
@@ -1478,7 +1479,7 @@
 		"name":"lich",
 		"actname":"rite of undeath",
 		"desc":"obtain immortality by becoming a lich",
-		"require":"g.crafting>=20&&g.necromancy>=8",
+		"require":"g.crafting>=20&&g.necromancy>=9&&g.phylactory>0",
 		"repeat":false,
 		"length":50,
 		"cost":{
@@ -1496,7 +1497,8 @@
 			"title":"lich"
 		},
 		"mod":{
-			"lore.max":1
+			"lore.max":1,
+			"resist.light":-100
 		}
 
 	},
@@ -1534,7 +1536,7 @@
 	{
 		"id":"animalfriend",
 		"name":"animal companion",
-		"require":"(g.druid+g.witch)>0",
+		"require":"(g.druid+g.warden)>0",
 		"need":"outdoors",
 		"desc":"create a magic link with a wild animal.",
 		"repeat":false,

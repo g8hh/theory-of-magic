@@ -61,7 +61,7 @@
 
 		"id":"ebonwoodbroomstick",
 		"name":"ebonwood broomstick",
-		"require":"g.witch>0&&g.crafting>=15&&g.spirit.max>=10",
+		"require":"g.witch>0&&g.crafting>=15&&g.tier3>0",
 		"flavor":"",
 		"slot":"mount",
 		"buy":{
@@ -686,7 +686,7 @@
 
 		"id":"grimoire",
 		"desc":"The handbook of witches",
-		"require":"witch",
+		"require":"g.witch>0&&g.tier2>0",
 		"locked":true,
 		"cost":{
 			"gold":50,
