@@ -331,8 +331,9 @@
 	},
 	{
 
-		"id":"idrasil tree",
-		"name":"lesser idrasil",
+		"id":"sm_idrasil",
+		"alias":"idrasil tree",
+		"name":"idrasil seedling",
 		"desc":"The seedlings of Yggdrasil become trees to rival mountains.",
 		"tags":"outdoors",
 		"cost":{
