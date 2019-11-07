@@ -215,13 +215,11 @@
 		"require":"g.airlore>=20",
 		"slot":"mount",
 		"buy":{
-			"arcana":20,
+			"arcana":15,
 			"research":10000,
-			"airgem":20
+			"airgem":15
 		},
 		"mod":{
-			"player.bonuses.air":2,
-			"speed":1,
 			"dist":525
 		}
 
@@ -1447,7 +1445,7 @@
 			"research.max":50
 		},
 		"mod":{
-			"hp.rate":0.25
+			"hp.rate":0.5
 		},"flavor":"magic over matter"
 
 	},

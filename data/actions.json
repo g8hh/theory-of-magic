@@ -230,152 +230,6 @@
 
 	},
 	{
-		"id":"act_garden",
-		"name":"garden",
-		"perpetual":true,
-		"verb":"botanicalizing",
-		"desc":"study plants and herbs.",
-		"need":"t_garden",
-		"require":"(g.witch+g.druid+g.alchemist+g.warden)>0",
-		"run":{
-			"stamina":0.3,
-			"nature":0.1
-		},
-		"at":{
-			"100":{
-				"effect.herbs":0.1,
-				"effect.herbalism.exp":0.5,
-				"effect.naturelore.exp":0.5
-			},
-			"1200":{
-				"effect.herbs":0.2,
-				"effect.naturelore.exp":0.5,
-				"effect.naturelore.max":0.0005
-			},
-			"5000":{
-				"effect.research":0.1,
-				"effect.herbalism.max":0.0005,
-				"effect.naturelore.max":0.0015,
-				"effect.naturelore.rate":0.001
-			}
-		},
-		"effect":{
-			"research":1.5,
-			"sp":0.0001,
-			"herbs":0.2
-		}
-	},
-	{
-		"id":"act_scry",
-		"name":"scry",
-		"perpetual":true,
-		"verb":"peering",
-		"desc":"knowledge for those who look.",
-		"require":"(g.oracle+g.seer+g.astralseer)>0&&g.chronomancy>=3&&g.scrying>=5",
-		"length":5,
-		"run":{
-			"stamina":0.5,
-			"mana":0.3,
-			"tempus":0.1
-		},
-		"at":{
-			"60":{
-				"result.research":5
-			},
-			"240":{
-				"result.research":5,
-				"result.arcana":0.005
-			},
-			"600":{
-				"result.research":10,
-				"result.arcana":0.02
-			}
-		},
-		"result":{
-			"research":10,
-			"arcana":0.005
-		}
-	},
-	{
-		"id":"act_concoct",
-		"name":"concoct potions",
-		"perpetual":true,
-		"verb":"concocting",
-		"desc":"Experiment with potions.",
-		"require":"g.alchemist>0",
-		"need":["workspace","potsource"],
-		"length":25,
-		"cost":{
-			"herbs":5
-		},
-		"run":{
-			"stamina":0.5
-		},
-		"at":{
-			"30":{
-				"effect.research":0.05,
-				"alchemy.exp": 0.05,
-				"potions.exp": 0.2
-			},
-			"120":{
-				"effect.research":0.05,
-				"potions.exp": 0.3,
-				"loot.gold":0.5,
-				"loot.pot_ironskin":"2%"
-			},
-			"500":{
-				"effect.research":0.1,
-				"potions.max": 0.0001
-			}
-		},
-		"effect":{
-			"research":1.3,
-			"alchemy.exp": 0.2,
-			"potions.exp": 1
-		},
-		"loot":{
-			"gold":2,
-			"pot_heal1":"5%",
-			"pot_stam1":"5%",
-			"pot_mana1":"5%"
-		}
-	},
-	{
-		"id":"act_element",
-		"name":"Attune (elements)",
-		"perpetual":true,
-		"verb":"attuning",
-		"desc":"attune to primal forces of the world.",
-		"require":"(g.kell+g.elementalist+g.highelemental)>0",
-		"run":{
-			"stamina":0.5,
-			"fire":0.05,
-			"water":0.05,
-			"air":0.05,
-			"earth":0.05
-		},
-		"at":{
-			"30":{
-				"effect.research":0.05,
-				"effect.arcana":0.001,
-				"effect.elemental.exp":0.2
-			},
-			"120":{
-				"effect.research":0.05,
-				"effect.elemental.exp":0.3,
-				"effect.elemental.rate":0.05
-			},
-			"500":{
-				"effect.research":0.1,
-				"effect.arcana":0.001,
-				"effect.elemental.max":0.001
-			}
-		},
-		"effect":{
-			"research":1.3
-		}
-	},
-	{
 
 		"id":"spingold",
 		"name":"spin gold",
@@ -499,7 +353,6 @@
 		"desc":"grind bones into dust",
 		"require":"g.dissection>=3",
 		"length":10,
-		"fill":"bonedust",
 		"cost":{
 			"bones":1
 		},
@@ -1645,10 +1498,6 @@
 		},
 		"mod":{
 			"lore.max":1,
-			"hp.rate":0.2,
-			"player.bonuses.shadow":3,
-			"player.hits.shadow":3,
-			"player.resist.shadow":"5%",
 			"resist.light":-100
 		}
 

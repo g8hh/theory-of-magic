@@ -829,7 +829,7 @@ var cnItems = {
     'siege perilous': '危机围城',
     'four leaf clover': '四叶草',
     'fly': '飞',
-    'Purchase freedom from your apprenticeship. You will become an independent practitioner of magic.': '花钱赎身来结束学徒制。您将成为独立的魔法实习者。',
+    '': '',
     '': '',
     '': '',
     '': '',

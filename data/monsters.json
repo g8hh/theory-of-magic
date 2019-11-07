@@ -64,7 +64,7 @@
 	{
         "id":"gremlin",
         "level":1,
-        "kind":"goblinoid",
+        "kind":"gobloid",
         "evil":5,
         "flavor":"Na-na-na-na-Na-na Na-na-na-na-Na-na...",
         "hp":"3~5",
@@ -181,8 +181,7 @@
 		"id":"gardengnome",
         "name":"garden gnome",
         "level":1,
-		"desc":"Standard variety garden gnome.",
-		"kind":"humanoid",
+        "desc":"Standard variety garden gnome.",
         "hp":"3~6",
         "defense":4,
         "tohit":2,
@@ -387,7 +386,6 @@
 		"id":"willowisp",
 		"name":"will o' wisp",
 		"desc":"a gleaming orb of light",
-		"kind":"spirit",
 		"level":3,
 		"defense":4,
 		"hp":4,
@@ -410,7 +408,7 @@
 	{
 		"id":"mutantrat",
 		"name":"Mutant Rat",
-		"kind":"magicbeast",
+		"kind":"natural",
 		"level":3,
 		"hp":4,
 		"tohit":3,
@@ -461,7 +459,7 @@
 		"id":"ratking",
 		"name":"Rat King",
 		"unique":true,
-		"kind":"magicbeast",
+		"kind":"natural",
 		"level":3,
 		"hp":8,
 		"tohit":2,
@@ -474,7 +472,6 @@
 		"id":"scarab",
 		"level":4,
 		"desc":"massive shimmering beetle with a projecting horn",
-		"kind":"beast",
 		"hp":5,
 		"defense":7,
 		"attack":{
@@ -566,7 +563,7 @@
 	},
 	{
 		"id":"warg",
-		"kind":"magicbeast",
+		"kind":"beast",
 		"level":6,
 		"hp":15,
 		"tohit":7,
@@ -576,7 +573,7 @@
 	{
 		"id":"giantspider",
 		"name":"giant spider",
-		"kind":"beast",
+		"kind":"natural",
 		"level":5,
 		"hp":9,
 		"tohit":5,
@@ -589,8 +586,7 @@
     {
         "id":"kobold",
         "level":2,
-		"flavor":"You no take candle!",
-		"kind":"humanoid",
+        "flavor":"You no take candle!",
         "hp":"2~5",
         "defense":7,
         "attack":{
@@ -709,7 +705,7 @@
 		"id":"direbat",
         "name":"dire bat",
         "level":4,
-        "kind":"magicbeast",
+        "kind":"magic beast",
         "evil":5,
         "desc":"That's one large bat.",
         "hp":8,
@@ -727,7 +723,7 @@
 		"id":"direrat",
         "name":"dire rat",
         "level":5,
-        "kind":"magicbeast",
+        "kind":"magic beast",
         "evil":5,
         "desc":"Red eyes... that's different.",
         "hp":11,
@@ -945,8 +941,7 @@
     },
     {
 		"id":"giantcentipede",
-		"name":"giant centipede",
-		"kind":"beast",
+        "name":"giant centipede",
         "level":5,
         "desc":"creepy crawly",
         "hp":16,
@@ -980,7 +975,6 @@
 	{
 		"id":"leech",
 		"level":4,
-		"kind":"beast",
 		"desc":"blood sucking leech",
 		"hp":6,
 		"attack":{
@@ -994,8 +988,7 @@
     {
         "id":"slime",
         "level":4,
-		"desc":"",
-		"kind":"beast",
+        "desc":"",
         "hp":10,
         "defense":8,
         "attack":{
@@ -1275,7 +1268,7 @@
 		"id":"vampirebat",
         "name":"vampire bat",
         "level":4,
-        "kind":"magicbeast",
+        "kind":"magic beast",
         "evil":5,
         "desc":"It vants to zuck your blood.",
         "hp":12,
@@ -1292,7 +1285,6 @@
 	{
 		"id":"sandmite",
 		"name":"sand mite",
-		"kind":"beast",
 		"level":5,
 		"desc":"oversized parasites of the dunes",
 		"hp":14,
@@ -1339,7 +1331,7 @@
 		"id":"direwolf",
 		"name":"dire wolf",
         "level":5,
-        "kind":"magicbeast",
+        "kind":"magic beast",
         "evil":7,
         "desc":"",
         "hp":17,
@@ -1377,8 +1369,7 @@
         "id":"doppelganger",
         "level":6,
         "evil":22,
-		"desc":"Such a good-looking fellow!",
-		"kind":"humanoid",
+        "desc":"Such a good-looking fellow!",
         "hp":37,
         "tohit":8,
         "defense":32,
@@ -1415,7 +1406,7 @@
         "id":"salamander",
         "level":6,
         "desc":"",
-        "kind":"magicbeast",
+        "kind":"magic beast",
         "hp":34,
         "tohit":5,
         "defense":23,
@@ -1549,7 +1540,7 @@
         "id":"beserker",
         "level":7,
         "kind":"humanoid",
-        "flavor":"You gotta... dance.",
+        "desc":"You gotta... dance.",
         "hp":25,
         "tohit":10,
         "defense":29,
@@ -1708,7 +1699,7 @@
 	{
 		"id":"spiderqueen",
 		"name":"spider queen",
-		"kind":"beast",
+		"kind":"natural",
 		"level":8,
 		"hp":70,
 		"tohit":6,
@@ -1789,8 +1780,7 @@
         "name":"invisible stalker",
         "level":7,
         "evil":13,
-		"desc":"You don't see a thing.",
-		"kind":"humanoid",
+        "desc":"You don't see a thing.",
         "hp":24,
         "tohit":26,
         "defense":42,
@@ -2445,8 +2435,7 @@
     {
         "id":"troll",
         "level":11,
-		"evil":25,
-		"kind":"giant",
+        "evil":25,
         "flavor":"tro lo lo.",
         "hp":100,
         "tohit":3,
@@ -2469,7 +2458,7 @@
         "hp":87,
         "tohit":10,
 		"defense":42,
-		"regen":2,
+		"regen":3,
         "attack":{
             "name":"bite",
             "kind":"drain",
@@ -2566,7 +2555,7 @@
 	{
         "id":"gryffon",
         "level":12,
-        "kind":"magicbeast",
+        "kind":"magic beast",
         "evil":-8,
         "desc":"Body of a lion. Face of a giant eagle.",
         "hp":123,
@@ -2586,7 +2575,6 @@
 		"id":"bloodgolem",
 		"name":"blood golem",
 		"level":12,
-		"kind":"construct",
 		"desc":"a creature of pure blood.",
 		"hp":90,
 		"defense":45,
@@ -2600,7 +2588,7 @@
 	{
         "id":"manticore",
         "level":12,
-        "kind":"magicbeast",
+        "kind":"magic beast",
         "evil":5,
         "desc":"",
         "hp":130,
@@ -2671,8 +2659,7 @@
         "id":"ent",
         "level":13,
         "biome":"woods",
-		"desc":"Out cruising for some ent-wives.",
-		"kind":"giant",
+        "desc":"Out cruising for some ent-wives.",
         "hp":138,
         "evil":-18,
         "tohit":2,
@@ -2689,8 +2676,7 @@
     {
         "id":"wyvern",
         "level":13,
-		"desc":"Not a dragon. But it will kill you like one.",
-		"kind":"magicbeast",
+        "desc":"Not a dragon. But it will kill you like one.",
         "hp":132,
         "tohit":12,
         "defense":42,
@@ -2720,8 +2706,7 @@
 	},
 	{
 		"id":"sandwyrm",
-		"name":"sand wyrm",
-		"kind":"beast",
+        "name":"sand wyrm",
         "level":14,
         "desc":"terror of the desert wastes",
         "tohit":15,
@@ -2739,7 +2724,7 @@
     {
         "id":"beholder",
         "level":14,
-        "kind":"magicbeast",
+        "kind":"magic beast",
         "evil":23,
         "desc":"It seeeeees you.",
         "hp":119,
@@ -2777,12 +2762,10 @@
         "desc":"It was a wizard, once.",
         "hp":166,
         "tohit":20,
-		"defense":68,
-		"regen":3,
+        "defense":68,
         "attack":{
             "name":"death touch",
-			"kind":"drain",
-			"leech":0.1,
+            "kind":"drain",
             "dmg":"26~36"
         }, "loot":{ "ichor":"2%"}
 
@@ -2852,7 +2835,7 @@
             "name":"trample",
 			"kind":"blunt",
 			"targets":"enemies",
-            "dmg":"40~70"
+            "dmg":"30~70"
 		},
 		"resist":{
 			"nature":25,
@@ -2877,7 +2860,7 @@
         "hp":120,
         "tohit":15,
 		"defense":70,
-		"regen":5,
+		"regen":10,
         "attack":{
             "name":"bite",
             "kind":"drain",
@@ -2936,12 +2919,12 @@
         "hp":150,
         "tohit":20,
 		"defense":71,
-		"regen":7,
+		"regen":10,
         "attack":{
             "name":"death touch",
             "kind":"drain",
 			"dmg":"30~40",
-			"leech":0.1
+			"leech":0.2
         }, "loot":{}
 
 	},
@@ -2974,7 +2957,7 @@
         "hp":150,
         "tohit":25,
 		"defense":75,
-		"regen":7,
+		"regen":15,
         "attack":{
             "name":"bite",
             "kind":"shadow",
@@ -3083,7 +3066,7 @@
         "hp":175,
         "tohit":25,
 		"defense":110,
-		"regen":10,
+		"regen":15,
         "attack":{
             "name":"bite",
             "kind":"shadow",
@@ -3292,21 +3275,13 @@
         "desc":"Not one lich in a hundred live to reach such heights.",
         "hp":550,
 		"tohit":27,
-		"regen":15,
+		"regen":25,
         "defense":120,
         "attack":{
             "name":"death touch",
             "kind":"shadow",
-			"dmg":"80~120",
-			"leech":0.1
-		},
-		"resist":{
-			"shadow":50,
-			"mana":25,
-			"water":40,
-			"spirit":25
-		},
-		"loot":{"ichor":"10%"}
+            "dmg":"80~120"
+        }, "loot":{"ichor":"10%"}
 
 	},
 	{

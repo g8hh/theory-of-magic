@@ -965,8 +965,8 @@
 		"school":"nature",
 		"level":3,
 		"buy":{
-			"research":100,
-			"scrolls":20
+			"research":50,
+			"scrolls":25
 		},
 		"cost":{
 			"nature":4
@@ -980,88 +980,20 @@
 		"level":3,
 		"targets":"undead",
 		"school":"shadow",
-		"desc":"reanimate minor undead.",
 		"tags":"rez",
-		"buy":{
-			"research":50,
-			"scrolls":25
-		},
 		"cost":{
-			"bonedust":5,
-			"shadow":5
-		}
-
-	},
-	{
-
-		"id":"reanimate2",
-		"name":"greater reanimate",
-		"desc":"reanimate stronger undead.",
-		"level":5,
-		"targets":"undead",
-		"school":"shadow",
-		"tags":"rez",
-		"buy":{
-			"codices":10,
-			"research":500
-		},
-		"cost":{
-			"bonedust":10,
-			"bones":3,
-			"shadow":5
+			"bonedust":5
 		}
 
 	},
 	{
 		"id":"revive",
-		"targets":"humanoid,goblinoid",
+		"targets":"humanoid",
 		"level":3,
 		"school":"spirit",
-		"desc":"call the weak back to life.",
 		"tags":"rez",
-		"buy":{
-			"research":100,
-			"scrolls":20
-		},
 		"cost":{
-			"scrolls":5,
-			"mana":5
-		}
-	},
-	{
-		"id":"tend",
-		"name":"magic tending",
-		"targets":"beast",
-		"level":3,
-		"school":"nature",
-		"desc":"revive minor creatures of the wilds.",
-		"tags":"rez",
-		"buy":{
-			"research":100,
-			"scrolls":20
-		},
-		"cost":{
-			"herbs":5,
-			"nature":5
-		}
-	},
-	{
-		"id":"wildtend",
-		"name":"wild's tending",
-		"tags":"patron,rez",
-		"sym":"⭐",
-		"targets":"beast",
-		"require":"(g.druid+g.warden+g.kell+g.fey)>0",
-		"level":5,
-		"school":"nature",
-		"desc":"revive creatures of the wilds.",
-		"buy":{
-			"research":100,
-			"codices":25
-		},
-		"cost":{
-			"herbs":10,
-			"nature":7
+			"scrolls":10
 		}
 	},
 	{
@@ -2063,7 +1995,6 @@
 		"id":"kannadance",
 		"level":7,
 		"name":"kanna's dervish dance",
-		"tags":"patron",
 		"school":"bladelore",
 		"sym":"⭐",
 		"require":"spellblade",
@@ -2081,9 +2012,9 @@
 		"dot":{
 			"duration":60,
 			"mod":{
-				"stamina.max":50,
-				"stamina":50,
-				"stamina.rate":-1,
+				"stamina.max":40,
+				"stamina":40,
+				"stamina.rate":-2,
 				"dodge":15,
 				"player.tohit":10,
 				"player.damage":5
@@ -2156,7 +2087,7 @@
 
 		},
 		"cost":{
-			"earth":7
+			"earth":10
 		},
 		"dot":{
 			"duration":120,
@@ -2165,52 +2096,6 @@
 			}
 		}
 
-	},
-	{
-		"id":"apiary",
-		"name":"bulm's apiary",
-		"desc":"",
-		"require":"g.tier5>0&&(g.conjuration>=5&&g.summoning>=10)",
-		"school":"conjuration",
-		"level":10,
-		"cd":200,
-		"buy":{
-			"research":2000,
-			"tomes":15,
-			"arcana":10,
-			"airgem":15
-		},
-		"cost":{
-			"airgem":1
-		},
-		"dot":{
-			"duration":10,
-			"effect":"stingybee"
-		},"flavor":"beeeees"
-	},
-	{
-		"id":"starfall",
-		"desc":"You can't escape the sky.",
-		"school":"astral",
-		"require":"g.tier5>0&&(g.astralseer+g.wizard3+g.wizard2)>=0&&g.astronomy>=15&&g.evil==0",
-		"cd":55,
-		"buy":{
-			"research":2000,
-			"tomes":15,
-			"arcana":10,
-			"managem":15
-		},
-		"cost":{
-			"managem":1
-		},
-		"attack":{
-			"targets":"enemies",
-			"dot":{
-				"duration":30,
-				"kind":"astral",
-				"dmg":"20~30"
-			}
-		}
 	},
 	{
 		"id":"adamantshell",
@@ -2227,7 +2112,7 @@
 
 		},
 		"cost":{
-			"earth":10
+			"earth":7
 		},
 		"dot":{
 			"duration":180,
@@ -2531,8 +2416,7 @@
 		"id":"forceten",
 		"name":"force ten",
 		"school":"water",
-		"cd":50,
-		"level":15,
+		"level":10,
 		"desc":"The storm before the calm.",
 		"buy":{
 
@@ -2559,42 +2443,7 @@
 				"player.resist.water":75
 			}
 
-		},"flavor":"force without form"
-
-	},
-	{
-
-		"id":"firestorm",
-		"school":"fire",
-		"level":17,
-		"desc":"rain hell from above",
-		"cd":66,
-		"buy":{
-
-			"research":4000,
-			"firegem":25,
-			"tomes":20
-
-		},
-		"cost":{
-			"fire":8
-		},
-		"attack":{
-			"dot":{
-				"kind":"fire",
-				"targets":"all",
-				"dmg":"30~50",
-				"duration":30
-			}
-		},
-		"dot":{
-			"targets":"allies",
-			"duration":30,
-			"mod":{
-				"player.resist.fire":80
-			}
-
-		},"flavor":""
+		},"flavor":"the force without form"
 
 	},
 	{
@@ -2622,31 +2471,6 @@
 			}
 
 		}
-
-	},
-	{
-		"id":"cyrilsling",
-		"name":"cyril's celestial sling",
-		"tags":"patron",
-		"level":7,
-		"desc":"",
-		"require":"g.tier9>0&&g.chaos>=3",
-		"buy":{
-			"firerune":7,
-			"waterrune":7,
-			"airrune":7,
-			"earthrune":7,
-			"runestones":7
-		},
-		"cost":{
-			"sindel":1,
-			"chaos":1
-		},
-		"attack":{
-			"kind":"pierce",
-			"dmg":2,
-			"tohit":50
-		},"flavor":""
 
 	},
 	{

@@ -115,24 +115,12 @@
 		"id":"earthrune",
 		"name":"earth runes",
 		"tags":"t_runes",
-		"desc":"Rune ingrained with moonstone",
+		"desc":"rune ingrained with moonstone",
 		"max":10,
 		"mod":{
 			"research.max":10
 		}, "flavor":""
 
-	},
-	{
-
-		"id":"timerune",
-		"name":"time runes",
-		"desc":"Time flows along the grooves of the rune",
-		"mod":{
-			"tempus.rate":0.001,
-			"bf.rate":0.01
-		},
-		"max":3,
-		"flavor":"it's not easy to look at."
 	},
 	{
 		"id":"bodies",
@@ -270,17 +258,6 @@
 		}
 	},
 	{
-
-		"id":"timegem",
-		"tags":"magicgems",
-		"desc":"crafted from gems which do not yet exist.",
-		"mod":{
-			"gems.rate":-0.005,
-			"tempus.rate":0.01
-		},
-		"max":3
-	},
-	{
 		"id":"ichor",
 		"tags":"reagent",
 		"desc":"The blood of gods.",
@@ -337,7 +314,7 @@
 		"id":"fire",
 		"require":"firelore",
 		"unit":false,
-		"tags":"manas,element",
+		"tags":"manas,elemental",
 		"desc":"Fire Mana",
 		"max":0
 	},
@@ -345,14 +322,14 @@
 		"id":"air",
 		"require":"airlore",
 		"unit":false,
-		"tags":"manas,element",
+		"tags":"manas,elemental",
 		"desc":"Air Mana",
 		"max":0
 	},
 	{
 		"id":"earth",
 		"unit":false,
-		"tags":"manas,element",
+		"tags":"manas,elemental",
 		"require":"earthlore",
 		"desc":"Earth Mana",
 		"max":0
@@ -360,7 +337,7 @@
 	{
 		"id":"water",
 		"unit":false,
-		"tags":"manas,element",
+		"tags":"manas,elemental",
 		"desc":"Water Mana",
 		"require":"waterlore",
 		"max":0
