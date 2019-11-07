@@ -267,7 +267,7 @@
 		"targets":"feet",
 		"desc":"imbue an item with inherent speed",
 		"require":"g.enchanting>=5",
-		"level":4,
+		"level":3,
 		"buy":{
 			"tomes":3,
 			"research":800
@@ -289,7 +289,7 @@
 		"targets":"feet",
 		"desc":"imbue an item with inherent speed",
 		"require":"g.enchanting>=7",
-		"level":7,
+		"level":5,
 		"buy":{
 			"tomes":10,
 			"research":200
@@ -300,9 +300,33 @@
 			"mana":10
 		},
 		"mod":{
-			"mod.speed":3
+			"mod.speed":5
 		}
 	},
+	{
+		"id":"en_speed4",
+		"name":"quick boots IV",
+		"verb":"infusing shoes",
+		"targets":"feet",
+		"adj":"of speed",
+		"desc":"imbue your boots with speed",
+		"require":"g.enchanting>=10",
+		"level":7,
+		"buy":{
+			"tomes":10,
+			"runestones":10,
+			"research":3000
+		},
+		"length":30,
+		"cost":{
+			"runestones":2,
+			"mana":15
+		},
+		"mod":{
+			"mod.speed":8
+		}
+	},
+
 	{
 		"id":"en_clarity",
 		"name":"clarity",
@@ -464,29 +488,6 @@
 		},
 		"mod":{
 			"mod.manas.rate":0.5
-		}
-	},
-	{
-		"id":"en_speed4",
-		"name":"quick boots IV",
-		"verb":"infusing shoes",
-		"targets":"feet",
-		"adj":"of speed",
-		"desc":"imbue your boots with speed",
-		"require":"g.enchanting>=10",
-		"level":7,
-		"buy":{
-			"tomes":10,
-			"runestones":10,
-			"research":3000
-		},
-		"length":30,
-		"cost":{
-			"runestones":2,
-			"mana":15
-		},
-		"mod":{
-			"mod.speed":8
 		}
 	}
 
