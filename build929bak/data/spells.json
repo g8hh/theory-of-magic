@@ -1,0 +1,2683 @@
+[
+	{
+		"id":"stam1",
+		"name":"minor fount",
+		"level":1,
+		"require":"water",
+		"school":"water",
+		"buy":{
+
+			"research":25,
+			"scrolls":1
+
+		},
+		"flavor":"Come thou fount",
+		"cost":{
+			"water":1
+		},
+		"dot":{
+			"duration":30,
+			"effect":{
+				"stamina":0.3
+			}
+		}
+
+	},
+	{
+		"id":"stam2",
+		"name":"fount",
+		"level":5,
+		"require":"g.stam1>0",
+		"school":"water",
+		"buy":{
+
+			"watergem":10,
+			"tomes":3
+
+		},
+		"flavor":"Come thou fount",
+		"cost":{
+			"water":1
+		},
+		"dot":{
+			"duration":60,
+			"effect":{
+				"stamina":0.5
+			}
+		}
+
+	},
+	{
+		"id":"darkbolt",
+		"name":"dark bolt",
+		"level":1,
+		"require":"shadow",
+		"school":"shadow",
+		"buy":{
+
+			"research":25,
+			"scrolls":1
+
+		},
+		"cost":{
+			"shadow":1
+		},
+		"at":{
+			"25":{
+				"attack.damage.max":1
+			},
+			"75":{
+				"attack.damage.min":1
+			},
+			"300":{
+				"attack.damage.max":2,
+				"attack.damage.min":1,
+				"attack.tohit":2
+			}
+		},
+		"attack":{
+			"damage":"0.5~1",
+			"dot":{
+				"kind":"shadow",
+				"duration":15,
+				"damage":1
+			}
+		}
+
+	},
+	{
+		"id":"blast",
+		"name":"blasting curse",
+		"level":3,
+		"require":"g.shadow>=8&&g.evil>0",
+		"school":"shadow",
+		"buy":{
+
+			"research":750,
+			"shadowgem":1
+
+		},
+		"cost":{
+			"shadow":3
+		},
+		"at":{
+			"25":{
+				"attack.damage.max":3
+			},
+			"75":{
+				"attack.damage.min":3
+			},
+			"300":{
+				"attack.damage.max":3,
+				"attack.damage.min":3,
+				"attack.tohit":4
+			}
+		},
+		"attack":{
+			"damage":"4~7",
+			"dot":{
+				"kind":"shadow",
+				"duration":10,
+				"damage":0.7,
+				"leech":1
+			}
+		}
+
+	},
+	{
+		"id":"deathbolt",
+		"name":"death bolt",
+		"level":6,
+		"require":"darkbolt",
+		"school":"shadow",
+		"buy":{
+
+			"shadowgem":10,
+			"tomes":3
+
+		},
+		"cost":{
+			"shadow":5
+		},
+		"at":{
+			"25":{
+				"attack.damage.max":4
+			},
+			"75":{
+				"attack.damage.min":5
+			},
+			"300":{
+				"attack.damage.max":4,
+				"attack.damage.min":4,
+				"attack.tohit":4
+			}
+		},
+		"attack":{
+			"damage":"5~10",
+			"dot":{
+				"kind":"drain",
+				"duration":30,
+				"damage":2
+			}
+		}
+
+	},
+	{
+		"id":"quell",
+		"level":15,
+		"school":"mana",
+		"require":"g.lore>=35",
+		"desc":"The full weight of a wizard's gaze is often overpowering.",
+		"cd":300,
+		"buy":{
+			"arcana":30
+		},
+		"cost":{
+			"mana":5
+		},
+		"attack":{
+			"targets":"enemies",
+			"dot":{
+				"duration":60,
+				"mod":{
+					"speed":-20
+				}
+			}
+		}
+	},
+	{
+		"id":"lifedrain",
+		"name":"drain life",
+		"level":12,
+		"school":"shadow",
+		"require":"g.necromancy>=8&&g.shadowlore>=25",
+		"buy":{
+
+			"research":5000,
+			"shadowgem":20,
+			"tomes":10
+
+		},
+		"cost":{
+			"shadow":7
+		},
+		"at":{
+			"25":{
+				"attack.dot.damage.max":5
+			},
+			"75":{
+				"attack.dot.damage.min":5
+			},
+			"300":{
+				"attack.dot.damage.max":5,
+				"attack.dot.damage.min":5
+			}
+		},
+		"attack":{
+			"dot":{
+				"kind":"drain",
+				"leech":0.75,
+				"duration":60,
+				"damage":"15~30"
+			}
+		}
+
+	},
+	{
+		"id":"gloom",
+		"level":2,
+		"require":"g.shadow>=10",
+		"school":"shadow",
+		"desc":"decreases the target's resistance to shadow magic.",
+		"buy":{
+
+			"research":100,
+			"codices":1,
+			"shadowgem":1
+
+		},
+		"cost":{
+			"shadow":2
+		},
+		"attack":{
+			"dot":{
+				"targets":"enemies",
+				"kind":"shadow",
+				"duration":100,
+				"resist.shadow":-10
+			}
+		}
+
+	},
+	{
+		"id":"poisonnettle",
+		"name":"poison nettle",
+		"level":1,
+		"require":"nature",
+		"school":"nature",
+		"buy":{
+
+			"research":25,
+			"scrolls":1
+
+		},
+		"cost":{
+			"nature":1
+		},
+		"attack":{
+			"dot":{
+				"kind":"poison",
+				"duration":10,
+				"damage":"0.5~1"
+			}
+		}
+
+	},
+	{
+		"id":"whirl1",
+		"name":"whirling step",
+		"level":1,
+		"school":"air",
+		"buy":{
+
+			"research":25,
+			"scrolls":1
+
+		},
+		"cost":{
+			"air":1
+		},
+		"dot":{
+			"duration":45,
+			"mod":{
+				"dodge":1
+			}
+		}
+
+	},
+	{
+		"id":"whirl2",
+		"name":"whirling step II",
+		"level":3,
+		"school":"air",
+		"require":"whirl1",
+		"buy":{
+
+			"research":500,
+			"codices":5,
+			"airgem":1
+
+		},
+		"cost":{
+			"air":5
+		},
+		"dot":{
+			"duration":60,
+			"mod":{
+				"dodge":2,
+				"speed":0.3
+			}
+		}
+
+	},
+	{
+		"id":"whirl3",
+		"name":"whirling step III",
+		"level":5,
+		"require":"whirl2",
+		"school":"air",
+		"buy":{
+
+			"airgem":10,
+			"tomes":1
+
+		},
+		"cost":{
+			"air":4
+		},
+		"dot":{
+			"duration":80,
+			"mod":{
+				"dodge":5,
+				"speed":0.55
+			}
+		}
+
+	},
+	{
+		"id":"mana1",
+		"name":"minor mana",
+		"school":"mana",
+		"locked":false,
+		"level":1,
+		"buy":{
+
+			"research":25,
+			"scrolls":1
+
+		},
+		"cost":{
+			"mana":0.1
+		},
+		"dot":{
+			"duration":30,
+			"effect":{
+				"mana":0.25
+			}
+		}
+
+	},
+	{
+		"id":"mana2",
+		"name":"lesser mana",
+		"school":"mana",
+		"locked":false,
+		"level":2,
+		"require":"mana1",
+		"buy":{
+
+			"research":30,
+			"codices":1,
+			"managem":1
+
+		},
+		"cost":{
+			"mana":0.3
+		},
+		"dot":{
+			"duration":60,
+			"effect":{
+				"mana":0.45
+			}
+		}
+
+	},
+	{
+		"id":"mana3",
+		"name":"mana",
+		"school":"mana",
+		"locked":false,
+		"require":"mana2",
+		"level":5,
+		"buy":{
+
+			"research":200,
+			"codices":10,
+			"managem":5
+
+		},
+		"cost":{
+			"mana":1
+		},
+		"dot":{
+			"duration":120,
+			"effect":{
+				"mana":0.8
+			}
+		}
+
+	},
+	{
+
+		"id":"lightregen1",
+		"name":"pulsing light",
+		"require":"light",
+		"school":"light",
+		"desc":"a small pulse of light zips around you, mending injuries.",
+		"level":1,
+		"buy":{
+
+			"research":25,
+			"scrolls":1
+
+		},
+		"cost":{
+			"light":1
+		},
+		"dot":{
+
+			"duration":45,
+			"effect":{
+				"hp":1.1
+			}
+
+		}
+
+	},
+	{
+
+		"id":"lightregen2",
+		"name":"pulsing light II",
+		"school":"light",
+		"require":"lightregen1",
+		"desc":"a small pulse of light zips around you, mending injuries.",
+		"level":3,
+		"buy":{
+
+			"research":100,
+			"codices":1,
+			"lightgem":3
+
+		},
+		"cost":{
+			"light":5
+		},
+		"dot":{
+
+			"duration":60,
+			"effect":{
+				"hp":2
+			}
+
+		}
+
+	},
+	{
+
+		"id":"lightregen3",
+		"name":"pulsing light III",
+		"school":"light",
+		"desc":"a small pulse of light zips around you, mending injuries.",
+		"level":5,
+		"require":"lightregen2",
+		"buy":{
+
+			"research":100,
+			"tomes":1,
+			"lightgem":10
+
+		},
+		"cost":{
+			"light":10
+		},
+		"dot":{
+
+			"duration":120,
+			"effect":{
+				"hp":5
+			}
+
+		}
+
+	},
+	{
+		"id":"magicmissile",
+		"name":"magic missile",
+		"level":1,
+		"school":"mana",
+		"locked":false,
+		"buy":{
+
+			"research":25,
+			"scrolls":1
+
+		},
+		"at":{
+			"10":{
+				"attack.damage.max":1
+			},
+			"50":{
+				"attack.damage.min":1
+			},
+			"200":{
+				"attack.damage.max":1,
+				"attack.damage.min":1
+			}
+		},
+		"cost":{
+			"mana":1
+		},
+		"attack":{
+			"damage":"1.5~2.5",
+			"kind":"arcane",
+			"tohit":2
+		}
+	},
+
+	{
+		"id":"prismaticspray",
+		"name":"prismatic spray",
+		"level":1,
+		"school":"mana",
+		"locked":false,
+		"desc":"lines of arcane energy damage all enemies.",
+		"buy":{
+
+			"research":100,
+			"scrolls":10
+
+		},
+		"at":{
+			"25":{
+				"attack.tohit":1,
+				"attack.damage.max":1
+			},
+			"100":{
+				"attack.tohit":2,
+				"attack.damage.min":1
+			}
+		},
+		"cost":{
+			"mana":1
+		},
+		"attack":{
+			"targets":"enemies",
+			"damage":"0.75~1",
+			"kind":"arcane",
+			"tohit":1
+		}
+	},
+
+	{
+		"id":"slow1",
+		"name":"mud",
+		"desc":"engulfs target in mud",
+		"school":"earth",
+		"require":"g.player.level>=4&&g.earthlore>=5",
+		"level":2,
+		"buy":{
+
+			"research":30,
+			"scrolls":5,
+			"earthgem":1
+
+		},
+		"cost":{
+			"earth":5
+		},
+		"attack":{
+			"dot":{
+				"duration":20,
+				"mod":{
+					"speed":-0.2
+				}
+			}
+		}
+
+	},
+	{
+		"id":"mk_spirit",
+		"name":"call spirit",
+		"school":"spirit",
+		"level":1,
+		"buy":{
+			"research":30,
+			"scrolls":5
+		},
+		"cost":{
+			"spirit":5
+		},
+		"effect":"wisp"
+	},
+	{
+		"id":"mk_zombie",
+		"name":"raise zombie",
+		"school":"shadow",
+		"require":"g.shadowlore>0&&g.reanimation>0",
+		"level":2,
+		"buy":{
+			"research":30,
+			"scrolls":5,
+			"shadowgem":1
+		},
+		"cost":{
+			"shadow":7
+		},
+		"effect":"zombie"
+
+	},
+	{
+		"id":"firedart",
+		"name":"fire dart",
+		"level":1,
+		"require":"fire",
+		"school":"fire",
+		"buy":{
+
+			"research":25,
+			"scrolls":1
+
+		},
+		"at":{
+			"25":{
+				"attack.damage.max":1.5
+			},
+			"75":{
+				"attack.damage.min":1.5
+			},
+			"300":{
+				"attack.damage.max":2,
+				"attack.damage.min":1,
+				"attack.tohit":2
+			}
+		},
+		"cost":{
+			"fire":1
+		},
+		"attack":{
+			"damage":"2~3",
+			"kind":"fire",
+			"tohit":1
+		}
+	},
+	{
+		"id":"firebolt",
+		"name":"fire bolt",
+		"level":2,
+		"desc":"a small bolt of flame.",
+		"require":"firedart",
+		"school":"fire",
+		"buy":{
+
+			"research":30,
+			"scrolls":5,
+			"firegem":1
+
+		},
+		"at":{
+			"25":{
+				"attack.damage.max":2
+			},
+			"75":{
+				"attack.damage.min":2
+			},
+			"300":{
+				"attack.damage.max":2,
+				"attack.damage.min":2,
+				"attack.tohit":3
+			}
+		},
+		"cost":{
+			"fire":4
+		},
+		"attack":{
+			"damage":"4~5",
+			"tohit":3,
+			"kind":"fire"
+		}
+
+	},
+	{
+		"id":"searingbolt",
+		"name":"searing bolt",
+		"level":3,
+		"desc":"a bolt of fire with lingering flames",
+		"school":"fire",
+		"require":"firebolt",
+		"buy":{
+
+			"research":100,
+			"codices":10,
+			"firegem":3
+
+		},
+		"cost":{
+			"fire":5
+		},
+		"at":{
+			"30":{
+				"attack.damage.max":3
+			},
+			"100":{
+				"attack.damage.min":3
+			},
+			"300":{
+				"attack.damage.max":4,
+				"attack.damage.min":3,
+				"attack.tohit":5
+			}
+		},
+		"attack":{
+			"damage":"7~10",
+			"tohit":5,
+			"kind":"fire",
+			"dot":{
+				"dmg":"2~3",
+				"duration":10
+			}
+		}
+
+	},
+	{
+		"id":"lightspear",
+		"name":"light spear",
+		"level":3,
+		"desc":"a barb of solid light",
+		"school":"light",
+		"buy":{
+
+			"research":100,
+			"codices":10,
+			"lightgem":3
+
+		},
+		"cost":{
+			"light":2
+		},
+		"at":{
+			"30":{
+				"attack.damage.min":3,
+				"attack.tohit":2
+			},
+			"100":{
+				"attack.damage.max":3,
+				"attack.tohit":3
+			},
+			"300":{
+				"attack.damage.max":4,
+				"attack.damage.min":3
+			}
+		},
+		"attack":{
+			"damage":"5~8",
+			"tohit":8,
+			"kind":"light"
+		}
+
+	},
+	{
+		"id":"magmabolt",
+		"name":"magma bolt",
+		"level":5,
+		"desc":"a bolt of liquid-hot magma",
+		"school":"fire",
+		"require":"searingbolt",
+		"buy":{
+
+			"research":100,
+			"tomes":1,
+			"firegem":10
+
+		},
+		"cost":{
+			"fire":7
+		},
+		"at":{
+			"50":{
+				"attack.damage.max":4
+			},
+			"150":{
+				"attack.damage.min":4
+			},
+			"500":{
+				"attack.damage.max":5,
+				"attack.damage.min":4,
+				"attack.tohit":7
+			}
+		},
+		"attack":{
+			"damage":"15~20",
+			"tohit":7,
+			"kind":"fire",
+			"dot":{
+				"dmg":"5~7",
+				"duration":20
+			}
+		}
+
+	},
+	{
+		"id":"frostbolt",
+		"name":"frost bolt",
+		"level":2,
+		"desc":"a sharp shard of ice.",
+		"school":"water",
+		"buy":{
+
+			"research":30,
+			"scrolls":10,
+			"watergem":1
+
+		},
+		"at":{
+			"25":{
+				"attack.damage.max":1.5
+			},
+			"75":{
+				"attack.damage.min":1.5
+			},
+			"300":{
+				"attack.damage.max":2,
+				"attack.damage.min":1,
+				"attack.tohit":2
+			}
+		},
+		"cost":{
+			"water":3
+		},
+		"attack":{
+			"damage":"3~4",
+			"tohit":5,
+			"kind":"water"
+		}
+
+	},
+	{
+		"id":"frostbolt2",
+		"name":"frost bolt II",
+		"level":4,
+		"require":"frostbolt",
+		"desc":"a sharp shard of ice.",
+		"school":"water",
+		"buy":{
+
+			"codices":10,
+			"watergem":6
+
+		},
+		"at":{
+			"25":{
+				"attack.damage.max":2
+			},
+			"75":{
+				"attack.damage.min":2
+			},
+			"300":{
+				"attack.damage.max":3,
+				"attack.damage.min":2,
+				"attack.tohit":7
+			}
+		},
+		"cost":{
+			"water":5
+		},
+		"attack":{
+			"damage":"7~11",
+			"tohit":8,
+			"kind":"water"
+		}
+
+	},
+	{
+		"id":"poisonward",
+		"name":"poison ward",
+		"level":2,
+		"school":"nature",
+		"desc":"reduce the efficacy of common venoms",
+		"buy":{
+			"research":50,
+			"scrolls":10
+		},
+		"cost":{
+			"nature":3
+		},
+		"dot":{
+			"duration":30,
+			"mod":{
+				"player.resist.poison":20
+			}
+		}
+	},
+	{
+		"id":"vinewhip",
+		"name":"vine whip",
+		"level":2,
+		"desc":"vines lash out from the ground.",
+		"school":"nature",
+		"require":"g.player.level>=4&&g.naturelore>=3",
+		"buy":{
+
+			"research":50,
+			"scrolls":5,
+			"naturegem":1
+
+		},
+		"at":{
+			"25":{
+				"attack.damage.max":1.5
+			},
+			"75":{
+				"attack.damage.min":1.5
+			},
+			"300":{
+				"attack.damage.max":2,
+				"attack.damage.min":1,
+				"attack.tohit":2
+			}
+		},
+		"cost":{
+			"nature":3
+		},
+		"attack":{
+			"damage":"3~5",
+			"tohit":3,
+			"kind":"nature"
+		}
+
+	},
+	{
+		"id":"mk_hobgoblin",
+		"name":"summon hobgoblin",
+		"school":"mana",
+		"level":6,
+		"buy":{
+			"research":100,
+			"tomes":1
+		},
+		"cost":{
+			"mana":10
+		},
+		"effect":"hobgoblin"
+	},
+	{
+		"id":"mk_raven",
+		"name":"summon raven",
+		"school":"nature",
+		"level":3,
+		"buy":{
+			"research":100,
+			"scrolls":20
+		},
+		"cost":{
+			"nature":4
+		},
+		"effect":"raven"
+
+	},
+	{
+
+		"id":"reanimate",
+		"level":3,
+		"targets":"undead",
+		"school":"shadow",
+		"desc":"reanimate minor undead.",
+		"tags":"rez",
+		"buy":{
+			"research":50,
+			"scrolls":25
+		},
+		"cost":{
+			"bonedust":5,
+			"shadow":5
+		}
+
+	},
+	{
+
+		"id":"reanimate2",
+		"name":"greater reanimate",
+		"desc":"reanimate stronger undead.",
+		"level":5,
+		"targets":"undead",
+		"school":"shadow",
+		"tags":"rez",
+		"buy":{
+			"codices":10,
+			"research":500
+		},
+		"cost":{
+			"bonedust":10,
+			"bones":3,
+			"shadow":5
+		}
+
+	},
+	{
+		"id":"revive",
+		"targets":"humanoid,goblinoid",
+		"level":3,
+		"school":"spirit",
+		"desc":"call the weak back to life.",
+		"tags":"rez",
+		"buy":{
+			"research":100,
+			"scrolls":20
+		},
+		"cost":{
+			"scrolls":5,
+			"mana":5
+		}
+	},
+	{
+		"id":"tend",
+		"name":"magic tending",
+		"targets":"beast",
+		"level":3,
+		"school":"nature",
+		"desc":"revive minor creatures of the wilds.",
+		"tags":"rez",
+		"buy":{
+			"research":100,
+			"scrolls":20
+		},
+		"cost":{
+			"herbs":5,
+			"nature":5
+		}
+	},
+	{
+		"id":"wildtend",
+		"name":"wild's tending",
+		"tags":"patron,rez",
+		"sym":"⭐",
+		"targets":"beast",
+		"require":"(g.druid+g.warden+g.kell+g.fey)>0",
+		"level":5,
+		"school":"nature",
+		"desc":"revive creatures of the wilds.",
+		"buy":{
+			"research":100,
+			"codices":25
+		},
+		"cost":{
+			"herbs":10,
+			"nature":7
+		}
+	},
+	{
+		"id":"mk_blade",
+		"name":"summon blade",
+		"school":"blade",
+		"require":"(g.battlemage+g.spellblade+g.dreadlord)>0",
+		"level":7,
+		"buy":{
+			"research":5000,
+			"tomes":5
+		},
+		"cost":{
+			"mana":12
+		},
+		"effect":"magicblade"
+	},
+	{
+		"id":"mk_murder",
+		"name":"summon murder",
+		"require":"summoner",
+		"level":5,
+		"cd":150,
+		"buy":{
+			"research":1000,
+			"codices":10,
+			"managem":3
+		},
+		"cost":{
+			"mana":7
+		},
+		"effect":[
+			"raven",
+			"raven",
+			"raven",
+			"raven",
+			"raven"
+		]
+
+	},
+	{
+		"id":"mk_unicorn",
+		"name":"summon unicorn",
+		"require":"g.evil==0&&(g.seer+g.oracle+g.summoner)>0&&g.magicbeasts>=5",
+		"level":5,
+		"cd":150,
+		"buy":{
+			"research":1000,
+			"tomes":10,
+			"lightgem":5
+		},
+		"cost":{
+			"light":10
+		},
+		"effect":"unicorn"
+
+	},
+	{
+		"id":"prolight",
+		"name":"protection: light",
+		"school":"shadow",
+		"require":"g.player.level>=4&&g.shadowlore>=3",
+		"level":2,
+		"buy":{
+
+			"research":100,
+			"scrolls":10
+
+		},
+		"cost":{
+			"shadow":2
+		},
+		"dot":{
+
+			"duration":20,
+			"mod":{
+				"player.resist.holy":10,
+				"player.resist.light":10
+			}
+
+		}
+
+	},
+	{
+
+		"id":"proshadow",
+		"name":"protection: shadow",
+		"school":"light",
+		"require":"g.player.level>=4&&g.lightlore>=3",
+		"level":2,
+		"buy":{
+
+			"research":100,
+			"scrolls":5
+
+		},
+		"cost":{
+			"light":2
+		},
+		"dot":{
+
+			"duration":20,
+			"mod":{
+				"player.resist.shadow":10,
+				"player.resist.undead":10
+			}
+
+		}
+
+	},
+	{
+
+		"id":"profire",
+		"name":"protection: fire",
+		"school":"fire",
+		"level":2,
+		"require":"g.player.level>=4&&g.firelore>=2",
+		"buy":{
+
+			"research":100,
+			"scrolls":10
+
+		},
+		"cost":{
+			"fire":1
+		},
+		"dot":{
+
+			"duration":20,
+			"mod":{
+				"player.resist.fire":10
+			}
+
+		}
+
+	},
+	{
+
+		"id":"prowater",
+		"name":"protection: water",
+		"school":"water",
+		"level":2,
+		"require":"g.player.level>=4&&g.waterlore>=3",
+		"buy":{
+
+			"research":100,
+			"scrolls":5
+
+		},
+		"cost":{
+			"water":1
+		},
+		"dot":{
+
+			"duration":20,
+			"mod":{
+				"player.resist.water":10,
+				"player.resist.cold":10
+			}
+
+		}
+
+	},
+	{
+
+		"id":"pronature",
+		"name":"protection: nature",
+		"school":"nature",
+		"level":2,
+		"require":"g.player.level>=4&&g.naturelore>=3",
+		"buy":{
+
+			"research":25,
+			"scrolls":5
+
+		},
+		"cost":{
+			"nature":1
+		},
+		"dot":{
+
+			"duration":20,
+			"mod":{
+				"player.resist.nature":10,
+				"player.resist.poison":10
+			}
+
+		}
+
+	},
+	{
+		"id":"heal1",
+		"level":2,
+		"name":"sealing light",
+		"desc":"seams of light close your wounds.",
+		"school":"light",
+		"require":"g.player.level>=4&&g.lightlore>=4",
+		"buy":{
+
+			"research":30,
+			"scrolls":5,
+			"lightgem":1
+
+		},
+		"cost":{
+			"light":5
+		},
+		"effect":{
+			"hp":20
+		}
+	},
+
+	{
+		"id":"unseenservant",
+		"level":2,
+		"name":"unseen servant",
+		"desc":"an invisible servant manages your affairs.",
+		"school":"air",
+		"require":"g.player.level>=4&&g.airlore>=4",
+		"buy":{
+
+			"research":30,
+			"scrolls":5,
+			"airgem":1
+
+		},
+		"cost":{
+			"air":5
+		},
+		"dot":{
+			"duration":45,
+			"effect":{
+				"gold":2
+			}
+		}
+	},
+	{
+		"id":"insight",
+		"name":"insight",
+		"level":3,
+		"desc":"all your studies seem to fall into place.",
+		"flavor":"I know the pieces fit",
+		"school":"light",
+		"require":"g.player.level>=5&&g.lightlore>=5",
+		"buy":{
+
+			"research":500,
+			"codices":1,
+			"lightgem":1
+
+		},
+		"cost":{
+			"light":5
+		},
+		"dot":{
+			"duration":60,
+			"mod":{
+				"lore.rate":0.5,
+				"naturelore.rate":"0.2+2%",
+				"lightlore.rate":"0.2+2%",
+				"languages.rate":"0.2+2%"
+			}
+		}
+	},
+	{
+		"id":"fireinsight",
+		"name":"fire sense",
+		"desc":"temporarily increase your natural aptitude for fire.",
+		"level":2,
+		"school":"fire",
+		"buy":{
+
+			"research":100,
+			"codices":1,
+			"firegem":1
+
+		},
+		"cost":{
+			"fire":2
+		},
+		"dot":{
+			"duration":60,
+			"mod":{
+				"lore.rate":0.5,
+				"firelore.rate":"0.2+2%"
+			}
+		}
+	},
+	{
+		"id":"waterinsight",
+		"name":"water sense",
+		"desc":"temporarily increase your natural aptitude for water.",
+		"level":2,
+		"school":"water",
+		"cost":{
+			"water":2
+		},
+		"buy":{
+
+			"research":100,
+			"codices":1,
+			"watergem":1
+
+		},
+		"dot":{
+			"duration":60,
+			"mod":{
+				"lore.rate":0.5,
+				"waterlore.rate":"0.2+2%"
+			}
+		}
+	},
+	{
+		"id":"airinsight",
+		"name":"wind sense",
+		"desc":"temporarily increase your natural aptitude for air.",
+		"level":2,
+		"school":"air",
+		"cost":{
+			"air":2
+		},
+		"buy":{
+
+			"research":100,
+			"codices":1,
+			"airgem":1
+
+		},
+		"dot":{
+			"duration":60,
+			"mod":{
+				"lore.rate":0.5,
+				"airlore.rate":"0.2+2%"
+			}
+		}
+	},
+	{
+		"id":"darkpromptings",
+		"name":"dark promptings",
+		"level":3,
+		"desc":"malevolent voices whisper secrets to your mind.",
+		"require":"g.player.level>=5&&g.shadowlore>=5",
+		"school":"shadow",
+		"buy":{
+
+			"research":500,
+			"codices":1,
+			"shadowgem":1
+
+		},
+		"cost":{
+			"shadow":5,
+			"bonedust":1
+		},
+		"dot":{
+			"duration":60,
+			"mod":{
+				"lore.rate":0.5,
+				"dissection.rate":"0.3+2%",
+				"shadowlore.rate":"0.3+2%",
+				"demonology.rate":"0.3+2%",
+				"reanimation.rate":"0.3+2%"
+			}
+		}
+	},
+	{
+		"id":"wildgrowth",
+		"name":"wild growth",
+		"level":1,
+		"desc":"herbs sprout more quickly from the earth.",
+		"school":"nature",
+		"require":"g.herbalism>=3",
+		"buy":{
+
+			"research":50,
+			"scrolls":5
+
+		},
+		"cost":{
+			"nature":2
+		},
+		"dot":{
+			"duration":45,
+			"mod":{
+				"herbs.rate":0.5
+			}
+		}
+	},
+	{
+		"id":"magebolt",
+		"name":"mage bolt",
+		"level":9,
+		"require":"(g.mage+g.wizard+g.wizard2+g.highmage)>0",
+		"school":"mana",
+		"buy":{
+
+			"research":5000,
+			"tomes":5,
+			"managem":20
+
+		},
+		"at":{
+			"10":{
+				"attack.damage.max":5
+			},
+			"50":{
+				"attack.damage.min":5
+			},
+			"200":{
+				"attack.damage.max":5,
+				"attack.damage.min":5
+			}
+		},
+		"cost":{
+			"mana":4
+		},
+		"attack":{
+			"damage":"10~20",
+			"kind":"arcane",
+			"tohit":10
+		}
+	},
+	{
+		"id":"whisper",
+		"level":2,
+		"desc":"spirits whisper hidden truths as you study.",
+		"school":"spirit",
+		"require":"g.player.level>=4&&g.spiritlore>=4",
+		"buy":{
+
+			"research":100,
+			"scrolls":5,
+			"spiritgem":1
+
+		},
+		"cost":{
+			"spirit":5,
+			"mana":2
+		},
+		"dot":{
+			"duration":50,
+			"effect":{
+				"research":1,
+				"sp":0.001,
+				"arcana":0.001
+			}
+		},"flavor":"did you hear something?"
+	},
+	{
+		"id":"venom1",
+		"name":"venom I",
+		"level":3,
+		"require":"g.player.level>=7&&g.naturelore>=6",
+		"school":"nature",
+		"buy":{
+
+			"research":500,
+			"codices":1,
+			"naturegem":1
+
+		},
+		"cost":{
+			"nature":5
+		},
+		"attack":{
+			"dot":{
+				"id":"venom",
+				"kind":"poison",
+				"duration":30,
+				"damage":"2~4"
+			}
+		}
+
+	},
+	{
+		"id":"hex1",
+		"name":"spiteful hex",
+		"level":4,
+		"require":"g.witch>0",
+		"school":"spirit",
+		"buy":{
+
+			"research":1000,
+			"codices":10,
+			"spiritgem":1
+
+		},
+		"cost":{
+			"spirit":7
+		},
+		"attack":{
+			"dot":{
+				"id":"hex1",
+				"kind":"hex",
+				"duration":15,
+				"damage":"5~7"
+			}
+		}
+
+	},
+	{
+
+		"id":"jinx",
+		"level":2,
+		"require":"trickster",
+		"desc":"curse an enemy with a streak of bad luck.",
+		"school":"trickery",
+		"buy":{
+			"research":75
+		},
+		"cost":{
+			"mana":2
+		},
+		"attack":{
+			"dot":{
+				"id":"jinx",
+				"kind":"curse",
+				"mod":{
+					"tohit":-5
+				},
+				"duration":20
+			}
+		}
+	},
+	{
+		"id":"speed1",
+		"level":3,
+		"name":"dust devil",
+		"desc":"a whirl of wind at your feet",
+		"school":"air",
+		"require":{
+			"air.max":5
+		},
+		"buy":{
+
+			"research":500,
+			"codices":1,
+			"airgem":3
+
+		},
+		"cost":{
+			"air":1
+		},
+		"dot":{
+			"duration":20,
+			"mod":{
+				"speed":1
+			}
+		}
+	},
+	{
+		"id":"speed2",
+		"level":5,
+		"name":"dust devil II",
+		"desc":"a whirl of wind at your feet",
+		"school":"air",
+		"require":{
+			"air.max":5
+		},
+		"buy":{
+
+			"research":500,
+			"tomes":1,
+			"airgem":5
+
+		},
+		"cost":{
+			"air":3
+		},
+		"dot":{
+			"duration":45,
+			"mod":{
+				"speed":2
+			}
+		}
+	},
+	{
+
+		"id":"massjinx",
+		"name":"mass jinx",
+		"level":4,
+		"require":"trickster",
+		"desc":"curse all enemies with a streak of bad luck.",
+		"school":"chaos",
+		"buy":{
+			"research":1000,
+			"codices":10
+		},
+		"cost":{
+			"chaos":1
+		},
+		"attack":{
+			"targets":"enemies",
+			"dot":{
+				"id":"jinx",
+				"kind":"curse",
+				"duration":30,
+				"mod":{
+					"tohit":-10
+				}
+			}
+		}
+	},
+	{
+		"id":"copperskin",
+		"name":"copper skin",
+		"level":1,
+		"require":"earth",
+		"school":"earth",
+		"buy":{
+
+			"research":25,
+			"scrolls":1
+
+		},
+		"cost":{
+			"earth":1
+		},
+		"dot":{
+			"duration":30,
+			"mod":{
+				"player.defense":2
+			}
+		}
+
+	},
+	{
+		"id":"guidestr",
+		"name":"guided strike",
+		"level":1,
+		"require":"g.divination>=3",
+		"school":"spirit",
+		"buy":{
+
+			"research":25,
+			"scrolls":1
+
+		},
+		"cost":{
+			"spirit":1
+		},
+		"dot":{
+			"duration":45,
+			"mod":{
+				"player.tohit":3
+			}
+		}
+
+	},
+	{
+		"id":"truestrike",
+		"name":"true strike",
+		"level":3,
+		"require":"g.scrying>=1",
+		"school":"spirit",
+		"buy":{
+
+			"codices":1,
+			"research":100
+
+		},
+		"cost":{
+			"spirit":2
+		},
+		"dot":{
+			"duration":45,
+			"mod":{
+				"player.tohit":7
+			}
+		}
+
+	},
+	{
+		"id":"perfectstrike",
+		"name":"perfect strike",
+		"level":5,
+		"require":"g.scrying>=5",
+		"school":"spirit",
+		"buy":{
+
+			"tomes":1,
+			"research":100,
+			"spiritgem":5
+
+		},
+		"cost":{
+			"spirit":2
+		},
+		"dot":{
+			"duration":45,
+			"mod":{
+				"player.tohit":15
+			}
+		}
+
+	},
+	{
+		"id":"heal2",
+		"level":4,
+		"name":"sealing light II",
+		"desc":"seams of light close your wounds.",
+		"require":"heal1",
+		"school":"light",
+		"buy":{
+
+			"research":1000,
+			"codices":10,
+			"lightgem":1
+
+		},
+		"cost":{
+			"light":5
+		},
+		"effect":{
+			"hp":75
+		}
+	},
+	{
+		"id":"soothing",
+		"name":"soothing breeze",
+		"level":2,
+		"school":"air",
+		"desc":"a light wind steadies your nerves.",
+		"buy":{
+
+			"research":200,
+			"codices":5,
+			"airgem":1
+
+		},
+		"cost":{
+			"air":3
+		},
+		"dot":{
+			"duration":45,
+			"effect":{
+				"unease":-0.2,
+				"madness":-0.2,
+				"weary":-0.2
+			}
+		}
+	},
+	{
+		"id":"zap",
+		"level":3,
+		"desc":"An electric shock leaps from your fingers",
+		"require":"g.lightlore>=5||g.airlore>=5",
+		"school":"air",
+		"buy":{
+
+			"research":100,
+			"scrolls":10
+
+		},
+		"cost":{
+			"air":2
+		},
+		"at":{
+			"30":{
+				"attack.damage.max":1
+			},
+			"100":{
+				"attack.damage.min":1
+			},
+			"300":{
+				"attack.damage.max":2,
+				"attack.damage.min":2,
+				"attack.tohit":2
+			}
+		},
+		"attack":{
+			"damage":"1~2",
+			"tohit":5,
+			"kind":"air",
+			"dot":{
+				"name":"blind",
+				"duration":5,
+				"mod":{
+					"tohit":-2
+				}
+			}
+		}
+	},
+
+	{
+		"id":"elec1",
+		"name":"lightning",
+		"level":5,
+		"desc":"An arc of lightning flashes from the sky.",
+		"require":"g.airlore>=7&&g.zap>0",
+		"school":"air",
+		"buy":{
+
+			"research":500,
+			"codices":10,
+			"airgem":5,
+			"lightgem":5
+
+		},
+		"flavor":"shazaaam?",
+		"cost":{
+			"air":5
+		},
+		"at":{
+			"30":{
+				"attack.damage.max":2
+			},
+			"150":{
+				"attack.damage.min":2
+			},
+			"400":{
+				"attack.damage.max":3,
+				"attack.damage.min":2,
+				"attack.tohit":4
+			}
+		},
+		"attack":{
+			"damage":"7~15",
+			"tohit":7,
+			"kind":"air",
+			"dot":{
+				"name":"blind",
+				"duration":5,
+				"mod":{
+					"tohit":-4
+				}
+			}
+		}
+	},
+	{
+		"id":"elec2",
+		"name":"doublestrike",
+		"level":8,
+		"desc":"Twin arcs of lightning flash from the sky.",
+		"flavor":"sometimes lightning does strike twice.",
+		"require":"g.airlore>=9&&g.elec1>0",
+		"school":"air",
+		"buy":{
+
+			"research":1000,
+			"tomes":3,
+			"airgem":10
+
+		},
+		"cost":{
+			"air":5
+		},
+		"at":{
+			"30":{
+				"attack.damage.max":2
+			},
+			"100":{
+				"attack.damage.min":2
+			},
+			"300":{
+				"attack.damage.max":3,
+				"attack.damage.min":3,
+				"attack.tohit":5
+			}
+		},
+		"attack":{
+			"damage":"7~15",
+			"tohit":12,
+			"kind":"air",
+			"dot":{
+				"name":"blind",
+				"duration":5,
+				"damage":"7~15",
+				"mod":{
+					"tohit":-7
+				}
+			}
+		}
+	},
+	{
+		"id":"elec3",
+		"name":"thunderstrike",
+		"level":12,
+		"desc":"a blinding storm of lightning.",
+		"require":"g.airlore>=12&&g.elec2>0",
+		"school":"air",
+		"buy":{
+
+			"research":5000,
+			"tomes":10,
+			"airgem":15
+
+		},
+		"cost":{
+			"air":10
+		},
+		"at":{
+			"30":{
+				"attack.dot.damage.max":3
+			},
+			"100":{
+				"attack.dot.damage.min":3
+			},
+			"300":{
+				"attack.dot.damage.max":4,
+				"attack.dot.damage.min":4,
+				"attack.toHit":5
+			}
+		},
+		"attack":{
+			"tohit":15,
+			"dot":{
+				"targets":"enemies",
+				"kind":"air",
+				"duration":15,
+				"dmg":"7~15",
+				"mod":{
+					"tohit":-5
+				}
+			}
+		}
+	},
+	{
+		"id":"calming",
+		"name":"calming murmurs",
+		"level":2,
+		"school":"spirit",
+		"desc":"whispers on the wind calm your troubled mind.",
+		"buy":{
+
+			"research":200,
+			"codices":5,
+			"spiritgem":1
+
+		},
+		"cost":{
+			"spirit":3
+		},
+		"dot":{
+			"duration":45,
+			"mod":{
+				"bf":-0.2,
+				"rage":-0.2,
+				"madness":-0.2
+			}
+		}
+	},
+	{
+		"id":"stoneskin",
+		"name":"stone skin",
+		"desc":"hardens the skin of the caster.",
+		"school":"earth",
+		"require":{
+			"earthlore":5
+		},
+		"level":2,
+		"buy":{
+
+			"research":30,
+			"scrolls":5,
+			"earthgem":1
+
+		},
+		"cost":{
+			"earth":5
+		},
+		"dot":{
+			"duration":50,
+			"mod":{
+				"player.defense":5
+			}
+		}
+
+	},
+	{
+		"id":"bodyisdry",
+		"level":7,
+		"name":"last stand",
+		"school":"blood",
+		"require":"bloodmage",
+		"desc":"before your body is dry",
+		"buy":{
+
+			"research":500,
+			"tomes":1,
+			"bloodgem":10
+
+		},
+		"cost":{
+			"mana":10
+		},
+		"dot":{
+			"duration":60,
+			"mod":{
+				"hp.max":50,
+				"hp":50,
+				"hp.rate":-2,
+				"player.tohit":10,
+				"player.damage":10
+			}
+		},"flavor":"don't lose your way"
+	},
+	{
+		"id":"kannadance",
+		"level":7,
+		"name":"kanna's dervish dance",
+		"tags":"patron",
+		"school":"bladelore",
+		"sym":"⭐",
+		"require":"spellblade",
+		"desc":"Kanna's dance was strenuous or a mage, but deadly to enemies.",
+		"buy":{
+
+			"research":500,
+			"tomes":1,
+			"airgem":10
+
+		},
+		"cost":{
+			"air":8
+		},
+		"dot":{
+			"duration":60,
+			"mod":{
+				"stamina.max":50,
+				"stamina":50,
+				"stamina.rate":-1,
+				"dodge":15,
+				"player.tohit":10,
+				"player.damage":5
+			}
+		},"flavor":"she danced with the devil in the pale moonlight, blades gleaming and blurring like a single streak of silver"
+	},
+	{
+		"id":"unearth",
+		"desc":"raise precious stones from the ground.",
+		"school":"earth",
+		"level":3,
+		"buy":{
+
+			"research":300,
+			"codices":5,
+			"earthgem":5
+
+		},
+		"cost":{
+			"scrolls":1,
+			"earth":7
+		},
+		"dot":{
+			"duration":120,
+			"mod":{
+				"gems.rate":0.25
+			}
+		},"flavor":"hi-ho, hi-ho"
+
+	},
+	{
+		"id":"ironskin",
+		"name":"iron skin",
+		"desc":"hardens the skin of the caster.",
+		"school":"earth",
+		"require":{
+			"earthlore":5
+		},
+		"level":2,
+		"buy":{
+
+			"research":750,
+			"codices":5,
+			"earthgem":5
+
+		},
+		"cost":{
+			"earth":5
+		},
+		"dot":{
+			"duration":60,
+			"mod":{
+				"player.defense":10
+			}
+		}
+
+	},
+	{
+		"id":"steelskin",
+		"name":"steel skin",
+		"desc":"hardens the skin of the caster.",
+		"school":"earth",
+		"require":"stoneskin",
+		"level":5,
+		"buy":{
+
+			"research":1000,
+			"tomes":1,
+			"earthgem":10
+
+		},
+		"cost":{
+			"earth":7
+		},
+		"dot":{
+			"duration":120,
+			"mod":{
+				"player.defense":25
+			}
+		}
+
+	},
+	{
+		"id":"apiary",
+		"name":"bulm's apiary",
+		"desc":"",
+		"require":"g.tier5>0&&(g.conjuration>=5&&g.summoning>=10)",
+		"school":"conjuration",
+		"level":10,
+		"cd":200,
+		"buy":{
+			"research":2000,
+			"tomes":15,
+			"arcana":10,
+			"airgem":15
+		},
+		"cost":{
+			"airgem":1
+		},
+		"dot":{
+			"duration":10,
+			"effect":"stingybee"
+		},"flavor":"beeeees"
+	},
+	{
+		"id":"starfall",
+		"desc":"You can't escape the sky.",
+		"school":"astral",
+		"require":"g.tier5>0&&(g.astralseer+g.wizard3+g.wizard2)>=0&&g.astronomy>=15&&g.evil==0",
+		"cd":55,
+		"buy":{
+			"research":2000,
+			"tomes":15,
+			"arcana":10,
+			"managem":15
+		},
+		"cost":{
+			"managem":1
+		},
+		"attack":{
+			"targets":"enemies",
+			"dot":{
+				"duration":30,
+				"kind":"astral",
+				"dmg":"20~30"
+			}
+		}
+	},
+	{
+		"id":"adamantshell",
+		"name":"adamant shell",
+		"desc":"your skin becomes adamant.",
+		"school":"earth",
+		"require":"steelskin",
+		"level":10,
+		"buy":{
+
+			"research":4000,
+			"tomes":5,
+			"earthgem":30
+
+		},
+		"cost":{
+			"earth":10
+		},
+		"dot":{
+			"duration":180,
+			"mod":{
+				"player.defense":50
+			}
+		}
+
+	},
+	{
+		"id":"tremor",
+		"level":5,
+		"desc":"The earth shakes beneath your enemies' feet",
+		"require":"mud",
+		"school":"earth",
+		"buy":{
+
+			"research":100,
+			"codices":30,
+			"earthgem":5
+
+		},
+		"cost":{
+			"earth":5
+		},
+		"at":{
+			"30":{
+				"attack.toHit":1
+			},
+			"100":{
+				"attack.damage.max":1,
+				"attack.toHit":2
+			},
+			"300":{
+				"attack.damage.max":2,
+				"attack.damage.min":1,
+				"attack.toHit":2
+			}
+		},
+		"attack":{
+			"tohit":2,
+			"targets":"enemies",
+			"kind":"earth",
+			"dot":{
+				"dmg":"2~3",
+				"duration":3,
+				"mod":{
+					"speed":-10
+				}
+			}
+		}
+	},
+	{
+		"id":"quake",
+		"alias":"earthquake",
+		"desc":"the earth shakes at your command",
+		"school":"earth",
+		"level":9,
+		"buy":{
+
+			"sp":1,
+			"research":1750,
+			"tomes":5,
+			"earthgem":10
+
+		},
+		"cost":{
+			"earth":5
+		},
+		"attack":{
+
+			"targets":"enemies",
+			"dot":{
+				"duration":30,
+				"dmg":"5~10",
+				"mod":{
+					"speed":-7
+				}
+			}
+
+		}
+
+	},
+	{
+
+		"id":"immunefire1",
+		"name":"quenching sphere",
+		"school":"water",
+		"level":5,
+		"require":"g.waterlore>=8",
+		"desc":"temporarily negate all fire damage",
+		"buy":{
+
+			"research":4000,
+			"tomes":1
+
+		},
+		"cost":{
+			"water":5
+		},
+		"dot":{
+
+			"duration":20,
+			"mod":{
+				"player.immunities.fire":1
+			}
+
+		}
+
+	},
+	{
+
+		"id":"splendor",
+		"alias":"magnificence",
+		"level":7,
+		"school":"light",
+		"desc":"",
+		"buy":{
+			"tomes":1,
+			"lightgem":10,
+			"runestones":5
+		},
+		"cost":{
+			"light":7
+		},
+		"dot":{
+			"duration":60,
+			"mod":{
+				"player.tohit":5,
+				"hp.max":50,
+				"defense":10,
+				"speed":2
+			}
+		}
+	},
+	{
+		"id":"abundance",
+		"level":8,
+		"desc":"herbs sprout more quickly from the earth.",
+		"school":"nature",
+		"require":"g.naturelore>=15",
+		"buy":{
+
+			"research":1000,
+			"tomes":5
+
+		},
+		"cost":{
+			"nature":8
+		},
+		"dot":{
+			"duration":60,
+			"mod":{
+				"herbs.rate":1.5
+			}
+		}
+	},
+	{
+
+		"id":"blindflash",
+		"name":"blinding flash",
+		"school":"light",
+		"level":8,
+		"desc":"a flash of pure white light",
+		"buy":{
+			"tomes":10,
+			"lightgem":20,
+			"runestones":5
+		},
+		"cost":{
+			"light":5
+		},
+		"attack":{
+			"targets":"enemies",
+			"damage":"3~5",
+			"dot":{
+				"id":"blind",
+				"kind":"light",
+				"duration":60,
+				"mod":{
+					"tohit":-30
+				}
+			}
+		}
+	},
+	{
+		"id":"venom2",
+		"level":5,
+		"name":"venom II",
+		"school":"nature",
+		"require":"venom1",
+		"buy":{
+
+			"research":4000,
+			"tomes":1,
+			"naturegem":10
+
+		},
+		"cost":{
+			"nature":5
+		},
+		"attack":{
+			"dot":{
+				"id":"venom",
+				"kind":"poison",
+				"duration":30,
+				"damage":"8~15"
+			}
+		}
+
+	},
+	{
+
+		"id":"hightide",
+		"name":"high tide",
+		"school":"water",
+		"level":6,
+		"desc":"flood the field of battle",
+		"cd":40,
+		"buy":{
+
+			"research":400,
+			"watergem":10,
+			"tomes":5
+
+		},
+		"cost":{
+			"water":5
+		},
+		"attack":{
+			"dot":{
+				"kind":"water",
+				"targets":"enemies",
+				"dmg":"3~7",
+				"duration":30,
+				"mod":{
+					"speed":-5,
+					"dodge":-10
+				}
+			}
+		},
+		"dot":{
+			"targets":"allies",
+			"duration":30,
+			"mod":{
+				"player.resist.water":50
+			}
+
+		}
+
+	},
+	{
+		"id":"cordyceps",
+		"level":7,
+		"school":"nature",
+		"require":"venom2",
+		"desc":"a fungal cloud that damages all enemies.",
+		"buy":{
+
+			"research":4000,
+			"tomes":5,
+			"naturegem":10
+
+		},
+		"cost":{
+			"nature":5
+		},
+		"attack":{
+			"targets":"enemies",
+			"dot":{
+				"kind":"poison",
+				"duration":45,
+				"damage":"7~11"
+			}
+		}
+
+	},
+	{
+		"id":"heal3",
+		"level":7,
+		"name":"sealing light III",
+		"desc":"seams of light close your wounds.",
+		"school":"light",
+		"require":"g.lightlore>=14&&g.heal2>0",
+		"buy":{
+
+			"research":1000,
+			"tomes":5,
+			"lightgem":5
+
+		},
+		"cost":{
+			"light":7
+		},
+		"effect":{
+			"hp":200
+		}
+	},
+	{
+
+		"id":"forceten",
+		"name":"force ten",
+		"school":"water",
+		"cd":50,
+		"level":15,
+		"desc":"The storm before the calm.",
+		"buy":{
+
+			"research":4000,
+			"watergem":25,
+			"tomes":20
+
+		},
+		"cost":{
+			"water":8
+		},
+		"attack":{
+			"dot":{
+				"kind":"water",
+				"targets":"all",
+				"dmg":"20~30",
+				"duration":30
+			}
+		},
+		"dot":{
+			"targets":"allies",
+			"duration":30,
+			"mod":{
+				"player.resist.water":75
+			}
+
+		},"flavor":"force without form"
+
+	},
+	{
+
+		"id":"firestorm",
+		"school":"fire",
+		"level":17,
+		"desc":"rain hell from above",
+		"cd":66,
+		"buy":{
+
+			"research":4000,
+			"firegem":25,
+			"tomes":20
+
+		},
+		"cost":{
+			"fire":8
+		},
+		"attack":{
+			"dot":{
+				"kind":"fire",
+				"targets":"all",
+				"dmg":"30~50",
+				"duration":30
+			}
+		},
+		"dot":{
+			"targets":"allies",
+			"duration":30,
+			"mod":{
+				"player.resist.fire":80
+			}
+
+		},"flavor":""
+
+	},
+	{
+
+		"id":"immunefire2",
+		"name":"greater quenching sphere",
+		"school":"water",
+		"level":5,
+		"require":"g.waterlore>=15",
+		"desc":"temporarily negate all fire damage",
+		"buy":{
+
+			"research":4000,
+			"tomes":10
+
+		},
+		"cost":{
+			"water":7
+		},
+		"dot":{
+
+			"duration":100,
+			"mod":{
+				"player.immunities.fire":1
+			}
+
+		}
+
+	},
+	{
+		"id":"cyrilsling",
+		"name":"cyril's celestial sling",
+		"tags":"patron",
+		"level":7,
+		"desc":"",
+		"require":"g.tier9>0&&g.chaos>=3",
+		"buy":{
+			"firerune":7,
+			"waterrune":7,
+			"airrune":7,
+			"earthrune":7,
+			"runestones":7
+		},
+		"cost":{
+			"sindel":1,
+			"chaos":1
+		},
+		"attack":{
+			"kind":"pierce",
+			"dmg":2,
+			"tohit":50
+		},"flavor":""
+
+	},
+	{
+		"id":"angelofdeath",
+		"name":"angel of death",
+		"desc":"a black spirit arises, to reap souls for your work.",
+		"school":"shadow",
+		"require":["evil",{
+			"shadow.max":15
+		}],
+		"level":5,
+		"buy":{
+
+			"research":3000,
+			"tomes":1,
+			"shadowgem":5,
+			"spiritgem":1
+
+		},
+		"cost":{
+			"shadow":10,
+			"spirit":5
+		},
+		"dot":{
+			"duration":90,
+			"effect":{
+				"bodies":0.03,
+				"souls":0.012
+			}
+		}
+
+	}
+
+]
