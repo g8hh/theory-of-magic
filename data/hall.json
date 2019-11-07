@@ -25,6 +25,25 @@
 				"mod":{
 					"hall.max":1
 				}
+			},
+			{
+				"id":"timewell",
+				"max":1,
+				"cost":{
+					"prestige":50,
+					"timerune":3
+				},
+				"mod":{
+					"runner.max":1
+				}
+			},
+			{
+				"id":"dreamchamber",
+				"name":"dream chamber",
+				"max":1,
+				"mod":{
+					"runner.max":1
+				}
 			}
 
 		],

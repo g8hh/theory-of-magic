@@ -52,7 +52,7 @@
 		"id":"sp",
 		"name":"skill points",
 		"desc":"Spend to unlock new skills",
-		"stat":"true",
+		"stat":true,
 		"val":0,
 		"locked":false
 	},
@@ -76,7 +76,7 @@
 		"desc":"affinity for fortune",
 		"val":0,
 		"stat":true,
-		"unit":"false",
+		"unit":false,
 		"locked":false,
 		"flavor":"let's keep this party polite"
 	},
@@ -93,7 +93,7 @@
 		"name":"Damage reduction",
 		"desc":"Amount of damage subtracted from total.",
 		"val":0,
-		"stat":"true",
+		"stat":true,
 		"unit":false,
 		"locked":false
 	},
@@ -108,14 +108,14 @@
 		"id":"virtue",
 		"hidden":"true",
 		"desc":"Tendency to good",
-		"stat":"true",
+		"stat":true,
 		"val":0
 	},
 	{
 		"id":"evilamt",
 		"name":"evil",
 		"hidden":true,
-		"stat":"true",
+		"stat":true,
 		"desc":"Tendency to evil",
 		"val":0
 	},
@@ -123,7 +123,7 @@
 	{
 		"id":"fame",
 		"name":"notoriety",
-		"hidden":"true",
+		"hidden":true,
 		"stat":true,
 		"desc":"Your reputation in the world",
 		"val":0

@@ -497,6 +497,7 @@
 		"lore.rate":"10%",
 		"lore.max":2,
 		"firelore.max":1,
+		"necromancy.max":1,
 		"firelore.rate":0.2,
 		"shadowlore.max":2,
 		"demonology.max":3
@@ -1208,6 +1209,7 @@
 		},"mod":{
 			"tier5":true,
 			"lore.max":2,
+			"necromancy.max":1,
 			"lore.rate":"10%",
 			"firelore.max":3,
 			"firelore.rate":"20%",
@@ -1331,7 +1333,7 @@
 		"name":"mythic wizard",
 		"desc":"Their names reappear throughout the ages, and few believe they ever existed.",
 		"tags":"t_tier6",
-		"require":"g.tier5>0&&g.lore>=35&&g.spellcraft>=10",
+		"require":"g.tier5>0&&g.lore>=35&&g.spellcraft>=10&&g.evil==0",
 		"cost":{
 			"research":20000,
 			"arcana":75,
@@ -1350,6 +1352,36 @@
 			"history.max":1,
 			"potions.max":1,
 			"alchemy.max":1
+		}
+
+	},
+	{
+		"id":"astralseer",
+		"name":"astral seer",
+		"desc":"The stars are an open book, to those who can read.",
+		"tags":"t_tier6",
+		"require":"g.tier5>0&&g.astronomy>=15&&g.planeslore>=15",
+		"cost":{
+			"research":17000,
+			"arcana":75,
+			"tomes":50,
+			"sindel":3,
+			"starcharts":50
+		},
+		"mod":{
+			"tier6":true,
+			"spellcraft.max":1,
+			"planeslore.max":2,
+			"planeslore.rate":"2%",
+			"player.bonuses.mana":2,
+			"astronomy.max":2,
+			"astronomy.rate":"1%",
+			"scrying.max":1,
+			"scrying.rate":"2%",
+			"sindel.rate":"5%",
+			"mysticism.max":2,
+			"mysticism.rate":0.5,
+			"crafting.max":2
 		}
 
 	},

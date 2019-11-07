@@ -73,6 +73,7 @@
 			"stamina":0.2
 		},
 		"mod":{
+			"history.rate":"1%",
 			"stress.max":1
 		}
 
@@ -196,6 +197,7 @@
 			"sp":0.05
 		},
 		"mod":{
+			"animals.rate":"1%",
 			"minions.maxAllies":0.25,
 			"research.max":5
 		}
@@ -381,6 +383,7 @@
 			"hp":1
 		},
 		"mod":{
+			"anatomy.rate":"1%",
 			"hp.max":10,
 			"hp.rate":0.1
 		}
@@ -828,7 +831,8 @@
 		},
 		"mod":{
 			"shadow.rate":0.01,
-			"minions.maxAllies":0.2
+			"minions.maxAllies":0.2,
+			"necromancy.rate":"1%"
 		}
 
 	},
@@ -849,6 +853,7 @@
 			"sp":0.05
 		},
 		"mod":{
+			"reanimation.rate":"2%",
 			"shadow.rate":0.01
 		}
 
@@ -864,6 +869,7 @@
 			"sp":0.05
 		},
 		"mod":{
+			"alchemy.rate":"1%",
 			"research.max":2
 		}
 	},
@@ -874,6 +880,9 @@
 		"run":{
 			"stamina":0.4,
 			"research":1
+		},
+		"mod":{
+			"charms.rate":"1%"
 		},
 		"result":{
 			"sp":0.05,
@@ -892,6 +901,7 @@
 			"research":5
 		},
 		"mod":{
+			"potions.rate":"1%",
 			"research.max":2
 		}
 	},
@@ -905,6 +915,7 @@
 			"sp":0.05
 		},
 		"mod":{
+			"planeslore.rate":"1%",
 			"research.max":2
 		}
 	},

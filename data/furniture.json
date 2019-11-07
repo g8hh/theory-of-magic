@@ -930,6 +930,7 @@
 		"require":"g.crafting>=14",
 		"need":"workshop",
 		"desc":"Great spells are often forged on iron.",
+		"tags":"patron",
 		"sym":"⭐",
 		"cost":{
 			"space":5,
