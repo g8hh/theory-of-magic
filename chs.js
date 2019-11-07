@@ -568,6 +568,7 @@ var cnItems = {
     'reading lore': '阅读知识',
 	'\n\n		progress': '进度',
     'damage': '伤害',
+    'dmg': '伤害',
     'dot': '状态',
     'spiritsource': '精神源泉',
     'spirit': '精神',
@@ -839,13 +840,15 @@ var cnItems = {
     'spirit mastery': '精神精通',
     'nature mastery': '自然精通',
     'water mastery': '水流精通',
-    '': '',
-    '': '',
-    '': '',
-    '': '',
-    '': '',
-    '': '',
-    '': '',
+    'raven': '乌鸦',
+    'summon raven': '召唤乌鸦',
+    'hobgoblin': '妖精',
+    'summon hobgoblin': '召唤妖精',
+    'unicorn': '独角兽',
+    'summon unicorn': '召唤独角兽',
+    'poison': '毒素',
+    'spooky': '惊吓',
+    'attack': '攻击',
     '': '',
     '': '',
     '': '',
@@ -928,11 +931,9 @@ var cnPostfix = {
 var cnExcludeWhole = [
     /^x?\d+(\.\d+)?[A-Za-z%]{0,2}(\s.C)?\s*$/, //12.34K,23.4 °C
     /^x?\d+(\.\d+)?(e[+\-]?\d+)?\s*$/, //12.34e+4
-    /^\s*$/, //纯空格
+    /^\s+$/, //纯空格
     /^\d+(\.\d+)?[A-Za-z]{0,2}.?\(?([+\-]?(\d+(\.\d+)?[A-Za-z]{0,2})?)?$/, //12.34M (+34.34K
-    /^(\d+(\.\d+)?[A-Za-z]{0,2}\/s)?.?\(?([+\-]?\d+(\.\d+)?[A-Za-z]{0,2})?\/s\stot$/, //2.74M/s (112.4K/s tot
     /^\d+(\.\d+)?(e[+\-]?\d+)?.?\(?([+\-]?(\d+(\.\d+)?(e[+\-]?\d+)?)?)?$/, //2.177e+6 (+4.01+4
-    /^(\d+(\.\d+)?(e[+\-]?\d+)?\/s)?.?\(?([+\-]?(\d+(\.\d+)?(e[+\-]?\d+)?)?)?\/s\stot$/, //2.177e+6/s (+4.01+4/s tot
 ];
 var cnExcludePostfix = [
 	/:?\s*\-?\d+(\.\d+)?\s*~\s*\d+(\.\d+)?/,  // : 1.5 ~ 2.5
@@ -960,6 +961,11 @@ var cnRegReplace = new Map([
 	[/^(.+)\sresist air$/, '$1 气抵抗'],
 	[/^(.+)\sresist water$/, '$1 水抵抗'],
 	[/^(.+)\sresist fire$/, '$1 火抵抗'],
+	[/^(.+)\simmunities fire$/, '$1 火免疫'],
 	[/^(.+)\sresist earth$/, '$1 地抵抗'],
+	[/^(.+)\sresist cold$/, '$1 冰冷抵抗'],
+	[/^(.+)\sresist light$/, '$1 光抵抗'],
+	[/^(.+)\sresist holy$/, '$1 神圣抵抗'],
 	[/^(.+)\stohit$/, '$1 命中'],
+	[/^(.+)\sdefense$/, '$1 防御'],
 ]);
