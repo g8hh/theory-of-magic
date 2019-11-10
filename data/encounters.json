@@ -222,7 +222,7 @@
 			"gold":"0~300",
 			"managem":"10%",
 			"gems":"0~5",
-			"tomes":"0~1"
+			"tomes":"30%"
 		}
 	},
 	{
@@ -388,7 +388,7 @@
 	{
 		"id":"enc_pidwig",
 		"name":"talk to pidwig",
-		"desc":"pidwig is sparse with words, but has seem many mysteries in his travels.",
+		"desc":"pidwig is sparse with words, but has seen many mysteries in his travels.",
 		"effect":{
 			"bf":"0~2",
 			"weary":"0~2",

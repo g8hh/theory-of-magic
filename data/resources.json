@@ -301,6 +301,14 @@
 
 	},
 	{
+		"id":"dreams",
+		"desc":"It meant something; if you could only remember it.",
+		"max":3,
+		"mod":{
+			"arcana.rate":"1%"
+		},"flavor":"in your wildest..."
+	},
+	{
 
 		"id":"herbs",
 		"desc":"Special plants for potions and alchemy.",

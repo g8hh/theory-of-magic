@@ -657,6 +657,25 @@
 
 	},
 	{
+		"id":"wizlore",
+		"name":"Wizard Lore",
+		"require":"(g.mage+g.highmage+g.wizard+g.wizard2+g.wizard3)>=2",
+		"school":"arcane",
+		"desc":"Many ask 'how?' Few think to ask, 'why?'",
+		"level":5,
+		"run":{
+			"stamina":1,
+			"research":50,
+			"arcana":0.5
+		},
+		"mod":{
+			"lore.rate":"5%",
+			"mana.rate":"3%",
+			"research.rate":"2%",
+			"arcana.rate":"2%"
+		}
+	},
+	{
 		"id":"earthlore2",
 		"name":"earth mastery",
 		"desc":"a mastery of earth",

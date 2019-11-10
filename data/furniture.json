@@ -768,6 +768,49 @@
 		}
 	},
 	{
+		"id": "elemsiphon",
+		"name":"elemental siphon",
+		"desc":"A crystal apparatus to siphon elemental energies into mana.",
+		"require": "g.tier4>0&&g.mana.max>30",
+		"need":"workshop",
+		"max": 2,
+		"cost": {
+			"gold": 2500,
+			"space": 5,
+			"managem": 25,
+			"firegem": 50,
+			"watergem": 50,
+			"airgem": 50,
+			"earthgem": 50
+		},
+		"mod": {
+			"mana.rate": 0.5,
+			"arcana.rate": -0.002,
+			"element.rate":-0.75
+		}
+	},
+	{
+		"id": "elemflux",
+		"name": "elemental flux",
+		"desc": "Gems draw in pure mana and disperse it into elemental forms.",
+		"require": "g.tier4>0&&g.mana.max>30",
+		"max": 2,
+		"cost": {
+			"gold": 2500,
+			"space": 5,
+			"managem": 50,
+			"firegem": 25,
+			"watergem": 25,
+			"airgem": 25,
+			"earthgem": 25
+		},
+		"mod": {
+			"mana.rate": -2,
+			"arcana.rate": -0.002,
+			"element.rate":0.25
+		}
+	},
+	{
 		"id":"cairn",
 		"desc":"Mystic rock-pile",
 		"tags":"spiritsource",

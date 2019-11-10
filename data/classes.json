@@ -326,6 +326,9 @@
 	"cost":{
 		"research":777,
 		"gems":7,
+		"managem":7,
+		"airgem":7,
+		"watergem":7,
 		"tomes":7,
 		"gold":777,
 		"arcana":7
@@ -351,7 +354,8 @@
 	"desc":"extend your life with spare parts from the dead.",
 	"require":"g.tier1>0&&g.reanimator>=1&&g.evil>0",
 	"cost":{
-		"research":700,
+		"research":800,
+		"bodies":3,
 		"bones":10,
 		"bonedust":15,
 		"arcana":7
@@ -376,11 +380,11 @@
 	"desc":"drain corpses of their lingering life-force to prolong your bleak existence.",
 	"require":"g.tier2>0&&g.evil>0",
 	"cost":{
-		"research":1000,
+		"research":1500,
 		"bones":100,
 		"bodies":50,
 		"bonedust":25,
-		"arcana":10
+		"arcana":15
 	},
 	"effect":{
 		"sp":2
@@ -405,9 +409,10 @@
 	"actdesc":"Pursue the path of battle.",
 	"require":"g.tier1>0&&g.player.level>=10&&g.armory>0",
 	"cost":{
-		"research":1000,
+		"research":1500,
 		"arcana":7,
-		"gold":400
+		"gold":800,
+		"gems":20
 	},
 	"effect":{
 		"sp":1
@@ -432,7 +437,7 @@
 	"require":"g.tier2>0&&g.enchanting>=7&&g.player.tohit>=10",
 	"cost":{
 		"research":3000,
-		"arcana":15,
+		"arcana":20,
 		"gold":1000
 	},
 	"effect":{
@@ -454,10 +459,10 @@
 	"tags":"t_tier3",
 	"require":"g.tier2>0&&g.evil>0&&g.hp>=100&&g.player.level>=17",
 	"cost":{
-		"research":1000,
+		"research":1500,
 		"bones":100,
 		"bodies":50,
-		"arcana":15
+		"arcana":20
 	},
 	"effect":{
 
@@ -483,7 +488,7 @@
 	"cost":{
 		"research":4000,
 		"souls":50,
-		"arcana":15,
+		"arcana":25,
 		"tomes":10,
 		"runestones":5
 	},
@@ -515,7 +520,7 @@
 		"research":1500,
 		"arcana":8,
 		"gold":700,
-		"bloodgem":15
+		"bloodgem":20
 	},
 	"effect":{
 
@@ -542,8 +547,8 @@
 	"desc":"alone or in company, the summoner is never without an army.",
 	"require":"g.minions>4&&g.tier2>0&&g.lore>=20",
 	"cost":{
-		"research":1000,
-		"arcana":15,
+		"research":2000,
+		"arcana":20,
 		"tomes":5
 	},
 	"effect":{
@@ -553,13 +558,15 @@
 	"mod":{
 		"tier3":true,
 		"minions.max":1,
+		"conjuration.max":2,
+		"conjuration.rate":"2%",
 		"charms.max":1,
 		"lore.max":2,
 		"lore.rate":"5%",
 		"mana.max":2,
 		"summoning.max":4,
 		"summoning.rate":"20%"
-	},"flavor":"i'd like to introduce you to some friends"
+	},"flavor":"How you do I; hope you've met my..."
 
 },
 {
@@ -568,10 +575,10 @@
 	"tags":"t_tier2",
 	"require":"g.tier1>0&&g.naturelore>=12",
 	"cost":{
-		"research":1000,
-		"naturegem":10,
+		"research":1500,
+		"naturegem":15,
 		"herbs":50,
-		"arcana":10
+		"arcana":15
 	},
 	"effect":{
 		"sp":1
@@ -596,7 +603,7 @@
 		"firegem":2,
 		"watergem":2,
 		"earthgem":2,
-		"arcana":10
+		"arcana":20
 	},
 	"effect":{
 		"sp":3
@@ -623,7 +630,7 @@
 		"research":1200,
 		"managem":10,
 		"tomes":5,
-		"arcana":12
+		"arcana":20
 	},
 	"effect":{
 		"sp":2
@@ -646,9 +653,9 @@
 	"actdesc":"Become a geomancer.",
 	"require":"g.tier1>0&&g.earthlore>=10",
 	"cost":{
-		"research":750,
-		"arcana":10,
-		"tomes":5,
+		"research":1000,
+		"arcana":15,
+		"tomes":10,
 		"earthgem":10
 	},
 	"effect":{
@@ -670,9 +677,9 @@
 	"actdesc":"Become a pyromancer.",
 	"require":"g.tier1>0&&g.firelore>=10",
 	"cost":{
-		"research":750,
-		"arcana":10,
-		"tomes":5,
+		"research":1000,
+		"arcana":15,
+		"tomes":10,
 		"firegem":10
 	},
 	"effect":{
@@ -695,8 +702,8 @@
 	"require":"g.tier1>0&&g.waterlore>=10",
 	"cost":{
 		"research":1000,
-		"arcana":10,
-		"tomes":5,
+		"arcana":15,
+		"tomes":10,
 		"watergem":10
 	},
 	"effect":{
@@ -721,8 +728,8 @@
 	"require":"g.tier1>0&&g.airlore>=10",
 	"cost":{
 		"research":1000,
-		"arcana":10,
-		"tomes":5,
+		"arcana":15,
+		"tomes":10,
 		"airgem":10
 	},
 	"effect":{
@@ -744,9 +751,9 @@
 	"tags":"t_tier3",
 	"cost":{
 		"research":3000,
-		"arcana":20,
-		"airgem":10,
-		"watergem":10,
+		"arcana":25,
+		"airgem":20,
+		"watergem":20,
 		"tomes":10
 	},
 	"effect":{
@@ -772,7 +779,8 @@
 	"cost":{
 		"arcana":12,
 		"research":1000,
-		"codices":20
+		"codices":20,
+		"gems":10
 	},
 	"effect":{
 
@@ -794,10 +802,10 @@
 	"cost":{
 		"research":3000,
 		"managem":5,
-		"firegem":10,
-		"earthgem":10,
-		"watergem":10,
-		"arcana":20
+		"firegem":15,
+		"earthgem":15,
+		"watergem":15,
+		"arcana":25
 	},
 	"effect":{
 
@@ -823,8 +831,8 @@
 	"cost":{
 		"research":1000,
 		"naturegem":20,
-		"herbs":25,
-		"arcana":15
+		"herbs":50,
+		"arcana":20
 	},
 	"effect":{
 
@@ -847,6 +855,7 @@
 	"desc":"Lord of the elements",
 	"require":"g.tier2>0&&g.airlore>7&&g.firelore>7&&g.waterlore>7&&g.earthlore>7",
 	"cost":{
+		"arcana":15,
 		"tomes":10,
 		"airgem":20,
 		"firegem":20,
@@ -876,7 +885,7 @@
 	"cost":{
 		"research":750,
 		"gems":10,
-		"codices":10,
+		"codices":20,
 		"arcana":5
 	},
 	"effect":{
@@ -903,6 +912,7 @@
 	"require":"g.tier1>0&&g.divination>=10",
 	"tags":"t_tier2",
 	"cost":{
+		"codices":20,
 		"tomes":5,
 		"arcana":10,
 		"research":2000
@@ -929,8 +939,8 @@
 	"require":"g.tier1>0&&g.lore>=17",
 	"cost":{
 		"research":2000,
-		"arcana":10,
-		"tomes":1
+		"arcana":15,
+		"tomes":5
 	},
 	"effect":{
 
@@ -954,7 +964,7 @@
 	"require":"g.tier2>0&&g.lore>=21",
 	"cost":{
 		"research":5000,
-		"arcana":15,
+		"arcana":20,
 		"tomes":10
 	},
 	"effect":{
@@ -980,7 +990,7 @@
 		"research":2000,
 		"arcana":15,
 		"tomes":7,
-		"spiritgem":10
+		"spiritgem":15
 	},
 	"effect":{
 		"sp":2
@@ -1093,7 +1103,7 @@
 	"cost":{
 		"research":5000,
 		"arcana":25,
-		"tomes":10,
+		"tomes":20,
 		"runestones":5
 	},
 	"effect":{
@@ -1120,7 +1130,7 @@
 	"require":"g.tier4>0&&g.lore>=30",
 	"cost":{
 		"research":20000,
-		"arcana":25,
+		"arcana":30,
 		"tomes":30,
 		"runestones":10
 	},

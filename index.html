@@ -8,6 +8,12 @@
 	<meta name="keywords" content="idle, clicker, idle clicker, game, wizard, arcane, rpg, fun, browser, javascript" />
 	<meta name="description" content="magic idle clicker for rpg enthusiasts" />
 	<meta name="author" content="lerping lemur" />
+	
+	<script>
+		var kongregateAPI = {
+			loadAPI: function(){}
+		}
+	</script>
 
 	<!-- WEBFONT LOADING -->
 	<!--<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
@@ -53,26 +59,6 @@
     button:disabled { opacity: 0.3; color: unset; }
 
     /*.items div.dot-view { display: flex; flex-flow: row; justify-content: flex-start; }*/
-
-
-
-
-
-    /* Top Bar */
-
-    body div.full div.top-bar { margin: 0; padding: var(--comfy-gap); }
-    body div.full div.top-bar .items { margin: 0; flex: 1; }
-    body div.full div.top-bar .items div.dot-view {
-        display: grid; grid-auto-columns: 1fr; grid-template-rows: 1fr;  grid-auto-flow: column;
-        grid-gap: 1px; margin: var(--sm-gap);
-    }
-    body div.full div.top-bar .items div.dot-view .dot {
-        flex: 1; margin: 0; padding: 0.1em; font-size: 0.75em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
-        border: none; outline: 1px solid #AAA;
-    }
-    body div.full div.top-bar .load-opts .text-button { max-height: unset; }
-    body div.full div.top-bar .link-bar { margin: 0; flex-grow: unset; }
-
 
 
     /* Action List */
@@ -191,20 +177,6 @@
     .dungeon > span:first-child { flex-basis: 40%; }
     .dungeon button { white-space: nowrap; }
 
-
-
-    table.equip {
-        /*display: flex; flex-direction: column;*/
-        flex-basis: 65%; overflow-y: auto;
-        display: grid; grid-template-columns: 1fr; grid-gap: var(--sm-gap); padding: var(--sm-gap);
-
-    }
-    table.equip .equip-slot {
-        display: flex;height: unset; flex-flow: column; margin: 0; padding: var(--sm-gap);
-    }
-    table.equip .equip-slot .slot-item {
-        display: flex; flex-flow: column; text-indent: 1em;
-    }
 
     /* Beastiary */
 

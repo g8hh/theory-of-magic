@@ -167,8 +167,24 @@ input[type=text].fld-name {
 }
 
 div.full:first-child { display: flex; margin: 0; }
-div.full div.top-bar { border-bottom: 1px solid var(--separator-color); margin: 0; padding:0;}
-div.full div.top-bar .load-opts { display: flex; align-items: center; width: unset; }
+
+div.top-bar { border-bottom: 1px solid var(--separator-color); margin: 0; padding: var(--comfy-gap);
+}
+div.top-bar .load-opts { display: flex; align-items: center; width: unset; }
+
+div.top-bar .items { margin: 0; flex: 1; }
+div.top-bar .items div.dot-view {
+	display: grid; grid-auto-columns: 1fr; grid-template-rows: 1fr;  grid-auto-flow: column;
+	grid-gap: 1px; margin: var(--sm-gap);
+}
+div.top-bar .items div.dot-view .dot {
+	flex: 1; margin: 0; padding: 0.1em; font-size: 0.75em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+	border: none; outline: 1px solid #AAA;
+}
+div.top-bar .load-opts .text-button { max-height: unset; }
+div.top-bar .link-bar { margin: 0; flex-grow: unset; }
+
+
 div.full div.game-main { flex: 1; margin-top: 0; max-height: unset; min-height: 0; }
 div.full div.game-mid { border-left: 1px solid var(--separator-color); border-right: 1px solid var(--separator-color); margin: 0; }
 div.full div.game-mid .menu-content {

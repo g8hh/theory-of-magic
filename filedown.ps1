@@ -38,3 +38,4 @@ Invoke-WebRequest -Uri "https://game312933.konggames.com/gamez/0031/2933/live/di
 Invoke-WebRequest -Uri "https://game312933.konggames.com/gamez/0031/2933/live/dist/dist/minions-ui.bundle.js" -OutFile "dist/dist/minions-ui.bundle.js"
 Invoke-WebRequest -Uri "https://game312933.konggames.com/gamez/0031/2933/live/dist/dist/enchant-ui.bundle.js" -OutFile "dist/dist/enchant-ui.bundle.js"
 Invoke-WebRequest -Uri "https://game312933.konggames.com/gamez/0031/2933/live/css/main.css"  -OutFile "css/main.css"
+Invoke-WebRequest -Uri "https://game312933.konggames.com/gamez/0031/2933/live/dist/dist/hall-ui.bundle.js" -OutFile "dist/dist/hall-ui.bundle.js"

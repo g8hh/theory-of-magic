@@ -1645,7 +1645,7 @@
 		"level":4,
 		"require":"trickster",
 		"desc":"curse all enemies with a streak of bad luck.",
-		"school":"chaos",
+		"school":"trickery",
 		"buy":{
 			"research":1000,
 			"codices":10
@@ -1972,7 +1972,7 @@
 				"targets":"enemies",
 				"kind":"air",
 				"duration":15,
-				"dmg":"7~15",
+				"damage":"7~15",
 				"mod":{
 					"tohit":-5
 				}
@@ -2067,7 +2067,7 @@
 		"school":"bladelore",
 		"sym":"⭐",
 		"require":"spellblade",
-		"desc":"Kanna's dance was strenuous or a mage, but deadly to enemies.",
+		"desc":"Kanna's dance was a strenuous one for a mage, and a deadly one to her enemies.",
 		"buy":{
 
 			"research":500,
