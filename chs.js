@@ -892,7 +892,7 @@ var cnItems = {
     'cave': '洞穴',
     'hut': '棚屋',
     'cottage': '茅屋',
-    '': '',
+    'elemental': '元素',
     '': '',
     '': '',
     '': '',
@@ -976,6 +976,9 @@ var cnPostfix = {
 	', enchantsource': '，附魔源泉',
 	', home': '，家',
 	', skill': '，技能',
+	', school': '，学院派',
+	', school': '，学院派',
+	', elemental': '，元素',
 }
 
 //需排除的，正则匹配
