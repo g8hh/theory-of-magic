@@ -441,7 +441,7 @@
 			"astronomy.exp":3,
 			"planeslore.exp":1,
 			"scrying.exp":1
-		}, "loot":"starchart"
+		}, "loot":"starcharts"
 	},
 	{
 		"id":"sombersunset",

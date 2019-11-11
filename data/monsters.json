@@ -1218,8 +1218,7 @@
 		}, "resist":{
 			"cold":20,
 			"water":10
-		},
-		"loot":{}
+		}
 
     },
     {
@@ -1233,7 +1232,7 @@
             "name":"mallet",
             "kind":"blunt",
             "dmg":"7~11"
-        }, "loot":{}
+        }
 
     },
     {
@@ -2185,7 +2184,7 @@
             "name":"broadsword",
             "kind":"slash",
             "dmg":"12~17"
-        }, "loot":{ "level":8, "pct":80}
+        }, "loot":{ "max":8, "pct":80}
 
 	},
 	{
@@ -2361,7 +2360,7 @@
             "name":"smash",
             "kind":"blunt",
             "dmg":"9~14"
-		},"loot":{"raw iron":10},
+		},
 		"resist":{
 			"earth":15,
 			"physical":10
@@ -2511,7 +2510,7 @@
         "attack":{"name":"club",
             "kind":"blunt",
             "dmg":"15~24"
-		}, "loot":{"potion of cure serious wounds":15},
+		},
 		"resist":{
 			"earth":20
 		}

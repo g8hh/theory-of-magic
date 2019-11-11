@@ -69,6 +69,34 @@
 
 	},
 	{
+
+		"id":"wildcamp",
+		"name":"wild's encampment",
+		"desc":"Deep in Delkin Wood, Master Wild kept his fabled camp.",
+		"require":"(g.warden+g.druid+g.fey+g.kell)>0&&g.tier2>0",
+		"tags":"outdoors,t_garden,t_pets,patron",
+		"sym":"⭐",
+		"cost":{
+			"gold":300,
+			"naturegem":20,
+			"herbs":50,
+			"research":1000
+		},
+		"mod":{
+			"space.max":40,
+			"lore.rate":-0.1,
+			"research.rate":-0.2,
+			"naturelore2.max":1,
+			"airlore.max":1,
+			"waterlore.max":1,
+			"naturelore.max":2,
+			"naturelore.rate":"5%",
+			"animals.max":1,
+			"animals.rate":0.1
+		}
+
+	},
+	{
 		"id":"wagon",
 		"name":"tinker's wagon",
 		"desc":"wheeled carriage for a nomadic lifestyle.",

@@ -846,7 +846,7 @@
 		"effect":{
 			"arcana":0.001,
 			"virtue":0.1,
-			"notoriety":0.002,
+			"fame":0.002,
 			"history.max":0.001,
 			"history.exp":1,
 			"lightlore.max":0.001,
