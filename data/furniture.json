@@ -88,6 +88,10 @@
 			"space":4
 		},
 		"mod":{
+			"dreams":{
+				"skipLocked":true,
+				"rate":0.0001
+			},
 			"rest":{
 				"effect":{
 					"stamina":0.4,
@@ -1151,6 +1155,7 @@
 		},
 		"mod":{
 			"sindel.rate":0.0001,
+			"arcana.rate":0.0001,
 			"airlore.max":1,
 			"airlore.rate":"1%"
 		}
@@ -1171,6 +1176,7 @@
 		"mod":{
 			"sindel.rate":0.0005,
 			"waterlore.max":1,
+			"arcana.rate":0.0003,
 			"waterlore.rate":"1%"
 		}
 	},
@@ -1426,7 +1432,8 @@
 		"mod":{
 			"tomes.rate":0.01,
 			"starcharts.max":50,
-			"tomes.mod.research.max":"5%",
+			"tomes.mod.research.max":"3%",
+			"tomes.mod.arcana.max":"2%",
 			"codices.max":100,
 			"scrolls.max":100,
 			"tomes.max":100
@@ -1441,11 +1448,12 @@
 		"cost":{
 			"gold":5000,
 			"tomes":25,
-			"runestones":10,
+			"runestones":20,
 			"arcana":10,
 			"space":25
 		},
 		"mod":{
+			"arcana.rate":0.001,
 			"voidlore.max":1,
 			"planeslore.max":1
 		}
@@ -1462,6 +1470,7 @@
 			"space":50
 		},
 		"mod":{
+			"arcana.rate":0.005,
 			"magicgem.rate":0.01
 		}
 

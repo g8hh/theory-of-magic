@@ -529,7 +529,7 @@
 		},
 		"attack":{
 			"damage":"1.5~2.5",
-			"kind":"arcane",
+			"kind":"mana",
 			"tohit":2
 		}
 	},
@@ -563,7 +563,7 @@
 		"attack":{
 			"targets":"enemies",
 			"damage":"0.75~1",
-			"kind":"arcane",
+			"kind":"mana",
 			"tohit":1
 		}
 	},
@@ -1479,7 +1479,7 @@
 		},
 		"attack":{
 			"damage":"10~20",
-			"kind":"arcane",
+			"kind":"mana",
 			"tohit":10
 		}
 	},
@@ -1954,14 +1954,14 @@
 		},
 		"at":{
 			"30":{
-				"attack.dot.damage.max":3
+				"attack.dot.dmg.max":3
 			},
 			"100":{
-				"attack.dot.damage.min":3
+				"attack.dot.dmg.min":3
 			},
 			"300":{
-				"attack.dot.damage.max":4,
-				"attack.dot.damage.min":4,
+				"attack.dot.dmg.max":4,
+				"attack.dot.dmg.min":4,
 				"attack.toHit":5
 			}
 		},
@@ -2102,13 +2102,13 @@
 
 		},
 		"cost":{
-			"scrolls":1,
-			"earth":7
+			"scrolls":2,
+			"earth":5
 		},
 		"dot":{
 			"duration":120,
 			"mod":{
-				"gems.rate":0.25
+				"gems.rate":0.1
 			}
 		},"flavor":"hi-ho, hi-ho"
 
@@ -2674,6 +2674,27 @@
 			"effect":{
 				"bodies":0.03,
 				"souls":0.012
+			}
+		}
+
+	},
+	{
+		"id":"disdream",
+		"name":"dispersal dream",
+		"school":"void",
+		"desc":"",
+		"buy":{
+			"voidgem":10
+		},
+		"cost":"voidgem",
+		"attack":{
+			"targets":"all",
+			"dot":{
+				"duration":30,
+				"effect":{
+					"dmg":"200-300",
+					"kind":"void"
+				}
 			}
 		}
 

@@ -376,6 +376,46 @@
 	},
 	{
 
+		"id":"dreamweaver",
+		"desc":"Spin your dreams upon a tapestry.",
+		"verb":"dream weaving",
+		"require":"g.dreams>0&&g.weaving>=5",
+		"perpetual":true,
+		"length":10,
+		"run":{
+			"stamina":0.7,
+			"mana":1,
+			"gold":5,
+			"arcana":0.02
+		},
+		"at":{
+
+			"500":{ "effect.dreams":0.0001 },
+			"2000":{ "effect.gold":0.0001 },
+			"5000":{ "effect.gold":0.0001 }
+
+		},
+		"effect":{
+			"dreams":0.0005
+		},"flavor":"we are the dream-makers"
+
+	},
+	{
+
+		"id":"starwish",
+		"desc":"Turn sindels into dreams.",
+		"require":"g.astrallore>=5&&g.divination>=10",
+		"cost":{
+			"arcana":1,
+			"sindel":1
+		},
+		"effect":{
+			"dreams":1
+		},"flavor":"star-light, star-bright..."
+
+	},
+	{
+
 		"id":"spingold",
 		"name":"spin gold",
 		"desc":"Spin straw into gold",
@@ -579,7 +619,11 @@
 		"run":{
 			"bonedust":0.2,
 			"stamina":0.3,
-			"spirit":0.3
+			"spirit":0.3,
+			"dreams":{
+				"skipLocked":true,
+				"value":0.0001
+			}
 		},
 		"result":{
 			"souls.max":0.5,
@@ -727,6 +771,27 @@
 			"stamina":0.8,
 			"hp":1,
 			"stress":-1
+		}
+	},
+	{
+		"id":"slumber",
+		"desc":"The deepest sleep guards the greatest insights.",
+		"require":"dreamchamber",
+		"tags":"t_rest",
+		"slot":"rest",
+		"verb":"sleeping",
+		"perpetual":true,
+		"buy":{
+			"arcana":20
+		},
+		"run":{
+			"arcana":0.03
+		},"effect":{
+			"manas":0.5,
+			"stamina":1,
+			"hp":1,
+			"stress":-0.8,
+			"dreams":0.0003
 		}
 	},
 	{
@@ -944,7 +1009,7 @@
 
 		"id":"bindcodex",
 		"name":"bind codex",
-		"require":"g.research.max>=30&&g.crafting>=2",
+		"require":"g.research.max>=30&&g.crafting>=2&&g.lore>=1",
 		"cost":{
 			"scrolls":10,
 			"research":20,
@@ -1659,7 +1724,7 @@
 		"need":"g.runner.hasType('skill')",
 		"every":{
 			"25":{
-				"effect.runner.exp":0.01
+				"effect.runner.exp":0.02
 			}
 		},
 		"cost":{

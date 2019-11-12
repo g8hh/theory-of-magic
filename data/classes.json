@@ -258,7 +258,7 @@
 	"name":"witchcraft",
 	"actname":"The Craft",
 	"actdesc":"Enter into the practice of witchcraft.",
-	"require":"g.tier0>0&&g.animals>=2&&g.herbalism>=3&&g.potions>=3",
+	"require":"g.tier0>0&&g.animals>=2&&g.potions>=3&&g.tier1==0",
 	"flavor":"'what is't you do?' 'a deed without a name'",
 	"cost":{
 		"research":350,
@@ -291,7 +291,7 @@
 	"desc":"Use magic for deceit and trickery.",
 	"buyname":"Path of Trickery",
 	"tags":"t_tier1",
-	"require":"g.trickery>=4&&g.tier0>0",
+	"require":"g.trickery>=4&&g.tier0>0&&g.tier1==0",
 	"cost":{
 		"research":250,
 		"gems":10,
@@ -322,7 +322,7 @@
 	"name":"mystic madcap",
 	"desc":"A penchant for chaos",
 	"tags":"t_tier2",
-	"require":"g.trickery>=7&&g.tier1>0",
+	"require":"g.trickery>=7&&g.tier1>0&&g.tier2==0",
 	"cost":{
 		"research":777,
 		"gems":7,
@@ -352,7 +352,7 @@
 	"id":"bonemonger",
 	"tags":"t_tier2",
 	"desc":"extend your life with spare parts from the dead.",
-	"require":"g.tier1>0&&g.reanimator>=1&&g.evil>0",
+	"require":"g.tier1>0&&g.reanimator>=1&&g.evil>0&&g.tier2==0",
 	"cost":{
 		"research":800,
 		"bodies":3,
@@ -378,7 +378,7 @@
 	"id":"thanophage",
 	"tags":"t_tier3",
 	"desc":"drain corpses of their lingering life-force to prolong your bleak existence.",
-	"require":"g.tier2>0&&g.evil>0",
+	"require":"g.tier2>0&&g.evil>0&&g.tier3==0",
 	"cost":{
 		"research":1500,
 		"bones":100,
@@ -407,7 +407,7 @@
 	"name":"battle mage",
 	"tags":"t_tier2",
 	"actdesc":"Pursue the path of battle.",
-	"require":"g.tier1>0&&g.player.level>=10&&g.armory>0",
+	"require":"g.tier1>0&&g.player.level>=10&&g.armory>0&&g.tier2==0",
 	"cost":{
 		"research":1500,
 		"arcana":7,
@@ -434,7 +434,7 @@
 	"name":"spell blade",
 	"tags":"t_tier3",
 	"desc":"",
-	"require":"g.tier2>0&&g.enchanting>=7&&g.player.tohit>=10",
+	"require":"g.tier2>0&&g.enchanting>=7&&g.player.tohit>=10&&g.tier3==0",
 	"cost":{
 		"research":3000,
 		"arcana":20,
@@ -457,7 +457,7 @@
 	"id":"dreadlord",
 	"desc":"harbinger of destruction",
 	"tags":"t_tier3",
-	"require":"g.tier2>0&&g.evil>0&&g.hp>=100&&g.player.level>=17",
+	"require":"g.tier2>0&&g.evil>0&&g.hp>=100&&g.player.level>=17&&g.tier3==0",
 	"cost":{
 		"research":1500,
 		"bones":100,
@@ -484,7 +484,7 @@
 	"id":"warlock",
 	"tags":"t_tier4",
 	"desc":"master of demons and demonic magic",
-	"require":"g.tier3>0&&g.evil>0&&g.demonology>=10",
+	"require":"g.tier3>0&&g.evil>0&&g.demonology>=10&&g.tier4==0",
 	"cost":{
 		"research":4000,
 		"souls":50,
@@ -515,7 +515,7 @@
 	"name":"blood mage",
 	"tags":"t_tier3",
 	"desc":"the magic in your veins",
-	"require":"g.tier2>0&&(g.battlemage>0||g.hp.max>150)",
+	"require":"g.tier2>0&&(g.battlemage>0||g.hp.max>150)&&g.tier3==0",
 	"cost":{
 		"research":1500,
 		"arcana":8,

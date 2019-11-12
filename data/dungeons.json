@@ -602,6 +602,20 @@
 		]
 	},
 	{
+
+		"id":"temple of strativax",
+		"desc":"His acolytes fed the beast on offerings from a thousand leagues.",
+		"flavor":"Strativax curled up to nap. His temple fell to ruins, and the ages fled like leaves.",
+		"require":"g.player.level>999",
+		"level":20,
+		"boss":{
+			"0":"strativax1",
+			"1":"strativax2",
+			"2":"strativax3"
+		}
+
+	},
+	{
 		"id":"holyhall",
 		"name":"hall of the holy",
 		"desc":"Various divine spirits watch over the world. And the greatest have their halls and kingdoms.",

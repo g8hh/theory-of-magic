@@ -1530,6 +1530,7 @@
 		"require":"tier1",
 		"desc":"ancient spellcasters often move with preternatural speed.",
 		"max":3,
+		"warn":true,
 		"cost":{
 			"sp":2,
 			"research":500
@@ -1615,12 +1616,26 @@
 			"research":10000,
 			"tomes":30
 		},
+		"warn":true,
 		"mod":{
 			"void.rate":0.01,
 			"stamina.rate":-0.5,
 			"voidlore.max":3,
 			"voidlore.rate":0.5
 		}
+	},
+	{
+
+		"id":"somnambulist",
+		"desc":"A wizard's dreams are as full as waking hours.",
+		"cost":{
+			"dreams":1,
+			"tempus":5
+		},
+		"mod":{
+			"dreams.rate":0.0001,
+			"bed.mod.runner.max":1
+		},"flavor":"Every second of the night I live another life."
 	},
 	{
 		"id":"demonicpact",

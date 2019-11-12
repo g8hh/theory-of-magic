@@ -302,9 +302,11 @@
 	},
 	{
 		"id":"dreams",
-		"desc":"It meant something; if you could only remember it.",
+		"desc":"We are such stuff as dreams are made of. And our little life is rounded with a sleep.",
+		"require":"dreamchamber",
 		"max":3,
 		"mod":{
+			"weary.rate":-0.1,
 			"arcana.rate":"1%"
 		},"flavor":"in your wildest..."
 	},

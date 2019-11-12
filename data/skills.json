@@ -672,7 +672,7 @@
 			"lore.rate":"5%",
 			"mana.rate":"3%",
 			"research.rate":"2%",
-			"arcana.rate":"2%"
+			"arcana.rate":"1%"
 		}
 	},
 	{
@@ -926,7 +926,7 @@
 	},
 	{
 		"id":"astronomy",
-		"require":"starsource",
+		"need":"starsource",
 		"run":{
 			"stamina":0.5
 		},
@@ -971,6 +971,27 @@
 			"arcana.max":1,
 			"research.max":1
 		}, "flavor":"there is no safe distance"
+
+	},
+	{
+
+		"id":"astrallore",
+		"name":"astral lore",
+		"require":"g.planeslore>=25&&g.tier5>0",
+		"desc":"Anyone can see the stars. Few can read them.",
+		"level":10,
+		"buy":{
+			"sp":10
+		},
+		"run":{
+			"stamina":1,
+			"research":10,
+			"arcana":1
+		},
+		"mod":{
+			"sindel.rate":0.0001,
+			"sindel.max":1
+		}
 
 	},
 	{

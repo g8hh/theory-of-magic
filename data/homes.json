@@ -358,6 +358,26 @@
 		}
 	},
 	{
+		"id":"magetower",
+		"name":"mage tower",
+		"desc":"Nothing is more iconic to the craft than the wizard in a tower.",
+		"require":"g.tier3>0&&(g.magician+g.mage+g.highmage+g.wizard+g.wizard2+g.wizard3)>1",
+		"cost":{
+			"gold":7000,
+			"research":5000,
+			"managem":30,
+			"tomes":20
+		},
+		"mod":{
+			"minions.max":10,
+			"space.max":420,
+			"mysticism.max":1,
+			"manas.rate":0.05,
+			"history.max":1,
+			"arcana.rate":0.0001
+		}
+	},
+	{
 
 		"id":"sm_idrasil",
 		"alias":"idrasil tree",

@@ -18,43 +18,64 @@
 			{
 				"id":"expandhall",
 				"name":"expanded halls",
+				"require":"tier5",
 				"max":3,
 				"cost":{
 					"prestige":50
 				},
 				"mod":{
-					"hall.max":1
-				}
-			},
-			{
-				"id":"timewell",
-				"max":1,
-				"cost":{
-					"prestige":50,
-					"timerune":3
-				},
-				"mod":{
-					"runner.max":1
+					"hallSize":1
 				}
 			},
 			{
 				"id":"dreamchamber",
 				"name":"dream chamber",
+				"desc":"In some time and place, even dreams have happened before.",
+				"require":"tier5",
 				"max":1,
+				"cost":{
+					"prestige":40
+				},"mod":{
+					"dreams.rate":0.0001,
+					"dreams.max":5
+				}
+			},
+			{
+				"id":"timewell",
+				"require":"tier6",
+				"max":1,
+				"cost":{
+					"prestige":75
+				},
 				"mod":{
 					"runner.max":1
-				},"flavor":"Every second of the night I live another life."
+				}
 			}
 
 		],
 		"stats":[
 
 			{
+				"id":"hallSize",
+				"locked":false,
+				"val":3
+			},
+			{
+				"id":"hallPoints",
+				"alias":"points",
+				"hidden":true,
+				"locked":false,
+				"val":0,
+				"mod":{
+					"prestige":1
+				}
+
+			},
+			{
 				"id":"prestige",
 				"name":"hall prestige",
 				"require":"evt_hall",
-				"stat":true,
-				"value":0,
+				"val":0,
 				"locked":false,
 				"mod":{
 					"skill.rate":"0.1%",
