@@ -1403,6 +1403,7 @@
 		"tohit":7,
 		"attack":{
 			"name":"burrow",
+			"kind":"pierce",
 			"dmg":"4~6"
 		},
 		"resist":{
@@ -1470,7 +1471,6 @@
             "kind":"slash",
             "dmg":"3~9"
         },
-		"loot":{},
 		"resist":{
 			"shadow":15
 		}
@@ -1677,7 +1677,7 @@
             "kind":"slash",
             "dmg":"4~9"
         },
-        "loot":{ "sulfur dust":10}
+        "loot":{ "sulfur":10}
 
 	},
     {
@@ -1732,7 +1732,7 @@
         "defense":20,
         "attack":{
             "name":"strangle",
-            "kind":"physical",
+            "kind":"blunt",
             "dmg":"3~7"
         },"flavor":"a dwarp can hear the drip of water through 100 feet of solid rock."
 
@@ -1763,7 +1763,7 @@
 		"speed":12,
         "attack":{
             "name":"frost bolt",
-            "kind":"cold",
+            "kind":"water",
             "dmg":"4~17"
         },"resist":{
 			"water":20,
@@ -1921,7 +1921,7 @@
             "name":"spellstorm",
             "kind":"nature",
             "dmg":"9~17"
-		}, "loot":{"raw wood":5},
+		},
 		"resist":{
 			"nature":25
 		}
@@ -1940,7 +1940,7 @@
             "name":"punch",
             "kind":"blunt",
             "dmg":"2~11"
-		}, "loot":{"raw wood":5},
+		},
 		"resist":{
 			"nature":15
 		}
@@ -2068,7 +2068,7 @@
             "kind":"drain",
 			"dmg":"9~18",
 			"leech":0.3
-		}, "loot":{"vampire fang":5},
+		}, "loot":{"vampfang":5},
 		"resist":{
 			"shadow":20
 		}
@@ -2489,7 +2489,7 @@
             "name":"mind flay",
             "kind":"psionic",
             "dmg":"11~19"
-        }, "loot":{}
+        }
 
 	},
     {
@@ -2593,7 +2593,8 @@
         "defense":50,
         "attack":{
             "name":"claws",
-            "dmg":"12~22"
+			"dmg":"12~22",
+			"type":"slash"
         }, "loot":{
 			"max":11
 		}
@@ -2663,7 +2664,7 @@
             "name":"kick",
             "kind":"blunt",
             "dmg":"14~20"
-        },"loot":{}
+        }
 
     },
 	{
@@ -2850,7 +2851,7 @@
         "defense":50,
         "attack":{
             "name":"eye beam",
-            "kind":"magic",
+            "kind":"mana",
             "dmg":"23~43"
         }
     },
@@ -2865,7 +2866,7 @@
         "defense":70,
         "attack":{
             "name":"light sword",
-            "kind":"holy",
+            "kind":"light",
             "dmg":"20~50"
 		}, "loot":{"angelwing":"1%", "ichor":"30%" },
 		"immune":"light"
@@ -3045,7 +3046,7 @@
             "kind":"drain",
 			"dmg":"30~40",
 			"leech":0.1
-        }, "loot":{}
+        }
 
 	},
     {
@@ -3118,7 +3119,7 @@
             "name":"flame whip",
             "kind":"fire",
             "dmg":"90~150"
-		}, "loot":{"fireessence":10},
+		}, "loot":{"firegem":10},
 		"immune":"fire"
 
 	},
@@ -3134,7 +3135,7 @@
 		"regen":10,
         "attack":{
             "name":"light sword",
-            "kind":"holy",
+            "kind":"light",
             "dmg":"70~120"
 		}, "loot":{"ichor":"50%"},
 		"immune":"light"
@@ -3476,7 +3477,7 @@
 			"kind":"sonic",
 			"targets":"enemies",
             "dmg":"50~75"
-        },"flavor":"most agree it's best the gorborung cannot be seen."
+        },"flavor":"most agree it's best the gorborung resides in darkness."
 	},
 	{
 		"id":"fetigern",

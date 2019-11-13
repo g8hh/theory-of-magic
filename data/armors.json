@@ -9,7 +9,7 @@
     { "id":"jerkin", "armor":2, "slot":"chest", "cost":100, "level":2 },
     { "id":"padded armor", "armor":3, "slot":"chest", "cost":150, "level":4 },
     { "id":"chainmail", "armor":5, "slot":"chest", "cost":350, "level":5 },
-    { "id":"plate mail", "armor":8, "slot":"chest", "cost":700, "level":12 },
+    { "id":"plate mail", "armor":8, "slot":"chest", "cost":700, "level":9 },
 
     { "id":"conical helm", "armor":3, "slot":"head", "cost":40 },
 

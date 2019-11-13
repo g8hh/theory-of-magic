@@ -920,7 +920,8 @@
     },
 	{
 		"id":"archive",
-		"desc":"arcane archive",
+		"name":"arcane archive",
+		"desc":"A good archive does the research for you.",
 		"require":"g.lore.max>=15",
 		"max":3,
 		"cost":{
@@ -929,10 +930,12 @@
 			"space":10
 		},
 		"mod":{
-			"scrolls.max":20,
+			"scrolls.max":50,
 			"tomes.max":20,
-			"codices.max":20,
-			"arcana.max":1
+			"codices.max":50,
+			"codices.rate":0.01,
+			"tomes.rate":0.002,
+			"starcharts.max":25
 		}
 
 	},

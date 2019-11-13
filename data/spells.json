@@ -2691,10 +2691,8 @@
 			"targets":"all",
 			"dot":{
 				"duration":30,
-				"effect":{
-					"dmg":"200-300",
-					"kind":"void"
-				}
+				"dmg":"200-300",
+				"kind":"void"
 			}
 		}
 

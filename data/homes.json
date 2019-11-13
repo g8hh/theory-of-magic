@@ -101,6 +101,7 @@
 		"name":"tinker's wagon",
 		"desc":"wheeled carriage for a nomadic lifestyle.",
 		"require":"g.tier0>0&&g.naturelore>=5",
+		"disable":"innroom",
 		"tags":"outdoors",
 		"cost":150,
 		"mod":{

@@ -345,7 +345,7 @@
 		"perpetual":true,
 		"verb":"attuning",
 		"desc":"attune to primal forces of the world.",
-		"require":"(g.kell+g.elementalist+g.highelemental)>0",
+		"require":"(g.kell+g.elementalist+g.highelemental+g.avatar)>0",
 		"run":{
 			"stamina":0.5,
 			"fire":0.1,
@@ -787,10 +787,10 @@
 		"run":{
 			"arcana":0.03
 		},"effect":{
-			"manas":0.5,
+			"manas":0.55,
 			"stamina":1,
-			"hp":1,
-			"stress":-0.8,
+			"hp":1.2,
+			"stress":-1.1,
 			"dreams":0.0003
 		}
 	},
