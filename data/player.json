@@ -107,6 +107,7 @@
 	{
 		"id":"virtue",
 		"hidden":"true",
+		"locked":false,
 		"desc":"Tendency to good",
 		"stat":true,
 		"val":0
@@ -115,6 +116,7 @@
 		"id":"evilamt",
 		"name":"evil",
 		"hidden":true,
+		"locked":false,
 		"stat":true,
 		"desc":"Tendency to evil",
 		"val":0
@@ -124,6 +126,7 @@
 		"id":"fame",
 		"name":"notoriety",
 		"hidden":true,
+		"locked":false,
 		"stat":true,
 		"desc":"Your reputation in the world",
 		"val":0

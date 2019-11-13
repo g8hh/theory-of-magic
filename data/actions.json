@@ -404,7 +404,7 @@
 
 		"id":"starwish",
 		"desc":"Turn sindels into dreams.",
-		"require":"g.astrallore>=5&&g.divination>=10",
+		"require":"g.astrallore>=5&&g.divination>=10&&g.dreams>0",
 		"cost":{
 			"arcana":1,
 			"sindel":1
@@ -619,15 +619,15 @@
 		"run":{
 			"bonedust":0.2,
 			"stamina":0.3,
-			"spirit":0.3,
+			"spirit":0.3
+		},
+		"result":{
+			"souls.max":0.5,
+			"souls":1,
 			"dreams":{
 				"skipLocked":true,
 				"value":0.0001
 			}
-		},
-		"result":{
-			"souls.max":0.5,
-			"souls":1
 		}
 	},
 	{

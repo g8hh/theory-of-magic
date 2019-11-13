@@ -610,7 +610,7 @@
 	{
 		"id":"campfire",
 		"tags":"firesource",
-		"require":"outdoors",
+		"need":"outdoors",
 		"cost":{
 			"space":1
 		},
@@ -674,7 +674,7 @@
 		"id":"grotesque",
 		"tags":"earthsource",
 		"require":"g.tier1>0&&(g.earthlore>3||g.shadowlore>3)",
-		"desc":"a grim and disfigured stone statue",
+		"desc":"a grim, disfigured stone statue",
 		"max":4,
 		"cost":{
 			"gold":750,
@@ -865,7 +865,8 @@
 			"shadowgem.max":2,
 			"shadow.rate":0.01,
 			"shadow.max":1
-		}
+		},"flavor":"Zhakul ihnaac."
+
 	},
 	{
 		"id":"ironcell",
@@ -1083,6 +1084,7 @@
 		"id":"orrery",
 		"desc":"a vast mechanical model of existence",
 		"require":"g.codices>=80&&g.astronomy>7",
+		"tags":"starsource",
 		"repeat":false,
 		"cost":{
 			"gold":500,
@@ -1479,6 +1481,7 @@
 		"id":"ziggurat",
 		"desc":"a vast mound of earth dedicated to occult practices.",
 		"require":"tier4",
+		"tags":"starsource",
 		"cost":{
 			"gold":300,
 			"research":4000,

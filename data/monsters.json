@@ -998,6 +998,36 @@
 
 	},
 	{
+		"id":"snek",
+		"name":"arcane serpent",
+        "level":6,
+        "kind":"magicbeast",
+        "desc":"Fiercely loyal when summoned by magic.",
+		"flavor":"do not boop",
+        "hp":50,
+		"regen":2,
+        "defense":20,
+        "tohit":9,
+        "attack":[
+		{
+            "name":"constrict",
+            "kind":"blunt",
+            "dmg":"6~14"
+        },
+		{
+			"name":"venom",
+			"dot":{
+				"duration":7,
+				"kind":"poison",
+				"dmg":"0.5~1.2"
+			}
+		}
+		],
+		"resist":{
+			"poison":80
+		}
+    },
+	{
         "id":"barracuda",
         "level":5,
         "kind":"beast",

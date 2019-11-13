@@ -2240,7 +2240,7 @@
 		"id":"tremor",
 		"level":5,
 		"desc":"The earth shakes beneath your enemies' feet",
-		"require":"mud",
+		"require":"slow1",
 		"school":"earth",
 		"buy":{
 
@@ -2686,7 +2686,7 @@
 		"buy":{
 			"voidgem":10
 		},
-		"cost":"voidgem",
+		"cost":"dreams",
 		"attack":{
 			"targets":"all",
 			"dot":{
