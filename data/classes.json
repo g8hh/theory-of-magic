@@ -1014,7 +1014,6 @@
 	"require":"g.tier3>0&&g.naturelore>=19&&(g.witch+g.druid+g.elementalist)>0",
 	"cost":{
 		"research":5000,
-
 		"naturegem":30,
 		"herbs":75,
 		"arcana":15,

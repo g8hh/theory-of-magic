@@ -348,6 +348,7 @@
 			"space":1
 		},
 		"mod":{
+			"herbs.max":1,
 			"herbalism.max":1,
 			"herbs.rate":0.2
 		}
@@ -904,10 +905,30 @@
 
 	},
 	{
+		"id":"mineshaft",
+		"tags":"t_mine",
+		"require":"g.earthlore>=10&&g.planeslore>=20",
+		"max":1,
+		"cost":{
+			"earth":25,
+			"earthrune":5,
+			"gold":7000,
+			"research":2500,
+			"space":20,
+			"gate":1
+		},
+		"mod":{
+			"earthlore.max":1,
+			"earthlore.rate":0.2,
+			"gold.rate":0.1
+		}
+	},
+	{
         "id":"weaponrack",
         "name":"weapon rack",
         "desc":"Holds equipment you aren't using",
-        "require":"g.player.level>=5&&g.armory>0",
+		"require":"g.player.level>=5&&g.armory>0",
+		"tags":"armssource",
         "max":3,
         "cost":{
 			"gold":400,
@@ -1119,7 +1140,7 @@
 			"space":10
 		},
 		"mod":{
-			"herbs.max":10,
+			"herbs.max":15,
 			"herbs.rate":1,
 			"herbalism.rate":0.2,
 			"herbalism.max":3,
@@ -1213,6 +1234,7 @@
 			"space":2
 		},
 		"mod":{
+			"herbs.max":5,
 			"herbalism.max":1,
 			"herbalism.rate":0.3,
 			"nature.rate":0.2
@@ -1330,6 +1352,7 @@
 			"research":3000
 		},
 		"mod":{
+			"herbs.max":10,
 			"potions.max":2,
 			"potions.rate":0.5,
 			"alchemy.max":1,

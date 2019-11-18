@@ -38,8 +38,10 @@
 		"locked":false
 	},
 	{
-		"id":"sight",
+		"id":"hobbies",
+		"desc":"Idle-time pursuits.",
 		"val":0,
+		"stat":true,
 		"locked":false
 	},
 	{

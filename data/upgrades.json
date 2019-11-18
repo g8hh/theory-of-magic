@@ -1628,6 +1628,7 @@
 
 		"id":"somnambulist",
 		"desc":"A wizard's dreams are as full as waking hours.",
+		"require":"g.dreamchamber>0&&g.tier5>0",
 		"cost":{
 			"dreams":1,
 			"tempus":5
