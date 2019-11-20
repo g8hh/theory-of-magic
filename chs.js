@@ -1018,6 +1018,27 @@ var cnItems = {
     'A simple, bare cell.': '一个简单的，光秃秃的格子。',
     'a burning pyre for the practice of pyromancy.': '为练习火魔法而点燃的柴堆。',
     'be careful where you put it.': '小心那个地方',
+    'Flee': '逃跑',
+    'enc': '遭遇',
+    'Small bag keeps gems safe without scratching.': '小袋子可确保宝石安全无刮擦。',
+    'A crystal sphere revealing distant lands.': '水晶球里可以看到遥远的土地。',
+    'sealing light': '光缝合',
+    'seams of light close your wounds.': '用光缝合伤口',
+    '': '',
+    '': '',
+    '': '',
+    '': '',
+    '': '',
+    '': '',
+    '': '',
+    '': '',
+    '': '',
+    '': '',
+    '': '',
+    '': '',
+    '': '',
+    '': '',
+    '': '',
     '': '',
     '': '',
     '': '',
@@ -1064,6 +1085,7 @@ var cnPrefix = {
 	'kind: ': '类型：',
 	'Title Earned: ': '获得头衔：',
 	'title: ': '头衔：',
+	'protection: ': '防护：',
 }
 
 //需处理的后缀
@@ -1086,7 +1108,6 @@ var cnPostfix = {
 	"⚔": "⚔",
 	
 	' Improved': '已提升',
-	' Level Up!': ' 升级了！',
 	
 	', furniture': '，家具',
 	', spiritsource': '，精神源泉',
@@ -1101,6 +1122,10 @@ var cnPostfix = {
 	', school': '，学院派',
 	', school': '，学院派',
 	', elemental': '，元素',
+
+	', gold': '，黄金',
+	', gems': '，宝石原石',
+	', scrolls': '，卷轴',
 }
 
 //需排除的，正则匹配
@@ -1158,4 +1183,5 @@ var cnRegReplace = new Map([
 	[/^(.+)\sresist holy$/, '$1 神圣抵抗'],
 	[/^(.+)\stohit$/, '$1 命中'],
 	[/^(.+)\sdefense$/, '$1 防御'],
+	[/^(.+)\sLevel Up!$/, '$1 升级了！'],
 ]);
