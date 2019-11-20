@@ -325,7 +325,7 @@
 		"name":"potted milkweed",
 		"locked":false,
 		"desc":"Really brightens up the place.",
-		"tags":"t_garden",
+		"tags":"plantsource",
 		"repeat":true,
 		"cost":{
 			"gold":25,
@@ -340,7 +340,7 @@
 		"id":"creepingvine",
 		"name":"creeping vine",
 		"desc":"a quickly growing plant",
-		"tags":"t_garden",
+		"tags":"plantsource",
 		"require":"g.herbalism>=4",
 		"max":5,
 		"cost":{
@@ -997,27 +997,6 @@
 		}
 	},
 	{
-		"id":"baneanvil",
-		"name":"bloodbane's anvil",
-		"require":"g.crafting>=14",
-		"need":"workshop",
-		"desc":"Great spells are often forged on iron.",
-		"tags":"patron",
-		"sym":"⭐",
-		"cost":{
-			"space":5,
-			"research":10000,
-			"tomes":10
-		},
-		"mod":{
-			"spellcraft.max":2,
-			"spellcraft.rate":"5%",
-			"enchanting.max":2
-		},
-		"flavor":"Forsaking war and violence, Bloodbane devoted himself to crafting new forms of magic."
-
-	},
-	{
 		"id":"casket",
 		"desc":"simple container for preserving bodies.",
 		"require":"g.tier0>0&&g.embalming>=5&&g.crafting>=5",
@@ -1131,7 +1110,7 @@
 	{
 		"id":"garden",
 		"desc":"A small garden by your home.",
-		"tags":"naturesource,t_garden",
+		"tags":"naturesource,plantsource",
 		"require":"(g.witch+g.druid+g.fey+g.kell)>0",
 		"max":3,
 		"cost":{

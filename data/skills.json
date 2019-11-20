@@ -222,12 +222,15 @@
 		"id":"herbalism",
 		"school":"nature",
 		"require":"lore",
-		"need":"t_garden",
+		"need":"plantsource",
+		"buy":{
+			"research":25
+		},
 		"run":{
 			"stamina":0.25
 		},
 		"result":{
-			"sp":0.05
+			"sp":0.01
 		},
 		"mod":{
 			"research.max":2,
@@ -990,7 +993,7 @@
 		},
 		"mod":{
 			"sindel.rate":0.0001,
-			"sindel.max":1
+			"sindel.max":0.4
 		}
 
 	},

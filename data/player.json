@@ -38,13 +38,6 @@
 		"locked":false
 	},
 	{
-		"id":"hobbies",
-		"desc":"Idle-time pursuits.",
-		"val":0,
-		"stat":true,
-		"locked":false
-	},
-	{
 		"id":"exp",
 		"val":0,
 		"unit":false,

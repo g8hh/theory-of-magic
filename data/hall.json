@@ -28,6 +28,19 @@
 				}
 			},
 			{
+				"id":"spellspire",
+				"max":3,
+				"require":"tier6",
+				"desc":"A conduit for magic energy.",
+				"cost":{
+					"prestige":15
+				},
+				"mod":{
+					"spellcraft.max":"20%"
+				}
+
+			},
+			{
 				"id":"dreamchamber",
 				"name":"dream chamber",
 				"desc":"In some time and place, even dreams have happened before.",

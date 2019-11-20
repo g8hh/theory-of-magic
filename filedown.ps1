@@ -2,6 +2,8 @@ Invoke-WebRequest -Uri "https://game312933.konggames.com/gamez/0031/2933/live/in
 Invoke-WebRequest -Uri "https://game312933.konggames.com/gamez/0031/2933/live/dist/wizrobe.dist.bundle.js" -OutFile "dist/wizrobe.dist.bundle.js"
 Invoke-WebRequest -Uri "https://game312933.konggames.com/gamez/0031/2933/live/data/hall.json" -OutFile "data/hall.json"
 Invoke-WebRequest -Uri "https://game312933.konggames.com/gamez/0031/2933/live/dist/dist/choice-ui.bundle.js" -OutFile "dist/dist/choice-ui.bundle.js"
+Invoke-WebRequest -Uri "https://game312933.konggames.com/gamez/0031/2933/live/data/modules.json" -OutFile "data/modules.json"
+Invoke-WebRequest -Uri "https://game312933.konggames.com/gamez/0031/2933/live/data/patrons.json" -OutFile "data/patrons.json"
 Invoke-WebRequest -Uri "https://game312933.konggames.com/gamez/0031/2933/live/data/seasonal.json" -OutFile "data/seasonal.json"
 Invoke-WebRequest -Uri "https://game312933.konggames.com/gamez/0031/2933/live/data/stressors.json" -OutFile "data/stressors.json"
 Invoke-WebRequest -Uri "https://game312933.konggames.com/gamez/0031/2933/live/data/locales.json" -OutFile "data/locales.json"

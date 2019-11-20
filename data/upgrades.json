@@ -1625,9 +1625,23 @@
 		}
 	},
 	{
+		"id":"pursuit",
+		"name":"favored pursuit",
+		"desc":"Mark an activity as a pursuit to return to in idle moments.",
+		"require":"g.tier2>0",
+		"cost":{
+			"research":3000,
+			"arcana":10
+		},
+		"mod":{
+			"pursuits.max":1
+		},
+		"flavor":"monomaniacal pursuits are characteristic of all true masters."
+	},
+	{
 
 		"id":"somnambulist",
-		"desc":"A wizard's dreams are as full as waking hours.",
+		"desc":"A wizard's dreams are full as waking hours.",
 		"require":"g.dreamchamber>0&&g.tier5>0",
 		"cost":{
 			"dreams":1,
@@ -1809,7 +1823,7 @@
 	{
 		"id":"airglobe",
 		"name":"swirling globe",
-		"tags":"airsupply",
+		"tags":"airsource",
 		"desc":"an unending supply of air.",
 		"flavor":"out of nothing at all",
 		"require":"g.air.max>=5",
@@ -1915,7 +1929,7 @@
 		"mod":{
 			"alchemy.rate":0.1,
 			"alchemy.max":1,
-			"fire.max":0.02
+			"fire.rate":0.02
 		}
 
 	},

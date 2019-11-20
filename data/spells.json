@@ -1081,6 +1081,7 @@
 	{
 		"id":"mk_murder",
 		"name":"summon murder",
+		"school":"nature",
 		"require":"summoner",
 		"level":5,
 		"cd":150,
@@ -1104,6 +1105,7 @@
 	{
 		"id":"mk_unicorn",
 		"name":"summon unicorn",
+		"school":"light",
 		"require":"g.evil==0&&(g.seer+g.oracle+g.summoner)>0&&g.magicbeasts>=5",
 		"level":5,
 		"cd":150,
@@ -2059,37 +2061,6 @@
 		},"flavor":"don't lose your way"
 	},
 	{
-		"id":"kannadance",
-		"level":7,
-		"name":"kanna's dervish dance",
-		"tags":"patron",
-		"school":"bladelore",
-		"sym":"⭐",
-		"require":"spellblade",
-		"desc":"Kanna's dance was a strenuous one for a mage, and a deadly one to her enemies.",
-		"buy":{
-
-			"research":500,
-			"tomes":1,
-			"airgem":10
-
-		},
-		"cost":{
-			"air":8
-		},
-		"dot":{
-			"duration":60,
-			"mod":{
-				"stamina.max":50,
-				"stamina.rate":-0.8,
-				"stamina":50,
-				"dodge":15,
-				"player.tohit":10,
-				"player.damage":5
-			}
-		},"flavor":"she danced with the devil in the pale moonlight, blades gleaming and blurring like a single streak of silver"
-	},
-	{
 		"id":"unearth",
 		"desc":"raise precious stones from the ground.",
 		"school":"earth",
@@ -2167,9 +2138,9 @@
 	},
 	{
 		"id":"apiary",
-		"name":"bulm's apiary",
+		"name":"dbulm's apiary",
 		"desc":"",
-		"require":"g.tier5>0&&(g.conjuration>=5&&g.summoning>=10)",
+		"require":"g.tier5>0&&g.conjuration>=5&&g.summoning>=10",
 		"school":"conjuration",
 		"level":10,
 		"cd":200,
@@ -2185,7 +2156,7 @@
 		"dot":{
 			"duration":10,
 			"effect":"stingybee"
-		},"flavor":"beeeees"
+		},"flavor":"BEEEEES"
 	},
 	{
 		"id":"starfall",
@@ -2257,12 +2228,12 @@
 				"attack.toHit":1
 			},
 			"100":{
-				"attack.damage.max":1,
+				"attack.dot.damage.max":1,
 				"attack.toHit":2
 			},
 			"300":{
-				"attack.damage.max":2,
-				"attack.damage.min":1,
+				"attack.dot.damage.max":2,
+				"attack.dot.damage.min":1,
 				"attack.toHit":2
 			}
 		},
@@ -2301,7 +2272,7 @@
 			"targets":"enemies",
 			"dot":{
 				"duration":30,
-				"dmg":"5~10",
+				"dmg":"5~12",
 				"mod":{
 					"speed":-7
 				}

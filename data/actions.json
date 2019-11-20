@@ -235,7 +235,7 @@
 		"perpetual":true,
 		"verb":"botanicalizing",
 		"desc":"study plants and herbs.",
-		"need":"t_garden",
+		"need":"plantsource",
 		"require":"(g.witch+g.druid+g.alchemist+g.warden)>0",
 		"run":{
 			"stamina":0.3,
@@ -345,7 +345,7 @@
 		"perpetual":true,
 		"verb":"attuning",
 		"desc":"attune to primal forces of the world.",
-		"require":"(g.kell+g.elementalist+g.highelemental+g.avatar)>0",
+		"require":"(g.kell+g.elementalist+g.highelemental+g.c_avatar)>0",
 		"run":{
 			"stamina":0.5,
 			"fire":0.1,
@@ -427,9 +427,9 @@
 		},
 		"at":{
 
-			"500":{ "effect.dreams":0.0001 },
-			"2000":{ "effect.dreams":0.0001 },
-			"5000":{ "effect.dreams":0.0001 }
+			"500":{ "effect.dreams":0.0002 },
+			"2000":{ "effect.dreams":0.0002 },
+			"5000":{ "effect.dreams":0.0002 }
 
 		},
 		"effect":{
@@ -767,7 +767,7 @@
 		"name":"gather herbs",
 		"desc":"Gather herbs used in potions and alchemy.",
 		"require":"g.herbalism>=2",
-		"need":"t_garden",
+		"need":"plantsource",
 		"cost":{
 			"stamina":0.3
 		},
@@ -888,10 +888,18 @@
 		"need":"cauldron",
 		"desc":"how could you!?!",
 		"fill":[ "hp", "manas", "stamina", "stress" ],
-		"every":{
+		"at":{
 			"100":{
 				"effect.hp":0.5,
 				"effect.shadow":0.05
+			},
+			"500":{
+				"effect.hp":1,
+				"effect.shadow":0.1
+			},
+			"1000":{
+				"effect.hp":1,
+				"effect.shadow":0.1
 			}
 		},
 		"effect":{
@@ -1470,7 +1478,7 @@
 	},
 	{
 		"id":"imbuelifegem",
-		"name":"imbue lifegem (nature)",
+		"name":"imbue gem (nature)",
 		"require":"g.naturelore>=6&&g.enchanting>0",
 		"tags":"gemimbue",
 		"fill":"naturegem",
