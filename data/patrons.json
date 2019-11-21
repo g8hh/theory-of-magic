@@ -162,9 +162,10 @@
 			{
 				"id":"enc_phrenesis",
 				"name":"phrenesis",
-				"desc":"Phrenesis is forever preoccupied with the cycles of death and rebirth.",
+				"desc":"Phrenesis was forever preoccupied with the cycles of death and rebirth.",
 				"effect":{
-
+					"stress":-0.1,
+					"hp":-4
 				}
 
 			},
@@ -200,10 +201,6 @@
 					"tempus":-1,
 					"chronomancy.exp":1,
 					"voidlore.exp":1
-				},
-				"result":{
-					"chronomancy.max":0.01,
-					"voidlore.max":0.001
 				},
 				"loot":{
 					"voidrune":"1%",
@@ -258,7 +255,7 @@
 				"id":"loc_ageshall",
 				"name":"hall of ages",
 				"desc":"The lost Hall of Ages was a gathering place of great and powerful patron mages.",
-				"require":"g.tier2>0",
+				"require":"g.tier3>0",
 				"title":"Mark of Ages",
 				"once":{
 					"history.max":1

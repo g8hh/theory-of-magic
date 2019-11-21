@@ -1117,6 +1117,31 @@
 
 	},
 	{
+		"id":"timesiphon",
+		"name":"time siphon",
+		"perpetual":true,
+		"desc":"Draw back that which was lost.",
+		"tags":"t_rest",
+		"slot":"rest",
+		"require":"timegem",
+		"run":{
+			"timegem":0.1
+		},
+		"effect":{
+			"stamina":5,
+			"tomes":3,
+			"codices":10,
+			"scrolls":20,
+			"gold":100,
+			"research":200,
+			"gem":1,
+			"managem":1,
+			"manas":2,
+			"hp":20
+		},
+		"flavor":"if I could turn back time"
+	},
+	{
 		"id":"mapstars",
 		"name":"map stars",
 		"length":10,

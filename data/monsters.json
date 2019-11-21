@@ -699,6 +699,22 @@
             "dmg":"4~8"
         },"resist":{"shadow":20}
 	},
+	{
+		"id":"orcchief",
+        "name":"orc chieftain",
+        "level":7,
+        "kind":"humanoid",
+        "desc":"The strongest orc in the whole tribe.",
+        "hp":80,
+        "tohit":8,
+        "defense":30,
+        "attack":{
+            "name":"broadsword",
+            "kind":"slash",
+			"dmg":"12~17"
+		}
+
+	},
     {
         "id":"zombie",
         "level":3,
@@ -2205,15 +2221,15 @@
         "name":"orc champion",
         "level":8,
         "kind":"humanoid",
-        "desc":"The strongest orc in the whole tribe!",
-        "hp":73,
+        "desc":"A champion among orcs.",
+        "hp":100,
         "tohit":10,
         "defense":40,
         "attack":{
             "name":"broadsword",
             "kind":"slash",
-            "dmg":"12~17"
-        }, "loot":{ "max":8, "%":80}
+            "dmg":"15~20"
+        }
 
 	},
 	{
