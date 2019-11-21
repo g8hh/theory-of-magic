@@ -802,6 +802,7 @@ var cnItems = {
     'darkmagician': '黑暗魔法师',
     'seer': '先知',
     'enchanter': '附魔师',
+    'Enchanter': '附魔师',
     'eat children': '吃小孩',
     'commune': '密谈',
     'bone collector': '骨头收集器',
@@ -928,6 +929,7 @@ var cnItems = {
     'dhrunic gate': '传说中的门',
     'armory': '军械库',
     'archive': '档案室',
+    'arcane archive': '奥术档案室',
     'orrery': '星象仪',
     'pond': '水塘',
     'Pond': '水塘',
@@ -1044,7 +1046,7 @@ var cnItems = {
     'Mark an activity as a pursuit to return to in idle moments.': '标记一个行动为爱好，当你空闲时自动执行（译者注：购买后，点击右侧行动条的F按钮标记爱好）',
     'reset hall': '重置大厅',
     'astral lore': '星空学识',
-    'Attune (elements': '调和（元素',
+    'Attune (elements': '调和 (元素',
     'somnambulist': '梦游者',
     'energy': '能源',
     'life pool': '生命池',
@@ -1087,12 +1089,12 @@ var cnItems = {
     'small wooden bed.': '小型的木质床',
     'Saferoom for ancient sources of magic.': '为魔法的古老来源打造的宝库。',
     'rocks and sand form patterns of intricate design.': '岩石和沙子形成复杂设计的图案。',
-    '': '',
-    '': '',
-    '': '',
-    '': '',
-    '': '',
-    '': '',
+    'Arcane Ascendant': '奥术支配者',
+    'The masses of arcane dabblers never reach such heights.': '大部分奥术涉猎者从未达到的高度。',
+    'potions room': '草药屋',
+    'room for preparing and brewing potions': '准备和酿造药水的房屋',
+    'Magical Mastery': '魔法精通者',
+    'You are a master of your field of magic.': '你是魔术领域的大师。',
     '': '',
     '': '',
     '': '',
@@ -1150,6 +1152,8 @@ var cnPrefix = {
 
 //需处理的后缀
 var cnPostfix = {
+	' Improved': '已提升',
+	
     ":": "：",
     "：": "：",
     ": ": "： ",
@@ -1167,8 +1171,6 @@ var cnPostfix = {
 	"🏰": "🏰",
 	"⚔": "⚔",
 	"⭐": "⭐",
-	
-	' Improved': '已提升',
 	
 	', furniture': '，家具',
 	', spiritsource': '，精神源泉',
