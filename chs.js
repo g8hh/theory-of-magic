@@ -49,7 +49,6 @@ var cnItems = {
     'souls': '灵魂',
     'max souls': '灵魂上限',
     'Stop All': '全部停止',
-    'study': '学习',
     'stamina': '耐力',
     'gems': '宝石原石',
     'unlock': '解锁',
@@ -600,7 +599,6 @@ var cnItems = {
     'lumenology exp': '荧光知识经验',
     'mysticism': '神秘主义',
     'train mysticism rate': '神秘主义训练速度',
-    'potions': '药剂学',
     'potion': '药剂',
     'pyromancy': '火焰知识',
     'a compilation of gloomy dwarven drinking songs': '令人沮丧的矮人诗酒歌集',
@@ -1165,11 +1163,38 @@ var cnItems = {
     '\n		Roll-over Item and hold {Shift} + {Number} to assign quickslot.': '滚动物品并按住{Shift} + {数字}可以分配快速插槽。',
     '\n		Press {Number} again to use quickslot Item.\n	': '再次按{数字}以使用快速插槽物品。',
     '\n		rest': '休息',
+	
+	//试验性功能，注意条件顺序
+	'study': {
+		'.action-btn': '学习',		//当前节点及其父节点有名为"action-btn"的class属性
+		'.furniture': '书房',
+		'$.menu-content>.main-actions': '学习',  //执行docment.querySelector(".menu-content>.main-actions")的结果不为null，即当前处于"主界面"页面
+		'$.menu-content>.home-view': '书房',	//执行docment.querySelector(".menu-content>.home-view")的结果不为null，即当前处于"家"页面
+	},
+	'potions': {
+		'.skill':'药剂学',
+		'.menu-items':'药剂',
+		'$.menu-content>.skills': '药剂学',
+	},
 
     //原样
+	"⚙": "⚙",
+	"打开手机QQ": "打开手机QQ",
+	"点击加群": "点击加群",
+	"更多同类游戏": "更多同类游戏",
+	"旧版": "旧版",
+	"论坛": "论坛",
+	"如右上版本号不对或其它异常问题请按Ctrl+F5刷新游戏": "如右上版本号不对或其它异常问题请按Ctrl+F5刷新游戏",
+	"扫码加群": "扫码加群",
+	"书房": "书房",
+	"提示：游戏已更新至build#": "提示：游戏已更新至build#",
+	"药剂学": "药剂学",
+	"一次": "一次",
+	"一起讨论吧": "一起讨论吧",
+	"Git游戏": "Git游戏",
+	"QQ群号": "QQ群号",
     '': '',
     '': '',
-
 }
 
 
@@ -1210,6 +1235,8 @@ var cnPrefix = {
 	"⭐": "⭐",
 	
 	'dot ':'状态 '
+	
+	
 }
 
 //需处理的后缀
