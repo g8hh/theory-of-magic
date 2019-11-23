@@ -1168,6 +1168,8 @@ var cnItems = {
 	'study': {
 		'.action-btn': '学习',		//当前节点及其父节点有名为"action-btn"的class属性
 		'.furniture': '书房',
+		'*Action': '学习',	//当前文本前后缀里包含"Action"
+		'*Furniture': '书房',
 		'$.menu-content>.main-actions': '学习',  //执行docment.querySelector(".menu-content>.main-actions")的结果不为null，即当前处于"主界面"页面
 		'$.menu-content>.home-view': '书房',	//执行docment.querySelector(".menu-content>.home-view")的结果不为null，即当前处于"家"页面
 	},
