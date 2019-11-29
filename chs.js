@@ -20,7 +20,7 @@ var cnItems = {
     'Clear': '清理',
     'close': '关闭',
     'combat': '战斗',
-    'craft gem': '工艺宝石',
+    'craft gem': '加工宝石',
     'craft rune': '工艺符文',
     'dark mode': '黑暗模式',
     'Deep Pockets': '深口袋',
