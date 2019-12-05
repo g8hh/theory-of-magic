@@ -1373,7 +1373,7 @@
 			"anatomy.max":2,
 			"arcanebody.max":3,
 			"minions.max":2,
-			"allies.max":1
+			"minions.maxAllies":1
 		}
 
 	},
@@ -1592,7 +1592,7 @@
 		"desc":"An ordinary human skull, infused with necromantic magicks.",
 		"max":1,
 		"cost":{
-			"skull":1,
+			"skulls":1,
 			"gems":2,
 			"research":500
 		},

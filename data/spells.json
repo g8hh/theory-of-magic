@@ -2162,7 +2162,7 @@
 		"id":"starfall",
 		"desc":"You can't escape the sky.",
 		"school":"astral",
-		"require":"g.tier5>0&&(g.astralseer+g.wizard3+g.wizard2)>=0&&g.astronomy>=15&&g.evil==0",
+		"require":"g.tier5>0&&(g.astralseer+g.wizard3+g.wizard2)>0&&g.astronomy>=15&&g.evil==0",
 		"cd":55,
 		"buy":{
 			"research":2000,
@@ -2270,6 +2270,7 @@
 		"attack":{
 
 			"targets":"enemies",
+			"kind":"earth",
 			"dot":{
 				"duration":30,
 				"dmg":"5~12",

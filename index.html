@@ -5,6 +5,40 @@
 	<title>Arcanum</title>
 	<link href="./css/main.css" rel="stylesheet" type="text/css">
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--<script>
+		if ( 'serviceWorker' in navigator) {
+
+			window.addEventListener( 'load', ()=>{
+
+				navigator.serviceWorker.register('./sw.js');
+
+				let instBtn = document.querySelector('#btnInstall');
+				instBtn.style.display = 'none';
+
+			});
+
+		}
+
+		let installPrompt;
+		window.addEventListener( 'beforeinstallprompt', e=>{
+
+		console.log('BEFORE INSTALL PROMPT FIRED');
+		e.preventDefault();
+		installPrompt = e;
+
+		let instBtn = document.querySelector('#btnInstall');
+		instBtn.style.display='block';
+		document.querySelector('#btnInstall').addEventListener( 'click', e=>{
+
+			instBtn.style.display='none';
+			installPrompt.prompt();
+		});
+	});
+
+	</script>-->
+
 	<meta name="keywords" content="idle, clicker, idle clicker, game, wizard, arcane, rpg, fun, browser, javascript" />
 	<meta name="description" content="magic idle clicker for rpg enthusiasts" />
 	<meta name="author" content="lerping lemur" />
@@ -23,18 +57,15 @@
 <script src="chs.js?_t=201911231957"></script>
 <script src="/game/zh/core.js?_t=201911231957"></script>
 	<div id="vueRoot"></div>
-	<div style="position:relative;top:-48px;left:655px;">提示：游戏已更新至build#1094<br>如右上版本号不对或其它异常问题请按Ctrl+F5刷新游戏<strong style="color:red">一次</strong></div>
+	<div style="position:relative;top:-48px;left:655px;">提示：游戏已更新至build#1124<br>如右上版本号不对或其它异常问题请按Ctrl+F5刷新游戏<strong style="color:red">一次</strong></div>
 </body>
-<script src="dist/wizrobe.dist.bundle.js"></script>
+<script src="js/wizrobe.js"></script>
 <!--客服 开始-->
 <script src="//likexia.gitee.io/game/js/jquery.min.js"></script>
 <link rel="stylesheet" href="//likexia.gitee.io/game/css/kf.css" type="text/css" media="screen" charset="utf-8">
 <script src="//likexia.gitee.io/game/js/kf.js"></script>
 <!-- 客服 结束 -->
 <style type="text/css">
-/*
-@author         gokiburikin
-*/
 
     button { color: var(--button-text-color); border: 1px solid #0006; }
     button { outline: none; }

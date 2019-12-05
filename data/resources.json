@@ -25,7 +25,8 @@
 	},
 	{
 
-		"id":"skull",
+		"id":"skulls",
+		"alias":"skulls",
 		"desc":"human skull.",
 		"max":5
 
