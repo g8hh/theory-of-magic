@@ -430,6 +430,114 @@
 },
 {
 
+	"id":"bladeweaver",
+	"tags":"t_tier4",
+	"desc":"You have taken your training further, weaving magic and steel with a flourish of magical grace.",
+	"require":"g.tier3>0&&g.spellblade>0&&g.tier4==0",
+
+	"cost":{
+
+		"research":5000,
+		"arcana":20,
+		"gold":2500,
+		"airgem":10,
+		"firegem":5,
+		"earthgem":5,
+		"watergem":5
+	},
+
+	"effect":{
+		"sp":2
+	},
+
+	"mod":{
+
+		"tier4":true,
+		"player.tohit":"15%",
+		"history.max":1,
+		"enchanting.max":1,
+		"elemental.max":1,
+		"bladelore.max":2,
+		"anatomy.max":1,
+		"arcanebody2.max":1
+
+	}
+
+},
+{
+
+	"id":"arcanedervish",
+	"name":"arcane dervish",
+	"tags":"t_tier5",
+	"desc":"Your skills with blade and magic blend together in a blur, each stroke seeming like a step in a dance.",
+	"require":"g.tier4>0&&g.spellblade>0&&g.tier5==0",
+
+	"cost":{
+
+		"research":10000,
+		"arcana":20,
+		"gold":4000,
+		"airgem":20,
+		"firegem":10,
+		"earthgem":10,
+		"watergem":10
+	},
+
+	"effect":{
+		"sp":2
+	},
+	"mod":{
+
+		"tier5":true,
+		"player.tohit":"15%",
+		"history.max":1,
+		"enchanting.max":1,
+		"elemental.max":1,
+		"bladelore.max":2,
+		"anatomy.max":1,
+		"arcanebody2.max":1
+	}
+
+},
+{
+	"id":"eldritchknight",
+	"name":"eldritch knight",
+	"tags":"t_tier6",
+	"desc":"You have reached the pinnacle of blending steel and sorcery, and your sword strokes seem to cleave the air itself.",
+	"require":"g.tier5>0&&g.spellblade>0&&g.tier6==0",
+	"cost":{
+
+		"research":15000,
+		"arcana":20,
+		"gold":7500,
+		"airgem":40,
+		"firegem":20,
+		"earthgem":20,
+		"watergem":20
+
+
+	},
+
+	"effect":{
+		"sp":2
+	},
+
+	"mod":{
+
+		"tier6":true,
+		"player.tohit":"15%",
+		"history.max":1,
+		"enchanting.max":1,
+		"bladelore.max":2,
+		"elemental.max":1,
+		"anatomy.max":1,
+		"arcanebody2.max":1
+
+	}
+
+},
+{
+
 	"id":"spellblade",
 	"name":"spell blade",
 	"tags":"t_tier3",
