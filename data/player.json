@@ -95,13 +95,13 @@
 	{
 		"id":"points",
 		"desc":"hall points",
-		"hidden":true,
+		"hide":true,
 		"stat":true,
 		"val":0
 	},
 	{
 		"id":"virtue",
-		"hidden":"true",
+		"hide":"true",
 		"locked":false,
 		"desc":"Tendency to good",
 		"stat":true,
@@ -110,7 +110,7 @@
 	{
 		"id":"evilamt",
 		"name":"evil",
-		"hidden":true,
+		"hide":true,
 		"locked":false,
 		"stat":true,
 		"desc":"Tendency to evil",
@@ -120,7 +120,7 @@
 	{
 		"id":"fame",
 		"name":"notoriety",
-		"hidden":true,
+		"hide":true,
 		"locked":false,
 		"stat":true,
 		"desc":"Your reputation in the world",

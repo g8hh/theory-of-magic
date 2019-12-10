@@ -246,6 +246,18 @@
 					"animals.exp":2
 				}
 
+			},
+			{
+				"id":"enc_mrreaper",
+				"name":"mister reaper",
+				"desc":"A grim name for an otherwise respectable mage.",
+				"effect":{
+					"madness":"1~5",
+					"bf":"2~5",
+					"history.exp":2,
+					"shadowlore.exp":2
+				}
+
 			}
 
 		],
@@ -270,6 +282,7 @@
 					"enc_tainted",
 					"enc_tjoker",
 					"enc_vondrey",
+					"enc_mrreaper",
 					"enc_mrwild"
 
 				],

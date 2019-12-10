@@ -4,6 +4,7 @@
 <head>
 	<title>Arcanum</title>
 	<link href="./css/main.css" rel="stylesheet" type="text/css">
+	<link rel="manifest" href="./manifest.webmanifest" type="application/json">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -56,8 +57,9 @@
 <body>
 <script src="chs.js?_t=201911231957"></script>
 <script src="/game/zh/core.js?_t=201911231957"></script>
+	<!--<button id="btnInstall">Install</button>-->
 	<div id="vueRoot"></div>
-	<div style="position:relative;top:-48px;left:655px;">提示：游戏已更新至build#1124<br>如右上版本号不对或其它异常问题请按Ctrl+F5刷新游戏<strong style="color:red">一次</strong></div>
+	<div style="position:relative;top:-48px;left:810px;">提示：游戏已更新至build#1215<br>进度条样式原作者就是写成这样的。。</div>
 </body>
 <script src="js/wizrobe.js"></script>
 <!--客服 开始-->
@@ -65,135 +67,4 @@
 <link rel="stylesheet" href="//likexia.gitee.io/game/css/kf.css" type="text/css" media="screen" charset="utf-8">
 <script src="//likexia.gitee.io/game/js/kf.js"></script>
 <!-- 客服 结束 -->
-<style type="text/css">
-
-    button { color: var(--button-text-color); border: 1px solid #0006; }
-    button { outline: none; }
-    button:disabled { opacity: 0.3; color: unset; }
-
-    /* Action List */
-
-    .game-mid .menu-content .main-actions > div.action-list,
-    .game-mid .menu-content .main-actions > div.upgrade-list {
-        margin: 0; padding: var(--md-gap);
-        display: grid; grid-template-columns: repeat( auto-fit, var(--action-button-width) );
-    }
-
-    .game-mid .menu-content .main-actions > div.action-list .runnable button:hover {background: var(--accent-color-hover); }
-    .game-mid .menu-content .main-actions > div.action-list .runnable button:active {background: var(--accent-color-active); }
-
-
-
-    /* Bars */
-
-    /*div.bar { border: 2px solid #000; overflow: hidden; padding: unset; position: relative; background: #000A; }*/
-    div.bar {
-        position: relative;
-        border: 2px solid #000; box-sizing: content-box;
-        margin: 0;
-        overflow: hidden; padding: unset; background: #0001; height: 24px; min-height: unset;
-    }
-    div.bar .bar-text {
-        font-size: 1.0rem; position: absolute; top:50%; right: var(--tiny-gap); transform: translate( 0, -50% );
-        text-align: right; padding: 0 0.5em; color: #000; background: #FFF8; border-radius: 4px;
-        line-height: 16px;
-    }
-
-	.darkmode div.bar .bar-text {
-	color: var( --progbar-dark-text );
-}
-
-    body.compact div.bar .fill { border-radius: 0 4px 4px 0; }
-    body.compact div.bar { height: 14px; border-radius: 6px; }
-    body.compact div.bar .bar-text { font-size: 0.7rem; line-height: 10px; }
-
-
-
-
-    /* Log */
-
-    .game-main div.log-view {
-        display: flex; border-left: 1px solid var(--separator-color); min-width: 200px;
-        margin: 0px;
-    }
-    .game-main div.log-view div.top-span { max-height: unset; margin: 0; border-bottom: 1px solid var(--separator-color) }
-    .game-main div.log-view div.top-span .checks {
-        display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr;
-        height: 50px; align-items: center;
-        font-size: 0.8em;
-    }
-    .game-main div.log-view div.top-span .checks span { flex-basis: 50%; overflow: hidden; white-space: nowrap; }
-    .game-main div.log-view .outlog {
-        overflow-y: auto; flex-direction: column;
-        max-height: unset; flex: 1; font-size: var(--compact-small-font);
-    }
-
-    /* Main */
-
-    /* Skills */
-
-    .full div.skills { padding: 0; }
-
-    .full div.subs {
-        /*display: flex; flex-flow: row wrap; width: 100%; justify-content: space-evenly; */
-        display: grid; grid-template-columns: repeat( auto-fit, minmax( 256px, 1fr) );
-        margin: 0; padding: var(--md-gap); overflow-x: hidden; gap: var(--sm-gap);
-        width: 100%; justify-content: space-between;
-    }
-
-    .full div.subs div.skill {
-        margin-bottom: 0; width: unset; flex-basis: 45%; box-sizing: border-box;
-        padding: var(--md-gap); text-transform: capitalize; font-size: var(--compact-small-font);
-         border-radius: var(--list-entry-border-radius);
-    }
-    .full div.sub div.skill button { font-size: 0.75em; }
-    .full div.sub div.skill > div {
-        font-size: 0.75em; position: relative; text-align: right; display: flex; flex: 1;  align-items: center;
-    }
-    .full div.subs div.skill > div > div { flex: 1; }
-    .full div.subs div.skill .separate span:first-child { text-overflow: ellipsis; white-space: nowrap; overflow:hidden;}
-    .full div.subs div.skill .separate span:nth-child(2) {
-        flex-basis: 50%;
-        color: var(--quiet-text-color);
-    }
-
-    body.compact .full div.subs { justify-content: center;}
-    body.compact .full div.subs div.skill { background: var(--list-entry-background); }
-    body.compact .full div.subs div.skill > div > div .bar { max-height: 6px; background: #0001; border: none; margin: 0.5em }
-
-
-
-    /* Vitals */
-
-    .full div.vitals {
-        text-transform: capitalize;
-        margin: 0; padding: 0;
-        min-width: 200px; overflow-y :auto; overflow-x: hidden;
-    }
-    .full div.vitals .bars { display: flex; flex-flow: column; }
-    .full div.vitals .bars tr { display: flex; align-items: center; }
-    .full div.vitals .bars tr td:nth-child(2) div { display: flex; flex-flow: column; justify-content: center; }
-    .full div.vitals .bars tr:first-child { min-height: 4em; }
-    .full div.vitals .bars tr:not(:first-child) { padding: var(--sm-gap) var(--sm-gap); }
-    .full div.vitals .bars tr td:nth-child(1) { flex-basis: 50%; }
-
-
-    .skill div:last-child { color: #999; text-align: center; }
-    body.compact .skill div:last-child { display: flex; }
-    .menu-items .menu-item { color: #000; }
-    body.darkmode .menu-items .menu-item { color: #FFF; }
-    .menu-items .menu-item u { color: #999; }
-    .menu-items .menu-item:hover, .menu-items .menu-item u:hover { color: #33F; }
-    .dungeon > span:first-child { flex-basis: 40%; }
-    .dungeon button { white-space: nowrap; }
-
-
-    /* Beastiary */
-
-    .game-mid .menu-content > div.bestiary { padding: 0; margin: 0; }
-    .game-mid .menu-content > div.bestiary .char-list { padding: 0; margin: 0; }
-
-
-</style>
-
 </html>

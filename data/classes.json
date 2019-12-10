@@ -755,28 +755,80 @@
 	}
 },
 {
-	"id":"geomancer",
-	"desc":"lord of rocks.",
-	"tags":"t_tier2",
-	"actdesc":"Become a geomancer.",
-	"require":"g.tier1>0&&g.earthlore>=10",
-	"cost":{
-		"research":1000,
-		"arcana":15,
-		"tomes":10,
-		"earthgem":10
+	"id": "geomancer",
+	"desc": "Lord of rocks.",
+	"tags": "t_tier2",
+	"actdesc": "Become a geomancer, a master of perseverance.",
+	"require": "g.tier1>0&&g.earthlore>=10&&g.tier2==0",
+	"cost": {
+		"research": 1000,
+		"arcana": 15,
+		"tomes": 10,
+		"earthgem": 10
 	},
-	"effect":{
-		"sp":2
+	"effect": {
+		"sp": 2
 	},
-	"mod":{
-		"tier2":true,
-		"earthlore.max":2,
-		"earthlore.rate":"10%",
-		"stamina.max":"10%",
-		"mana.max":2
+	"mod": {
+		"tier2": true,
+		"earthlore.max": 2,
+		"geosculpting.max": 2,
+		"stamina.max": "10%",
+		"mana.max": 2,
+		"earthspire.mod.space.max": 50
 	},
-	"flavor":"your empire of dirt"
+	"flavor": "Your empire of dirt"
+},
+{
+	"id": "earthshaker",
+	"desc": "master of the tectonics.",
+	"tags": "t_tier4",
+	"actdesc": "Become an earthshaker.",
+	"require": "g.tier3>0&&g.earthlore>=20&&g.tier4==0",
+	"cost": {
+		"research": 4000,
+		"arcana": 25,
+		"tomes": 30,
+		"earthgem": 50
+	},
+	"effect": {
+		"sp": 2
+	},
+	"mod": {
+		"tier4": true,
+		"earthlore.max": 3,
+		"player.defense": 15,
+		"stamina.max": "20%",
+		"earth.rate": 0.5,
+		"earthspire.mod.space.max": 50
+	},
+	"flavor": "Finally, a subduction license!"
+},
+{
+	"id": "titan",
+	"desc": "A mantle of metal and stone.",
+	"tags": "t_tier6",
+	"actdesc": "Become a titan.",
+	"require": "g.tier5>0&&(g.earthshaker+g.geomancer)>0&&g.hammerlore>=10&&g.geosculpting>=10&&g.tier6==0",
+	"cost": {
+		"research": 10000,
+		"arcana": 50,
+		"tomes": 40,
+		"earthgem": 100,
+		"earthrune": 20
+	},
+	"effect": {
+		"sp": 2
+	},
+	"mod": {
+		"tier6": true,
+		"earthlore.max": 3,
+		"player.defense": 30,
+		"stamina.max": "20%",
+		"hammerlore.max": 3,
+		"earthspire.mod.space.max": 100
+	},
+	"flavor": "No stone left unturned"
 },
 {
 	"id":"pyromancer",

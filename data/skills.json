@@ -660,6 +660,46 @@
 
 	},
 	{
+		"id": "hammerlore",
+		"desc": "The anvil or the skull, it makes no difference.",
+		"require": "g.geomancer>0||g.earthshaker>0||g.titan>0",
+		"need": "armssource",
+		"level": 3,
+		"buy": {
+			"sp": 2
+		},
+		"run": {
+			"stamina": 0.6
+		},
+		"result": {
+			"sp": 0.05
+		},
+		"mod": {
+			"player.bonuses.blunt": 1,
+			"player.hits.blunt": 1
+		}
+	},
+	{
+		"id": "geosculpting",
+		"desc": "Bend the earth to your will.",
+		"require": "g.geomancer>0||g.earthshaker>0",
+		"level": 3,
+		"buy": {
+			"sp": 2
+		},
+		"run": {
+			"stamina": 0.6
+		},
+		"result": {
+			"sp": 0.05
+		},
+		"mod": {
+			"player.defense": 1,
+			"player.dodge": -1,
+			"earthspire.mod.space.max": 1
+		}
+	},
+	{
 		"id":"wizlore",
 		"name":"Wizard Lore",
 		"require":"(g.mage+g.highmage+g.wizard+g.wizard2+g.wizard3)>=2",

@@ -9,6 +9,25 @@
 		}
 	},
 	{
+		"id": "earthspire",
+		"name": "earthen spire",
+		"desc": "An impervious spire of metal and stone.",
+		"cost": {
+			"research": 3000,
+			"gold": 3000,
+			"codices": 50
+		},
+		"require": "g.geosculpting>=5",
+		"mod": {
+			"minions.max": 10,
+			"space.max": 300,
+			"earthlore.max": 5,
+			"geosculpting.max": 3,
+			"earth.max": 5,
+			"earth.rate": 0.5
+		},"flavor":"A monument to your geosculpting mastery."
+	},
+	{
 		"id":"atticbedroom",
 		"name":"Attic Bedroom",
 		"desc":"Noting your progress, your master begrudgingly offers you some space in the attic.",

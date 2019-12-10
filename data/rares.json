@@ -1,0 +1,66 @@
+[
+
+	{
+		"id":"patronring1",
+		"name":"ring of the patron",
+		"unique":true,
+		"desc":"A trinket bestowed on mages embroiled in the world's affairs.",
+		"mod":{
+			"space.max":"1%"
+		}
+
+	},
+	{
+		"id":"icedagg",
+		"name":"icy dagger",
+		"material":"ice",
+		"type":"weapon",
+		"tohit":1,
+		"attack":{ "kind":"pierce", "damage":"2~4","dot":{
+			"duration":5,
+			"dmg":"1~3",
+			"name":"frosty",
+			"kind":"frost"
+
+		}}, "cost":20, "level":3
+	},
+	{
+		"id":"tenwickstick",
+		"name":"tenwick's walking stick",
+		"level":5,
+		"unique":true,
+		"recipe":true,
+		"mod":{
+			"unease.rate":"-5%",
+			"weary.rate":"-10%",
+			"dist":"5%"
+		},
+		"attack":{
+			"dmg":"5~10",
+			"type":"blunt"
+		}
+
+	},
+	{
+		"id": "titanhammer",
+		"name": "titan's hammer",
+		"desc": "Wrought from unyielding adamant, it hums with the energies of the earth.",
+		"save": true,
+		"type": "weapon",
+		"unique": true,
+		"attack": {
+			"kind": "blunt",
+			"damage": "40~50"
+		},
+		"mod": {
+			"earth.rate": 0.5,
+			"earth.max": 10,
+			"player.defense": 30
+		},
+		"hands": 2,
+		"kind": "hammer",
+		"level": 15,
+		"cost": 5000
+	}
+
+]

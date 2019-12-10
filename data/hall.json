@@ -76,7 +76,7 @@
 			{
 				"id":"hallPoints",
 				"alias":"points",
-				"hidden":true,
+				"hide":true,
 				"locked":false,
 				"val":0,
 				"mod":{

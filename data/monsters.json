@@ -107,7 +107,8 @@
 	{
         "id":"bat",
         "level":1,
-        "kind":"beast",
+		"kind":"beast",
+		"biome":["hills","cave","woods"],
         "hp":3,
         "tohit":3,
         "defense":1,
@@ -2380,7 +2381,7 @@
         "level":9,
 		"evil":15,
 		"kind":"giant",
-        "biome":["hills","mountains"],
+        "biome":["hills","mountains","cave"],
 		"flavor":"they have a cave troll...",
         "hp":90,
 		"defense":35,

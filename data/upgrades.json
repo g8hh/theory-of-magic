@@ -1757,6 +1757,153 @@
 		},"flavor":"i've had worse"
 	},
 	{
+		"id": "earthworks",
+		"desc": "Strong walls around your home, to deter unwise attackers",
+		"require": "g.geosculpting>=5",
+		"max": 2,
+		"cost": {
+			"gold": 300,
+			"research": 250
+		},
+		"mod": {
+			"geosculpting.max": 1,
+			"player.defense": 5
+		},
+		"flavor": "Doubles as a burial mound"
+	},
+	{
+		"id": "coretap",
+		"name": "Core tap",
+		"desc": "tap the world's core for endless heat",
+		"require": "g.earthshaker>0&&g.geosculpting>=6",
+		"max": 1,
+		"cost": {
+			"gold": 5000,
+			"research": 4000,
+			"earthrune": 5
+		},
+		"mod": {
+			"firelore.max": 3,
+			"earthlore.max": 3,
+			"geosculpting.max": 1,
+			"earth.rate": 0.2,
+			"fire.rate": 0.2
+		}
+	},
+	{
+		"id": "tamedroads",
+		"name": "tamed pathway",
+		"require": "g.geomancer>0&&g.dist>=200",
+		"desc": "Train the roads around your home to behave.",
+		"cost": {
+			"gold": 3000,
+			"earthgem": 5,
+			"earth": 10
+		},
+		"mod": {
+			"dist": 100
+		},
+		"flavor": "those good boys are perfect for keeping unwanted guests away"
+	},
+	{
+		"id": "hiddenchamber",
+		"name": "hidden chamber",
+		"desc": "A place to meditate in solitude, deep beneath the earth",
+		"require": "g.geosculpting>0",
+		"max": 1,
+		"cost": {
+			"gold": 500,
+			"research": 500,
+			"earthgem": 5
+		},
+		"mod": {
+			"concentrate.max": 1
+		}
+	},
+	{
+		"id": "rockcollection",
+		"name": "minerals collection",
+		"desc": "Sorted by hardness.",
+		"require": "(g.geomancer)>0",
+		"max": 3,
+		"cost": {
+			"gold": 500,
+			"research": 1000
+		},
+		"mod": {
+			"hammerlore.max": 1
+		},
+		"flavor": "A fantastic way to test your strength"
+	},
+	{
+		"id": "artificialmountain",
+		"name": "raise mountain",
+		"desc": "Leave your mark on this world",
+		"require": "g.earthshaker>0",
+		"max": 1,
+		"cost": {
+			"gold": 5000,
+			"research": 7500,
+			"earthrune": 10
+		},
+		"mod": {
+			"gems.rate": 0.1,
+			"act_mine.effect.gems": 0.1,
+			"player.fame": 5,
+			"hammerlore.max": 2,
+			"geosculpting.max": 2
+		}
+	},
+	{
+		"id": "constructquarry",
+		"name": "magic quarry",
+		"desc": "A rocky escarpment to conduct your excavations more efficiently.",
+		"require": "g.geosculpting>0",
+		"max": 3,
+		"cost": {
+			"gold": 1500,
+			"research": 2000,
+			"earthgem": 20
+		},
+		"mod": {
+			"act_mine.effect.gems": 0.1,
+			"hammerlore.max": 1
+		}
+	},
+	{
+		"id": "mythicanvil",
+		"name": "mythic anvil",
+		"desc": "Made of mythical metals, this anvil can withstand even a titan's power",
+		"require": "g.titan>0",
+		"max": 1,
+		"cost": {
+			"gold": 10000,
+			"research": 15000,
+			"tomes": 100,
+			"earthrune": 50
+		},
+		"mod": {
+			"hammerlore.max": 2,
+			"geosculpting.max": 2,
+			"crafting.max": 2
+		}
+	},
+	{
+		"id": "undertunnels",
+		"name": "subterranean pathways",
+		"desc": "A twisting maze of indistinguishable passages spanning your domain.",
+		"require": "g.geosculpting>=10",
+		"max": 1,
+		"cost": {
+			"gold": 5000,
+			"research": 10000,
+			"earthrune": 1
+		},
+		"mod": {
+			"dist": "25%"
+		}
+	},
+	{
 
 		"id":"innerfire",
 		"name":"inner fire",
