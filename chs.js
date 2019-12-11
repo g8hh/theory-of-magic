@@ -682,7 +682,7 @@ var cnItems = {
     'coporis fabrica': '人体构造',
 	'max anatomy': '解剖学上限',
     'train anatomy rate': '解剖学训练速度',
-    'unholy candle': '邪恶火烛',
+    'unholy candle': '邪烛',
     'truesight': '真知术',
     'max shadow': '暗影上限',
     'spellcraft': '法术融合',
@@ -1192,7 +1192,7 @@ var cnItems = {
     'elemental rift': '元素裂隙',
     'fazbit\'s workshop': '法兹比的工房',
 
- //以下为冬活文本,对应winter.json   
+ //以下为winter.json,对应冬活文本  
     'wintertide': '寒潮',
     'snow double': '雪之分身',
     'the path opens': '打开通路',
@@ -1262,9 +1262,22 @@ var cnItems = {
     '': '',
     '': '',
     '': '',
-//冬活文本到此结束
+//winter.json到此结束
 
-
+//以下为patrons.json,对应赞助大佬
+    'bloodbane\'s anvil': '血祸的铁砧',
+    'Great spells are often forged on iron.': '伟大的法术经常被固化在金铁之上。',
+    'Forsaking war and violence, Bloodbane devoted himself to crafting new forms of magic.': '厌弃了战争与暴力，血烬专注于用锻造展现新的魔法形式。',
+    '': '',
+    '': '',
+    '': '',
+    '': '',
+    '': '',
+    '': '',
+    '': '',
+    '': '',
+    '': '',
+//patrons.json到此结束
 
     '': '',
     '': '',
