@@ -1,12 +1,12 @@
 {
 
 	"core":[
-		"resources", "upgrades", "actions", "homes", "furniture", "skills",
+		"resources", "upgrades", "tasks", "homes", "furniture", "skills", "states",
 		"player", "spells", "monsters", "dungeons", "events", "classes", "armors", "weapons",
 		"materials", "enchants", "sections", "potions", "encounters", "locales","stressors", "rares"
 	],
 	"modules":[
-		"patrons", "winter"
+		"patrons", "puppeteer","combattutorial", "shian"
 	]
 
 }

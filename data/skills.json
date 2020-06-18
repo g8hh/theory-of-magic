@@ -198,7 +198,7 @@
 		},
 		"mod":{
 			"animals.rate":"1%",
-			"minions.maxAllies":0.25,
+			"allies.max":0.25,
 			"research.max":5
 		}
 
@@ -215,7 +215,7 @@
 		},"mod":{
 			"research.max":1,
 			"minions.max":"10%",
-			"minions.maxAllies":1
+			"allies.max":1
 		}
 	},
 	{
@@ -280,7 +280,7 @@
 	{
 		"id":"history",
 		"name":"world lore",
-		"require":"g.languages>=7",
+		"require":"g.languages>=6",
 		"desc":"the knowledge of what has come before reveals what is yet possible.",
 		"verb":"historicizing",
 		"run":{
@@ -295,6 +295,7 @@
 		"mod":{
 			"research.max":10,
 			"arcana.max":0.1,
+			"s_travel.max":0.1,
 			"languages.rate":"1%"
 		}
 
@@ -320,6 +321,23 @@
 
 	},
 	{
+		"id":"vivification",
+		"require":"g.tier4>0&&g.anatomy>0&&g.spiritlore>=5",
+		"desc":"",
+		"level":3,
+		"run":{
+			"stamina":1
+		},
+		"result":{
+			"sp":0.01
+		},
+		"mod":{
+			"stamina.rate":0.1,
+			"anatomy.rate":"2%"
+		}
+
+	},
+	{
 
 		"id":"dissection",
 		"need":"g.anatomy>=3",
@@ -332,7 +350,7 @@
 			"bones":1
 		},
 		"mod":{
-			"research.max":1
+			"research.max":5
 		}
 
 	},
@@ -366,7 +384,7 @@
 			"stamina":0.7
 		},
 		"mod":{
-			"minions.maxAllies":1,
+			"allies.max":1,
 			"research.max":5,
 			"minions.max":0.5
 		}
@@ -701,7 +719,7 @@
 	},
 	{
 		"id":"wizlore",
-		"name":"Wizard Lore",
+		"name":"wizard Lore",
 		"require":"(g.mage+g.highmage+g.wizard+g.wizard2+g.wizard3)>=2",
 		"school":"arcane",
 		"desc":"Many ask 'how?' Few think to ask, 'why?'",
@@ -893,7 +911,7 @@
 		},
 		"mod":{
 			"shadow.rate":0.01,
-			"minions.maxAllies":0.2,
+			"allies.max":0.2,
 			"necromancy.rate":"1%"
 		}
 
@@ -944,7 +962,8 @@
 			"research":1
 		},
 		"mod":{
-			"charms.rate":"1%"
+			"charms.rate":"1%",
+			"enchantslots.max":1
 		},
 		"result":{
 			"sp":0.05,
@@ -964,9 +983,10 @@
 		},
 		"mod":{
 			"potions.rate":"1%",
-			"research.max":2
+			"research.max":5
 		}
 	},
+
 	{
 		"id":"astronomy",
 		"need":"starsource",
@@ -991,8 +1011,22 @@
 		"mod":{
 			"mana.max":0.5,
 			"arcana.rate":0.001,
-			"manas.rate":0.02
+			"prismatic.rate":0.02
 		}
+	},
+	{
+		"id":"s_travel",
+		"name":"travel",
+		"level":2,
+		"require":"(g.languages+g.history)>=10",
+		"desc":"Travel offers a growing wizard new avenues of research and new sources of research.",
+		"run":{
+			"stamina":0.5
+		},
+		"mod":{
+			"dist":"5%"
+		}
+
 	},
 	{
 
@@ -1010,7 +1044,7 @@
 			"mana":0.1
 		},
 		"mod":{
-			"dist":"5%",
+			"dist":"1%",
 			"arcana.max":1,
 			"research.max":1
 		}, "flavor":"there is no safe distance"

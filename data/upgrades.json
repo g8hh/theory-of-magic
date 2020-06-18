@@ -12,7 +12,7 @@
 			"arcana":5,
 			"gold":200
 		},
-		"effect":"adept"
+		"result":"adept"
 
 	},
 	{
@@ -31,7 +31,7 @@
 			"name":"Master Slain",
 			"desc":"Your master was a fool. A quick murder in the dark put an end to their petty demands, and frees you to pursue your own grander designs."
 		},
-		"effect":["adept","evil", {
+		"result":["adept","evil", {
 			"bodies":1,
 			"player.exp":10
 		}]
@@ -99,7 +99,7 @@
 	},
 	{
 		"id":"timesplit",
-		"desc":"perform actions of different types simultaneously.",
+		"desc":"perform tasks of different types simultaneously.",
 		"require":"chronomancy",
 		"cost":{
 			"arcana":10,
@@ -373,7 +373,9 @@
 		"flavor":"You no take candle!",
 		"max":1,
 		"require":"mana",
-		"cost":10,
+		"cost":{
+			"gold":10
+		},
 		"mod":{
 			"mana.rate":0.02
 		}
@@ -398,7 +400,9 @@
 		"desc":"Keep your money safe.",
 		"require":"g.gold>=5",
 		"max":3,
-		"cost":5,
+		"cost":{
+			"gold":5
+		},
 		"flavor":"seems a tad pricey for a bag.",
 		"mod":{
 			"gold.max":10
@@ -410,7 +414,9 @@
 		"desc":"Small bag keeps gems safe without scratching.",
 		"require":"g.gems>=5",
 		"max":2,
-		"cost":300,
+		"cost":{
+			"gold":300
+		},
 		"flavor":"who prices these bags?!",
 		"mod":{
 			"magicgems.max":1,
@@ -689,14 +695,13 @@
 		"id":"grimoire",
 		"desc":"The handbook of witches",
 		"require":"g.witch>0&&g.tier2>0",
-		"locked":true,
 		"cost":{
 			"gold":50,
 			"spirit":2,
 			"research":50,
 			"codices":1
 		},
-		"effect":{
+		"result":{
 			"sp":1
 		},
 		"mod":{
@@ -780,7 +785,9 @@
 		"desc":"Common way to carry coins.",
 		"require":"g.gold>=20",
 		"max":2,
-		"cost":15,
+		"cost":{
+			"gold":15
+		},
 		"mod":{
 			"gold.max":20
 		}
@@ -873,7 +880,7 @@
 			"inv.max":4,
 			"gold.max":100,
 			"gems.max":20,
-			"magicgems.max":5
+			"prismaticgems.max":5
 		},"flavor":"the research costs a little more than you expected..."
 
 	},
@@ -919,7 +926,7 @@
 			"arcana":15,
 			"sp":5
 		},
-		"desc":"Imbue gems continuously as your current activity.",
+		"desc":"Allow you to imbue gems continuously as an activity.",
 		"mod":{
 			"gemimbue.perpetual":true,
 			"gemimbue.length":5
@@ -1154,7 +1161,9 @@
 		"desc":"Carry more scrolls.",
 		"require":"g.scrolls>=10",
 		"scale":2,
-		"cost":50,
+		"cost":{
+			"gold":50
+		},
 		"max":1,
 		"mod":{
 			"scrolls.max":15
@@ -1233,7 +1242,7 @@
 	{
 		"id":"dreamcatcher",
 		"name":"dream catcher",
-		"desc":"you might not like what you catch.",
+		"desc":"you may not like what you catch.",
 		"tags":"spiritsource",
 		"require":"g.crafting>=5",
 		"max":1,
@@ -1243,6 +1252,7 @@
 			"mana":2
 		},
 		"mod":{
+			"spiritlore.max":1,
 			"spirit.rate":0.01
 		}
 	},
@@ -1254,7 +1264,9 @@
 		"max":2,
 		"flavor":"Spare a little candle, save some light for me.",
 		"require":"g.mana.max>=50",
-		"cost":35,
+		"cost":{
+			"gold":35
+		},
 		"mod":{
 			"fire.max":0.04,
 			"fire.rate":0.01
@@ -1268,10 +1280,29 @@
 		"max":2,
 		"require":"g.light.max>=10",
 		"flavor":"It is better to light one candle than to curse the darkness.",
-		"cost":75,
+		"cost":{
+			"gold":75
+		},
 		"mod":{
 			"light.max":0.2,
 			"light.rate":0.01
+		}
+	},
+	{
+		"id":"sombercandle",
+		"name":"somber candle",
+		"tags":"candle",
+		"desc":"Its faint light stirs the restless spirits.",
+		"repeat":true,
+		"max":5,
+		"require":"g.spiritlore.max>=7",
+		"cost":{
+			"gold":150,
+			"bonedust":10
+		},
+		"mod":{
+			"spiritlore.max":0.2,
+			"spirit.rate":0.01
 		}
 	},
 	{
@@ -1283,7 +1314,9 @@
 		"max":2,
 		"require":"g.shadow.max>=10",
 		"flavor":"darkness, darkness.",
-		"cost":75,
+		"cost":{
+			"gold":75
+		},
 		"mod":{
 			"shadow.max":0.2,
 			"shadow.rate":0.01
@@ -1373,7 +1406,7 @@
 			"anatomy.max":2,
 			"arcanebody.max":3,
 			"minions.max":2,
-			"minions.maxAllies":1
+			"allies.max":1
 		}
 
 	},
@@ -1381,6 +1414,7 @@
 		"id":"specialization",
 		"desc":"specialize in a school of magic",
 		"require":"g.lore>999",
+		"unused":true,
 		"max":1,
 		"cost":{
 			"tomes":1,
@@ -1724,7 +1758,7 @@
 		"id":"evanescence",
 		"name":"evanescence",
 		"tags":"airsource",
-		"desc":"like you don't exist at all",
+		"desc":"Like you don't exist at all",
 		"require":"g.air.max>=8",
 		"cost":{
 			"research":300,
@@ -1824,7 +1858,7 @@
 		"id": "rockcollection",
 		"name": "minerals collection",
 		"desc": "Sorted by hardness.",
-		"require": "(g.geomancer)>0",
+		"require": "geomancer",
 		"max": 3,
 		"cost": {
 			"gold": 500,
@@ -1839,7 +1873,7 @@
 		"id": "artificialmountain",
 		"name": "raise mountain",
 		"desc": "Leave your mark on this world",
-		"require": "g.earthshaker>0",
+		"require": "earthshaker",
 		"max": 1,
 		"cost": {
 			"gold": 5000,
@@ -1858,7 +1892,7 @@
 		"id": "constructquarry",
 		"name": "magic quarry",
 		"desc": "A rocky escarpment to conduct your excavations more efficiently.",
-		"require": "g.geosculpting>0",
+		"require": "geosculpting",
 		"max": 3,
 		"cost": {
 			"gold": 1500,
@@ -1874,7 +1908,7 @@
 		"id": "mythicanvil",
 		"name": "mythic anvil",
 		"desc": "Made of mythical metals, this anvil can withstand even a titan's power",
-		"require": "g.titan>0",
+		"require": "titan",
 		"max": 1,
 		"cost": {
 			"gold": 10000,
@@ -2006,18 +2040,29 @@
 	{
 		"id":"mendicant",
 		"desc":"Sacrifice luxury for higher attainments.",
-		"need":"g.evil<=0&&g.tier1>0&&g.gold.max>1000&&g.light.max>5",
+		"need":"g.evil<=0&&g.gold.max>1000&&g.light.max>5",
 		"warn":true,
-		"cost":{
-		},
 		"mod":{
 			"fame":10,
-			"virtue":2,
 			"gold.max":"-10%",
 			"spiritlore.max":2,
 			"spiritlore.rate":0.5,
 			"lightlore.max":2,
 			"lightlore.rate":0.5
+		}
+
+	},
+	{
+		"id":"innersanctum",
+		"name":"inner sanctum",
+		"need":"g.mendicant>0&&g.truesight>0",
+		"desc":"The halls of the mind are without limits.",
+		"cost":{
+			"lightgem":5,
+			"research":5000
+		},
+		"mod":{
+			"space.max":"10%"
 		}
 
 	},
@@ -2100,7 +2145,7 @@
 		"name":"cauldron",
 		"desc":"Like a cooking pot, but larger.",
 		"tags":"potsource",
-		"require":["tier0","firesource"],
+		"require":["tier1","firesource"],
 		"disable":"pot",
 		"cost":{
 			"gold":150
@@ -2166,7 +2211,7 @@
 		},
 		"mod":{
 			"fame":1,
-			"minions.maxAllies":4,
+			"allies.max":4,
 			"minions.max":2,
 			"lightlore.max":2,
 			"lightlore.rate":"10%"
@@ -2181,10 +2226,10 @@
 		"require":"g.evil<=0&&g.runelore>=5&&g.tier3>0",
 		"max":5,
 		"cost":{
-			"gems":100,
-			"space":5
+			"gems":100
 		},
 		"mod":{
+			"space":5,
 			"gold.rate":-0.5,
 			"runestones.rate":0.01
 		}
@@ -2196,12 +2241,12 @@
 		"desc":"Take on an apprentice to do work for you",
 		"require":"tier2",
 		"cost":{
-			"space":5,
 			"gold":300,
 			"tomes":1,
 			"research":1000
 		},
 		"mod":{
+			"space":5,
 			"gold.rate":0.1,
 			"scrolls.rate":0.02,
 			"codices.rate":0.01,

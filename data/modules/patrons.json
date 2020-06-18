@@ -8,6 +8,26 @@
 		"furniture":[
 
 			{
+
+				"id":"nathanielshelter",
+				"name":"nathaniel's sanctuary",
+				"require":"g.tier3>0&&g.good>0",
+				"desc":"A sanctuary for orphans and paupers.",
+				"tags":"patron",
+				"cost":{
+					"gold":100
+				},
+				"mod":{
+					"space":5,
+					"gold.rate":-0.2,
+					"virtue.rate":0.0001,
+					"light.rate":0.1,
+					"notoriety.rate":0.00001
+
+				},
+				"flavor":"Nathaniel insisted magic be used for the benefit of the unfortunate."
+			},
+			{
 				"id":"baneanvil",
 				"name":"bloodbane's anvil",
 				"require":"g.crafting>=14",
@@ -15,11 +35,11 @@
 				"desc":"Great spells are often forged on iron.",
 				"tags":"patron",
 				"cost":{
-					"space":5,
 					"research":10000,
 					"tomes":10
 				},
 				"mod":{
+					"space":5,
 					"spellcraft.max":2,
 					"spellcraft.rate":"5%",
 					"enchanting.max":2
@@ -63,6 +83,79 @@
 		],
 
 		"spells":[
+			{
+				"id":"phrenesis_heal1",
+				"level":4,
+				"name":"phrenesis' healing circle",
+				"desc":"",
+				"school":"light",
+				"require":"g.lightlore>=7",
+				"buy":{
+
+					"research":1000,
+					"codices":25
+
+				},
+				"cost":{
+					"light":1
+				},
+				"action":{
+
+					"targets":"allies",
+					"result":{
+						"hp":15
+					}
+				}
+			},
+			{
+				"id":"phrenesis_heal2",
+				"level":10,
+				"name":"phrenesis' healing wave",
+				"desc":"",
+				"school":"light",
+				"require":"g.lightlore>=20",
+				"buy":{
+
+					"research":1000,
+					"codices":25
+
+				},
+				"cost":{
+					"light":3
+				},
+				"action":{
+
+					"targets":"allies",
+					"result":{
+						"hp":35
+					}
+				}
+			},
+			{
+				"id":"cyrilsling",
+				"name":"cyril's celestial sling",
+				"level":7,
+				"school":"chaos",
+				"require":"g.tier5>0&&g.chaos.max>=3",
+				"desc":"Free a star and unleash the fury of the heavens on your foe. Hopefully your star won't turn on you...",
+				"buy":{
+					"research":7777,
+					"runestones":7,
+					"firerune":7,
+					"waterrune":7,
+					"airrune":7,
+					"earthrune":7
+				},
+				"cost":{
+					"chaos":3,
+					"sindel":1
+				},
+				"effect":[
+					{
+						"%":7
+					}
+				],"flavor":"If you're already star-crossed, why not make a few stars cross as well?"
+			},
 			{
 				"id":"kannadance",
 				"level":7,
@@ -212,6 +305,15 @@
 
 			},
 			{
+				"id":"enc_kaidi",
+				"name":"kaidi",
+				"desc":"",
+				"effect":{
+
+				},"flavor":""
+
+			},
+			{
 				"id":"enc_tjoker",
 				"name":"a joker",
 				"desc":"A crafty expression suggests trouble.",
@@ -269,10 +371,12 @@
 				"desc":"The lost Hall of Ages was a gathering place of great and powerful patron mages.",
 				"require":"g.tier3>0",
 				"title":"Mark of Ages",
+				"length":100,
 				"once":{
 					"history.max":1
 				},
 				"encs":[
+					"enc_kaidi",
 					"enc_cyril",
 					"enc_jeremy",
 					"enc_kanna",

@@ -3,9 +3,9 @@
 	"id":"mustylibrary",
 	"name":"musty library",
 	"level":1,
-	"length":10,
+	"length":15,
 	"sym":"📖",
-	"require":"apprentice",
+	"require":"evt_helper",
 	"desc":"a good apprentice spends all their free time in the library. after doing chores, of course.",
 	"run":{
 		"stamina":0.2
@@ -29,8 +29,8 @@
 	"id":"loc_spring",
 	"name":"lillit's spring",
 	"level":2,
-	"length":15,
-	"require":"apprentice",
+	"length":20,
+	"require":"evt_helper",
 	"desc":"tradition tells of a spring with enchanted waters. investigations might prove revealing.",
 	"run":{
 		"stamina":0.2
@@ -44,16 +44,18 @@
 	},
 	"encs":[
 		"manatree",
+		"enc_heather",
 		"mysticwater",
 		"manatree",
-		"hiddencache"
+		"hiddencache",
+		"starrysky1"
 	]
 },
 {
 	"id":"eryleyot",
 	"name":"eryl eyot",
 	"level":5,
-	"length":25,
+	"length":30,
 	"desc":"the small and tranquil island is inhabited by an old hermit named thyffr",
 	"run":{
 		"stamina":0.2
@@ -81,7 +83,7 @@
 	"id":"loc_treffil",
 	"name":"explore treffil wood",
 	"level":7,
-	"length":15,
+	"length":40,
 	"desc":"the woods posses many features of interest to the magical scholar.",
 	"run":{
 		"stamina":0.2
@@ -138,7 +140,7 @@
 {
 	"id":"rithel",
 	"level":14,
-	"desc":"this tiny outpost in the center of thangmor outlasted even the pillars",
+	"desc":"This tiny outpost in the center of thangmor outlasted even the pillars",
 	"require":"g.evil<=0&&g.history>=5",
 	"run":{
 		"stamina":0.2
@@ -154,6 +156,7 @@
 		"enc_chest2",
 		"enc_gnome",
 		"enc_primer2",
+		"enc_hettie",
 		"enc_delki",
 		"brightvista"
 	]
@@ -243,6 +246,9 @@
 	"sym":"📖",
 	"desc":"An ancient library at the bridge spanning Markhul's gap.",
 	"flavor":"third of the Four Weirs of Dhrune.",
+	"result":{
+		"title":"Historian"
+	},
 	"loot":{
 		"tomes":"3~5",
 		"markhulcodex":true
@@ -257,35 +263,122 @@
 	]
 },
 {
+
+	"id":"loc_orrem",
+	"name":"sands of orrem",
+	"require":"g.history>=7&&g.scrying>=5",
+	"show":{
+		"name":"Cities of Orrem",
+		"desc":"A vision in a crystal orb reveals to you the ruins of the lost cities of Orrem."
+	},
+	"desc":"Only a small trading post marks the boundary of the lost cities of Orrem. Weathered masonry jutting from the sands beyond bespeak monuments of unimaginable proportions.",
+	"length":400,
+	"level":19,
+	"run":{
+		"stamina":3
+	},
+	"result":{
+		"title":"Nomad",
+		"fame":1
+	},"encs":[
+		"enc_aeonclock",
+		"enc_caravan",
+		"enc_oasis",
+		"orrem_rains",
+		"enc_madwinds",
+		"enc_orrem_cave",
+		"enc_sandstorm",
+		"enc_mirage",
+		"enc_statue4",
+		"strangebones",
+		"enc_statue2",
+		"starrysky1",
+		"enc_chest3",
+		"enc_orremtrade"
+	]
+},
+{
+	"id":"loc_menagerie",
+	"name":"the lost menagerie",
+	"level":23,
+	"require":"g.tier98>0",
+	"length":200,
+	"desc":"Beneath the tallest idrasil a great menagerie thrives beneath a second sky.",
+	"run":{
+		"stamina":3
+	},
+	"once":{
+		"magicbeasts.max":1
+	},
+	"result":{
+		"title":""
+	},
+	"loot":{
+		"herbs":"10~20"
+	},
+	"encs":[
+		"e_agolith",
+		"e_balmuth",
+		"e_barghest",
+		"e_bestiary1",
+		"e_bestiary2",
+		"e_big_scale",
+		"e_cockatrice",
+		"e_flithy",
+		"e_gryffon",
+		"e_hydra",
+		"e_phoenix",
+		"e_pogler",
+		"e_snakemass",
+		"e_spidermass",
+		"e_trumple",
+		"e_wyvern"
+	],"flavor":"Its creator and purpose are unknown to history. Perhaps all creatures exist within."
+},
+{
 	"id":"loc_tenwick",
 	"name":"peregrination",
 	"level":20,
+	"require":"g.s_travel>=5&&g.a_travel>=100",
 	"desc":"Tenwick's trail runs a circuit about the notable areas of Dhrune. On foot it takes the better part of a year to complete.",
 	"length":10000,
 	"run":{
 		"stamina":2
 	},
-	"loot":{
-
-	},
 	"result":{
-		"title":"Dhrunic Wayfarer"
+		"title":"Dhrunic Wayfarer",
+		"tenwickstick":1,
+		"fame":1
 	},
 	"encs":[
-		"enc_statue2",
-		"enc_battle1",
-		"enc_oldstone",
-		"strangebones",
-		"enc_gibber",
-		"hauntedglade",
-		"enc_statue4",
 		"brightvista",
+		"e_pogler",
+		"e_agolith",
+		"enc_battle1",
+		"enc_blackcat",
+		"enc_chest4",
+		"enc_delki",
+		"enc_statue2",
+		"enc_statue4",
+		"enc_gap",
+		"e_bloodgrass",
+		"enc_gibber",
+		"enc_gnome",
 		"enc_mtpass",
-		"hiddencache",
-		"murkywater",
-		"sombersunset",
+		"enc_oldstone",
+		"enc_sandstorm",
+		"enc_sindel",
+		"enc_tenwick",
 		"enc_wyrd",
-		"enc_sindel"
+		"hauntedglade",
+		"foggydale",
+		"hiddencache",
+		"manatree",
+		"murkywater",
+		"mysticwater",
+		"sombersunset",
+		"starrysky1",
+		"strangebones"
 
 	]
 

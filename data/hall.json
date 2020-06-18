@@ -13,7 +13,56 @@
 				"desc":"Across the aeons wizards gather in hidden halls to exchange lore and augment their powers."
 			}
 		],
+		"tasks":[
+
+			{
+
+				"id":"retire",
+				"warn":true,
+				"require":"g.planeslore>=999",
+				"desc":"",
+				"cost":{
+
+				},
+				"flavor":""
+
+			}
+		],
 		"upgrades":[
+
+			{
+				"id":"greatwing",
+				"name":"great wing",
+				"max":3,
+				"desc":"A new wing of the Great Hall where Wizards can lodge in comfort.",
+				"require":"g.expandhall>=1",
+				"cost":{
+					"gold":10000,
+					"schematic":3,
+					"void":3,
+					"prestige":10
+				},
+				"mod":{
+					"expandhall.max":1
+				}
+			},
+
+			{
+				"id":"starchamber",
+				"name":"star chamber",
+				"require":"tier6",
+				"max":3,
+				"desc":"An expansive chamber for viewing the heavens.",
+				"cost":{
+					"sindel":3,
+					"prestige":10,
+					"dreams":3
+				},
+				"mod":{
+					"notoriety.rate":0.000001,
+					"sindel.rate":"10%"
+				}
+			},
 
 			{
 				"id":"expandhall",
@@ -43,7 +92,7 @@
 			{
 				"id":"dreamchamber",
 				"name":"dream chamber",
-				"desc":"In some time and place, even dreams have happened before.",
+				"desc":"In some time and place, even dreams were once real.",
 				"require":"tier5",
 				"max":1,
 				"cost":{
@@ -56,6 +105,7 @@
 			{
 				"id":"timewell",
 				"require":"tier6",
+				"desc":"A deep pool of time incarnate.",
 				"max":1,
 				"cost":{
 					"prestige":75
@@ -75,6 +125,7 @@
 			},
 			{
 				"id":"hallPoints",
+				"name":"prestige",
 				"alias":"points",
 				"hide":true,
 				"locked":false,
@@ -96,7 +147,24 @@
 				}
 			}
 
+		],
+		"classes":[
+			{
+				"id":"pillarfire",
+				"name":"pillar of flame",
+				"desc":"",
+				"max":1,
+				"tags":"t_tier7",
+				"require":"g.planeslore>=999",
+				"cost":{
+				},
+				"mod":{
+					"tier7":true
+				}
+
+			}
 		]
+
 	}
 
 

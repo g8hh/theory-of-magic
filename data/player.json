@@ -3,8 +3,8 @@
 		"id":"hp",
 		"name":"life",
 		"desc":"Wizard life-force",
-		"val":10,
-		"max":10,
+		"val":5,
+		"max":5,
 		"unit":false,
 		"locked":false
 	},
@@ -13,7 +13,21 @@
 		"val":0,
 		"unit":true,
 		"stat":true,
-		"locked":false
+		"locked":false,
+		"hide":true,
+		"mod":{
+			"spelllist.max":1,
+			"stamina.max":1,
+			"player.tohit":1,
+			"hp.max":1,
+			"allies.max":"/5",
+			"speed":"/4"
+		},
+		"result":{
+			"hallPoints":0.1,
+			"sp":"/3"
+		}
+
 	},
 	{
 
@@ -93,13 +107,6 @@
 		"locked":false
 	},
 	{
-		"id":"points",
-		"desc":"hall points",
-		"hide":true,
-		"stat":true,
-		"val":0
-	},
-	{
 		"id":"virtue",
 		"hide":"true",
 		"locked":false,
@@ -124,6 +131,9 @@
 		"locked":false,
 		"stat":true,
 		"desc":"Your reputation in the world",
+		"result":{
+			"hallPoints":1
+		},
 		"val":0
 	}
 

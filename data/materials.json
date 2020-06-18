@@ -1,13 +1,30 @@
 [
-    { "id":"silk", "kind":"cloth", "weight":0, "priceMod":5, "dmg":-5, "tohit":-3, "level":2, "exclude":["weapon"] },
-    { "id":"cotton", "kind":"cloth", "weight":0, "priceMod":0, "dmg":-3, "tohit":-3, "level":0, "exclude":["weapon"] },
+    { "id":"silk", "kind":"cloth", "weight":0, "priceMod":5, "tohit":-3, "level":1, "exclude":["weapon"] },
+    { "id":"cotton", "kind":"cloth", "weight":0, "priceMod":0, "tohit":-3, "level":0, "exclude":["weapon"] },
     { "id":"stone", "kind":"natural", "weight":3, "bonus":0, "dmg":1, "level":0 },
-    { "id":"leather", "kind":"natural", "weight":1, "priceMod":1, "dmg":-2, "bonus":0, "level":0, "exclude":["weapon"] },
+    { "id":"leather", "kind":"natural", "weight":1, "priceMod":1, "bonus":0, "level":0, "exclude":["weapon"] },
 	{ "id":"wood", "kind":"natural", "adj":"wooden", "priceMod":1, "tohit":1, "bonus":1, "level":0, "only":["weapon"] },
 	{ "id":"bone", "kind":"natural", "priceMod":1, "tohit":1, "bonus":1, "level":2 },
     { "id":"bronze", "kind":"metal", "weight":2, "priceMod":5, "tohit":2, "bonus":1, "level":2 },
     { "id":"iron", "kind":"metal", "weight":2, "priceMod":10, "tohit":2, "bonus":2, "level":3 },
-    { "id":"steel", "kind":"metal", "weight":2, "priceMod":20, "bonus":3,"tohit":4, "level":4 },
+	{ "id":"steel", "kind":"metal", "weight":2, "priceMod":20, "bonus":3,"tohit":4, "level":4 },
+	{
+		"id":"dragonscale", "name":"dragonscale", "kind":"natural", "weight":1, "priceMod":50, "bonus":9, "level":7,
+		"noproc":true,
+		"exclude":["weapon"],
+		"mod":{
+			"self.resist.fire":10
+		}
+	},
+	{
+		"id":"basiliskhide", "name":"basilisk hide", "kind":"natural", "weight":1, "priceMod":30, "bonus":4, "level":6,
+		"noproc":true,
+		"exclude":["weapon"],
+		"mod":{
+			"self.resist.paralysis":10
+		}
+
+	},
     { "id":"quicksteel", "kind":"metal", "weight":2, "priceMod":25, "bonus":5, "tohit":7, "level":5 },
     { "id":"mithril", "kind":"metal", "weight":1, "priceMod":100, "bonus":8, "tohit":10, "level":7 },
 	{ "id":"ebonwood", "kind":"natural", "weight":1, "priceMod":100, "bonus":6, "tohit":12, "level":8 },

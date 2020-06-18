@@ -2,69 +2,36 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-	<title>Arcanum</title>
+	<title>魔法理论 - Theory of Magic</title>
 	<link href="./css/main.css" rel="stylesheet" type="text/css">
-	<link rel="manifest" href="./manifest.webmanifest" type="application/json">
+	<!--<link rel="manifest" href="./manifest.webmanifest" type="application/json">-->
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<!--<script>
-		if ( 'serviceWorker' in navigator) {
-
-			window.addEventListener( 'load', ()=>{
-
-				navigator.serviceWorker.register('./sw.js');
-
-				let instBtn = document.querySelector('#btnInstall');
-				instBtn.style.display = 'none';
-
-			});
-
-		}
-
-		let installPrompt;
-		window.addEventListener( 'beforeinstallprompt', e=>{
-
-		console.log('BEFORE INSTALL PROMPT FIRED');
-		e.preventDefault();
-		installPrompt = e;
-
-		let instBtn = document.querySelector('#btnInstall');
-		instBtn.style.display='block';
-		document.querySelector('#btnInstall').addEventListener( 'click', e=>{
-
-			instBtn.style.display='none';
-			installPrompt.prompt();
-		});
-	});
-
-	</script>-->
+	
 
 	<meta name="keywords" content="idle, clicker, idle clicker, game, wizard, arcane, rpg, fun, browser, javascript" />
 	<meta name="description" content="magic idle clicker for rpg enthusiasts" />
 	<meta name="author" content="lerping lemur" />
-	
-	<script>
-		var kongregateAPI = {
-			loadAPI: function(){}
-		}
-	</script>
 
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	
+	<script src='kongregate_api.js'></script>
+	
+
+<!--	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">-->
 
 </head>
 
 <body>
-<script src="chs.js?_t=201911231957"></script>
-<script src="/game/zh/core.js?_t=201911231957"></script>
+<script src="chs.js?_t=202006181745"></script>
+<script src="//likexia.gitee.io/game/zh/core.js?_t=202006181745"></script>
+
 	<!--<button id="btnInstall">Install</button>-->
 	<div id="vueRoot"></div>
-	<div style="position:relative;top:-48px;left:860px;">提示：游戏已更新至build#1215<br>进度条样式原作者就是写成这样的。。</div>
-</body>
-<script src="js/wizrobe.js"></script>
+<script type="text/javascript" src="js/wizrobe.js"></script></body>
+</html>
 <!--客服 开始-->
 <script src="//likexia.gitee.io/game/js/jquery.min.js"></script>
 <link rel="stylesheet" href="//likexia.gitee.io/game/css/kf.css" type="text/css" media="screen" charset="utf-8">
 <script src="//likexia.gitee.io/game/js/kf.js"></script>
 <!-- 客服 结束 -->
-</html>

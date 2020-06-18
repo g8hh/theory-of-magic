@@ -9,7 +9,7 @@
 	{
 		"id":"evt_scroll",
 		"name":"A tattered scroll",
-		"desc":"You buy a strange scroll from a travelling peddlar. If you could only decipher the cryptic symbols."
+		"desc":"You buy a strange scroll from a travelling peddler. If you could only decipher the cryptic symbols."
 	},
 	{
 		"id":"evt_alcove",
@@ -23,7 +23,7 @@
 		"name":"Promotion",
 		"desc":"In return for your new services, your master grants you a small allowance for your studies. The position does require of course, some initial fees...",
 		"lock":"t_job",
-		"effect":{
+		"result":{
 			"arcana.rate":0.0001,
 			"research.max":10,
 			"lore.max":1,
@@ -32,30 +32,16 @@
 		}
 	},
 	{
-
-		"id":"evt_pestcontrol",
-		"name":"Pest Control",
-		"desc":"After your daily castigation, your master mentions the rats in the basement have become a problem. Something about stolen shortswords and building barricades. You had better go down and deal with it.",
-		"require":"g.player.level>0&&(g.apprentice.value>0||g.neophyte.value>0)"
-
-	},
-	{
-		"id":"evt_gobcamp",
-		"name":"Goblins, Goblins!",
-		"require":"g.tier0&&g.player.level>=4&&g.dist>=25",
-		"desc":"Rumors hint at a camp of goblins in the vicinity. As an aspiring wizard, convention dictates you test your mettle on their lives."
-	},
-	{
 		"id":"evt_rangers",
-		"name":"Interlopers",
-		"require":"g.tier7>0&&g.player.level>=7&&g.evilamt>=50",
+		"name":"Impudent Meddlers",
+		"require":"g.wicked>0&&g.player.level>=15&&g.evilamt>=75",
 		"desc":"Hearing of your wicked deeds, the rangers of the Ettinmarch plots your downfall. An assault on their camps should crush their presumption."
 	},
 	{
 		"id":"evt_cabal",
-		"name":"Plotters",
-		"require":"g.tier7>0&&g.player.level>=7&&g.virtue>=50",
-		"desc":"Learning of your virtuous ways, a cabal of cytherian priests plots your overthrow. deal with them for the good of the land."
+		"name":"Vile Plotters",
+		"require":"g.respectable>0&&g.player.level>=15&&g.virtue>=75",
+		"desc":"Learning of your virtuous ways, a cabal of ossurite priests plots your destruction. Travel to the Fetid Barrows and unravel their schemes."
 	},
 	{
 		"id":"tier0",
@@ -63,7 +49,7 @@
 		"desc":"Some say the study of magic doesn't truly begin until apprenticeship ends. People say a lot of things.",
 		"disable":["study", "chores","errands","leavemaster","slaymaster", "pestcontrol", "alcove", "atticbedroom"],
 		"lock":"t_tier0",
-		"effect":{
+		"result":{
 			"innroom":true,
 			"sp":1,
 			"player.exp":15
@@ -78,9 +64,9 @@
 		"id":"tier1",
 		"name":"Professional Magick",
 		"desc":"Every province has its handful of runaway apprentices and failed Adepts. It's not uncommon for thieves and rangers to know a spell or two. They are nothing compared to the talents of a true professional.",
-		"disable":["treatailments","prestidigitation","buyscroll"],
+		"disable":["prestidigitation","buyscroll"],
 		"lock":["t_tier1", "t_tier0"],
-		"effect":{
+		"result":{
 			"sp":1,
 			"player.exp":15
 		},
@@ -98,7 +84,7 @@
 		"name":"Arcane Ascendant",
 		"desc":"The masses of arcane dabblers never reach such heights.",
 		"lock":"t_tier2",
-		"effect":{
+		"result":{
 			"player.exp":25
 		},
 		"mod":{
@@ -115,7 +101,7 @@
 		"name":"Magical Mastery",
 		"desc":"You are a master of your field of magic.",
 		"lock":"t_tier3",
-		"effect":{
+		"result":{
 			"sp":1,
 			"player.exp":50
 		},
@@ -134,7 +120,7 @@
 		"name":"Supreme Sorcery",
 		"desc":"Not even the masters could challenge you.",
 		"lock":"t_tier4",
-		"effect":{
+		"result":{
 			"sp":1,
 			"player.exp":75
 		},
@@ -153,7 +139,7 @@
 		"name":"Dhrunic Magic",
 		"desc":"Magic from a forgotten age.",
 		"lock":"t_tier5",
-		"effect":{
+		"result":{
 			"sp":1,
 			"player.exp":100
 		},
@@ -173,7 +159,7 @@
 		"name":"Ageless Magic",
 		"desc":"ages of the world come and go; only these endure.",
 		"lock":"t_tier6",
-		"effect":{
+		"result":{
 			"sp":1,
 			"player.exp":100
 		},
@@ -193,7 +179,7 @@
 		"name":"Dhrunic Pillar",
 		"desc":"a foundation of the world",
 		"lock":"t_tier7",
-		"effect":{
+		"result":{
 			"sp":1,
 			"player.exp":100
 		},

@@ -13,10 +13,11 @@
 			"gold":"5~10"
 		},
 		"loot":{
-			"max":1
+			"maxlevel":1
 		},
 		"boss":"kakapo",
-		"enemies":[
+		"spawns":[
+			"gardengnome",
 			["newt","newt","newt"],
 			"lgmouse",
 			"bigstone",
@@ -38,9 +39,9 @@
 			"gold":"7~14"
 		},
 		"loot":{
-			"max":2
+			"maxlevel":2
 		},
-		"enemies":[
+		"spawns":[
 
 			["stingybee","stingybee"],
 			"lgrat",
@@ -49,13 +50,19 @@
 			"angrybird",
 			"smsnake"
 
-		], "flavor":"only the rare glimpse of wildlife breaks the stillness of the grove."
+		], "desc":"An idyllic grove for a walk or long nap."
 
 	},
 	{
 		"id":"pestcontrol",
 		"name":"Leaky Cellar",
-		"require":"evt_pestcontrol",
+		"require":"g.player.level>0&&(g.apprentice.value>0||g.neophyte.value>0)",
+		"show":{
+
+			"name":"Pest Control",
+			"desc":"After your daily castigation, your master mentions the rats in the basement have become a problem. Something about stolen shortswords and building barricades. You had better go down and deal with it."
+
+		},
 		"repeat":false,
 		"level":3,
 		"length":25,
@@ -70,14 +77,14 @@
 			"title":"master of the cellar"
 		},
 		"loot":{
-			"max":4
+			"maxlevel":4
 		},
 		"log":{
 			"name":"Pests Clear",
 			"desc":"With the basement cleared your master will have more room to stash all the gold you've been earning."
 		},
 		"boss":"ratking",
-		"enemies":[
+		"spawns":[
 			["lgmouse","lgmouse"],
 			"lgrat",
 			"badexperiment",
@@ -98,10 +105,10 @@
 			"gold":"10~15"
 		},
 		"loot":{
-			"max":3
+			"maxlevel":3
 		},
 		"biome":"hills",
-		"enemies":[
+		"spawns":[
 
 			"coyote",
 			"warthog",
@@ -116,9 +123,73 @@
 
 	},
 	{
+		"id":"ettinmarchcamp",
+		"name":"ettinmarch camp",
+		"desc":"The perilous wilds of the Ettinmarch are a cherished home to bands of merry rangers and virtuous druids.",
+		"require":"evt_rangers",
+		"title":"forest scourge",
+		"max":1,
+		"level":15,
+		"length":200,
+		"run":{
+			"stamina":2
+		},
+		"result":{
+			"herbs":"3~7",
+			"gems":"0~2"
+		},
+		"boss":["eledin","gildella"],
+		"spawns":[
+			["ranger","ranger"],
+			["elf","elf","elf","elf"],
+			"beserker",
+			["roc","m_druid","roc"],
+			["ranger","gryffon"],
+			["m_druid","m_druid"],
+			"ent",
+			["bear","bear","bear","ranger"],
+			"direbear",
+			"highranger",
+			["elf","highelf"],
+			["slinger","direbear"]
+		]
+	},
+	{
+		"id":"fetidbarrow",
+		"name":"the fetid barrows",
+		"desc":"When the fetid barrows were discovered, dark acolytes gathered at the mounds seeking ancient patrons of their art.",
+		"require":"evt_cabal",
+		"max":1,
+		"level":15,
+		"length":200,
+		"run":{
+			"stamina":2
+		},
+		"result":{
+			"title":"cabal breaker",
+			"bones":"3~7",
+			"bodies":"0~2"
+		},
+		"boss":"palus",
+		"spawns":[
+			["evilpriest","evilpriest","evilpriest"],
+			["corpse","corpse","skeleton","corpse"],
+			["ghost","ghost","wraith"],
+			["evilpriest","greaterzombie"],
+			["undeadhorror","undeadhorror"],
+			["wight","wight","ghast"],
+			"vampiremaster",
+			"skellord",
+			["m_hierophant","evilpriest","evilpriest"],
+			["blasphemer", "blasphemer"],
+			"wraith",
+			["ghoul","ghoul","ghast","evilpriest"]
+		]
+	},
+	{
 		"id":"treffilwoods",
 		"name":"treffil woods",
-		"desc":"these enchanted woods are not particularly dangerous.",
+		"desc":"These enchanted woods are not particularly dangerous.",
 		"dist":17,
 		"level":4,
 		"length":20,
@@ -130,7 +201,7 @@
 			"gems":"0~2"
 		},
 		"boss":"gobchief",
-		"enemies":[
+		"spawns":[
 			["goblin","goblin"],
 			"gardengnome",
 			"wombat",
@@ -139,31 +210,7 @@
 			"ranger",
 			"elf",
 			"slinger"
-		],"loot":{"max":4}
-	},
-	{
-		"id":"goblincamp",
-		"name":"goblin camp",
-		"desc":"the pesky creatures are everywhere.",
-		"require":"evt_gobcamp",
-		"level":4,
-		"run":{
-			"stamina":1
-		},
-		"result":{
-			"title":"goblin slayer",
-			"gold":"20~30"
-		},
-		"boss":"gobchief",
-		"enemies":[
-			["goblin","goblin"],
-			"gobwarrior",
-			"gobwarrior",
-			"goblin",
-			"goblin",
-			"gobpriest"
-		],"loot":{"max":3}
-
+		],"loot":{"maxlevel":4}
 	},
 	{
 		"id":"underden",
@@ -178,7 +225,7 @@
 			"gold":"25~40"
 		},
 		"boss":"banditlord",
-		"enemies":[
+		"spawns":[
 			"cutpurse",
 			"bandit",
 			["bat","bat","bat","bat"],
@@ -192,7 +239,7 @@
 		"id":"veldranswreck",
 		"name":"veldran's wreck",
 		"desc":"Off the stormy cliffs of the arag highlands, a mass of cracked spars marks the resting place of the largest ship ever sailed by man.",
-		"require":"g.water.max>=10",
+		"require":"g.waterlore.max>=10",
 		"level":5,
 		"length":30,
 		"run":{
@@ -203,7 +250,7 @@
 			"watergem":"50%",
 			"gems":10
 		},
-		"enemies":[
+		"spawns":[
 			"eel",
 			"jellyfish",
 			"ghost",
@@ -216,7 +263,7 @@
 	{
 		"id":"aragheights",
 		"name":"arag heights",
-		"desc":"barren mountains over arazor",
+		"desc":"Barren mountains over arazor",
 		"level":6,
 		"run":{
 			"stamina":1
@@ -225,7 +272,7 @@
 		"result":{
 			"gold":"20~30"
 		},
-		"enemies":[
+		"spawns":[
 			"lgbird",
 			["kobold","kobold","kobold"],
 			"orc",
@@ -251,7 +298,7 @@
 			"gold":"20~30"
 		},
 		"boss":"poltergeist",
-		"enemies":[
+		"spawns":[
 			"ghost",
 			"ghost",
 			"zombie",
@@ -273,26 +320,55 @@
 			"gold":"20~30",
 			"gems":"4~5"
 		},
-		"enemies":[
+		"spawns":[
 			"naga",
 			["raven","raven","raven","raven"],
 			"medusa",
-			"naga",
+			["naga","naga"],
 			"shriekingeel",
 			"naga",
 			"magicblade",
 			"evilpriest",
 			["eel","eel"],
-			"crab",
 			["crab","crab"]
 		],"flavor":"would the ancient seredites appreciate the temple's new inhabitants?"
 
 	},
 	{
+		"id":"goblincamp",
+		"name":"goblin camp",
+		"show":{
+
+			"name":"Goblins, Goblins!",
+			"desc":"Rumors hint at a camp of goblins in the vicinity. As an aspiring wizard, convention dictates you test your mettle on their lives."
+
+		},
+		"desc":"The pesky creatures are everywhere.",
+		"require":"g.treffilwoods>0&&g.player.level>=4&&g.dist>=25",
+		"level":4,
+		"run":{
+			"stamina":1
+		},
+		"result":{
+			"title":"goblin slayer",
+			"gold":"20~30"
+		},
+		"boss":"gobchief",
+		"spawns":[
+			["goblin","goblin"],
+			"gobwarrior",
+			"gobwarrior",
+			"goblin",
+			"goblin",
+			"gobpriest"
+		],"loot":{"maxlevel":3}
+
+	},
+	{
 		"id":"orccamp",
 		"name":"orc camp",
-		"desc":"a scourge of cities.",
-		"require":"tier0",
+		"desc":"A scourge of towns and cities.",
+		"require":"goblincamp",
 		"level":7,
 		"run":{
 			"stamina":1.2
@@ -301,7 +377,7 @@
 			"gold":"40~50"
 		},
 		"boss":"orcchief",
-		"enemies":[
+		"spawns":[
 			"orc",
 			"orcwarrior",
 			"orcwarrior",
@@ -309,6 +385,44 @@
 			"orc",
 			"orcpriest"
 		], "flavor":"lok'tar!"
+
+	},
+	{
+		"id":"aragogres",
+		"name":"ogre cavern",
+		"show":{
+			"name":"Ogre Cavern",
+			"desc":"While scrying the outlying lands you discover a colossal cave in the arag heights."
+		},
+		"desc":"A scourge of towns and cities.",
+		"require":"g.orccamp>0&&g.aragheights>0&&g.scrying>0",
+		"level":10,
+		"length":100,
+		"run":{
+			"stamina":1.7
+		},
+		"result":{
+			"bones":"5~10",
+			"gold":"40~50"
+		},
+		"boss":["orcchief","ogre","ogre"],
+		"spawns":[
+			"ogre",
+			["bugbear","bugbear"],
+			["giantspider","lgspider","lgspider","lgspider"],
+			["ogre","warg","warg"],
+			"orcwarrior",
+			["ogrewarrior","ogrewarrior"],
+			"troll",
+			"minotaur",
+			["vampirebat","vampirebat","vampirebat"],
+			["ogre","wolf","wolf","wolf"],
+			"hillgiant",
+			"direbear",
+			"ettin",
+			"orcchief",
+			["orcpriest","ogre","ogre"]
+		]
 
 	},
 	{
@@ -325,13 +439,17 @@
 			"gold":"40~50"
 		},
 		"boss":"spiderqueen",
-		"enemies":[
+		"spawns":[
 			"giantspider",
 			"kobold",
+			{
+				"spawns":"jazid",
+				"weight":0.1
+			},
+			["lgspider","lgspider"],
 			"lgspider",
 			"lgspider",
-			"direbat",
-			"giantspider"
+			"direbat"
 		]
 
 	},
@@ -347,7 +465,7 @@
 		"result":{
 			"gold":"20~30"
 		},
-		"enemies":[
+		"spawns":[
 			"lgbird",
 			"orc",
 			"bandit",
@@ -374,7 +492,7 @@
 			"airgem":"10%",
 			"gems":"3~5"
 		},
-		"enemies":[
+		"spawns":[
 			"yeti",
 			"wolf",
 			"stonegolem",
@@ -382,6 +500,7 @@
 			"icewalker",
 			"harpy",
 			"wolf",
+			"jazid",
 			"doppelganger",
 			"iceelemental",
 			"wight",
@@ -391,7 +510,6 @@
 			"frixie",
 			"ogre",
 			"cavetroll",
-			"snowleopard",
 			"snowleopard"
 		]
 	},
@@ -412,11 +530,13 @@
 			"bones":10
 		},
 		"boss":"bogwitch",
-		"enemies":[
+		"spawns":[
 			["direcrocodile","direcrocodile"],
 			"ghost",
 			["leech","leech","leech","leech","leech"],
 			"grimstalk",
+			"jazid",
+			"basilisk",
 			"stalker",
 			["corpse","corpse","corpse","corpse"],
 			["eel","eel","eel"],
@@ -444,9 +564,8 @@
 			"gold":"1000~2000"
 		},
 		"biome":["cave","mountain"],
-		"enemies":{
-			"level":"8~25",
-			"scale":true,
+		"spawns":{
+			"level":"15~23",
 			"range":2
 		},"flavor":"day and night the dark gates stand open to all... but to return to the open air... that is the task, that is the labor"
 
@@ -465,7 +584,7 @@
 			"gems":"3~5"
 		},
 		"boss":"lightningelemental",
-		"enemies":[
+		"spawns":[
 			"fireelemental",
 			"iceelemental",
 			"earthelemental",
@@ -477,22 +596,25 @@
 	{
 		"id":"veldransstorehouse",
 		"name":"veldran's storehouse",
-		"desc":"Veldran never did manage to carve a kingdom from the wreck of bodias' reign. But he did accrue a sizeable hoard.",
-		"level":12,
+		"desc":"Veldran never did manage to carve a kingdom from the wreck of Bodias' reign. But he did accrue a sizeable hoard.",
+		"level":9,
 		"run":{
 			"stamina":2
 		},
-		"length":30,
+		"length":50,
 		"result":{
 			"gems":"5~7",
 			"gold":"100~200"
 		},
-		"enemies":[
-			"claygolem",
+		"spawns":[
+			["claygolem","claygolem","claygolem"],
 			"hobgoblin",
+			"doppelganger",
 			"masterswordsman",
-			"stonegolem",
-			"slime",
+			"irongolem",
+			"quasit",
+			["slime","slime","slime","slime"],
+			["stonegolem","stonegolem"],
 			"banditlord",
 			"magicmirror",
 			"woodgolem"
@@ -515,7 +637,7 @@
 			"ichor":1
 		},
 		"boss":"desillaconcubine",
-		"enemies":[
+		"spawns":[
 			"masterswordsman",
 			["magicblade","magicblade"],
 			["magicmirror","magicmirror"],
@@ -545,7 +667,7 @@
 			"ichor":3
 		},
 		"boss":["reddragon","karnivex","reddragon"],
-		"enemies":[
+		"spawns":[
 			"mithrilgolem",
 			["bloodgolem","bloodgolem"],
 			["magicmirror","magicmirror"],
@@ -553,6 +675,7 @@
 			["manticore","manticore"],
 			"reddragon",
 			"demon",
+			"jazid",
 			["greendragon","greendragon"],
 			"balrog",
 			"ancientvampire",
@@ -582,7 +705,7 @@
 			"50":"cthulhu",
 			"100":"gorborung"
 		},
-		"enemies":[
+		"spawns":[
 			["stonegolem","stonegolem"],
 			["magmaelemental","magmaelemental"],
 			["earthelemental","earthelemental","earthelemental"],
@@ -595,6 +718,7 @@
 			["trow","trow"],
 			"reddragon",
 			"balrog",
+			"jazid",
 			"m_lichlord",
 			["shade","shade"],
 			"beholder",
@@ -620,7 +744,7 @@
 		"id":"holyhall",
 		"name":"hall of the holy",
 		"desc":"Various divine spirits watch over the world. And the greatest have their halls and kingdoms.",
-		"require":"g.planeslore.max>=12&g.evil>0",
+		"require":"g.planeslore.max>=12&&g.evil>0",
 		"level":17,
 		"length":50,
 		"run":{
@@ -632,10 +756,13 @@
 			"gold":"150~275"
 		},
 		"boss":"archon",
-		"enemies":[
+		"spawns":[
 			"angel",
+			["valkyrie","valkyrie"],
+			["gryffon","gryffon"],
 			"mithrilgolem",
 			"angel",
+			"firegolem",
 			["angel","angel"],
 			["lightelem","lightelem","lightelem"],
 			["roc","roc","roc"],

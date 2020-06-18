@@ -13,7 +13,7 @@
 
 	},
 	{
-		"id":"sect_house",
+		"id":"sect_home",
 		"name":"home",
 		"require":"apprentice"
 
