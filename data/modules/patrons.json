@@ -372,8 +372,8 @@
 				"require":"g.tier3>0",
 				"title":"Mark of Ages",
 				"length":100,
-				"once":{
-					"history.max":1
+				"mod":{
+					"history.max":"?1"
 				},
 				"encs":[
 					"enc_kaidi",

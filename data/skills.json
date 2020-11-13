@@ -120,7 +120,7 @@
 		"school":"arcane",
 		"verb":"conjuring",
 		"desc":"",
-		"require":"g.lore>=7&&g.divination>3",
+		"require":"g.lore>=10&&g.divination>3",
 		"run":{
 			"stamina":0.2,
 			"spirit":0.2
@@ -240,7 +240,7 @@
 	{
 
 		"id":"weaving",
-		"need":"loom",
+		"need":"weavesource",
 		"run":{
 			"stamina":0.5
 		},
@@ -293,7 +293,7 @@
 			"sp":0.05
 		},
 		"mod":{
-			"research.max":10,
+			"research.max":15,
 			"arcana.max":0.1,
 			"s_travel.max":0.1,
 			"languages.rate":"1%"
@@ -374,7 +374,7 @@
 	{
 
 		"id":"summoning",
-		"require":"g.tier1>0",
+		"require":"g.tier1>0&&g.conjuration>=5",
 		"school":"arcane",
 		"level":4,
 		"buy":{
@@ -606,12 +606,32 @@
 
 	},
 	{
+		"id":"wizlore",
+		"name":"wizard Lore",
+		"require":"(g.mage+g.highmage+g.wizard+g.wizard2+g.wizard3)>=2",
+		"school":"arcane",
+		"desc":"Many ask 'how?' Few think to ask, 'why?'",
+		"level":5,
+		"run":{
+			"stamina":1,
+			"research":50,
+			"arcana":0.5
+		},
+		"mod":{
+			"lore.rate":"5%",
+			"mana.rate":"3%",
+			"research.rate":"2%",
+			"arcana.rate":"1%"
+		}
+	},
+	{
 		"id":"firelore2",
 		"name":"fire mastery",
 		"desc":"a mastery of fire",
 		"level":10,
 		"require":"g.firelore>=10",
 		"buy":{
+			"arcana":1,
 			"sp":5,
 			"tomes":30,
 			"runestones":10
@@ -636,6 +656,7 @@
 		"require":"g.waterlore>=10",
 		"level":10,
 		"buy":{
+			"arcana":1,
 			"sp":5,
 			"tomes":30,
 			"runestones":10
@@ -660,6 +681,7 @@
 		"require":"g.airlore>=10",
 		"level":10,
 		"buy":{
+			"arcana":1,
 			"sp":5,
 			"tomes":30,
 			"runestones":10
@@ -678,62 +700,43 @@
 
 	},
 	{
-		"id": "hammerlore",
-		"desc": "The anvil or the skull, it makes no difference.",
-		"require": "g.geomancer>0||g.earthshaker>0||g.titan>0",
-		"need": "armssource",
-		"level": 3,
-		"buy": {
-			"sp": 2
+		"id":"hammerlore",
+		"desc":"The anvil or the skull, it makes no difference.",
+		"require":"g.geomancer>0||g.earthshaker>0||g.titan>0",
+		"need":"armssource",
+		"level":3,
+		"buy":{
+			"sp":2
 		},
-		"run": {
-			"stamina": 0.6
-		},
-		"result": {
-			"sp": 0.05
-		},
-		"mod": {
-			"player.bonuses.blunt": 1,
-			"player.hits.blunt": 1
-		}
-	},
-	{
-		"id": "geosculpting",
-		"desc": "Bend the earth to your will.",
-		"require": "g.geomancer>0||g.earthshaker>0",
-		"level": 3,
-		"buy": {
-			"sp": 2
-		},
-		"run": {
-			"stamina": 0.6
-		},
-		"result": {
-			"sp": 0.05
-		},
-		"mod": {
-			"player.defense": 1,
-			"player.dodge": -1,
-			"earthspire.mod.space.max": 1
-		}
-	},
-	{
-		"id":"wizlore",
-		"name":"wizard Lore",
-		"require":"(g.mage+g.highmage+g.wizard+g.wizard2+g.wizard3)>=2",
-		"school":"arcane",
-		"desc":"Many ask 'how?' Few think to ask, 'why?'",
-		"level":5,
 		"run":{
-			"stamina":1,
-			"research":50,
-			"arcana":0.5
+			"stamina":0.6
+		},
+		"result":{
+			"sp":0.05
 		},
 		"mod":{
-			"lore.rate":"5%",
-			"mana.rate":"3%",
-			"research.rate":"2%",
-			"arcana.rate":"1%"
+			"player.bonuses.blunt":1,
+			"player.hits.blunt":1
+		}
+	},
+	{
+		"id":"geosculpting",
+		"desc":"Bend the earth to your will.",
+		"require":"g.geomancer>0||g.earthshaker>0",
+		"level":3,
+		"buy":{
+			"sp":2
+		},
+		"run":{
+			"stamina":0.6
+		},
+		"result":{
+			"sp":0.05
+		},
+		"mod":{
+			"player.defense":1,
+			"player.dodge": -1,
+			"earthspire.mod.space.max":1
 		}
 	},
 	{
@@ -743,6 +746,7 @@
 		"require":"g.earthlore>=10",
 		"level":10,
 		"buy":{
+			"arcana":1,
 			"sp":5,
 			"tomes":30,
 			"runestones":10
@@ -767,6 +771,7 @@
 		"require":"g.shadowlore>=10",
 		"level":10,
 		"buy":{
+			"arcana":1,
 			"sp":5,
 			"tomes":30,
 			"runestones":10
@@ -790,6 +795,7 @@
 		"require":"g.lightlore>=10",
 		"level":10,
 		"buy":{
+			"arcana":1,
 			"sp":5,
 			"tomes":30,
 			"runestones":10
@@ -813,9 +819,10 @@
 		"require":"g.spiritlore>=10",
 		"level":10,
 		"buy":{
+			"arcana":1,
 			"sp":5,
 			"tomes":30,
-			"runestones":10
+			"souls":10
 		},
 		"run":{
 			"stamina":1,
@@ -836,6 +843,7 @@
 		"require":"g.lore>=20",
 		"level":10,
 		"buy":{
+			"arcana":1,
 			"sp":5,
 			"tomes":30,
 			"runestones":10
@@ -859,6 +867,7 @@
 		"require":"g.naturelore>=10",
 		"level":10,
 		"buy":{
+			"arcana":1,
 			"sp":5,
 			"tomes":30,
 			"runestones":10
@@ -881,7 +890,8 @@
 		"require":"tier1",
 		"level":4,
 		"buy":{
-			"sp":2
+			"sp":2,
+			"arcana":1
 		},
 		"run":{
 			"stamina":0.4,
@@ -893,7 +903,7 @@
 		"mod":{
 			"arcana.max":0.1,
 			"lore.rate":0.2,
-			"research.max":1
+			"research.max":3
 		}
 
 	},
@@ -940,7 +950,7 @@
 	},
 	{
 		"id":"potions",
-		"require":"g.crafting>=3&&g.alchemy>=1",
+		"require":"g.crafting>=3&&g.alchemy>=2",
 		"need":["workspace","potsource"],
 		"run":{
 			"stamina":0.5
@@ -950,12 +960,12 @@
 		},
 		"mod":{
 			"alchemy.rate":"1%",
-			"research.max":2
+			"research.max":5
 		}
 	},
 	{
 		"id":"enchanting",
-		"require":"g.tier0>0&&g.lore>=7",
+		"require":"g.tier1>0&&g.lore>=14",
 		"desc":"imbue mundane gems and items with magical properties.",
 		"run":{
 			"stamina":0.4,
@@ -973,7 +983,7 @@
 	{
 		"id":"alchemy",
 		"school":"elemental",
-		"require":"g.herbalism>=3",
+		"require":"g.tier0>0&&g.herbalism>=4",
 		"run":{
 			"stamina":0.5
 		},
@@ -994,17 +1004,20 @@
 			"stamina":0.5
 		},
 		"result":{
-			"sp":0.05
+			"sp":0.04
 		},
 		"mod":{
 			"planeslore.rate":"1%",
-			"research.max":2
+			"research.max":5
 		}
 	},
 	{
 		"id":"mysticism",
 		"require":"g.lore>=8",
 		"desc":"the ability to sense the flow and flux of arcane energies.",
+		"buy":{
+			"arcana":1
+		},
 		"run":{
 			"stamina":0.5
 		},
@@ -1018,7 +1031,7 @@
 		"id":"s_travel",
 		"name":"travel",
 		"level":2,
-		"require":"(g.languages+g.history)>=10",
+		"require":"(g.languages+g.history)>=12",
 		"desc":"Travel offers a growing wizard new avenues of research and new sources of research.",
 		"run":{
 			"stamina":0.5
@@ -1036,7 +1049,8 @@
 		"level":6,
 		"desc":"farther than the stars and closer than your fingertips",
 		"buy":{
-			"sp":2
+			"sp":2,
+			"arcana":5
 		},
 		"run":{
 			"stamina":0.7,
@@ -1058,12 +1072,13 @@
 		"desc":"Anyone can see the stars. Few can read them.",
 		"level":10,
 		"buy":{
-			"sp":10
+			"sp":10,
+			"arcana":1
 		},
 		"run":{
 			"stamina":1,
 			"research":10,
-			"arcana":1
+			"arcana":5
 		},
 		"mod":{
 			"sindel.rate":0.0001,
@@ -1079,7 +1094,8 @@
 		"desc":"the absence of all things",
 		"level":10,
 		"buy":{
-			"sp":5
+			"sp":5,
+			"arcana":5
 		},
 		"run":{
 			"stamina":0.7,

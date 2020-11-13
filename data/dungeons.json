@@ -30,6 +30,7 @@
 	{
 		"id":"placidgrove",
 		"name":"placid grove",
+		"require":"sunnyfield",
 		"level":2,
 		"length":12,
 		"run":{
@@ -56,8 +57,8 @@
 	{
 		"id":"pestcontrol",
 		"name":"Leaky Cellar",
-		"require":"g.player.level>0&&(g.apprentice.value>0||g.neophyte.value>0)",
-		"show":{
+		"require":"g.sunnyfield>0&&(g.apprentice.value>0||g.neophyte.value>0)",
+		"start":{
 
 			"name":"Pest Control",
 			"desc":"After your daily castigation, your master mentions the rats in the basement have become a problem. Something about stolen shortswords and building barricades. You had better go down and deal with it."
@@ -94,10 +95,12 @@
 		]
 	},
 	{
-		"id":"hills",
+		"id":"stonyhills",
+		"alias":"hills",
 		"name":"stony hills",
+		"require":"placidgrove",
 		"level":3,
-		"length":15,
+		"length":25,
 		"run":{
 			"stamina":0.75
 		},
@@ -113,6 +116,7 @@
 			"coyote",
 			"warthog",
 			"kobold",
+			"goblin",
 			"smbox",
 			["bat","bat","bat"],
 			["twikman","twikman"],
@@ -238,17 +242,22 @@
 	{
 		"id":"veldranswreck",
 		"name":"veldran's wreck",
-		"desc":"Off the stormy cliffs of the arag highlands, a mass of cracked spars marks the resting place of the largest ship ever sailed by man.",
-		"require":"g.waterlore.max>=10",
-		"level":5,
-		"length":30,
+		"desc":"Off the stormy cliffs of Arazor a mass of cracked spars marks the resting place of the largest ship ever sailed by man.",
+		"require":"g.waterlore.max>=10&&g.aragheights>0",
+		"level":7,
+		"length":75,
+		"bars":"breath",
 		"run":{
 			"stamina":1
+		},
+		"effect":{
+			"breath":-2
 		},
 		"result":{
 			"gold":"50~75",
 			"watergem":"50%",
-			"gems":10
+			"gems":10,
+			"veldranearring":"5%"
 		},
 		"spawns":[
 			"eel",
@@ -263,7 +272,8 @@
 	{
 		"id":"aragheights",
 		"name":"arag heights",
-		"desc":"Barren mountains over arazor",
+		"desc":"Barren mountains on the coast of Arazor.",
+		"require":"stonyhills",
 		"level":6,
 		"run":{
 			"stamina":1
@@ -293,7 +303,7 @@
 		"run":{
 			"stamina":1
 		},
-		"length":20,
+		"length":30,
 		"result":{
 			"gold":"20~30"
 		},
@@ -337,7 +347,7 @@
 	{
 		"id":"goblincamp",
 		"name":"goblin camp",
-		"show":{
+		"start":{
 
 			"name":"Goblins, Goblins!",
 			"desc":"Rumors hint at a camp of goblins in the vicinity. As an aspiring wizard, convention dictates you test your mettle on their lives."
@@ -390,7 +400,7 @@
 	{
 		"id":"aragogres",
 		"name":"ogre cavern",
-		"show":{
+		"start":{
 			"name":"Ogre Cavern",
 			"desc":"While scrying the outlying lands you discover a colossal cave in the arag heights."
 		},
@@ -428,7 +438,7 @@
 	{
 		"id":"spidercave",
 		"name":"skittering caverns",
-		"desc":"the only treasures here are were lost by adventurers searching for treasure.",
+		"desc":"The only treasures here are were lost by adventurers searching for treasure.",
 		"require":"tier0",
 		"level":7,
 		"run":{
@@ -443,7 +453,7 @@
 			"giantspider",
 			"kobold",
 			{
-				"spawns":"jazid",
+				"ids":"jazid",
 				"weight":0.1
 			},
 			["lgspider","lgspider"],
@@ -456,24 +466,32 @@
 	{
 		"id":"aragwastes",
 		"name":"arag wastes",
-		"desc":"an arid plain stretching from the arag heights.",
+		"desc":"An arid plain stretching across Arazor from the Arag Heights.",
+		"require":"aragheights",
 		"level":8,
 		"run":{
-			"stamina":1.5
+			"stamina":2
 		},
 		"boss":"roc",
 		"result":{
-			"gold":"20~30"
+			"gold":"20~30",
+			"bones":"3~7"
 		},
 		"spawns":[
-			"lgbird",
+			"vulture",
+			"minotaur",
 			"orc",
+			"warg",
+			["vrrek","vrrek"],
+			["m_scarab","m_scarab"],
 			"bandit",
 			"wolf",
+			"sandmite",
 			"bugbear",
 			"hawk",
 			"goblin",
-			"coyote"
+			["vulture","vulture","vulture"],
+			["coyote","coyote","coyote"]
 		]
 
 	},
@@ -524,7 +542,7 @@
 		},
 		"length":100,
 		"result":{
-			"title":"fetid champion",
+			"title":"fetid pathfinder",
 			"gems":"3~5",
 			"gold":"100~200",
 			"bones":10
@@ -731,7 +749,8 @@
 		"id":"temple of strativax",
 		"desc":"His acolytes fed the beast on offerings from a thousand leagues.",
 		"flavor":"Strativax curled up to nap. His temple fell to ruins, and the ages fled like leaves.",
-		"require":"g.player.level>999",
+		"require":"g.scrying>=12&&g.history>=12",
+		"start":"You scry the location of an ancient ruined temple.",
 		"level":20,
 		"boss":{
 			"0":"strativax1",

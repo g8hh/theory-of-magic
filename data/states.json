@@ -1,16 +1,59 @@
 [
+	{
+		"id":"charmed",
+		"flags":"charmed",
+		"kind":"charm",
+		"mod":{
+			"tohit":-5
+		}
+	},
+	{
+		"id":"disgust",
+		"adj":"disgusted",
+		"kind":"disgust",
+		"flags":"noattack"
+	},
+	{
+		"id":"enrage",
+		"adj":"enraged",
+		"kind":"rage",
+		"flags":"nodefend"
+	},
+	{
+		"id":"entangle",
+		"adj":"entangled",
+		"kind":"entangle",
+		"flags":"noattack"
+	},
 
 	{
-		"id":"sleep",
-		"adj":"asleep",
-		"kind":"sleep",
-		"flags":"noact"
+		"id":"fear",
+		"adj":"afraid",
+		"kind":"fear",
+		"flags":"noattack",
+		"mod":{
+			"defense":-5
+		}
 	},
+
 	{
 		"id":"paralyze",
 		"adj":"paralyzed",
 		"kind":"paralysis",
 		"flags":"noact"
+	},
+	{
+        "id":"prone",
+        "adj":"prone",
+        "kind":"knockdown",
+        "flags":"noact"
+	},
+	{
+		"id":"sacked",
+		"flags":"noattack,nodefend",
+		"mod":{
+			"tohit":-10
+		}
 	},
 	{
 		"id":"sick",
@@ -28,43 +71,10 @@
 		"flags":"nocast"
 	},
 	{
-		"id":"charmed",
-		"flags":"charmed",
-		"kind":"charm",
-		"mod":{
-			"tohit":-5
-		}
-	},
-	{
-		"id":"fear",
-		"adj":"afraid",
-		"kind":"fear",
-		"flags":"noattack",
-		"mod":{
-			"defense":-5
-		}
-	},
-	{
-		"id":"entangle",
-		"adj":"entangled",
-		"kind":"entangle",
-		"flags":"noattack"
-	},
-	{
-		"id":"enrage",
-		"adj":"enraged",
-		"kind":"rage",
-		"flags":"nodefend"
-	},
-	{
-		"id":"disgust",
-		"adj":"disgusted",
-		"kind":"disgust",
-		"flags":"noattack"
-	},
-	{
-		"id":"sacked",
-		"flags":"noattack,nodefend"
+		"id":"sleep",
+		"adj":"asleep",
+		"kind":"sleep",
+		"flags":"noact"
 	}
 
 ]

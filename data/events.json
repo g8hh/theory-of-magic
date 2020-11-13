@@ -197,7 +197,7 @@
 	{
 
 		"id":"decent",
-		"require":"g.virtue>75&&g.evilamt<10",
+		"require":"g.virtue>90&&g.evilamt<10",
 		"desc":"You are turning out to be an upstanding spellcaster.",
 		"mod":{
 			"light.rate":0.1

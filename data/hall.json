@@ -34,7 +34,7 @@
 				"id":"greatwing",
 				"name":"great wing",
 				"max":3,
-				"desc":"A new wing of the Great Hall where Wizards can lodge in comfort.",
+				"desc":"A new wing of the Great Hall where Wizards may lodge in comfort.",
 				"require":"g.expandhall>=1",
 				"cost":{
 					"gold":10000,
@@ -112,6 +112,21 @@
 				},
 				"mod":{
 					"runner.max":1
+				}
+			},
+			{
+				"id":"ritualchamber",
+				"name":"ritual chamber",
+				"require":"g.ritualist>0&&g.tier6>0",
+				"desc":"A warded room deep within the hall, dedicated to carrying out rituals in safety.",
+				"max":1,
+				"cost":{
+					"prestige":30
+				},
+				"mod":{
+					"ritualism.max":2,
+					"ritualnotes.max":12,
+					"ritualward.max":7
 				}
 			}
 

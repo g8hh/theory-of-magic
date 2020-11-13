@@ -17,14 +17,14 @@
 			"managem":3,
 			"mana":5
 		},
-		"mod":{
+		"alter":{
 			"armor":1
 		}
 	},
 	{
 		"id":"en_luck1",
 		"name":"luck",
-		"adj":"of luck",
+		"adj":"lucky",
 		"only":"ring",
 		"desc":"infuse a ring with a mana gem.",
 		"require":"g.enchanting>=1",
@@ -38,7 +38,7 @@
 			"airgem":1,
 			"mana":5
 		},
-		"mod":{
+		"alter":{
 			"mod.luck":1
 		},"flavor":"let's keep this party polite"
 	},
@@ -46,7 +46,7 @@
 		"id":"en_mana1",
 		"name":"mana",
 		"verb":"enchanting",
-		"adj":"of mana",
+		"adj":"%i of %s",
 		"only":"ring",
 		"desc":"infuse a ring with a mana gem.",
 		"require":"g.enchanting>=1",
@@ -60,7 +60,7 @@
 			"managem":1,
 			"mana":5
 		},
-		"mod":{
+		"alter":{
 			"mod.mana.max":1
 		}
 	},
@@ -68,7 +68,7 @@
 		"id":"en_energy1",
 		"name":"energy",
 		"verb":"enchanting",
-		"adj":"of energy",
+		"adj":"%i of %s",
 		"only":"ring",
 		"desc":"link a ring with a mana source.",
 		"require":"g.enchanting>=1",
@@ -82,7 +82,7 @@
 			"managem":1,
 			"mana":5
 		},
-		"mod":{
+		"alter":{
 			"mod.mana.rate":0.01
 		}
 	},
@@ -90,7 +90,7 @@
 		"id":"en_hp1",
 		"name":"life pool",
 		"verb":"enchanting",
-		"adj":"of life",
+		"adj":"%i of life",
 		"only":"neck",
 		"desc":"infuse an amulet with lifeforce.",
 		"require":"g.enchanting>=2",
@@ -105,7 +105,7 @@
 			"mana":5,
 			"hp":10
 		},
-		"mod":{
+		"alter":{
 			"mod.hp.max":4
 		}
 	},
@@ -113,7 +113,7 @@
 		"id":"en_regen1",
 		"name":"regeneration",
 		"verb":"enchanting",
-		"adj":"of regeneration",
+		"adj":"%i of %s",
 		"only":"neck",
 		"desc":"infuse an amulet with living blood.",
 		"require":"g.enchanting>=5",
@@ -128,7 +128,7 @@
 			"mana":5,
 			"hp":10
 		},
-		"mod":{
+		"alter":{
 			"mod.hp.rate":0.2
 		}
 	},
@@ -136,7 +136,7 @@
 		"id":"en_dmg1",
 		"name":"biting edge",
 		"verb":"infusing weapon",
-		"adj":"of biting",
+		"adj":"%i of biting",
 		"only":"weapon",
 		"desc":"imbue a weapon with a magic strike.",
 		"require":"g.enchanting>=3",
@@ -147,17 +147,63 @@
 		},
 		"length":30,
 		"cost":{
-			"managem":3,
+			"firegem":3,
 			"mana":5
 		},
-		"mod":{
+		"alter":{
 			"attack.bonus":1
+		}
+	},
+	{
+		"id":"en_dmg2",
+		"name":"biting edge",
+		"verb":"infusing weapon",
+		"adj":"%i of biting",
+		"only":"weapon",
+		"desc":"imbue a weapon with a magic strike.",
+		"require":"g.en_dmg1>0&&g.enchanting>=6",
+		"level":3,
+		"buy":{
+			"arcana":1,
+			"research":500
+		},
+		"length":30,
+		"cost":{
+			"firegem":5,
+			"mana":5
+		},
+		"alter":{
+			"attack.bonus":2
+		}
+	},
+	{
+		"id":"en_dmg3",
+		"name":"biting edge",
+		"verb":"infusing weapon",
+		"adj":"%i of biting",
+		"only":"weapon",
+		"desc":"imbue a weapon with a magic strike.",
+		"require":"g.en_dmg2>0&&g.enchanting>=9",
+		"level":5,
+		"buy":{
+			"arcana":1,
+			"research":1000,
+			"firerune":10
+		},
+		"length":30,
+		"cost":{
+			"firerune":3,
+			"mana":5
+		},
+		"alter":{
+			"attack.bonus":3
 		}
 	},
 	{
 		"id":"en_speed1",
 		"name":"quick boots",
 		"verb":"infusing shoes",
+		"adj":"%i of speed",
 		"only":"feet",
 		"desc":"imbue an item with inherent speed",
 		"require":"g.enchanting>=3",
@@ -172,18 +218,108 @@
 			"watergem":1,
 			"mana":5
 		},
-		"mod":{
+		"alter":{
 			"mod.speed":0.5
+		}
+	},
+	{
+		"id":"en_firelore1",
+		"name":"Pyromancy",
+		"adj":"of Pyromancy",
+		"only":"ring",
+		"desc":"Subduing fire is a necessary step in its study.",
+		"require":"g.enchanting>=8&&g.firelore>=9",
+		"level":8,
+		"buy":{
+			"research":3000,
+			"firegem":10,
+			"arcana":5
+		},
+		"length":300,
+		"cost":{
+			"firegem":1,
+			"fire":5
+		},
+		"alter":{
+			"mod.firelore.max":1
+		}
+	},
+	{
+		"id":"en_waterlore1",
+		"name":"Hydromancy",
+		"adj":"of Hydromancy",
+		"only":"ring",
+		"desc":"An aid to the manipulation of water.",
+		"require":"g.enchanting>=8&&g.waterlore>=9",
+		"level":8,
+		"buy":{
+			"research":3000,
+			"watergem":10,
+			"arcana":5
+		},
+		"length":300,
+		"cost":{
+			"watergem":1,
+			"water":5
+		},
+		"alter":{
+			"mod.waterlore.max":1
+		}
+	},
+
+	{
+		"id":"en_earthlore1",
+		"name":"Geomancy",
+		"adj":"of Geomancy",
+		"only":"ring",
+		"desc":"Magic to command the earth.",
+		"require":"g.enchanting>=8&&g.earthlore>=9",
+		"level":8,
+		"buy":{
+			"research":3000,
+			"earthgem":10,
+			"arcana":5
+		},
+		"length":300,
+		"cost":{
+			"earthgem":1,
+			"earth":5
+		},
+		"alter":{
+			"mod.earthlore.max":1
+		}
+	},
+
+	{
+		"id":"en_airlore1",
+		"name":"Aeromancy",
+		"adj":"of Aeromancy",
+		"only":"ring",
+		"desc":"Call upon the wind.",
+		"require":"g.enchanting>=8&&g.airlore>=9",
+		"level":8,
+		"buy":{
+			"research":3000,
+			"airgem":10,
+			"arcana":5
+		},
+		"length":300,
+		"cost":{
+			"airgem":1,
+			"air":5
+		},
+		"alter":{
+			"mod.airlore.max":1
 		}
 	},
 	{
 		"id":"en_fire1",
 		"name":"fire ring",
-		"adj":"of fire",
+		"adj":"%i of the salamander",
 		"only":"ring",
 		"desc":"increases your aptitude with fire",
 		"require":"g.enchanting>=1&&g.firelore>=7",
-		"level":1,
+		"level":3,
 		"buy":{
 			"research":300
 		},
@@ -192,19 +328,66 @@
 			"firegem":1,
 			"fire":5
 		},
-		"mod":{
-			"mod.firelore.max":1,
-			"mod.fire.rate":0.2
+		"alter":{
+			"mod.fire.max":1,
+			"mod.fire.rate":0.1
+		}
+	},
+	{
+		"id":"en_fire2",
+		"name":"Ifrit's ring",
+		"adj":"of the Ifrit",
+		"only":"ring",
+		"desc":"Increases your aptitude for fire.",
+		"require":"g.en_fire1>=1&&g.firelore>=10",
+		"level":2,
+		"buy":{
+			"arcana":1,
+			"firegem":5,
+			"research":1500
+		},
+		"length":50,
+		"cost":{
+			"firegem":3,
+			"fire":10
+		},
+		"alter":{
+			"mod.fire.max":1,
+			"mod.fire.rate":0.5
+		}
+	},
+	{
+		"id":"en_fire3",
+		"name":"Sun Dog's ring",
+		"adj":"of the Sun Dog",
+		"only":"ring",
+		"desc":"Dramatically increases your aptitude with fire.",
+		"require":"g.en_fire2>=1&&g.firelore>=15",
+		"level":3,
+		"buy":{
+			"firerune":5,
+			"arcana":10,
+			"firegem":20,
+			"research":3000
+		},
+		"length":100,
+		"cost":{
+			"firegem":5,
+			"fire":15
+		},
+		"alter":{
+			"mod.fire.max":2,
+			"mod.fire.rate":1.0
 		}
 	},
 	{
 		"id":"en_water1",
-		"name":"water ring",
-		"adj":"of water",
+		"name":"crabs's ring",
+		"adj":"%i of the crab",
 		"only":"ring",
 		"desc":"increases your aptitude with water",
 		"require":"g.enchanting>=1&&g.waterlore>=7",
-		"level":1,
+		"level":3,
 		"buy":{
 			"research":300
 		},
@@ -213,19 +396,66 @@
 			"watergem":1,
 			"water":5
 		},
-		"mod":{
-			"mod.waterlore.max":1,
-			"mod.water.rate":0.2
+		"alter":{
+			"mod.water.max":1,
+			"mod.water.rate":0.1
+		}
+	},
+	{
+		"id":"en_water2",
+		"name":"otters's ring",
+		"adj":"%i of the otter",
+		"only":"ring",
+		"desc":"Increases your water reserves significantly.",
+		"require":"g.en_water1>=1&&g.waterlore>=10",
+		"level":2,
+		"buy":{
+			"arcana":1,
+			"watergem":5,
+			"research":1500
+		},
+		"length":50,
+		"cost":{
+			"watergem":3,
+			"water":10
+		},
+		"alter":{
+			"mod.water.max":1,
+			"mod.water.rate":0.5
+		}
+	},
+	{
+		"id":"en_water3",
+		"name":"Pisces' ring",
+		"adj":"%i of the Pisces",
+		"only":"ring",
+		"desc":"Increases your water reserves dramatically.",
+		"require":"g.en_water2>=1&&g.waterlore>=15",
+		"level":3,
+		"buy":{
+			"waterrune":5,
+			"arcana":10,
+			"watergem":20,
+			"research":3000
+		},
+		"length":100,
+		"cost":{
+			"watergem":5,
+			"water":15
+		},
+		"alter":{
+			"mod.water.max":2,
+			"mod.water.rate":1.0
 		}
 	},
 	{
 		"id":"en_earth1",
-		"name":"earth ring",
-		"adj":"of earth",
+		"name":"vole's ring",
+		"adj":"%i of the vole",
 		"only":"ring",
 		"desc":"increases your aptitude with earth",
 		"require":"g.enchanting>=1&&g.earthlore>=7",
-		"level":1,
+		"level":3,
 		"buy":{
 			"research":300
 		},
@@ -234,17 +464,64 @@
 			"earthgem":1,
 			"earth":5
 		},
-		"mod":{
-			"mod.earthlore.max":1,
-			"mod.earth.rate":0.2
+		"alter":{
+			"mod.earth.max":1,
+			"mod.earth.rate":0.1
+		}
+	},
+	{
+		"id":"en_earth2",
+		"name":"Worms's Ring",
+		"adj":"of the Welver",
+		"only":"ring",
+		"desc":"Increases your earth reserves significantly.",
+		"require":"g.en_earth1>=1&&g.earthlore>=10",
+		"level":5,
+		"buy":{
+			"arcana":1,
+			"earthgem":5,
+			"research":1500
+		},
+		"length":50,
+		"cost":{
+			"earthgem":3,
+			"earth":10
+		},
+		"alter":{
+			"mod.earth.max":1,
+			"mod.earth.rate":0.5
+		}
+	},
+	{
+		"id":"en_earth3",
+		"name":"Delver's ring",
+		"adj":"of the Delver",
+		"only":"ring",
+		"desc":"Increases your earth reserves dramatically.",
+		"require":"g.en_earth2>=1&&g.earthlore>=15",
+		"level":3,
+		"buy":{
+			"earthrune":5,
+			"arcana":10,
+			"earthgem":20,
+			"research":3000
+		},
+		"length":100,
+		"cost":{
+			"earthgem":5,
+			"earth":15
+		},
+		"alter":{
+			"mod.earth.max":2,
+			"mod.earth.rate":1.0
 		}
 	},
 	{
 		"id":"en_air1",
-		"name":"air ring",
-		"adj":"of air",
+		"name":"Sparrow's ring",
+		"adj":"%i of the sparrow",
 		"only":"ring",
-		"desc":"increases your aptitude with air",
+		"desc":"An aid to call upon the wind.",
 		"require":"g.enchanting>=1&&g.airlore>=7",
 		"level":1,
 		"buy":{
@@ -255,15 +532,63 @@
 			"airgem":1,
 			"air":5
 		},
-		"mod":{
-			"mod.airlore.max":1,
-			"mod.air.rate":0.2
+		"alter":{
+			"mod.air.max":1,
+			"mod.air.rate":0.1
+		}
+	},
+	{
+		"id":"en_air2",
+		"name":"Eagle's ring",
+		"adj":"of the Eagle",
+		"only":"ring",
+		"desc":"Increases your air reserves significantly.",
+		"require":"g.en_air1>0&&g.airlore>=10",
+		"level":2,
+		"buy":{
+			"arcana":1,
+			"airgem":5,
+			"research":1500
+		},
+		"length":50,
+		"cost":{
+			"airgem":3,
+			"air":10
+		},
+		"alter":{
+			"mod.air.max":1,
+			"mod.air.rate":0.5
+		}
+	},
+	{
+		"id":"en_air3",
+		"name":"Albatross's ring",
+		"adj":"of the Albatross",
+		"only":"ring",
+		"desc":"Increases your air reserves dramatically.",
+		"require":"g.en_air2>=0&&g.airlore>=15",
+		"level":3,
+		"buy":{
+			"airrune":5,
+			"arcana":10,
+			"airgem":20,
+			"research":3000
+		},
+		"length":100,
+		"cost":{
+			"airgem":5,
+			"air":15
+		},
+		"alter":{
+			"mod.air.max":2,
+			"mod.air.rate":1.0
 		}
 	},
 	{
 		"id":"en_speed2",
 		"name":"quick boots II",
 		"verb":"infusing shoes",
+		"adj":"%i of speed",
 		"only":"feet",
 		"desc":"imbue an item with inherent speed",
 		"require":"g.enchanting>=5",
@@ -278,7 +603,7 @@
 			"watergem":5,
 			"mana":5
 		},
-		"mod":{
+		"alter":{
 			"mod.speed":2
 		}
 	},
@@ -286,6 +611,7 @@
 		"id":"en_speed3",
 		"name":"quick boots III",
 		"verb":"infusing shoes",
+		"adj":"%i of speed",
 		"only":"feet",
 		"desc":"imbue an item with inherent speed",
 		"require":"g.enchanting>=7",
@@ -299,7 +625,7 @@
 			"runestones":2,
 			"mana":10
 		},
-		"mod":{
+		"alter":{
 			"mod.speed":5
 		}
 	},
@@ -308,7 +634,7 @@
 		"name":"quick boots IV",
 		"verb":"infusing shoes",
 		"only":"feet",
-		"adj":"of speed",
+		"adj":"%i of speed",
 		"desc":"imbue your boots with speed",
 		"require":"g.enchanting>=10",
 		"level":7,
@@ -322,7 +648,7 @@
 			"runestones":2,
 			"mana":15
 		},
-		"mod":{
+		"alter":{
 			"mod.speed":8
 		}
 	},
@@ -331,7 +657,7 @@
 		"id":"en_clarity",
 		"name":"clarity",
 		"only":"head",
-		"adj":"of clarity",
+		"adj":"%i of %s",
 		"desc":"an enchantment to aid the mind.",
 		"level":3,
 		"buy":{
@@ -342,14 +668,14 @@
 		"cost":{
 			"managem":10
 		},
-		"mod":{
+		"alter":{
 			"mod.bf.rate":-0.5
 		}
 	},
 	{
 		"id":"en_scraft",
 		"name":"spellcraft",
-		"adj":"of spells",
+		"adj":"%i of spells",
 		"desc":"increases your spellcrafting power.",
 		"only":"armor,weapon",
 		"level":3,
@@ -363,7 +689,7 @@
 			"managem":15,
 			"mana":5
 		},
-		"mod":{
+		"alter":{
 			"mod.scraft":1
 		}
 	},
@@ -371,6 +697,7 @@
 		"id":"en_courage",
 		"name":"courage",
 		"only":"waist",
+		"adj":"%i of %s",
 		"desc":"an enchantment to gird the spine.",
 		"level":5,
 		"buy":{
@@ -381,7 +708,7 @@
 		"cost":{
 			"earthgem":5
 		},
-		"mod":{
+		"alter":{
 			"mod.unease.rate":-0.5
 		}
 	},
@@ -389,7 +716,7 @@
 		"id":"en_sanity",
 		"name":"sanity",
 		"only":"head",
-		"adj":"of sanity",
+		"adj":"%i of %s",
 		"desc":"an enchantment to ward off madness",
 		"level":6,
 		"buy":{
@@ -400,15 +727,36 @@
 		"cost":{
 			"managem":10
 		},
-		"mod":{
+		"alter":{
 			"mod.madness.rate":-1
+		}
+	},
+	{
+		"id":"en_clarity2",
+		"name":"clarity",
+		"only":"head",
+		"adj":"%i of %s",
+		"desc":"an enchantment to aid the mind.",
+		"require":"g.en_clarity>0&&g.enchanting>10",
+		"level":7,
+		"buy":{
+			"tomes":5,
+			"airrune":3,
+			"research":2000
+		},
+		"length":20,
+		"cost":{
+			"managem":10
+		},
+		"alter":{
+			"mod.bf.rate":-0.75
 		}
 	},
 	{
 		"id":"en_stam1",
 		"name":"refreshment",
 		"verb":"enchanting",
-		"adj":"of refreshing",
+		"adj":"%i of %s",
 		"only":"ring",
 		"desc":"runed ring refreshes your stamina.",
 		"require":"g.enchanting>=10&&g.enchanter>0",
@@ -423,7 +771,7 @@
 			"waterrune":3,
 			"mana":5
 		},
-		"mod":{
+		"alter":{
 			"mod.stamina.rate":0.3
 		}
 	},
@@ -441,17 +789,17 @@
 		},
 		"length":30,
 		"cost":{
-			"managem":3,
+			"watergem":3,
 			"mana":5
 		},
-		"mod":{
-			"attack.tohit":2
+		"alter":{
+			"attack.tohit":1
 		}
 	},
 	{
 		"id":"en_scraft2",
 		"name":"spellcraft II",
-		"adj":"of spells",
+		"adj":"%i of spells",
 		"only":"armor,weapon",
 		"desc":"increases your spellcrafting power",
 		"require":"g.en_scraft>0&&g.enchanting>=6",
@@ -466,15 +814,83 @@
 			"managem":15,
 			"spiritgem":15
 		},
-		"mod":{
+		"alter":{
 			"mod.scraft":2
+		}
+	},
+	{
+		"id":"en_tohit2",
+		"name":"keen weapon",
+		"verb":"infusing weapon",
+		"only":"weapon",
+		"desc":"infuse an item with magical precision.",
+		"require":"g.enchanting>=7",
+		"level":2,
+		"buy":{
+			"arcana":2,
+			"research":500,
+			"watergem":3
+		},
+		"length":30,
+		"cost":{
+			"watergem":3,
+			"mana":5
+		},
+		"alter":{
+			"attack.tohit":3
+		}
+	},
+	{
+		"id":"en_scraft3",
+		"name":"spellcraft III",
+		"adj":"%i of spells",
+		"only":"armor,weapon",
+		"desc":"Increases your spellcrafting power",
+		"require":"g.en_scraft2>0&&g.enchanting>=10",
+		"level":8,
+		"buy":{
+			"gold":1000,
+			"research":5000,
+			"tomes":5,
+			"runestones":10
+		},
+		"length":30,
+		"cost":{
+			"managem":15,
+			"spiritrune":10
+		},
+		"alter":{
+			"mod.scraft":3
+		}
+	},
+	{
+		"id":"en_scraft4",
+		"name":"spellcraft IV",
+		"adj":"%i of spells",
+		"only":"armor,weapon",
+		"desc":"Increases your spellcrafting power",
+		"require":"g.en_scraft3>0&&g.enchanting>=15",
+		"level":10,
+		"buy":{
+			"gold":2000,
+			"research":7000,
+			"tomes":15,
+			"runestones":20
+		},
+		"length":30,
+		"cost":{
+			"runestones":15,
+			"spiritrune":10
+		},
+		"alter":{
+			"mod.scraft":5
 		}
 	},
 	{
 		"id":"en_decep",
 		"name":"deception",
 		"only":"back",
-		"adj":"of deception",
+		"adj":"%i of %s",
 		"desc":"a cloak to confuse your enemies.",
 		"level":9,
 		"buy":{
@@ -485,16 +901,57 @@
 		"cost":{
 			"watergem":10
 		},
-		"mod":{
+		"alter":{
 			"mod.trickery":2
+		}
+	},
+	{
+		"id":"en_lightcloak",
+		"name":"Lumos",
+		"only":"back",
+		"adj":"of the light",
+		"desc":"Wrap yourself in light.",
+		"level":9,
+		"buy":{
+			"tomes":5,
+			"research":2000
+		},
+		"length":200,
+		"cost":{
+			"lightgem":25,
+			"lightrune":5
+		},
+		"alter":{
+			"mod.lightlore.max":1
+		}
+	},
+	{
+		"id":"en_shadowcloak",
+		"name":"Shadow",
+		"only":"back",
+		"adj":"of darkness",
+		"desc":"Wrap yourself in darkness.",
+		"level":9,
+		"buy":{
+			"tomes":5,
+			"research":2000
+		},
+		"length":200,
+		"cost":{
+			"shadowgem":25,
+			"shadowrune":5
+		},
+		"alter":{
+			"mod.shadowlore.max":1
 		}
 	},
 	{
 		"id":"en_prisma",
 		"name":"prismatic ring",
 		"only":"ring",
-		"adj":"of colors",
+		"adj":"%i of colors",
 		"desc":"restores energies of all kinds.",
+		"require":"enchanter",
 		"level":8,
 		"buy":{
 			"tomes":5,
@@ -511,8 +968,8 @@
 			"shadowgem":10,
 			"spiritgem":10
 		},
-		"mod":{
-			"mod.prismatic.rate":0.5
+		"alter":{
+			"mod.prismatic.rate":0.4
 		}
 	}
 

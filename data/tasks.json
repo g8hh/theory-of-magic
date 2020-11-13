@@ -45,7 +45,7 @@
 		},
 		"every":{
 			"100":{
-				"effect.research":"0.05/100"
+				"effect.research":"0.05:100"
 			}
 		},
 		"effect":{
@@ -89,7 +89,7 @@
 		"length":15,
 		"every":{
 			"10":{
-				"effect.gold":"0.01/10"
+				"effect.gold":"0.01:10"
 			}
 		},
 		"run":{
@@ -185,7 +185,7 @@
 		"name":"offer services",
 		"desc":"Offer your magical services to the nearby townsfolk.",
 		"verb":"servicing",
-		"require":"adept",
+		"require":"(g.adept+g.blueadept)>0",
 		"perpetual":true,
 		"at":{
 
@@ -314,23 +314,23 @@
 		"at":{
 			"30":{
 				"effect.research":0.05,
-				"effect.alchemy.exp": 0.05,
-				"effect.potions.exp": 0.2
+				"effect.alchemy.exp":0.05,
+				"effect.potions.exp":0.2
 			},
 			"120":{
 				"effect.research":0.05,
-				"effect.potions.exp": 0.3,
+				"effect.potions.exp":0.3,
 				"result.gold":0.5
 			},
 			"500":{
 				"effect.research":0.1,
-				"effect.potions.max": 0.0001
+				"effect.potions.max":0.0001
 			}
 		},
 		"effect":{
 			"research":1.3,
-			"alchemy.exp": 0.2,
-			"potions.exp": 1
+			"alchemy.exp":0.2,
+			"potions.exp":1
 		},
 		"result":{
 			"gold":2,
@@ -419,6 +419,9 @@
 		"require":"g.dreams>0&&g.weaving>=5",
 		"perpetual":true,
 		"length":10,
+		"cost":{
+			"tapestries":1
+		},
 		"run":{
 			"stamina":0.7,
 			"mana":1,
@@ -457,6 +460,7 @@
 		"name":"spin gold",
 		"desc":"Spin straw into gold",
 		"verb":"spinning",
+		"need":"(g.spinwheel+g.loom)>0",
 		"require":"g.weaving>=5&&g.loom>0&&g.enchanting>=3",
 		"perpetual":true,
 		"length":10,
@@ -470,6 +474,9 @@
 			"500":{ "effect.gold":0.5 },
 			"1500":{ "effect.gold":1 }
 
+		},
+		"mod":{
+			"weaving.max":"?1"
 		},
 		"effect":{
 			"gold":2.2
@@ -660,8 +667,10 @@
 			"stamina":0.3,
 			"spirit":0.3
 		},
+		"mod":{
+			"souls.max":0.5
+		},
 		"result":{
-			"souls.max":0.5,
 			"souls":1,
 			"dreams":{
 				"skipLocked":true,
@@ -718,7 +727,7 @@
 	{
 		"id":"magicadvice",
 		"name":"advise notables",
-		"desc":"from worried village councils to bumbling barons, they all require your advice",
+		"desc":"From worried village councils to bumbling barons, they all require your advice",
 		"require":"(g.witch+g.magician+g.blueadept)>0",
 		"cost":{
 			"stamina":0.3
@@ -742,7 +751,7 @@
 		"id":"hattrick",
 		"name":"hat trick",
 		"require":"g.trickster>0&&g.conjuration>1",
-		"desc":"pull small objects out of thin air.",
+		"desc":"Pull small objects out of thin air.",
 		"cost":{
 			"mana":5,
 			"stamina":4,
@@ -918,7 +927,7 @@
 		"length":10,
 		"require":"(g.witch+g.thanophage)>0",
 		"need":"cauldron",
-		"desc":"how could you!?!",
+		"flavor":"How could you!?!",
 		"fill":[ "hp", "prismatic", "stamina", "stress" ],
 		"at":{
 			"100":{
@@ -949,7 +958,7 @@
 
 		"id":"sabbat",
 		"name":"witch's sabbat",
-		"desc":"a revelry of demons and witches.",
+		"desc":"A revelry of demons and witches.",
 		"require":"g.witch>0&&g.demonology>=7&&g.spiritlore>=8",
 		"length":100,
 		"cd":666,
@@ -997,7 +1006,7 @@
 	{
 
 		"id":"geas",
-		"desc":"undertake a quest to subdue a great evil.",
+		"desc":"Undertake a quest to subdue a great evil.",
 		"need":"g.tier2>0&&g.evil<=0",
 		"length":100,
 		"cd":777,
@@ -1126,9 +1135,29 @@
 	},
 	{
 
+		"id":"weavetapestry",
+		"name":"weave tapestry",
+		"require":"g.weaving>=2",
+		"need":"weavesource",
+		"length":10,
+		"fill":"tapestries",
+		"run":{
+			"stamina":2,
+			"gold":3,
+			"research":1,
+			"mana":0.5
+		},
+		"result":{
+			"tapestries":1
+		}
+
+	},
+	{
+
 		"id":"craftrune",
 		"name":"craft rune",
 		"require":"g.crafting>=14&&g.runelore>=3",
+		"need":"workspace",
 		"length":10,
 		"cost":{
 			"tomes":1,
@@ -1165,9 +1194,36 @@
 
 	},
 	{
+		"id":"demonbag",
+		"name":"bag of demons",
+		"actname":"craft bag of demons",
+		"require":"g.demonology>=10&&g.crafting>20&&g.tier3>0",
+		"max":1,
+		"length":2000,
+		"desc":"You'll make your own bags, thank you.",
+		"cost":{
+			"gold":1000,
+			"souls":75,
+			"arcana":1,
+			"bones":10
+		},
+		"run":{
+			"stamina":2,
+			"hp":2
+		},
+		"mod":{
+			"bones.max":10,
+			"bloodgems.max":10,
+			"voidgem.max":1,
+			"spiritgem.max":2,
+			"shadowgem.max":1
+		},"flavor":"the research costs a little more than you expected..."
+
+	},
+	{
 		"id":"sublimate",
 		"name":"sublimate lore",
-		"desc":"internalize a vast amount of existing knowledge.",
+		"desc":"Internalize a vast amount of existing knowledge.",
 		"require":"g.codices.max>=10&&g.crafting>=3",
 		"warn":true,
 		"cost":{
@@ -1223,10 +1279,11 @@
 		"name":"map stars",
 		"length":10,
 		"verb":"mapping stars",
+		"desc":"A complex diagram of lines and arcane symbols.",
 		"require":"g.astronomy>=5",
 		"fill":"starcharts",
 		"cost":{
-			"scrolls":1
+			"scrolls":5
 		},
 		"run":{
 			"research":10
@@ -1238,7 +1295,7 @@
 		"actname":"compile bestiary",
 		"verb":"researching beasts",
 		"require":"g.animals>=3",
-		"length":50,
+		"length":75,
 		"desc":"Compendium of common creatures",
 		"repeat":false,
 		"cost":{
@@ -1259,15 +1316,15 @@
 	},
 	{
 
-		"id":"systemanaturae",
-		"name":"systema naturae",
-		"desc":"Compendium of living things.",
+		"id":"bestiary2",
+		"name":"arcane bestiary",
+		"desc":"Compendium of magic creatures.",
 		"require":"g.loc_menagerie>0",
 		"repeat":false,
-		"length":200,
+		"length":500,
 		"cost":{
 			"tomes":25,
-			"research":5000,
+			"research":10000,
 			"waterrune":5,
 			"earthrune":5
 		},
@@ -1308,7 +1365,7 @@
 		"id":"codexannih",
 		"name":"codex annihilus",
 		"require":"(g.darkmagician+g.dreadlord)>0",
-		"desc":"karnivex's manual of destruction",
+		"desc":"Karnivex's manual of destruction",
 		"length":75,
 		"repeat":false,
 		"cost":{
@@ -1350,7 +1407,7 @@
 		"id":"sylvansyllabary",
 		"name":"sylvan syllabary",
 		"require":"g.languages>=5&&g.tier0>0",
-		"desc":"a book of elvish symbols",
+		"desc":"A book of elvish symbols",
 		"length":75,
 		"repeat":false,
 		"cost":{
@@ -1372,7 +1429,7 @@
 		"id":"dwarfbook",
 		"name":"dwarven dirges",
 		"require":"g.languages>=5&&g.tier0>0",
-		"desc":"a compilation of gloomy dwarven drinking songs",
+		"desc":"A compilation of gloomy dwarven drinking songs",
 		"length":75,
 		"repeat":false,
 		"cost":{
@@ -1393,8 +1450,8 @@
 	{
 		"id":"lemurlexicon",
 		"name":"lemurian lexicon",
-		"require":"g.languages>=7&&g.tier0>0",
-		"desc":"interpret the strange whisperings of spirits",
+		"require":"g.languages>=7&&g.spiritlore>=6&&g.tier0>0",
+		"desc":"Interpret the strange whisperings of spirits",
 		"length":50,
 		"repeat":false,
 		"cost":{
@@ -1416,7 +1473,7 @@
 		"id":"demondict",
 		"name":"demonic dictionary",
 		"require":"g.languages>=10&&g.demonology>0&&g.tier1>0",
-		"desc":"a compiliation of obscure demonic languages",
+		"desc":"A compiliation of obscure demonic languages",
 		"length":75,
 		"repeat":false,
 		"cost":{
@@ -1436,18 +1493,56 @@
 
 	},
 	{
+		"id":"arazorannals",
+		"name":"annals of arazor",
+		"require":"aragwastes",
+		"desc":"A history of the eastern region of Arazor.",
+		"tags":"book",
+		"repeat":false,
+		"length":50,
+		"cost":{
+			"codices":5
+		},
+		"run":{
+			"research":1
+		},
+		"mod":{
+			"history.max":1,
+			"history.rate":0.1
+		}
+	},
+	{
+		"id":"orremannals",
+		"name":"annals of orrem",
+		"require":"loc_orrem",
+		"desc":"A history of the lost cities of Orrem.",
+		"tags":"book",
+		"repeat":false,
+		"length":100,
+		"cost":{
+			"tomes":25
+		},
+		"run":{
+			"research":10
+		},
+		"mod":{
+			"history.max":1,
+			"history.rate":0.2
+		}
+	},
+	{
 		"id":"malleus",
 		"name":"malleus maleficarum",
 		"actname":"compile witchhammer",
 		"require":"g.crafting>=15&&g.lightlore>=15",
-		"desc":"a manual against the darkness.",
+		"desc":"A manual against the darkness.",
 		"length":50,
 		"repeat":false,
 		"cost":{
 			"tomes":5
 		},
 		"run":{
-			"research":1,
+			"research":2,
 			"stamina":2
 		},
 		"mod":{
@@ -1461,66 +1556,87 @@
 
 	},
 	{
-		"id": "terraform",
-		"name": "warp landscape",
-		"desc": "Improve the conditions of your local countryside",
-		"verb": "terraforming",
-		"require": "geosculpting",
-		"length": 15,
-		"at": {
-			"10": {
-				"effect.gems.max": 0.0002,
-				"effect.prismaticgems.max": 0.0002
+		"id":"terraform",
+		"name":"warp landscape",
+		"desc":"Improve the conditions of your local countryside",
+		"verb":"terraforming",
+		"require":"geosculpting",
+		"length":15,
+		"at":{
+			"10":{
+				"effect.gems.max":0.0002,
+				"effect.prismaticgems.max":0.0002
 			},
-			"50": {
-				"effect.earthgem": 0.01
+			"50":{
+				"effect.earthgem":0.01
 			},
-			"100": {
-				"effect.gems.max": 0.0002,
-				"effect.prismaticgems.max": 0.0002
+			"100":{
+				"effect.gems.max":0.0002,
+				"effect.prismaticgems.max":0.0002
 			},
-			"250": {
-				"effect.earthgem": 0.01
+			"250":{
+				"effect.earthgem":0.01
 			}
 		},
-		"run": {
-			"stamina": 1,
-			"earth": 1
+		"run":{
+			"stamina":1,
+			"earth":1
 		},
-		"effect": {
-			"earthgem": 0.01,
-			"gems.max": 0.0002,
-			"prismaticgems.max": 0.0002
+		"effect":{
+			"earthgem":0.01,
+			"gems.max":0.0002,
+			"prismaticgems.max":0.0002
 		},
-		"result": {
-			"geosculpting.max": 0.01
+		"result":{
+			"geosculpting.max":0.01
 		}
 	},
 	{
-		"id": "maketitanhammer",
-		"name": "titan's hammer",
-		"desc": "The powers of creation and destruction, locked in your grip.",
-		"verb": "Creating Masterpiece",
-		"require": "g.titan>0&&g.mythicanvil>0",
-		"length": 180,
-		"cost":{
-			"earthgem":300,
-			"earthrune":80,
-			"sindel":5,
-			"ichor":5
-		},
-		"run": {
-			"stamina": 4,
-			"earth": 3
-		},
-		"loot": {
-			"titanhammer": 1
-		}
-	},
+        "id":"remakehammer",
+        "name":"call hammer",
+        "desc":"You forged it once, call forth another.",
+        "verb":"Recalling",
+        "require":"g.maketitanhammer>0",
+        "length":10,
+        "cost":{
+            "earthgem":30,
+            "earthrune":10,
+            "sindel":1
+        },
+        "run":{
+            "stamina":8,
+            "earth":5
+        },
+        "loot":{
+            "titanhammer":1
+        }
+    },
+	{
+        "id":"maketitanhammer",
+        "name":"titan's hammer",
+        "desc":"The powers of creation and destruction, locked in your grip.",
+        "repeat":false,
+        "verb":"Creating Masterpiece",
+        "require":"g.titan>0&&g.mythicanvil>0",
+        "length":180,
+        "cost":{
+            "earthgem":300,
+            "earthrune":80,
+            "sindel":5,
+            "ichor":5
+        },
+        "run":{
+            "stamina":4,
+            "earth":3
+        },
+        "loot":{
+            "titanhammer":1
+        }
+    },
 	{
 		"id":"fazbitfixate",
 		"name":"fazbit's fixations",
-		"desc":"scribe a copy the seminal text in practical alchemy",
+		"desc":"Scribe a copy the seminal text in practical alchemy",
 		"length":50,
 		"repeat":false,
 		"cost":{
@@ -1544,7 +1660,7 @@
 		"id":"coporisfabrica",
 		"name":"coporis fabrica",
 		"require":"g.player.level>=8&&g.anatomy>=5",
-		"desc":"a manual of the human body",
+		"desc":"A manual of the human body",
 		"tags":"book",
 		"length":40,
 		"repeat":false,
@@ -1562,33 +1678,75 @@
 
 	},
 	{
-		"id":"unendingtome",
-		"name":"unending tome",
-		"require":"g.languages>=9",
-		"desc":"some books have no end",
+		"id":"unendingscroll",
+		"name":"unending scroll",
+		"require":"g.languages>=7",
+		"desc":"Some scrolls feel interminable.",
 		"length":50,
-		"repeat":false,
+		"max":1,
 		"cost":{
-			"tomes":5,
-			"mana":10,
+			"scrolls":50,
+			"mana":7,
 			"gems":10
+		},
+		"run":{
+			"research":5,
+			"stamina":3
+		},
+		"mod":{
+			"scrolls.rate":0.02
+		}
+
+	},
+	{
+		"id":"unendingcodex",
+		"name":"unending codex",
+		"require":"g.unendingscroll>0&&g.tier1>0",
+		"desc":"Some books never seem to end.",
+		"length":100,
+		"max":1,
+		"cost":{
+			"codices":30,
+			"mana":10,
+			"gems":20
 		},
 		"run":{
 			"research":10,
 			"stamina":3
 		},
 		"mod":{
-			"lore.max":1,
+			"unendingscroll.mod.scrolls.rate":"50%",
 			"codices.rate":0.01
 		}
 
 	},
 	{
+		"id":"unendingtome",
+		"name":"unending tome",
+		"require":"g.tier2>0&&g.unendingcodex>0",
+		"desc":"Some tomes are never finished.",
+		"length":200,
+		"max":1,
+		"cost":{
+			"tomes":15,
+			"mana":10,
+			"managem":10
+		},
+		"run":{
+			"research":20,
+			"stamina":5
+		},
+		"mod":{
+			"unendingcodex.mod.codices.rate":"50%",
+			"tomes.rate":0.005
+		}
+
+	},
+	{
 		"id":"almagest",
-		"desc":"compile a manual of the sun and stars",
+		"desc":"Compile a manual of the sun and stars",
 		"actname":"almagest",
-		"require":"g.astronomy>=5&&g.tier0>0",
-		"need":"g.research.max>100",
+		"require":"g.astronomy>=7&&g.tier1>0",
 		"repeat":false,
 		"length":50,
 		"cost":{
@@ -1600,7 +1758,7 @@
 		},
 		"log":{
 			"name":"almagest",
-			"desc":"your map of the heavens is complete."
+			"desc":"Your map of the heavens is complete."
 		},
 		"mod":{
 			"starcharts.max":10,
@@ -1954,7 +2112,7 @@
 		"need":"g.runner.hasType('skill')",
 		"every":{
 			"25":{
-				"result.runner.exp":"0.02/25"
+				"result.runner.exp":"0.02:25"
 			}
 		},
 		"cost":{
@@ -2024,4 +2182,5 @@
 		}
 
 	}
+
 ]

@@ -5,6 +5,7 @@
 		"id":"karnivexcrown",
 		"name":"crown of karnivex",
 		"desc":"The conceits of Karnivex were without bounds.",
+		"slot":"head",
 		"unique":true,
 		"level":7,
 		"armor":5,
@@ -14,6 +15,21 @@
 			"resist.silence":5,
 			"tohit":1,
 			"rage.rate":0.5
+		}
+
+	},
+	{
+
+		"id":"veldranearring",
+		"name":"veldran's earring",
+		"desc":"A small blue stone with swirls of white.",
+		"unique":true,
+		"level":5,
+		"armor":1,
+		"slot":"trinket",
+		"mod":{
+			"water.rate":0.1,
+			"resist.water":5
 		}
 
 	},
@@ -124,26 +140,31 @@
 
 	},
 	{
-		"id": "titanhammer",
-		"name": "titan's hammer",
-		"desc": "Wrought from unyielding adamant, it hums with the energies of the earth.",
-		"type": "weapon",
-		"unique": true,
-		"attack": {
-			"kind": "blunt",
-			"damage": "40~50"
-		},
-		"mod": {
-			"earth.rate": 0.5,
-			"earth.max": 10,
-			"player.defense": 30
-		},
-		"hands": 2,
-		"kind": "hammer",
-		"level": 15,
-		"cost": {
-			"gold":5000
-		}
-	}
+        "id":"titanhammer",
+        "name":"titan's hammer",
+        "desc":"Wrought from unyielding adamant, it hums with the energies of the earth.",
+        "type":"weapon",
+        "attack":{
+            "kind":"blunt",
+            "damage":"40~50"
+        },
+        "mod":{
+            "earth.rate":1,
+            "earth.max":10,
+            "player.defense":30,
+            "smite.attack.tohit":5,
+            "smite.level":-2,
+            "smite.attack.damage":"20%",
+            "fissure.cd":"-25%",
+            "fissure.attack.dot.duration":1
+
+        },
+        "hands":2,
+        "tags":"hammer",
+        "level":10,
+        "cost":{
+            "gold":5000
+        }
+    }
 
 ]

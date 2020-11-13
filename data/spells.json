@@ -73,7 +73,7 @@
 	},
 	{
 		"id":"speak",
-		"level":10,
+		"level":8,
 		"school":"air",
 		"desc":"Breaks a curse of silence.",
 		"silent":true,
@@ -520,7 +520,6 @@
 		"id":"mana3",
 		"name":"mana",
 		"school":"mana",
-		"locked":false,
 		"require":"mana2",
 		"level":5,
 		"buy":{
@@ -693,54 +692,54 @@
 		}
 	},
 	{
-		"id": "prismaticspray2",
-		"name": "greater prismatic spray",
-		"level": 9,
-		"school": "mana",
-		"require": "g.tier3>0",
-		"desc": "lines of arcane energy strike all enemies.",
-		"buy": {
-			"research": 100,
-			"scrolls": 10
+		"id":"prismaticspray2",
+		"name":"greater prismatic spray",
+		"level":9,
+		"school":"mana",
+		"require":"g.tier3>0",
+		"desc":"lines of arcane energy strike all enemies.",
+		"buy":{
+			"research":100,
+			"scrolls":10
 		},
-		"at": {
-			"25": {
-				"attack.tohit": 3,
-				"attack.damage.max": 3
+		"at":{
+			"25":{
+				"attack.tohit":3,
+				"attack.damage.max":3
 			},
-			"100": {
-				"attack.tohit": 3,
-				"attack.damage.min": 3
+			"100":{
+				"attack.tohit":3,
+				"attack.damage.min":3
 			}
 		},
-		"cost": {
-			"mana": 8
+		"cost":{
+			"mana":8
 		},
-		"attack": {
-			"targets": "enemies",
-			"damage": "12~30",
-			"kind": "mana",
-			"tohit": 4
+		"attack":{
+			"targets":"enemies",
+			"damage":"12~30",
+			"kind":"mana",
+			"tohit":4
 		}
 	},
 	{
-		"id": "moveearth",
-		"name": "fling stone",
-		"desc": "Throw a rock using magic",
-		"school": "earth",
-		"require": "g.earthlore>=5",
-		"level": 1,
-		"buy": {
-			"research": 30,
-			"scrolls": 5
+		"id":"moveearth",
+		"name":"fling stone",
+		"desc":"Throw a rock using magic",
+		"school":"earth",
+		"require":"g.earthlore>=5",
+		"level":1,
+		"buy":{
+			"research":30,
+			"scrolls":5
 		},
-		"cost": {
-			"earth": 1
+		"cost":{
+			"earth":1
 		},
-		"attack": {
-			"damage": "2~6",
-			"kind": "earth",
-			"tohit": 4
+		"attack":{
+			"damage":"2~6",
+			"kind":"earth",
+			"tohit":4
 		}
 	},
 	{
@@ -786,7 +785,7 @@
 	{
 		"id":"mk_zombie",
 		"name":"raise zombie",
-		"desc": "Summon a zombie to fight for you",
+		"desc":"Summon a zombie to fight for you",
 		"school":"shadow",
 		"require":"g.shadowlore>0&&g.reanimation>0",
 		"level":2,
@@ -950,39 +949,39 @@
 
 	},
 	{
-		"id": "lightspear2",
-		"name": "greater light spear",
-		"level": 7,
-		"desc": "a lance of solid light",
-		"school": "light",
-		"require": "g.lightspear>0&&g.tier2>0",
-		"buy": {
-			"research": 100,
-			"codices": 10,
-			"lightgem": 3
+		"id":"lightspear2",
+		"name":"greater light spear",
+		"level":7,
+		"desc":"a lance of solid light",
+		"school":"light",
+		"require":"g.lightspear>0&&g.tier2>0",
+		"buy":{
+			"research":100,
+			"codices":10,
+			"lightgem":3
 		},
-		"cost": {
-			"light": 4
+		"cost":{
+			"light":4
 		},
-		"at": {
-			"30": {
-				"attack.damage.min": 3,
-				"attack.tohit": 2
+		"at":{
+			"30":{
+				"attack.damage.min":3,
+				"attack.tohit":2
 			},
-			"100": {
-				"attack.damage.max": 3,
-				"attack.tohit": 3
+			"100":{
+				"attack.damage.max":3,
+				"attack.tohit":3
 			},
-			"300": {
-				"attack.damage.max": 4,
-				"attack.damage.min": 3,
-				"attack.tohit": 4
+			"300":{
+				"attack.damage.max":4,
+				"attack.damage.min":3,
+				"attack.tohit":4
 			}
 		},
-		"attack": {
-			"damage": "21~29",
-			"tohit": 8,
-			"kind": "light"
+		"attack":{
+			"damage":"21~29",
+			"tohit":8,
+			"kind":"light"
 		}
 	},
 	{
@@ -1027,22 +1026,22 @@
 
 	},
 	{
-		"id": "waterblast",
-		"name": "water spray",
-		"level": 3,
-		"desc": "A violent burst of water.",
-		"school": "water",
-		"buy": {
-			"research": 30,
-			"scrolls": 10
+		"id":"waterblast",
+		"name":"water spray",
+		"level":3,
+		"desc":"A violent burst of water.",
+		"school":"water",
+		"buy":{
+			"research":30,
+			"scrolls":10
 		},
-		"cost": {
-			"water": 1
+		"cost":{
+			"water":1
 		},
-		"attack": {
-			"damage": "2~5",
-			"tohit": 3,
-			"kind": "water"
+		"attack":{
+			"damage":"2~5",
+			"tohit":3,
+			"kind":"water"
 		}
 	},
 	{
@@ -1119,36 +1118,36 @@
 
 	},
 {
-		"id": "frostbolt3",
-		"name": "frost bolt III",
-		"level": 10,
-		"require": "g.frostbolt2>0&&g.tier3>0",
-		"desc": "A heavy shard of ice.",
-		"school": "water",
-		"buy": {
-			"codices": 10,
-			"watergem": 6
+		"id":"frostbolt3",
+		"name":"frost bolt III",
+		"level":10,
+		"require":"g.frostbolt2>0&&g.tier3>0",
+		"desc":"A heavy shard of ice.",
+		"school":"water",
+		"buy":{
+			"codices":10,
+			"watergem":6
 		},
-		"at": {
-			"25": {
-				"attack.damage.max": 2
+		"at":{
+			"25":{
+				"attack.damage.max":2
 			},
-			"75": {
-				"attack.damage.min": 2
+			"75":{
+				"attack.damage.min":2
 			},
-			"300": {
-				"attack.damage.max": 3,
-				"attack.damage.min": 2,
-				"attack.tohit": 7
+			"300":{
+				"attack.damage.max":3,
+				"attack.damage.min":2,
+				"attack.tohit":7
 			}
 		},
-		"cost": {
-			"water": 7
+		"cost":{
+			"water":7
 		},
-		"attack": {
-			"damage": "36~45",
-			"tohit": 8,
-			"kind": "water"
+		"attack":{
+			"damage":"36~45",
+			"tohit":8,
+			"kind":"water"
 		}
 	},
 	{
@@ -1346,25 +1345,26 @@
 		}
 	},
 	{
-		"id":"flamestrike",
-		"school":"fire",
-		"desc":"Imbue your weapon with flame before striking.",
-		"level":4,
-		"buy":{
-			"tomes":5,
-			"firegem":10
-		},
-		"cost":{
-			"fire":3,
-			"hp":10
-		},
-		"attack":{
-			"kind":"fire",
-			"bonus":5,
-			"dmg":"a.weapon.damage+a.getBonus( a.weapon.kind )"
-		}
+        "id":"flamestrike",
+        "school":"fire",
+        "desc":"Imbue your weapon with flame before striking.",
+        "level":4,
+        "buy":{
+            "tomes":5,
+            "firegem":10
+        },
+        "cost":{
+            "fire":3,
+            "hp":10,
+            "stamina":1
+        },
+        "attack":{
+            "kind":"fire",
+            "bonus":5,
+            "dmg":"(a.weapon.damage+a.getBonus( a.weapon.kind ))/2"
+        }
 
-	},
+    },
 	{
 		"id":"mk_blade",
 		"name":"summon blade",
@@ -1426,127 +1426,125 @@
 
 	},
 	{
-		"id": "tosand",
-		"name": "to sand",
-		"desc": "Transform your body into fine-grained sand.",
-		"school": "earth",
-		"require": "g.titan>0&&g.geosculpting>11",
-		"level": 15,
-		"buy": {
-			"research": 8000,
-			"tomes": 25,
-			"earthrune": 25
+		"id":"tosand",
+		"name":"to sand",
+		"desc":"Transform your body into fine-grained sand.",
+		"school":"earth",
+		"require":"g.titan>0&&g.geosculpting>11",
+		"level":15,
+		"buy":{
+			"research":8000,
+			"tomes":25,
+			"earthrune":25
 		},
-		"cost": {
-			"earth": 15
+		"cost":{
+			"earth":15
 		},
-		"dot": {
-			"duration": 10,
-			"mod": {
-				"self.defense": 200
+		"dot":{
+			"duration":10,
+			"mod":{
+				"self.defense":200
 			}
 		}
 	},
 	{
-		"id": "quicksand",
-		"desc": "Command the earth to swallow the enemy",
-		"school": "earth",
-		"require": "g.geosculpting>7",
-		"level": 15,
-		"buy": {
-			"sp": 1,
-			"research": 8000,
-			"tomes": 25,
-			"earthrune": 25
+		"id":"quicksand",
+		"desc":"Command the earth to swallow the enemy",
+		"school":"earth",
+		"require":"g.geosculpting>7",
+		"level":15,
+		"buy":{
+			"sp":1,
+			"research":8000,
+			"tomes":25,
+			"earthrune":25
 		},
-		"cost": {
-			"earth": 15
+		"cost":{
+			"earth":15
 		},
-		"attack": {
-			"targets": "enemies",
-			"dot": {
-				"duration": 15,
-				"dmg": "15~25",
-				"mod": {
+		"attack":{
+			"targets":"enemies",
+			"dot":{
+				"duration":15,
+				"dmg":"15~25",
+				"mod":{
 					"speed": -12
 				}
 			}
 		}
 	},
 	{
-		"id": "entomb",
-		"desc": "Bury your enemies deep beneath the ground.",
-		"school": "earth",
-		"require": "g.titan>0",
-		"level": 25,
-		"buy": {
-			"sp": 15,
-			"research": 30000,
-			"tomes": 200,
-			"codices": 700,
-			"earthrune": 60,
-			"earthgem": 350
+		"id":"entomb",
+		"desc":"Bury your enemies deep beneath the ground.",
+		"school":"earth",
+		"require":"g.titan>0",
+		"level":25,
+		"buy":{
+			"sp":15,
+			"research":30000,
+			"tomes":200,
+			"codices":700,
+			"earthrune":60,
+			"earthgem":350
 		},
-		"cost": {
-			"earth": 25,
-			"sindel": 2
+		"cost":{
+			"earth":25,
+			"sindel":2
 		},
-		"attack": {
-			"targets": "enemies",
-			"dot": {
-				"duration": 30,
-				"dmg": "50~75",
-				"mod": {
+		"attack":{
+			"targets":"enemies",
+			"dot":{
+				"duration":30,
+				"dmg":"50~75",
+				"mod":{
 					"speed": -25
 				}
 			}
 		}
 	},
 	{
-		"id": "smite",
-		"school": "earth",
-		"require": "g.hammerlore>=5",
-		"level": 2,
-		"buy": {
-			"research": 500
-		},
-		"cost": {
-			"earth": 2,
-			"stamina": 1
-		},
-		"attack": {
-			"damage": 30,
-			"tohit": 3,
-			"kind": "earth"
-		}
-	},
+        "id":"smite",
+        "school":"earth",
+        "require":"g.hammerlore>=5",
+        "level":5,
+        "buy":{
+            "research":500
+        },
+        "cost":{
+            "earth":3,
+            "stamina":1
+        },
+        "attack":{
+            "damage": "(a.weapon.damage+a.getBonus( a.weapon.kind ))/2.5",
+            "tohit":3,
+            "kind":"earth"
+        }
+    },
 	{
-		"id": "fissure",
-		"desc": "Crack the earth beneath the feet of your enemy.",
-		"cd": 200,
-		"school": "earth",
-		"require": "g.hammerlore>=10",
-		"level": 5,
-		"buy": {
-			"research": 12000
-		},
-		"cost": {
-			"earth": 8,
-			"stamina": 12
-		},
-		"attack": {
-			"damage": 50,
-			"tohit": -5,
-			"kind": "earth",
-			"dot": {
-				"kind": "earth",
-				"duration": 2,
-				"mod": {
-					"speed": -500
-				}
-			}
-		}
-	},
+        "id":"fissure",
+        "desc":"Crack the earth beneath the feet of your enemy.",
+        "cd":200,
+        "school":"earth",
+        "require":"g.hammerlore>=10",
+        "level":5,
+        "buy":{
+            "research":12000
+        },
+        "cost":{
+            "earth":8,
+            "stamina":12
+        },
+        "attack":{
+            "damage": "(a.weapon.damage+a.getBonus( a.weapon.kind ))*1.5",
+            "tohit":5,
+            "kind":"earth",
+            "dot":{
+                "kind":"earth",
+                "duration":4,
+                "id":"prone"
+            }
+        }
+    },
 	{
 		"id":"prolight",
 		"name":"protection: light",
@@ -1947,8 +1945,8 @@
 		"buy":{
 
 			"research":500,
-			"codices":1,
-			"naturegem":1
+			"codices":5,
+			"naturegem":3
 
 		},
 		"cost":{
@@ -2233,21 +2231,21 @@
 		}
 	},
 	{
-		"id": "airburst",
+		"id":"airburst",
 		"name":"burst",
-		"level": 1,
-		"school": "air",
-		"buy": {
-			"research": 100,
-			"scrolls": 10
+		"level":1,
+		"school":"air",
+		"buy":{
+			"research":100,
+			"scrolls":10
 		},
-		"cost": {
-			"air": 1
+		"cost":{
+			"air":1
 		},
-		"attack": {
-			"damage": "1~4",
-			"tohit": 3,
-			"kind": "air"
+		"attack":{
+			"damage":"1~4",
+			"tohit":3,
+			"kind":"air"
 		}
 	},
 	{
@@ -2479,15 +2477,15 @@
 
 	},
 	{
-		"id":"bodyisdry",
+		"id":"downswinging",
 		"level":7,
-		"name":"last stand",
+		"name":"down swinging",
 		"school":"blood",
 		"require":"bloodmage",
-		"desc":"before your body is dry",
+		"desc":"You won't go down without a fight.",
 		"buy":{
 
-			"research":500,
+			"research":1000,
 			"tomes":1,
 			"bloodgem":10
 
@@ -2503,6 +2501,35 @@
 				"hp.rate":-2,
 				"self.tohit":10,
 				"self.damage":10
+			}
+		},"flavor":"am I more than you bargained for yet?"
+	},
+	{
+		"id":"bodyisdry",
+		"level":10,
+		"name":"last stand",
+		"school":"blood",
+		"require":"g.bloodmage&&g.tier5>0",
+		"desc":"Before your body is dry",
+		"cd":120,
+		"buy":{
+
+			"research":3000,
+			"tomes":10,
+			"bloodgem":30
+
+		},
+		"cost":{
+			"mana":10
+		},
+		"dot":{
+			"duration":60,
+			"mod":{
+				"hp.max":200,
+				"hp":200,
+				"hp.rate":-3,
+				"self.tohit":20,
+				"self.damage":20
 			}
 		},"flavor":"don't lose your way"
 	},
@@ -2912,7 +2939,7 @@
 		"buy":{
 
 			"research":4000,
-			"tomes":1,
+			"tomes":5,
 			"naturegem":10
 
 		},
@@ -2937,7 +2964,7 @@
 		"level":6,
 		"desc":"flood the field of battle",
 		"cd":40,
-		"require": "g.tier3>0",
+		"require":"g.tier3>0",
 		"buy":{
 
 			"research":400,
@@ -2951,7 +2978,7 @@
 		"attack":{
 			"dot":{
 				"kind":"water",
-				"targets":"enemies",
+				"targets":"all",
 				"dmg":"3~7",
 				"duration":30,
 				"mod":{
@@ -2979,8 +3006,8 @@
 		"buy":{
 
 			"research":4000,
-			"tomes":5,
-			"naturegem":10
+			"tomes":10,
+			"naturegem":20
 
 		},
 		"cost":{
@@ -3006,8 +3033,8 @@
 		"buy":{
 
 			"research":1000,
-			"tomes":5,
-			"lightgem":5
+			"tomes":10,
+			"lightgem":10
 
 		},
 		"cost":{

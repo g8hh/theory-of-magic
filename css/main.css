@@ -91,6 +91,28 @@ body.darkmode {
 	color: #D7DADC;
 }
 
+.devWarn {
+	font-size: larger;
+	font-weight: bold;
+}
+
+div.popup {
+	height:auto;
+	min-height:100px;
+	min-width:240px;
+	position: absolute;
+	opacity:1;
+	z-index:var(--high-depth);
+	align-self: center;
+	background:inherit;
+	background-clip: border-box;
+	padding:var(--md-gap);
+	background-color: var( --background-color);
+	border:var(--popup-border);
+	border-radius: 0.20rem;
+}
+
+
     div.bar {
         position: relative;
         border: 2px solid #000; box-sizing: content-box;
@@ -114,7 +136,20 @@ body.darkmode {
     body.compact div.bar .bar-text { font-size: 0.7rem; line-height: 0.8em; }
 
 button { color: var(--button-text-color); border: 1px solid #0006; outline:none; }
-button:disabled { opacity: 0.3; color: unset; }
+
+
+input[type="button"]:enabled:active, button:enabled:active, .hilite {
+	background-color: var(--accent-color-active);
+}
+
+input[type="button"]:hover, button:hover, .text-button:hover {
+	background-color: #c2c2c2;
+}
+
+button:disabled, button.disabled, button.disabled:hover, button.disabled:active {
+	opacity: 0.3; color: unset;
+	background-color: unset;
+}
 
 input[type="button"], button, div.text-button, div.popup-close {
 	background-color: #e7e5e5;
@@ -126,21 +161,37 @@ input[type="button"], button, div.text-button, div.popup-close {
 
 }
 
-div.popup {
-	height:auto;
-	min-height:100px;
-	min-width:240px;
-	position: absolute;
-	opacity:1;
-	z-index:var(--high-depth);
-	align-self: center;
-	background:inherit;
-	background-clip: border-box;
-	padding:var(--md-gap);
-	background-color: var( --background-color);
-	border:var(--popup-border);
-	border-radius: 0.20rem;
+.flex-row {
+	display:flex;
 }
+
+.darkmode input[type="button"],
+.darkmode button,
+.darkmode .text-button {
+	background-color:#181818;
+	border-color: #646464;
+	color:#D7DADC;
+}
+.darkmode input[type="button"]:hover, .darkmode button:hover, .darkmode .hilite, .darkmode .text-button:hover {
+	background-color: #5f5f5f;
+}
+
+.darkmode input[type="button"]:disabled, .darkmode button:disabled, .darkmode .task-btn.disabled,
+.darkmode .task-btn.disabled:hover, .darkmode .task-btn.disabled:active, .darkmode .text-button:disabled {
+	color: #808080;
+	background-color: #070707;
+}
+
+button.runnable {
+	background: var(--task-btn-color);
+}
+
+button.runnable:hover { background: #dba659; }
+
+.darkmode button.runnable:hover {
+	background:#c5964f
+}
+
 
 div.text-button {
 	display:flex;
@@ -155,30 +206,6 @@ div.text-button {
 	padding:0;
 }
 
-.darkmode input[type="button"],
-.darkmode button,
-.darkmode .text-button {
-	background-color:#181818;
-	border-color: #646464;
-	color:#D7DADC;
-}
-.darkmode input[type="button"]:hover, .darkmode button:hover, .darkmode .hilite, .darkmode .text-button:hover {
-	background-color: #5f5f5f;
-}
-
-.darkmode input[type="button"]:disabled, .darkmode button:disabled, .darkmode .text-button:disabled {
-	color: #808080;
-	background-color: #070707;
-}
-
-input[type="button"]:enabled:active, button:enabled:active, .hilite {
-	background-color: var(--accent-color-active);
-}
-
-input[type="button"]:hover, button:hover, .text-button:hover {
-	background-color: #c2c2c2;
-}
-
 
 /** button won't respect absolute position by itself **/
 .popup-close {
@@ -186,16 +213,6 @@ input[type="button"]:hover, button:hover, .text-button:hover {
 	cursor: default;
 	top: var(--sm-gap);
 	right: var(--sm-gap);
-}
-
-.runnable button {
-	background: var(--task-btn-color);
-}
-
-.runnable button:hover { background: #dba659; }
-
-.darkmode .runnable button:hover {
-	background:#c5964f
 }
 
 input[type=text].fld-name {
@@ -206,7 +223,7 @@ input[type=text].fld-name {
 }
 
 .darkmode .fld-name {
-	color: var( --button-text-color);
+	color: var( --button-text-color );
 }
 
 div.top-bar {
@@ -390,31 +407,32 @@ button.btnMenu:before {
 }
 
 
-body.compact .task-btn button { min-height: 1em; }
+.compact .task-btn { min-height: 1em; }
 
-.task-btn.running { border: var(--tiny-gap) dashed #000; }
+div.running {
+	border: 2px dashed #000;
+}
+button.running {
+	outline: 1.6px dashed #000;
+	outline-offset: 4px;
+}
 
 .task-btn {
 	text-transform: capitalize;
-	border: var(--tiny-gap) solid transparent;
-	margin: 0;
-	padding: 1px;
-	width:100%;
+	margin: var(--sm-gap);
+	padding: var(--sm-gap);
 	max-width: 9rem;
-}
-.task-btn:not(.locked) { display:flex; }
-
-.task-btn button {
-	flex: 1; word-break: break-word; text-transform: capitalize;
+	word-break: break-word; text-transform: capitalize;
 	min-height: 3em;
 	min-width: 6em;
-	padding: var(--tiny-gap);
+
 	font-size:0.9em;
 }
 
+
+
 button.pursuit {
 	position: absolute;
-	background: rgb(22, 219, 22);
 	top:0;
 	right:0;
 	opacity: 0.2;
@@ -425,23 +443,26 @@ button.pursuit.current {
 }
 
 
-button.stop {
-	background: rgb(211, 89, 89);
+button.stop, button.remove {
+	background: #d35959;
 }
 
+button.pursuit, button.accept, button.add {
+	background: #16db16;
+}
 
-body.darkmode .task-btn.running {
+button.remove {
+	background: #f7755e;
+}
+
+body.darkmode button.task-btn.running {
 	border: 2px dashed var(--task-button-border-color);
 }
-.checks > span { flex: 1; }
-
-.task-btn.darkmode {
+body.darkmode button.task-btn {
 	color: var(--task-button-text-color);
 }
-.running {
-	border: 2px dashed #202020;
-	padding: 1px;
-}
+
+.checks > span { flex: 1; }
 
 .hide { display:hide; }
 
@@ -593,6 +614,24 @@ div.bgfill {
 	width:100%;
 }
 
+.statbars {
+	display: flex; flex-flow: column;
+	width: -moz-available;
+	width:-webkit-fill-available;
+}
+
+.statbars .statbar {
+	display: flex; align-items: center;
+}
+.statbars .statbar .name {
+	flex-basis: 33%; margin:auto;
+}
+.statbars .statbar .barspan {
+	flex-basis: 66%;
+	 padding: var(--sm-gap) var(--sm-gap); width: 100%;
+	}
+
+
 div.bar .fill {
 	background:orange;
 	border-radius: var(--rg-radius);
@@ -612,6 +651,10 @@ div.hp .fill, div.hp .bgfill {
 /*div.arcane .fill, div.arcane.bgfill {
 	background:#8011ac;
 }*/
+
+div.breath .fill, div.breath .bgfill {
+	background:#6eb9e7;
+}
 
 div.mana .fill, div.mana .bgfill {
 	background: #2531b3;

@@ -270,7 +270,7 @@
 		"hp":14,
 		"tohit":1,
 		"defense":4,
-		"attack": {
+		"attack":{
             "name":"slime",
             "kind":"nature",
 			"dmg":"1~3",
@@ -292,7 +292,7 @@
 		"hp":10,
 		"tohit":2,
 		"defense":2,
-		"attack": {
+		"attack":{
             "name":"bite",
             "kind":"pierce",
             "dmg":"0~2.5"
@@ -310,7 +310,7 @@
 		"tohit":4,
 		"defense":1,
 		"speed":3,
-		"attack": {
+		"attack":{
             "name":"peck",
             "kind":"pierce",
             "dmg":"0~2"
@@ -354,7 +354,7 @@
 		"hp":3,
 		"tohit":3,
 		"defense":1,
-		"attack": {
+		"attack":{
             "name":"bite",
             "kind":"pierce",
             "dmg":"0~2"
@@ -403,7 +403,7 @@
 		"hp":4,
 		"tohit":2,
 		"defense":2,
-		"attack": {
+		"attack":{
             "name":"claws",
 			"kind":"slash",
             "dmg":"2~3"
@@ -417,7 +417,7 @@
 		"hp":3,
 		"tohit":5,
 		"defense":2,
-		"attack": {
+		"attack":{
             "name":"claws",
 			"kind":"slash",
             "dmg":"2.2~4.2"
@@ -451,7 +451,7 @@
 		"hp":7,
 		"tohit":2,
 		"defense":4,
-		"attack": {
+		"attack":{
 			"name":"bite",
             "dmg":"1~4",
             "kind":"pierce"
@@ -465,7 +465,7 @@
 		"hp":4,
 		"tohit":3,
 		"defense":3,
-		"attack": {
+		"attack":{
 			"name":"bite",
             "dmg":"2~4",
             "kind":"pierce"
@@ -479,7 +479,7 @@
 		"hp":4,
 		"tohit":5,
 		"defense":3,
-		"attack": {
+		"attack":{
 			"name":"slash",
             "dmg":"1~4",
             "kind":"slash"
@@ -501,10 +501,10 @@
 		"hp":4,
 		"tohit":2,
 		"defense":5,
-		"attack": {
-			"name": "psychic blast",
-            "dmg": "1~2",
-            "kind": "mana"
+		"attack":{
+			"name":"psychic blast",
+            "dmg":"1~2",
+            "kind":"mana"
         },
 		"resist":{
 			"mana":20
@@ -521,7 +521,7 @@
 		"tohit":2,
 		"regen":0.5,
 		"defense":4,
-		"attack": {
+		"attack":{
 			"name":"kingly bite",
             "dmg":"1~3",
             "kind":"pierce"
@@ -529,8 +529,9 @@
 
 	},
 	{
-		"id":"scarab",
+		"id":"m_scarab",
 		"level":4,
+		"name":"scarab",
 		"desc":"massive shimmering beetle with a projecting horn",
 		"kind":"beast",
 		"hp":5,
@@ -548,7 +549,7 @@
 		"level":2,
 		"hp":4,
 		"defense":5,
-		"attack": {
+		"attack":{
 			"name":"dagger",
             "dmg":"1~2",
             "kind":"pierce"
@@ -566,7 +567,7 @@
 		"hp":8,
 		"tohit":5,
 		"defense":7,
-		"attack": {
+		"attack":{
 			"name":"shortsword",
             "dmg":"2~3",
             "kind":"pierce"
@@ -584,7 +585,7 @@
 		"tohit":5,
 		"spells":"heal1",
 		"defense":5,
-		"attack": {
+		"attack":{
 			"name":"club",
             "dmg":"2~4",
             "kind":"blunt"
@@ -601,7 +602,7 @@
 		"hp":11,
 		"tohit":6,
 		"defense":13,
-		"attack": {
+		"attack":{
             "dmg":"3~5",
             "kind":"slash"
         },
@@ -617,7 +618,7 @@
 		"hp":14,
 		"tohit":7,
 		"defense":16,
-		"attack": {
+		"attack":{
             "dmg":"4~7",
             "kind":"slash"
         },
@@ -633,7 +634,7 @@
 		"hp":18,
 		"tohit":8,
 		"defense":23,
-		"attack": {
+		"attack":{
 			"name":"magic missle",
             "dmg":"5~9",
             "kind":"mana"
@@ -651,7 +652,7 @@
 		"hp":15,
 		"tohit":7,
 		"defense":4,
-		"attack": {
+		"attack":{
 			"name":"bite",
             "dmg":"7~9",
             "kind":"pierce"
@@ -666,14 +667,14 @@
 		"tohit":5,
 		"defense":5,
 		"attack":{
-			"name": "bite",
-            "kind": "pierce",
-            "dmg": "4~7",
+			"name":"bite",
+            "kind":"pierce",
+            "dmg":"4~7",
             "dot":[{
-                "kind": "poison",
-                "name": "venom",
-                "dmg": "1~3",
-                "duration": 5
+                "kind":"poison",
+                "name":"venom",
+                "dmg":"1~3",
+                "duration":5
 			},
 			{
 				"%":"10%",
@@ -769,7 +770,23 @@
 			"bodies":"10%"
 		}
 
-    },
+	},
+	{
+		"id":"vulture",
+		"kind":"beast",
+		"level":3,
+		"tohit":7,
+		"defense":1,
+		"speed":5,
+		"attack":{
+            "name":"peck",
+            "kind":"pierce",
+            "dmg":"4~8"
+        },
+		"resist":{
+			"air":20
+		}
+	},
 	{
         "id":"cutpurse",
         "level":4,
@@ -1555,7 +1572,7 @@
 		"attack":{
 			"name":"burrow",
 			"kind":"pierce",
-			"dmg":"4~6"
+			"dmg":"7~14"
 		},
 		"resist":{
 			"light":50
@@ -1564,14 +1581,14 @@
 	{
         "id":"vrrek",
         "level":5,
-        "kind":"humanoid",
-        "tohit":5,
+		"kind":"humanoid",
+		"desc":"An intelligent scavenger with the features of a vulture.",
+        "tohit":9,
         "hp":25,
-		"defense":18,
         "attack":{
             "name":"talons",
             "kind":"slash",
-            "dmg":"3~5"
+            "dmg":"7~12"
         },"flavor":"vrrek is what most of their words sound like"
 
 	},
@@ -2821,7 +2838,7 @@
 	{
 		"id":"m_cordyceps",
 		"name":"cordyceps",
-		"kind":"pest",
+		"kind":"plant",
 		"level":13,
         "desc":"A writhing fungus chokes the air with spores.",
 		"hp":65,
@@ -2835,6 +2852,27 @@
 				"duration":10
 			}
 		}]
+
+	},
+	{
+		"id":"m_stranglevine",
+		"name":"stranglevine",
+		"kind":"plant",
+		"level":17,
+        "desc":"Writhing tendrils seek to ensnare fresh prey.",
+		"hp":165,
+		"spells":"vinewhip",
+        "attack":{
+            "name":"strangle",
+            "kind":"blunt",
+            "dmg":"10~20",
+			"dot":{
+				"id":"entangle",
+				"name":"strangle",
+				"duration":50,
+				"dmg":"5~10"
+			}
+		}
 
 	},
 	{
@@ -3166,6 +3204,54 @@
 			"air":35
 		}
 
+	},
+	{
+		"id":"wyvern2",
+		"name":"vicious wyvern",
+        "level":20,
+		"desc":"",
+		"kind":"magicbeast",
+        "hp":332,
+        "tohit":32,
+        "defense":42,
+        "attack":[
+			{
+				"name":"bite",
+				"kind":"pierce",
+				"dmg":"40~80",
+				"dot":{
+					"kind":"poison",
+					"duration":20,
+					"dmg":"10~20"
+				}
+			}
+		],
+		"immune":"air,poison"
+
+	},
+	{
+		"id":"jabberwocky",
+		"level":25,
+		"unique":true,
+		"desc":"",
+		"kind":"magicbeast",
+        "hp":732,
+        "tohit":32,
+        "defense":42,
+        "attack":[
+			{
+				"name":"bite",
+				"kind":"pierce",
+				"dmg":"40~80",
+				"dot":{
+					"kind":"poison",
+					"duration":20,
+					"dmg":"10~20"
+				}
+			}
+		],
+		"immune":"air,poison"
+
     },
     {
 		"id":"greendragon",
@@ -3224,7 +3310,7 @@
 			{
 				"dot":{
 					"id":"silence",
-					"duration":2
+					"duration":15
 				}
 			},
 			{
@@ -3478,7 +3564,7 @@
         "id":"leviathan",
         "level":18,
         "kind":"beast",
-        "desc":"A mountain moves in the depths.",
+        "desc":"A mountain moves in the depths of the sea.",
         "hp":400,
         "tohit":20,
         "defense":75,
@@ -3865,23 +3951,35 @@
 		"id":"strativax2",
 		"name":"strativax waking",
         "level":27,
-		"desc":"",
+		"desc":"The dragon's eyes begin to open.",
 		"unique":true,
 		"kind":"dragon",
-        "hp":5000,
+        "hp":50000,
         "tohit":50,
         "defense":300,
-		"attack":""
+		"attack":[
+			{
+				"name":"tail flick",
+				"dmg":"100~150",
+				"kind":"pierce"
+			},
+			{
+				"name":"burning yawn",
+				"dmg":"50~100",
+				"targets":"enemies",
+				"kind":"fire"
+			}
+		]
 
 	},
 	{
 		"id":"strativax3",
 		"name":"strativax enraged",
         "level":27,
-		"desc":"",
+		"desc":"Strativax now furious at your impetuous intrusion.",
 		"unique":true,
 		"kind":"dragon",
-        "hp":5000,
+        "hp":20000,
         "tohit":50,
         "defense":200,
 		"attack":[
@@ -3891,7 +3989,7 @@
 				"kind":"blunt"
 			},
 			{
-				"name":"breath of fire",
+				"name":"fire breath",
 				"kind":"fire",
 				"dmg":"100~200",
 				"targets":"enemies"
@@ -4023,7 +4121,7 @@
 		  {
 			"name":"deathly presence",
 			"targets":"enemies",
-			"dot": {
+			"dot":{
 			  "kind":"death",
 			  "duration":500,
 			  "dmg":"50~80"
@@ -4031,9 +4129,9 @@
 		  },
 		  {
 			"name":"reap",
-			"tohit": 50,
-			"kind": "death",
-			"dmg": "150~300"
+			"tohit":50,
+			"kind":"death",
+			"dmg":"150~300"
 		  }
 		]
 	  },
@@ -4065,7 +4163,7 @@
 		"kind":"deity",
 		"unused":true,
 		"unique":true,
-		"desc":"The serpent who grips the earth in its scales",
+		"desc":"The serpent that grips the earth in its scales",
 		"hp":130000,
 		"tohit":30,
 		"defense":200,

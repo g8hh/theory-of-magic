@@ -12,19 +12,19 @@
 		"id":"earthspire",
 		"name":"earthen spire",
 		"desc":"An impervious spire of metal and stone.",
-		"cost": {
-			"research": 3000,
-			"gold": 3000,
-			"codices": 50
+		"cost":{
+			"research":3000,
+			"gold":3000,
+			"codices":50
 		},
-		"require": "g.geosculpting>=5",
-		"mod": {
-			"minions.max": 10,
-			"space.max": 300,
-			"earthlore.max": 5,
-			"geosculpting.max": 3,
-			"earth.max": 5,
-			"earth.rate": 0.5
+		"require":"g.geosculpting>=5",
+		"mod":{
+			"minions.max":10,
+			"space.max":300,
+			"earthlore.max":5,
+			"geosculpting.max":3,
+			"earth.max":5,
+			"earth.rate":0.5
 		},"flavor":"A monument to your geosculpting mastery."
 	},
 	{
@@ -109,8 +109,12 @@
 		"desc":"Cozy and quaint.",
 		"require":"tier0",
 		"disable":"innroom",
-		"cost":500,
+		"cost":{
+			"gold":500,
+			"gems":5
+		},
 		"mod":{
+			"tapestries.max":1,
 			"minions.max":1,
 			"space.max":20
 		}
@@ -118,10 +122,14 @@
 	{
 		"id":"house",
 		"desc":"A modest house in a small town.",
-		"cost":900,
+		"cost":{
+			"gold":900,
+			"gems":10
+		},
 		"disable":"innroom",
 		"require":"g.tier0>0&&g.arcana.max>=8",
 		"mod":{
+			"tapestries.max":2,
 			"minions.max":3,
 			"space.max":30
 		}
@@ -129,24 +137,32 @@
 	{
 		"id":"shop",
 		"desc":"A small shop in a bustling city.",
-		"cost":850,
-		"require":"g.tier0>0&&g.crafting>=9",
+		"cost":{
+			"gold":850,
+			"gems":9
+		},
+		"require":"g.tier1>0&&g.crafting>=9",
 		"mod":{
+			"tapestries.max":1,
 			"minions.max":2,
 			"magicgems.max":1,
 			"space.max":25,
 			"gold.rate":0.2,
 			"gold.max":25,
 			"nature.rate":"-5%",
-			"arcana.rate":-0.001
+			"arcana.rate":-0.002
 		}
 	},
 	{
 		"id":"inn",
 		"desc":"A quiet inn for hosting wayfarers.",
-		"cost":2000,
-		"require":"g.tier0>0&&g.languages>=7",
+		"cost":{
+			"gold":2000,
+			"gems":15
+		},
+		"require":"g.tier1>0&&g.languages>=7",
 		"mod":{
+			"tapestries.max":2,
 			"minions.max":5,
 			"space.max":50,
 			"research.rate":-0.5,
@@ -158,9 +174,13 @@
 	{
 		"id":"lodge",
 		"desc":"A rugged lodge in the woods.",
-		"cost":950,
-		"require":"g.tier0>0&&g.naturelore>=7",
+		"cost":{
+			"gold":950,
+			"gems":5
+		},
+		"require":"g.tier1>0&&g.naturelore>=7",
 		"mod":{
+			"tapestries.max":3,
 			"minions.max":5,
 			"space.max":30,
 			"nature.max":1,
@@ -171,9 +191,13 @@
 		"id":"gabledhouse",
 		"name":"gabled mansion",
 		"desc":"A spacious house with many gabled windows.",
-		"cost":2000,
+		"cost":{
+			"gold":2000,
+			"gems":10
+		},
 		"require":"g.tier1>0&&g.arcana>=10",
 		"mod":{
+			"tapestries.max":4,
 			"minions.max":5,
 			"space.max":65
 		}
@@ -182,9 +206,13 @@
 		"id":"halftimber",
 		"name":"half-timber house",
 		"desc":"A vast home of rustic design",
-		"cost":3000,
+		"cost":{
+			"gold":3000,
+			"gems":15
+		},
 		"require":"g.tier1>0&&g.arcana>=10",
 		"mod":{
+			"tapestries.max":3,
 			"minions.max":7,
 			"space.max":75
 		}
@@ -194,7 +222,9 @@
 		"desc":"A primitive dwelling well-suited to particular areas of study. Others less so.",
 		"require":"g.tier0>0&&(g.shadow+g.earth+g.nature)>0",
 		"tags":"outdoors",
-		"cost":150,
+		"cost":{
+			"gold":150
+		},
 		"mod":{
 			"minions.max":2,
 			"space.max":25,
@@ -236,6 +266,7 @@
 	     "require":"hauntedmanor",
           "tags":"spiritsource",
 		"mod":{
+			"tapestries.max":2,
 			"space.max":75,
 			"spiritlore.max":1,
 			"spiritlore.rate":0.1,
@@ -250,6 +281,7 @@
 		"cost":5000,
 		"require":"g.spirit>=15&&g.arcana>=12",
 		"mod":{
+			"tapestries.max":2,
 			"minions.max":10,
 			"space.max":110,
 			"runelore.max":2,
@@ -267,6 +299,7 @@
 	     "require":"g.magician>0&&g.arcana>=20",
           "tags":"airsource",
 		"mod":{
+			"tapestries.max":2,
 			"minions.max":5,
 			"space.max":55,
 			"airlore.max":1,
@@ -317,6 +350,7 @@
 		"cost":5000,
 		"require":"(g.magician+g.darkmagician+g.battlemage+g.dreadlord)>0&&g.arcana>=20",
 		"mod":{
+			"tapestries.max":3,
 			"minions.max":15,
 			"space.max":200,
 			"nature.max":-1,
@@ -332,6 +366,7 @@
 		},
 		"require":"g.research>=400&&g.magician>0",
 		"mod":{
+			"tapestries.max":5,
 			"minions.max":20,
 			"space.max":300,
 			"research.max":50,
@@ -344,6 +379,8 @@
 		"cost":10000,
 		"require":"(g.oracle+g.seer)>0",
 		"mod":{
+			"tapestries.max":4,
+			"composure.max":1,
 			"virtue.rate":0.001,
 			"arcana.rate":0.001,
 			"minions.max":8,
@@ -365,6 +402,7 @@
 			"tomes":20
 		},
 		"mod":{
+			"tapestries.max":1,
 			"minions.max":10,
 			"space.max":420,
 			"mysticism.max":1,
@@ -400,6 +438,7 @@
 		"cost":10000,
 		"require":"tier2",
 		"mod":{
+			"tapestries.max":4,
 			"minions.max":20,
 			"space.max":400,
 			"charms.max":2,
@@ -415,6 +454,7 @@
 		"require":"tier2",
 		"cost":10000,
 		"mod":{
+			"tapestries.max":5,
 			"minions.max":20,
 			"space.max":400,
 			"earthlore.max":1,

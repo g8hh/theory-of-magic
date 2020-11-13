@@ -23,6 +23,15 @@
 		}
 	},
 	{
+		"id":"enc_bookworm",
+		"name":"bookworm",
+		"desc":"A studious annelid to choose a home within a tome's pages.",
+		"effect":{
+			"bf":"1~2",
+			"lore.exp":3
+		}
+	},
+	{
 		"id":"mysticwater",
 		"name":"mystic waters",
 		"level":1,
@@ -69,7 +78,7 @@
 		"id":"enc_tapestry",
 		"name":"occult tapestry",
 		"level":2,
-		"desc":"a tapestry with strange, hidden meanings",
+		"desc":"A tapestry with strange, hidden meanings",
 		"effect":{
 			"bf":"-1~2",
 			"rage":"0~2"
@@ -251,6 +260,17 @@
 		}
 	},
 	{
+
+		"id":"eeriemoans",
+		"name":"eerie moans",
+		"desc":"You hear a faint moaning, but are unable to determine its source.",
+		"effect":{
+			"spiritlore.exp":1,
+			"madness":1
+		}
+
+	},
+	{
 		"id":"strangebones",
 		"name":"strange bones",
 		"desc":"You've never seen such bones before.",
@@ -266,7 +286,7 @@
 	{
 		"id":"enc_embalm1",
 		"name":"embalming apparatus",
-		"desc":"Fluids and recepticles for preservation of the dead.",
+		"desc":"Fluids and recepticles for the preservation of corpses.",
 		"effect":{
 			"bf":"-1~2",
 			"unease":"0~2",
@@ -685,7 +705,7 @@
 			"unease":"2~4"
 		},
 		"result":{
-		},"flavor":"blank verse is always hard to interpret."
+		},"flavor":"blank verse is hard to interpret."
 	},
 	{
 		"id":"enc_gap",
@@ -701,6 +721,121 @@
 			"airgem":"10%",
 			"airlore.max":0.0001
 		}
+	},
+	{
+		"id":"enc_mirror1",
+		"name":"mirror of introspection",
+		"desc":"It's just you.",
+		"effect":{
+			"lightlore.exp":1,
+			"weary":"1~3",
+			"unease":"1~2"
+		},
+		"result":{
+
+		}
+
+	},
+	{
+		"id":"enc_mirror2",
+		"name":"mirror of false reflection",
+		"desc":"Something is wrong with the glass.",
+		"effect":{
+			"trickery.exp":1,
+			"rage":"1~3",
+			"bf":"1~2"
+		},
+		"result":{
+
+		}
+
+	},
+	{
+		"id":"enc_futuremirror",
+		"name":"mirror of foretelling",
+		"desc":"Visions of the future play in your reflection.",
+		"effect":{
+			"divination.exp":1,
+			"madness":"1~3",
+			"unease":"2~3"
+		},
+		"result":{
+
+		}
+
+	},
+	{
+		"id":"enc_rageemirror",
+		"name":"seething mirror",
+		"desc":"The glass fixes your gaze and stokes your wrath.",
+		"effect":{
+			"rage":"4~5"
+		},
+		"result":{
+
+		}
+
+	},
+	{
+		"id":"enc_mirrorhall",
+		"name":"reflecting hallways",
+		"desc":"You soon become lost in the false cooridors.",
+		"effect":{
+			"trickery.exp":1,
+			"rage":"2~3",
+			"bf":"3~5"
+		},
+		"result":{
+
+		}
+
+	},
+	{
+		"id":"enc_voidmirror",
+		"name":"void mirror",
+		"desc":"You see all shapes clearly reflected; but completely black.",
+		"effect":{
+			"voidlore.exp":1,
+			"void":1,
+			"madness":"3~5",
+			"unease":"3~5"
+		},
+		"flavor":"for now you see in a mirror, darkly."
+
+	},
+	{
+		"id":"enc_watermirror",
+		"name":"water mirror",
+		"desc":"Through the mirror you appear to be drowning.",
+		"effect":{
+			"breath":-3,
+			"water":1,
+			"rage":"2~4",
+			"unease":"3~5"
+		}
+
+	},
+	{
+		"id":"enc_pastmirror",
+		"name":"mirror of history",
+		"desc":"The mirror shows scenes from long ago.",
+		"effect":{
+			"history.exp":1,
+			"bf":"1~2",
+			"unease":"1~2"
+		}
+
+	},
+	{
+		"id":"enc_farmirror",
+		"name":"a distant mirror",
+		"desc":"The mirror shows scenes from far away.",
+		"effect":{
+			"scrying.exp":1,
+			"travel.exp":1,
+			"bf":"1~2"
+		}
+
 	},
 	{
 
@@ -842,8 +977,6 @@
 			"madness":"2~4",
 			"rage":"1~2",
 			"hp":-1
-		},
-		"result":{
 		}
 	},
 	{
@@ -855,8 +988,6 @@
 			"madness":"2~3",
 			"rage":"2~3",
 			"hp":-3
-		},
-		"result":{
 		}
 	},
 	{
@@ -866,13 +997,14 @@
 		"effect":{
 			"unease":"1~2",
 			"weary":"0~1",
-			"herbalism.exp":1
+			"herbalism.exp":1,
+			"waterlore.exp":1
 		}
 	},
 	{
 		"id":"e_cockatrice",
 		"name":"cockatrice",
-		"desc":"An unnatural blend of serpent and rooster. Its stare is death and you must avert your eyes.",
+		"desc":"An unnatural blend of serpent and rooster. As its stare is death, you avert your gaze as you approach.",
 		"effect":{
 			"unease":"3~5",
 			"bf":"2~3",
@@ -900,6 +1032,18 @@
 		},"flavor":"It seems to like rocks the best."
 	},
 	{
+		"id":"e_moss_portal",
+		"name":"moss-stone portal",
+		"desc":"One of a dozen mossy portals at the edges of the menagerie. Their use is unknown.",
+		"effect":{
+			"unease":"3~4",
+			"bf":"3~4"
+		},
+		"result":{
+			"arcana":0.01
+		}
+	},
+	{
 		"id":"e_big_scale",
 		"name":"scale of ouroboros",
 		"desc":"At the center of the menagerie a single massive scale merges with the tree.",
@@ -921,7 +1065,8 @@
 		"name":"wyvern",
 		"desc":"Believed to be a distant cousin of dragons, some are even venomous.",
 		"effect":{
-			"unease":"2~3"
+			"unease":"2~3",
+			"airlore2.exp":1
 		}
 	},
 	{
@@ -931,7 +1076,7 @@
 		"effect":{
 			"unease":"2~3",
 			"rage":0.5,
-			"waterlore.exp":1
+			"waterlore2.exp":1
 		}
 	},
 	{
@@ -940,7 +1085,8 @@
 		"desc":"The great dog-like beast is a portend of death.",
 		"effect":{
 			"unease":"3~4",
-			"madness":"1~4"
+			"madness":"1~4",
+			"shadowlore2.exp":1
 		}
 	},
 	{
@@ -981,9 +1127,8 @@
 			"unease":"1~2",
 			"madness":"1~2",
 			"rage":"1~2",
-			"hp":-3
-		},
-		"result":{
+			"hp":-3,
+			"research":1
 		}
 	},
 	{
@@ -997,6 +1142,7 @@
 			"hp":-3
 		},
 		"result":{
+			"animals.max":0.001
 		}
 	}
 

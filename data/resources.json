@@ -42,6 +42,16 @@
 	},
 	{
 
+		"id":"tapestries",
+		"name":"tapestries",
+		"desc":"History, lore, and even spells, may be woven in their threads.",
+		"max":3,
+		"mod":{
+			"research.max":5
+		}
+	},
+	{
+
 		"id":"runestones",
 		"name":"rune stones",
 		"group":"runes",
@@ -191,7 +201,7 @@
 	},
 	{
 		"id":"codices",
-		"name":"Codices",
+		"name":"codices",
 		"group":"books",
 		"desc":"Codex of arcane lore",
 		"max":10,
@@ -204,12 +214,12 @@
 	},
 	{
 		"id":"tomes",
-		"name":"Tomes",
+		"name":"tomes",
 		"group":"books",
 		"desc":"A hefty tome of knowledge.",
 		"max":5,
 		"mod":{
-			"research.max":5,
+			"research.max":7,
 			"arcana.rate":0.001,
 			"lore.rate":0.1,
 			"lore.max":0.1
@@ -363,16 +373,6 @@
 
 		"id":"herbs",
 		"desc":"Special plants for potions and alchemy.",
-		"max":10
-	},
-	{
-		"id":"sulphur",
-		"desc":"principle of fire.",
-		"max":10
-	},
-	{
-		"id":"mercury",
-		"desc":"principle of metal.",
 		"max":10
 	},
 	{

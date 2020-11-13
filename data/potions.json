@@ -3,7 +3,7 @@
 	{
 		"id":"pot_poisonward",
 		"name":"poison ward",
-		"require":"g.potions>0",
+		"require":"potions",
 		"level":1,
 		"buy":{
 			"gold":25,
@@ -15,9 +15,30 @@
 		"use":"poisonward"
 	},
 	{
+		"id":"pot_breath1",
+		"name":"portion of waterbreathing",
+		"require":"g.potions>1",
+		"buy":{
+			"gold":25,
+			"research":50
+		},
+		"cost":{
+			"herbs":10
+		},
+		"use":{
+			"dot":{
+				"duration":120,
+				"effect":{
+					"breath":3,
+					"water":0.1
+				}
+			}
+		}
+	},
+	{
 		"id":"pot_mana1",
 		"name":"draught of mana",
-		"require":"g.potions>0",
+		"require":"potions",
 		"buy":{
 			"gold":25,
 			"research":50

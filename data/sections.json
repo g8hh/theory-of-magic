@@ -62,10 +62,11 @@
 		"id":"sect_craft",
 		"name":"crafting"
 	},
+
 	{
 		"id":"sect_potions",
 		"name":"potions",
-		"require":"g.potions>0"
+		"require":"potions"
 	},
 	{
 		"id":"sect_minions",

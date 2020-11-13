@@ -6,7 +6,7 @@
 	"length":15,
 	"sym":"📖",
 	"require":"evt_helper",
-	"desc":"a good apprentice spends all their free time in the library. after doing chores, of course.",
+	"desc":"A good apprentice spends all their free time in the library. After chores, of course.",
 	"run":{
 		"stamina":0.2
 	},
@@ -18,6 +18,7 @@
 		"scrolls":"1~4"
 	},
 	"encs":[
+		"enc_bookworm",
 		"enc_tapestry",
 		"enc_primer1",
 		"enc_chest1",
@@ -30,8 +31,8 @@
 	"name":"lillit's spring",
 	"level":2,
 	"length":20,
-	"require":"evt_helper",
-	"desc":"tradition tells of a spring with enchanted waters. investigations might prove revealing.",
+	"require":"mustylibrary",
+	"desc":"Tradition tells of a spring with enchanted waters. Investigations might prove revealing.",
 	"run":{
 		"stamina":0.2
 	},
@@ -56,12 +57,9 @@
 	"name":"eryl eyot",
 	"level":5,
 	"length":30,
-	"desc":"the small and tranquil island is inhabited by an old hermit named thyffr",
+	"desc":"The small and tranquil island is inhabited by an old hermit named thyffr",
 	"run":{
-		"stamina":0.2
-	},
-	"effect":{
-
+		"stamina":0.22
 	},
 	"result":{
 		"arcana":0.1,
@@ -86,7 +84,7 @@
 	"length":40,
 	"desc":"the woods posses many features of interest to the magical scholar.",
 	"run":{
-		"stamina":0.2
+		"stamina":0.25
 	},
 	"result":{
 		"arcana":0.1,
@@ -110,14 +108,11 @@
 	"id":"pidwigcove",
 	"name":"pidwig's cove",
 	"level":9,
-	"require":"g.history>=3",
+	"require":"g.history>=5&&g.eryleyot>0",
 	"length":25,
 	"desc":"The half-goblin Pidwig has sailed the waters around his bay for hundreds of years. In that time he has collected a myriad of interesting artifacts.",
 	"run":{
-		"stamina":0.2
-	},
-	"effect":{
-
+		"stamina":0.3
 	},
 	"result":{
 		"arcana":0.1
@@ -141,9 +136,9 @@
 	"id":"rithel",
 	"level":14,
 	"desc":"This tiny outpost in the center of thangmor outlasted even the pillars",
-	"require":"g.evil<=0&&g.history>=5",
+	"require":"g.evil<=0&&g.history>=7&&g.loc_treffil>0",
 	"run":{
-		"stamina":0.2
+		"stamina":0.33
 	},
 	"result":{
 		"arcana":0.1,
@@ -167,9 +162,9 @@
 	"level":4,
 	"length":30,
 	"require":"tier0",
-	"desc":"an ancient crypt of crumbling stone.",
+	"desc":"An ancient crypt of crumbling stone.",
 	"run":{
-		"stamina":0.2
+		"stamina":0.35
 	},
 	"result":{
 		"arcana":0.15,
@@ -185,18 +180,19 @@
 		"enc_rats",
 		"strangebones",
 		"enc_embalm1",
-		"enc_chest2"
+		"enc_chest2",
+		"eeriemoans"
 	]
 },
 {
 	"id":"hallofmirrors",
 	"level":12,
 	"require":"g.scrying>=999",
-	"length":10,
+	"length":50,
 	"sym":"📖",
 	"desc":"",
 	"run":{
-		"stamina":0.2
+		"stamina":0.4
 	},
 	"result":{
 		"arcana":0.1,
@@ -207,10 +203,16 @@
 	},
 	"encs":[
 		"enc_tapestry",
-		"enc_primer1",
 		"enc_chest1",
-		"enc_primer1",
-		"enc_workbook1"
+		"enc_mirror1",
+		"enc_mirror2",
+		"enc_futuremirror",
+		"enc_rageemirror",
+		"enc_mirrorhall",
+		"enc_voidmirror",
+		"enc_pastmirror",
+		"enc_farmirror",
+		"enc_watermirror"
 	]
 },
 {
@@ -219,8 +221,8 @@
 	"level":9,
 	"length":50,
 	"sym":"📖",
-	"require":"g.alchemy>=7||g.scrying>=9",
-	"desc":"You could spend a century in Fazbit's lost workshop and still not exhaust its creations.",
+	"require":"(g.alchemy+g.scrying)>=17",
+	"desc":"You could spend a century in Fazbit's lost workshop and not exhaust its creations.",
 	"loot":{
 		"tomes":"2~3",
 		"gems":"3~5",
@@ -241,13 +243,16 @@
 {
 	"id":"genezereth",
 	"level":15,
-	"require":"g.history>=6",
+	"require":"g.history>=7",
 	"length":100,
 	"sym":"📖",
 	"desc":"An ancient library at the bridge spanning Markhul's gap.",
 	"flavor":"third of the Four Weirs of Dhrune.",
 	"result":{
 		"title":"Historian"
+	},
+	"run":{
+		"stamina":0.4
 	},
 	"loot":{
 		"tomes":"3~5",
@@ -267,7 +272,7 @@
 	"id":"loc_orrem",
 	"name":"sands of orrem",
 	"require":"g.history>=7&&g.scrying>=5",
-	"show":{
+	"start":{
 		"name":"Cities of Orrem",
 		"desc":"A vision in a crystal orb reveals to you the ruins of the lost cities of Orrem."
 	},
@@ -275,7 +280,7 @@
 	"length":400,
 	"level":19,
 	"run":{
-		"stamina":3
+		"stamina":4
 	},
 	"result":{
 		"title":"Nomad",
@@ -298,22 +303,31 @@
 	]
 },
 {
+	"id":"loc_ettinmoors",
+	"name":"ettinmoors",
+	"require":"g.player.level>=9999"
+},
+{
 	"id":"loc_menagerie",
 	"name":"the lost menagerie",
 	"level":23,
-	"require":"g.tier98>0",
+	"require":"g.tier5>0&&g.magicbeasts>=5",
 	"length":200,
 	"desc":"Beneath the tallest idrasil a great menagerie thrives beneath a second sky.",
 	"run":{
 		"stamina":3
 	},
-	"once":{
-		"magicbeasts.max":1
+	"mod":{
+		"magicbeasts.max":"?1"
+	},
+	"effect":{
+		"magicbeasts.exp":1
 	},
 	"result":{
-		"title":""
+		"title":"Wild Compiler"
 	},
 	"loot":{
+		"gems":"5~10",
 		"herbs":"10~20"
 	},
 	"encs":[
@@ -330,6 +344,7 @@
 		"e_phoenix",
 		"e_pogler",
 		"e_snakemass",
+		"e_moss_portal",
 		"e_spidermass",
 		"e_trumple",
 		"e_wyvern"

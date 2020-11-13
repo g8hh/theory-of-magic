@@ -3,10 +3,11 @@
 	"core":[
 		"resources", "upgrades", "tasks", "homes", "furniture", "skills", "states",
 		"player", "spells", "monsters", "dungeons", "events", "classes", "armors", "weapons",
-		"materials", "enchants", "sections", "potions", "encounters", "locales","stressors", "rares"
+		"materials", "enchants", "sections", "potions", "encounters", "locales","stressors",
+		"rares","reagents","properties"
 	],
 	"modules":[
-		"patrons", "puppeteer","combattutorial", "shian"
+		"patrons", "puppeteer","combattutorial", "shian","sackmakers","ritualist","extramats"
 	]
 
 }
