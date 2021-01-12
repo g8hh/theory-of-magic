@@ -9,18 +9,18 @@
 				"id":"puppetry",
 				"require":"g.crafting>=8&&g.spiritlore>=5",
 				"desc":"Create and animate magical puppets",
-				"level": 1,
+				"level":1,
 				"run":{
-					"stamina": 0.4
+					"stamina":0.4
 				},
 				"result":{
-					"sp": 0.05
+					"sp":0.05
 				},
 				"mod":{
 					"minions.puppet.hp.max":"1%",
 					"minions.puppet.dmg":"1%",
-					"allies.max": 0.25,
-					"research.max": 5
+					"allies.max":0.25,
+					"research.max":5
 				}
 			},
 			{
@@ -28,16 +28,16 @@
 				"name":"animation",
 				"require":"g.puppetry>=5&&g.spiritlore>=10",
 				"desc":"Imbue objects with the power of motion",
-				"level": 3,
+				"level":3,
 				"run":{
-					"stamina": 0.7
+					"stamina":0.7
 				},
 				"result":{
-					"sp": 0.05
+					"sp":0.05
 				},
 				"mod":{
-					"allies.max": 0.25,
-					"research.max": 5
+					"allies.max":0.25,
+					"research.max":5
 				}
 			},
 			{
@@ -45,20 +45,20 @@
 				"name":"mechanical magic",
 				"require":"g.crafting>=12&&g.puppetry>=6&&g.magicalanimation>=5&&g.tier2>0",
 				"desc":"Assemble magic constructs",
-				"level": 3,
+				"level":3,
 				"run":{
-					"stamina": 0.7
+					"stamina":0.7
 				},
 				"result":{
-					"sp": 0.05
+					"sp":0.05
 				},
 				"mod":{
 					"minions.machina.hp.max":"1%",
 					"minions.machina.dmg":"1%",
-					"puppetry.max": 0.2,
-					"magicalanimation.max": 0.2,
-					"allies.max": 0.25,
-					"research.max": 5
+					"puppetry.max":0.2,
+					"magicalanimation.max":0.2,
+					"allies.max":0.25,
+					"research.max":5
 				}
 			},
 			{
@@ -66,17 +66,17 @@
 				"name":"magiphysics",
 				"require":"g.lore>=25&&g.planeslore>=15&&g.tier4>0",
 				"desc":"The study of magic in motion.",
-				"level": 12,
+				"level":12,
 				"run":{
-					"stamina": 0.7
+					"stamina":0.7
 				},
 				"result":{
-					"sp": 0.05
+					"sp":0.05
 				},
 				"mod":{
 					"planeslore.rate":"5%",
 					"lore.rate":"10%",
-					"research.max": 5
+					"research.max":5
 				}
 			},
 			{
@@ -84,12 +84,12 @@
 				"name":"automata sculpting",
 				"require":"g.crafting>=18&&g.puppetry>=8&&g.magicalanimation>=6&&g.magiphysics>=5&&(g.mechanist+g.mechamancer)>0",
 				"desc":"They think, therefore they are.",
-				"level": 13,
+				"level":13,
 				"run":{
-					"stamina": 1
+					"stamina":1
 				},
 				"result":{
-					"sp": 0.05
+					"sp":0.05
 				},
 				"mod":{
 					"minions.puppet.hp.max":"1%",
@@ -98,11 +98,11 @@
 					"minions.machina.dmg":"1%",
 					"minions.automata.hp.max":"1%",
 					"minions.automata.dmg":"1%",
-					"puppetry.max": 0.2,
-					"magicalanimation.max": 0.2,
-					"machinacreation.max": 0.2,
-					"allies.max": 0.25,
-					"research.max": 5
+					"puppetry.max":0.2,
+					"magicalanimation.max":0.2,
+					"machinacreation.max":0.2,
+					"allies.max":0.25,
+					"research.max":5
 				}
 			}
 		],
@@ -113,34 +113,34 @@
 				"desc":"Put on a show with animated puppets",
 				"verb":"puppeteering",
 				"require":"g.puppeteer>0",
-				"length": 15,
+				"length":15,
 				"at":{
 					"10":{
-						"effect.gold": 1
+						"effect.gold":1
 					},
 					"50":{
-						"effect.gems": 0.01
+						"effect.gems":0.01
 					},
 					"100":{
-						"effect.gold": 1.5
+						"effect.gold":1.5
 					},
 					"250":{
-						"effect.gems": 0.02
+						"effect.gems":0.02
 					}
 				},
 				"cost":{
-					"puppets": 1
+					"puppets":1
 				},
 				"run":{
-					"stamina": 0.2,
-					"spirit": 0.2
+					"stamina":0.2,
+					"spirit":0.2
 				},
 				"effect":{
-					"gems": 0.01,
-					"gold": 4
+					"gems":0.01,
+					"gold":4
 				},
 				"result":{
-					"puppetry.max": 0.01
+					"puppetry.max":0.01
 				}
 
 			},
@@ -154,18 +154,18 @@
 				"fill": [
 					"puppets"
 				],
-				"length": 10,
+				"length":10,
 				"cost":{
-					"spiritgem": 1,
-					"gold": 50,
-					"research": 50
+					"spiritgem":1,
+					"gold":50,
+					"research":50
 				},
 				"run":{
-					"stamina": 0.3,
-					"spirit": 0.3
+					"stamina":0.3,
+					"spirit":0.3
 				},
 				"result":{
-					"puppets": 1
+					"puppets":1
 				}
 
 			},
@@ -175,30 +175,30 @@
 				"desc":"Lend some of your machinae to perform menial tasks",
 				"verb":"leasing",
 				"require":"g.mechanist>0",
-				"length": 50,
+				"length":50,
 				"at":{
 					"10":{
-						"effect.gold": 1
+						"effect.gold":1
 					},
 					"50":{
-						"effect.gold": 1.5
+						"effect.gold":1.5
 					},
 					"100":{
-						"effect.gold": 1.5
+						"effect.gold":1.5
 					},
 					"250":{
-						"effect.gold": 2
+						"effect.gold":2
 					}
 				},
 				"cost":{
-					"machinae": 1
+					"machinae":1
 				},
 				"effect":{
-					"gold": 6,
-					"gems": 0.1
+					"gold":6,
+					"gems":0.1
 				},
 				"result":{
-					"machinacreation.max": 0.01
+					"machinacreation.max":0.01
 				}
 
 			},
@@ -209,20 +209,20 @@
 				"require":"g.machinacreation>=1",
 				"need":"workspace",
 				"desc":"Assemble a machina.",
-				"length": 10,
+				"length":10,
 				"fill": [
 					"machinae"
 				],
 				"cost":{
-					"gems": 5,
-					"gold": 250,
-					"research": 400
+					"gems":5,
+					"gold":250,
+					"research":400
 				},
 				"run":{
-					"stamina": 0.8
+					"stamina":0.8
 				},
 				"result":{
-					"machinae": 1
+					"machinae":1
 				}
 
 			},
@@ -232,22 +232,22 @@
 				"desc":"Counsel with your automata to plan the future.",
 				"verb":"Counseling",
 				"require":"g.mechamancer>0",
-				"length": 100,
+				"length":100,
 				"cost":{
-					"automatas": 1
+					"automatas":1
 				},
 				"run":{
-					"stamina": 4,
-					"research": 150
+					"stamina":4,
+					"research":150
 				},
 				"effect":{
-					"lore.max": 0.001,
-					"history.max": 0.001,
-					"charms.max": 0.001,
-					"languages.max": 0.001
+					"lore.max":0.001,
+					"history.max":0.001,
+					"charms.max":0.001,
+					"languages.max":0.001
 				},
 				"result":{
-					"automatasculpting.max": 0.05
+					"automatasculpting.max":0.05
 				}
 
 			},
@@ -258,22 +258,22 @@
 				"require":"g.automatasculpting>=1",
 				"need":"workspace",
 				"desc":"Create an automata.",
-				"length": 10,
+				"length":10,
 				"fill": [
 					"automatas"
 				],
 				"cost":{
-					"gold": 2000,
-					"research": 2000,
-					"bloodgem": 20,
-					"spiritgem": 20,
-					"runestones": 15
+					"gold":2000,
+					"research":2000,
+					"bloodgem":20,
+					"spiritgem":20,
+					"runestones":15
 				},
 				"run":{
-					"stamina": 2
+					"stamina":2
 				},
 				"result":{
-					"automatas": 1
+					"automatas":1
 				}
 
 			}
@@ -284,12 +284,12 @@
 				"name":"clockwork expansion",
 				"desc":"Expand the clockwork home with additional materials",
 				"require":"g.puppetry>=5&&(g.puppeteer+g.mechanist+g.mechamancer)>0",
-				"max": 2,
+				"max":2,
 				"cost":{
-					"puppets": 20
+					"puppets":20
 				},
 				"mod":{
-					"clockworkhome.mod.space.max": 5
+					"clockworkhome.mod.space.max":5
 				},
 				"flavor":"The jutting limbs are very helpful for household maintenance"
 			},
@@ -298,12 +298,12 @@
 				"name":"clockwork expansion",
 				"desc":"Expand the clockwork home with additional materials",
 				"require":"g.machinacreation>=5&&g.clockworkexpansion>=2",
-				"max": 2,
+				"max":2,
 				"cost":{
-					"machinae": 20
+					"machinae":20
 				},
 				"mod":{
-					"clockworkhome.mod.space.max": 10
+					"clockworkhome.mod.space.max":10
 				},
 				"flavor":"The moving floors really cut down on foot traffic"
 			},
@@ -312,12 +312,12 @@
 				"name":"clockwork expansion",
 				"desc":"Expand the clockwork home with additional materials",
 				"require":"g.automatasculpting>=5&&g.clockworkexpansion2>=2",
-				"max": 2,
+				"max":2,
 				"cost":{
-					"automatas": 20
+					"automatas":20
 				},
 				"mod":{
-					"clockworkhome.mod.space.max": 15
+					"clockworkhome.mod.space.max":15
 				},
 				"flavor":"The home anticipates your wants and needs"
 			},
@@ -326,20 +326,20 @@
 				"name":"endless expansion",
 				"desc":"More",
 				"require":"g.clockworkexpansion3>=2",
-				"max": 500,
+				"max":500,
 				"cost":{
-					"puppets": 20,
-					"machinae": 20,
-					"automatas": 20
+					"puppets":20,
+					"machinae":20,
+					"automatas":20
 				},
 				"mod":{
-					"clockworkhome.mod.space.max": 2,
-					"automatas.max": 1,
-					"puppets.max": 1,
-					"machinae.max": 1,
-					"clockworkexpansione.cost.puppets": 1,
-					"clockworkexpansione.cost.machinae": 1,
-					"clockworkexpansione.cost.automatas": 1
+					"clockworkhome.mod.space.max":2,
+					"automatas.max":1,
+					"puppets.max":1,
+					"machinae.max":1,
+					"clockworkexpansione.cost.puppets":1,
+					"clockworkexpansione.cost.machinae":1,
+					"clockworkexpansione.cost.automatas":1
 				},
 				"flavor":"Why stop?"
 			},
@@ -348,13 +348,13 @@
 				"name":"puppet strings",
 				"desc":"Buy some extra-strength strings for your puppetry needs",
 				"require":"g.puppetry>=5",
-				"max": 2,
+				"max":2,
 				"cost":{
-					"gold": 400,
-					"research": 250
+					"gold":400,
+					"research":250
 				},
 				"mod":{
-					"puppetry.max": 1
+					"puppetry.max":1
 				},
 				"flavor":"You are the one in control"
 			},
@@ -363,15 +363,15 @@
 				"name":"ebonwood supply",
 				"desc":"Procure a supply of ebonwood to strengthen your puppets",
 				"require":"g.puppetry>=9",
-				"max": 1,
+				"max":1,
 				"cost":{
-					"gold": 1200,
-					"research": 500
+					"gold":1200,
+					"research":500
 				},
 				"mod":{
-					"puppetry.max": 1,
-					"minions.puppet.hp.max": 5,
-					"minions.puppet.dmg": 5
+					"puppetry.max":1,
+					"minions.puppet.hp.max":5,
+					"minions.puppet.dmg":5
 				},
 				"flavor":"The dark coloring is handy for assasinations"
 			},
@@ -380,13 +380,13 @@
 				"name":"runic reinforcement",
 				"desc":"Carve the runes of strength and protection into your puppets",
 				"require":"g.puppeteer>0&&g.runelore>=3",
-				"max": 1,
+				"max":1,
 				"cost":{
-					"runestones": 20,
-					"research": 5000
+					"runestones":20,
+					"research":5000
 				},
 				"mod":{
-					"puppetry.max": 1,
+					"puppetry.max":1,
 					"minions.puppet.hp.max":"20%",
 					"minions.puppet.dmg":"20%"
 				},
@@ -397,13 +397,13 @@
 				"name":"puppet proxies",
 				"desc":"Throw your voice and will through specially-made puppets",
 				"require":"g.puppetry>=5",
-				"max": 1,
+				"max":1,
 				"cost":{
-					"gold": 300,
-					"research": 250
+					"gold":300,
+					"research":250
 				},
 				"mod":{
-					"stamina.rate": 0.1
+					"stamina.rate":0.1
 				},
 				"flavor":"Walking around is for fools"
 			},
@@ -412,14 +412,14 @@
 				"name":"proxy amplification",
 				"desc":"use your puppet proxies to amplify your memory",
 				"require":"g.puppetry>=8",
-				"max": 1,
+				"max":1,
 				"cost":{
-					"gold": 500,
-					"research": 750,
-					"managem": 15
+					"gold":500,
+					"research":750,
+					"managem":15
 				},
 				"mod":{
-					"spelllist.max": 10
+					"spelllist.max":10
 				}
 			},
 			{
@@ -427,14 +427,14 @@
 				"name":"puppet spies",
 				"desc":"nobody would notice",
 				"require":"g.puppeteer>0",
-				"max": 1,
+				"max":1,
 				"cost":{
-					"gold": 500,
-					"research": 500,
-					"airgem": 5
+					"gold":500,
+					"research":500,
+					"airgem":5
 				},
 				"mod":{
-					"composure.max": 2
+					"composure.max":2
 				}
 			},
 			{
@@ -442,13 +442,13 @@
 				"name":"clockwork butler",
 				"desc":"Serves you tea, scones and books.",
 				"require":"g.machinacreation>=5",
-				"max": 1,
+				"max":1,
 				"cost":{
-					"gold": 3000,
-					"research": 2500
+					"gold":3000,
+					"research":2500
 				},
 				"mod":{
-					"stamina.rate": 0.1
+					"stamina.rate":0.1
 				},
 				"flavor":"A remarkably efficient servant"
 			},
@@ -457,15 +457,15 @@
 				"name":"precision engineering",
 				"desc":"Precision to the millimeter.",
 				"require":"g.machinacreation>=5",
-				"max": 1,
+				"max":1,
 				"cost":{
-					"gold": 4000,
-					"research": 1500
+					"gold":4000,
+					"research":1500
 				},
 				"mod":{
-					"machinacreation.max": 2,
-					"minions.machina.hp.max": 5,
-					"minions.machina.dmg": 10
+					"machinacreation.max":2,
+					"minions.machina.hp.max":5,
+					"minions.machina.dmg":10
 				},
 				"flavor":"A layer of polish"
 			},
@@ -474,15 +474,15 @@
 				"name":"oil of slipping",
 				"desc":"Adapt a common magical item as a lubricant for your machinae.",
 				"require":"g.machinacreation>=7",
-				"max": 1,
+				"max":1,
 				"cost":{
-					"gold": 2000,
-					"research": 4500
+					"gold":2000,
+					"research":4500
 				},
 				"mod":{
-					"machinacreation.max": 2,
+					"machinacreation.max":2,
 					"assemblemachina.length": -5,
-					"minions.machina.speed": 3
+					"minions.machina.speed":3
 				},
 				"flavor":"Comes in handy in multiple situations"
 			},
@@ -491,21 +491,21 @@
 				"name":"automated appraiser",
 				"desc":"Some gems are more than what they look like",
 				"require":"g.mechanist>0",
-				"max": 1,
+				"max":1,
 				"cost":{
-					"gold": 5000,
-					"research": 7500,
-					"gems": 50
+					"gold":5000,
+					"research":7500,
+					"gems":50
 				},
 				"mod":{
 					"gems.rate": -0.07,
-					"managem.rate": 0.01,
-					"firegem.rate": 0.01,
-					"airgem.rate": 0.01,
-					"watergem.rate": 0.01,
-					"spiritgem.rate": 0.01,
-					"earthgem.rate": 0.01,
-					"naturegem.rate": 0.01
+					"managem.rate":0.01,
+					"firegem.rate":0.01,
+					"airgem.rate":0.01,
+					"watergem.rate":0.01,
+					"spiritgem.rate":0.01,
+					"earthgem.rate":0.01,
+					"naturegem.rate":0.01
 				}
 			},
 			{
@@ -513,14 +513,14 @@
 				"name":"automated miner",
 				"desc":"Greedily delve deeper",
 				"require":"g.machinacreation>=9",
-				"max": 2,
+				"max":2,
 				"cost":{
-					"gold": 5000,
-					"research": 7500,
-					"gems": 50
+					"gold":5000,
+					"research":7500,
+					"gems":50
 				},
 				"mod":{
-					"gems.rate": 0.05
+					"gems.rate":0.05
 				}
 			},
 			{
@@ -528,18 +528,18 @@
 				"name":"efficient algorithms",
 				"desc":"Efficient instructions for best performance",
 				"require":"g.mechanist>0",
-				"max": 1,
+				"max":1,
 				"cost":{
-					"gold": 500,
-					"research": 10000,
-					"tomes": 100,
-					"codices": 300
+					"gold":500,
+					"research":10000,
+					"tomes":100,
+					"codices":300
 				},
 				"mod":{
-					"autoappraiser.max": 1,
-					"clockworkbutler.max": 1,
-					"proxies2.max": 1,
-					"autominer.max": 2
+					"autoappraiser.max":1,
+					"clockworkbutler.max":1,
+					"proxies2.max":1,
+					"autominer.max":2
 				}
 			},
 			{
@@ -547,14 +547,14 @@
 				"name":"automated laboratory",
 				"desc":"A thinking, living place of research",
 				"require":"g.automatasculpting>=5",
-				"max": 1,
+				"max":1,
 				"cost":{
-					"gold": 30000,
-					"research": 25000,
-					"automatas": 30
+					"gold":30000,
+					"research":25000,
+					"automatas":30
 				},
 				"mod":{
-					"research.rate": 50,
+					"research.rate":50,
 					"lore.rate":"100+50%",
 					"history.rate":"100+50%",
 					"languages.rate":"100+50%",
@@ -567,14 +567,14 @@
 				"name":"automata studies",
 				"desc":"Spend time researching the secrets of the mind",
 				"require":"g.automatasculpting>=5",
-				"max": 5,
+				"max":5,
 				"cost":{
-					"research": 50000,
-					"tomes": 150,
-					"codices": 800
+					"research":50000,
+					"tomes":150,
+					"codices":800
 				},
 				"mod":{
-					"automatasculpting.max": 1
+					"automatasculpting.max":1
 				},
 				"flavor":"Hard work hardly pays"
 			},
@@ -583,19 +583,19 @@
 				"name":"automata agents",
 				"desc":"Agents capable of independent completion of any desired task",
 				"require":"g.automatasculpting>=10",
-				"max": 1,
+				"max":1,
 				"cost":{
-					"automatas": 50,
-					"runestones": 100,
-					"firerune": 50,
-					"airrune": 50,
-					"earthrune": 50,
-					"waterrune": 50,
-					"timerune": 3,
-					"sindel": 5
+					"automatas":50,
+					"runestones":100,
+					"firerune":50,
+					"airrune":50,
+					"earthrune":50,
+					"waterrune":50,
+					"timerune":3,
+					"sindel":5
 				},
 				"mod":{
-					"runner.max": 1
+					"runner.max":1
 				}
 			},
 			{
@@ -603,17 +603,17 @@
 				"name":"automata mastery",
 				"desc":"a complete mastery over all things mechanical",
 				"require":"g.mechamancer>0",
-				"max": 1,
+				"max":1,
 				"cost":{
-					"gold": 25000,
-					"research": 50000,
-					"tomes": 250,
-					"codices": 1000
+					"gold":25000,
+					"research":50000,
+					"tomes":250,
+					"codices":1000
 				},
 				"mod":{
-					"automatasculpting.max": 3,
-					"machinacreation.max": 5,
-					"puppetry.max": 5
+					"automatasculpting.max":3,
+					"machinacreation.max":5,
+					"puppetry.max":5
 				}
 			},
 			{
@@ -621,15 +621,15 @@
 				"name":"mastery of form",
 				"desc":"Learn the deepest secrets of shaping",
 				"require":"g.mechamancer>0",
-				"max": 1,
+				"max":1,
 				"cost":{
-					"gold": 15000,
-					"research": 40000,
-					"spiritgem": 200,
-					"gems": 300
+					"gold":15000,
+					"research":40000,
+					"spiritgem":200,
+					"gems":300
 				},
 				"mod":{
-					"assembleautomata.result.automatas": 1,
+					"assembleautomata.result.automatas":1,
 					"assembleautomata.length": -5
 				}
 			}
@@ -638,79 +638,79 @@
 			{
 				"id":"puppetrepair",
 				"name":"mend wood",
-				"level": 10,
+				"level":10,
 				"only":"puppet",
 				"school":"animation",
 				"desc":"mend a broken puppet.",
 				"require":"puppeteer",
 				"tags":"rez",
 				"buy":{
-					"research": 500,
-					"puppets": 5
+					"research":500,
+					"puppets":5
 				},
 				"cost":{
-					"puppets": 3
+					"puppets":3
 				}
 
 			},
 			{
 				"id":"machinarepair",
 				"name":"repair machina",
-				"level": 20,
+				"level":20,
 				"only":"machina",
 				"school":"animation",
 				"desc":"repair a wrecked machina.",
 				"require":"mechanist",
 				"tags":"rez",
 				"buy":{
-					"research": 8000,
-					"machinae": 10
+					"research":8000,
+					"machinae":10
 				},
 				"cost":{
-					"machinae": 3
+					"machinae":3
 				}
 
 			},
 			{
 				"id":"automatarepair",
 				"name":"tune automata",
-				"level": 30,
+				"level":30,
 				"only":"automata",
 				"school":"animation",
 				"desc":"re-tune a discordant automata.",
 				"require":"mechamancer",
 				"tags":"rez",
 				"buy":{
-					"research": 8000,
-					"automatas": 20
+					"research":8000,
+					"automatas":20
 				},
 				"cost":{
-					"automatas": 3
+					"automatas":3
 				}
 
 			},
 			{
 				"id":"prismaticmissile",
 				"name":"prismatic missile",
-				"level": 15,
+				"level":15,
 				"school":"mana",
 				"require":"g.magiphysics>=5",
 				"desc":"a burst of chaotic magic inflicting damage to enemies.",
 				"buy":{
-					"research": 6000,
-					"tomes": 40
+					"research":6000,
+					"tomes":40
 				},
 				"at":{
 					"25":{
-						"attack.hits.damage.max": 1
+						"attack.hits.damage.max":1
 					},
 					"100":{
-						"attack.hits.tohit": 1,
-						"attack.hits.damage.min": 1
+						"attack.hits.tohit":1,
+						"attack.hits.damage.min":1
 					}
 				},
 				"cost":{
-					"mana": 7
+					"mana":7
 				},
 				"attack":{
 					"kind":"mana",
@@ -774,14 +774,14 @@
 				"name":"animate puppet attacker",
 				"school":"animation",
 				"require":"g.puppetry>=5",
-				"level": 1,
+				"level":1,
 				"buy":{
-					"research": 500,
-					"puppets": 5
+					"research":500,
+					"puppets":5
 				},
 				"cost":{
-					"puppets": 5,
-					"spirit": 10
+					"puppets":5,
+					"spirit":10
 				},
 				"result":"puppetattacker"
 			},
@@ -790,13 +790,13 @@
 				"name":"assemble mecha-charger",
 				"school":"animation",
 				"require":"g.machinacreation>=5",
-				"level": 1,
+				"level":1,
 				"buy":{
-					"research": 8000,
-					"machinae": 10
+					"research":8000,
+					"machinae":10
 				},
 				"cost":{
-					"machinae": 5
+					"machinae":5
 				},
 				"result":"mechacharger"
 			},
@@ -805,13 +805,13 @@
 				"name":"shape autoslayer",
 				"school":"animation",
 				"require":"g.automatasculpting>=5",
-				"level": 1,
+				"level":1,
 				"buy":{
-					"research": 8000,
-					"automatas": 20
+					"research":8000,
+					"automatas":20
 				},
 				"cost":{
-					"automatas": 5
+					"automatas":5
 				},
 				"result":"autoslayer"
 			},
@@ -821,14 +821,14 @@
 				"school":"animation",
 				"desc":"A sturdy puppet lurches between you and danger.",
 				"require":"g.puppetry>=5&&g.puppeteer>0",
-				"level": 5,
+				"level":5,
 				"buy":{
-					"research": 5000,
-					"puppets": 40
+					"research":5000,
+					"puppets":40
 				},
 				"cost":{
-					"puppets": 5,
-					"spirit": 10
+					"puppets":5,
+					"spirit":10
 				},
 				"result":"puppetdefender"
 			},
@@ -837,13 +837,13 @@
 				"name":"assemble mecha-mender",
 				"school":"animation",
 				"require":"g.machinacreation>=5&&g.mechanist>0",
-				"level": 1,
+				"level":1,
 				"buy":{
-					"research": 8000,
-					"machinae": 10
+					"research":8000,
+					"machinae":10
 				},
 				"cost":{
-					"machinae": 5
+					"machinae":5
 				},
 				"result":"mechamender"
 			},
@@ -852,13 +852,13 @@
 				"name":"shape autocaster",
 				"school":"animation",
 				"require":"g.automatasculpting>=5&&g.mechamancer>0",
-				"level": 1,
+				"level":1,
 				"buy":{
-					"research": 8000,
-					"automatas": 20
+					"research":8000,
+					"automatas":20
 				},
 				"cost":{
-					"automatas": 5
+					"automatas":5
 				},
 				"result":"autocaster"
 
@@ -870,20 +870,20 @@
 				"name":"clockwork home",
 				"desc":"A house of gears and levers, constantly adjusting to the requirements of its occupant.",
 				"cost":{
-					"research": 3000,
-					"gold": 3000,
-					"codices": 50
+					"research":3000,
+					"gold":3000,
+					"codices":50
 				},
 				"require":"(g.puppeteer+g.mechanist+g.mechamancer)>0",
 				"mod":{
-					"minions.max": 50,
-					"space.max": 50,
-					"puppetry.max": 1,
-					"machinacreation.max": 1,
-					"automatasculpting.max": 1,
-					"puppets.max": 20,
-					"machinae.max": 20,
-					"automatas.max": 20,
+					"minions.max":50,
+					"space.max":50,
+					"puppetry.max":1,
+					"machinacreation.max":1,
+					"automatasculpting.max":1,
+					"puppets.max":20,
+					"machinae.max":20,
+					"automatas.max":20,
 					"puppetworkshop.mod.space": -25,
 					"puppetautomation.mod.space": -10,
 					"machinagarage.mod.space": -40,
@@ -898,16 +898,16 @@
 				"name":"puppet-making workshop",
 				"desc":"A specialized workshop for efficiently producing puppets.",
 				"require":"g.puppetry>=7",
-				"max": 2,
+				"max":2,
 				"cost":{
-					"gold": 300,
-					"research": 500,
-					"arcana": 5
+					"gold":300,
+					"research":500,
+					"arcana":5
 				},
 				"mod":{
-					"assemblepuppet.cost.gold": 20,
-					"assemblepuppet.cost.research": 20,
-					"assemblepuppet.result.puppets": 1,
+					"assemblepuppet.cost.gold":20,
+					"assemblepuppet.cost.research":20,
+					"assemblepuppet.result.puppets":1,
 					"space":35
 				}
 			},
@@ -916,14 +916,14 @@
 				"name":"puppet assembly line",
 				"desc":"A dedicated assembly line for automated production of puppets.",
 				"require":"puppeteer",
-				"max": 2,
+				"max":2,
 				"cost":{
-					"gold": 500,
-					"research": 500,
-					"spiritgem": 5
+					"gold":500,
+					"research":500,
+					"spiritgem":5
 				},
 				"mod":{
-					"puppets.rate": 0.01,
+					"puppets.rate":0.01,
 					"space":20
 				}
 			},
@@ -933,18 +933,18 @@
 				"desc":"A place to tinker with your machinae.",
 				"require":"g.machinacreation>=7",
 				"tags":"workspace",
-				"max": 2,
+				"max":2,
 				"cost":{
-					"gold": 3000,
-					"research": 2000,
-					"gems": 30
+					"gold":3000,
+					"research":2000,
+					"gems":30
 				},
 				"mod":{
-					"crafting.max": 1,
+					"crafting.max":1,
 					"crafting.rate":"5%",
-					"assemblemachina.cost.gold": 100,
-					"assemblemachina.cost.research": 150,
-					"assemblemachina.result.machinae": 1,
+					"assemblemachina.cost.gold":100,
+					"assemblemachina.cost.research":150,
+					"assemblemachina.result.machinae":1,
 					"space":55
 				}
 			},
@@ -953,15 +953,15 @@
 				"name":"machina assembly",
 				"desc":"A complex mechanism for automating the production of machinae.",
 				"require":"mechanist",
-				"max": 2,
+				"max":2,
 				"cost":{
-					"gold": 2500,
-					"research": 3000,
-					"puppets": 20,
-					"gems": 50
+					"gold":2500,
+					"research":3000,
+					"puppets":20,
+					"gems":50
 				},
 				"mod":{
-					"machinae.rate": 0.01,
+					"machinae.rate":0.01,
 					"space":30
 				}
 			},
@@ -971,11 +971,11 @@
 				"desc":"A facility for growing mind-crystals and pre-formed automata bodies.",
 				"tags":"workspace",
 				"require":"mechamancer",
-				"max": 2,
+				"max":2,
 				"cost":{
-					"gold": 5000,
-					"research": 5000,
-					"gems": 30
+					"gold":5000,
+					"research":5000,
+					"gems":30
 				},
 				"mod":{
 					"assembleautomata.cost.gold": -600,
@@ -997,14 +997,14 @@
 				"id":"machinae",
 				"name":"machinae",
 				"desc":"Towering hulks of metal, ready to do their master's bidding.",
-				"max": 20,
+				"max":20,
 				"flavor":"beep boop."
 			},
 			{
 				"id":"automatas",
 				"name":"automata",
 				"desc":"Constructs of translucent crystal; they possess a pristine intellect for learning.",
-				"max": 20,
+				"max":20,
 				"flavor":"It's not smarter than you, surely."
 			}
 		],
@@ -1013,12 +1013,12 @@
 				"id":"puppetattacker",
 				"tags":"t_puppet",
 				"name":"puppet aggressor",
-				"level": 10,
+				"level":10,
 				"kind":"puppet",
 				"noproc": true,
-				"hp": 75,
-				"tohit": 10,
-				"defense": 7,
+				"hp":75,
+				"tohit":10,
+				"defense":7,
 				"attack": [
 					{
 						"name":"stab",
@@ -1031,18 +1031,18 @@
 				"id":"mechacharger",
 				"tags":"t_machina",
 				"name":"mecha-charger",
-				"level": 20,
+				"level":20,
 				"kind":"machina",
 				"noproc": true,
-				"hp": 500,
-				"tohit": 20,
-				"defense": 200,
+				"hp":500,
+				"tohit":20,
+				"defense":200,
 				"attack": [
 					{
 						"hits": [
 							{
 								"name":"charge",
-								"tohit": 10,
+								"tohit":10,
 								"targets":"enemies",
 								"dmg":"50~70"
 							},
@@ -1051,11 +1051,11 @@
 								"nomiss": true,
 								"nodefense": true,
 								"targets":"self",
-								"dmg": 50,
+								"dmg":50,
 								"dot":{
 									"name":"recoil",
 									"targets":"self",
-									"duration": 10,
+									"duration":10,
 									"mod":{
 										"defense": -100
 									}
@@ -1066,11 +1066,11 @@
 					{
 						"name":"rewind",
 						"targets":"self",
-						"hp": 10,
+						"hp":10,
 						"dot":{
-							"duration": 2,
+							"duration":2,
 							"mod":{
-								"defense": 50
+								"defense":50
 							}
 						}
 					}
@@ -1080,32 +1080,32 @@
 				"id":"autoslayer",
 				"tags":"t_automata",
 				"name":"autoslayer",
-				"level": 30,
+				"level":30,
 				"kind":"automata",
 				"noproc": true,
-				"hp": 700,
-				"tohit": 15,
-				"defense": 50,
+				"hp":700,
+				"tohit":15,
+				"defense":50,
 				"attack": [
 					{
 						"name":"bleed dry",
 						"targets":"enemies",
 						"dot":{
 							"kind":"bleed",
-							"duration": 20,
-							"dmg": 15
+							"duration":20,
+							"dmg":15
 						}
 					},
 					{
 						"name":"slice",
 						"hits": [
 							{
-								"tohit": 5,
+								"tohit":5,
 								"kind":"slash",
 								"dmg":"25~35"
 							},
 							{
-								"tohit": 5,
+								"tohit":5,
 								"kind":"slash",
 								"dmg":"25~35"
 							}
@@ -1115,12 +1115,12 @@
 						"name":"dice",
 						"hits": [
 							{
-								"tohit": 50,
+								"tohit":50,
 								"kind":"slash",
 								"dmg":"20~25"
 							},
 							{
-								"tohit": 50,
+								"tohit":50,
 								"kind":"slash",
 								"dmg":"20~25"
 							}
@@ -1151,7 +1151,7 @@
 					},
 					{
 						"name":"stab",
-						"tohit": 100,
+						"tohit":100,
 						"kind":"pierce",
 						"dmg":"30~50"
 					},
@@ -1176,7 +1176,7 @@
 						"name":"recover",
 						"targets":"self",
 						"result":{
-							"hp": 150
+							"hp":150
 						}
 					}
 				]
@@ -1185,12 +1185,12 @@
 				"id":"puppetdefender",
 				"tags":"t_puppet",
 				"name":"puppet bulwark",
-				"level": 10,
+				"level":10,
 				"kind":"puppet",
 				"noproc": true,
-				"hp": 300,
-				"tohit": 7,
-				"defense": 20,
+				"hp":300,
+				"tohit":7,
+				"defense":20,
 				"attack": [
 					{
 						"name":"bash",
@@ -1201,9 +1201,9 @@
 						"name":"protect",
 						"targets":"ally",
 						"dot":{
-							"duration": 10,
+							"duration":10,
 							"mod":{
-								"defense": 15
+								"defense":15
 							}
 						}
 					},
@@ -1211,12 +1211,12 @@
 						"name":"fortify",
 						"targets":"self",
 						"result":{
-							"hp": 20
+							"hp":20
 						},
 						"dot":{
-							"duration": 10,
+							"duration":10,
 							"mod":{
-								"defense": 25
+								"defense":25
 							}
 						}
 					}
@@ -1227,18 +1227,18 @@
 				"tags":"t_machina",
 				"name":"mecha-mender",
 				"noproc": true,
-				"level": 20,
+				"level":20,
 				"kind":"machina",
-				"hp": 500,
-				"tohit": 20,
-				"defense": 100,
+				"hp":500,
+				"tohit":20,
+				"defense":100,
 				"attack": [
 					{
 						"name":"mend",
 						"targets":"ally",
 						"harmless":true,
 						"result":{
-							"hp": 40
+							"hp":40
 						}
 					},
 					{
@@ -1246,9 +1246,9 @@
 						"targets":"allies",
 						"harmless":true,
 						"dot":{
-							"duration": 10,
+							"duration":10,
 							"mod":{
-								"hp": 4
+								"hp":4
 							}
 						}
 					},
@@ -1257,9 +1257,9 @@
 						"targets":"ally",
 						"harmless":true,
 						"dot":{
-							"duration": 10,
+							"duration":10,
 							"mod":{
-								"tohit": 10
+								"tohit":10
 							}
 						}
 					}
@@ -1269,21 +1269,21 @@
 				"id":"autocaster",
 				"tags":"automata",
 				"name":"autocaster",
-				"level": 30,
+				"level":30,
 				"kind":"automata",
 				"noproc": true,
-				"hp": 500,
-				"tohit": 20,
-				"defense": 100,
-				"regen": 10,
+				"hp":500,
+				"tohit":20,
+				"defense":100,
+				"regen":10,
 				"attack": [
 					{
 						"name":"winter's chill",
 						"targets":"enemies",
 						"dot":{
 							"kind":"water",
-							"duration": 10,
-							"dmg": 20
+							"duration":10,
+							"dmg":20
 						}
 					},
 					{
@@ -1291,8 +1291,8 @@
 						"targets":"enemies",
 						"dot":{
 							"kind":"fire",
-							"duration": 10,
-							"dmg": 20
+							"duration":10,
+							"dmg":20
 						}
 					},
 					{
@@ -1300,8 +1300,8 @@
 						"targets":"enemies",
 						"dot":{
 							"kind":"air",
-							"duration": 10,
-							"dmg": 20
+							"duration":10,
+							"dmg":20
 						}
 					},
 					{
@@ -1309,18 +1309,18 @@
 						"targets":"enemies",
 						"dot":{
 							"kind":"earth",
-							"duration": 10,
-							"dmg": 20
+							"duration":10,
+							"dmg":20
 						}
 					},
 					{
 						"name":"disengage",
 						"targets":"self",
 						"dot":{
-							"duration": 10,
+							"duration":10,
 							"mod":{
-								"defense": 50,
-								"hp": 5
+								"defense":50,
+								"hp":5
 							}
 						}
 					},
@@ -1333,16 +1333,16 @@
 						"name":"rare air",
 						"dot":{
 							"id":"silence",
-							"duration": 3
+							"duration":3
 						}
 					},
 					{
 						"name":"jetstream",
 						"targets":"allies",
 						"dot":{
-							"duration": 10,
+							"duration":10,
 							"mod":{
-								"speed": 10
+								"speed":10
 							}
 						}
 					}
@@ -1354,19 +1354,19 @@
 				"id":"puppeteer",
 				"desc":"Assemble and control mechanical minions.",
 				"tags":"t_tier1",
-				"require":"g.tier0>0&&g.puppetry>=5&&g.tier1==0",
+				"require":"g.tier0>0&&g.puppetry>=5",
 				"cost":{
-					"research": 700,
-					"arcana": 10,
-					"gold": 500
+					"research":700,
+					"arcana":10,
+					"gold":500
 				},
 				"mod":{
 					"tier1": true,
-					"puppetry.max": 2,
+					"puppetry.max":2,
 					"minions.keep":"puppet",
-					"magicalanimation.max": 1,
-					"allies.max": 5,
-					"clockworkhome.mod.space.max": 50
+					"magicalanimation.max":1,
+					"allies.max":5,
+					"clockworkhome.mod.space.max":50
 				},
 				"flavor":"No matter what, the strings would not break."
 			},
@@ -1377,20 +1377,20 @@
 				"tags":"t_tier3",
 				"require":"g.tier2>0&&g.machinacreation>=5&&g.tier3==0",
 				"cost":{
-					"research": 3000,
-					"arcana": 25,
-					"bloodgem": 20,
-					"airgem": 20,
-					"tomes": 10
+					"research":3000,
+					"arcana":25,
+					"bloodgem":20,
+					"airgem":20,
+					"tomes":10
 				},
 				"mod":{
 					"tier3": true,
-					"puppetry.max": 1,
+					"puppetry.max":1,
 					"minions.keep":"machina",
-					"magicalanimation.max": 2,
-					"machinacreation.max": 2,
-					"allies.max": 5,
-					"clockworkhome.mod.space.max": 100
+					"magicalanimation.max":2,
+					"machinacreation.max":2,
+					"allies.max":5,
+					"clockworkhome.mod.space.max":100
 				},
 				"flavor":"What is a man? An inefficient form of labor."
 			},
@@ -1401,20 +1401,20 @@
 				"tags":"t_tier5",
 				"require":"g.tier4>0&&g.magiphysics>=5&&g.machinacreation>=9&&(g.puppeteer+g.mechanist)>0&&g.tier5==0",
 				"cost":{
-					"research": 20000,
-					"arcana": 27,
-					"tomes": 30,
-					"runestones": 30
+					"research":20000,
+					"arcana":27,
+					"tomes":30,
+					"runestones":30
 				},
 				"mod":{
 					"tier5": true,
-					"puppetry.max": 1,
-					"magicalanimation.max": 1,
-					"machinacreation.max": 2,
-					"automatasculpting.max": 3,
+					"puppetry.max":1,
+					"magicalanimation.max":1,
+					"machinacreation.max":2,
+					"automatasculpting.max":3,
 					"minions.keep":"automata",
-					"allies.max": 5,
-					"clockworkhome.mod.space.max": 150
+					"allies.max":5,
+					"clockworkhome.mod.space.max":150
 				},
 				"flavor":"If you want a better future, make better people."
 			}

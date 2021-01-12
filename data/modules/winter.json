@@ -25,21 +25,21 @@
         "desc":"Of an icy wasteland on a plain of endless fog. An altar marks the way to the Tree of Winter, which grew when the first snows fell."
 	  },
 	  {
-		"id": "evt_w_chillforge",
-		"name": "a cold legend",
-		"desc": "A tome tells of a forge without fire, a stronghold in the mountain passes, and an endless blizzard trapped within a globe.",
-		"mod": {
-			"winterlore.max": 2
+		"id":"evt_w_chillforge",
+		"name":"a cold legend",
+		"desc":"A tome tells of a forge without fire, a stronghold in the mountain passes, and an endless blizzard trapped within a globe.",
+		"mod":{
+			"winterlore.max":2
 		}
 	}
     ],
   	"resources":[
 		{
-			"id": "w_fazbitknowledge",
-			"name": "fazbit's knowledge",
-			"desc": "A story of fazbit's workshop",
+			"id":"w_fazbitknowledge",
+			"name":"fazbit's knowledge",
+			"desc":"A story of fazbit's workshop",
 			"hide":true,
-			"max": 100000
+			"max":100000
 		},
       {
         "id":"snowman",
@@ -199,105 +199,105 @@
 		],
 		"upgrades":[
 			{
-				"id": "w_fazbit1",
-				"name": "old forms",
-				"desc": "A dusty log detailing the ordering of materials for production. It appears this place required a LOT of materials to run",
-				"require": "g.w_fazbitknowledge>=50",
-				"mod": {
-					"crafting.max": 1,
-					"prismaticgems.max": 20,
-					"gem.max": 10
+				"id":"w_fazbit1",
+				"name":"old forms",
+				"desc":"A dusty log detailing the ordering of materials for production. It appears this place required a LOT of materials to run",
+				"require":"g.w_fazbitknowledge>=50",
+				"mod":{
+					"crafting.max":1,
+					"prismaticgems.max":20,
+					"gem.max":10
 				}
 			},
 			{
-				"id": "w_fazbit2",
-				"name": "withered designs",
-				"desc": "An anatomical drawing of a human with unnaturally large eyes. The skeleton is wrong.",
-				"require": "g.w_fazbitknowledge>=500",
-				"mod": {
-					"crafting.rate": 50,
-					"anatomy.max": 2
+				"id":"w_fazbit2",
+				"name":"withered designs",
+				"desc":"An anatomical drawing of a human with unnaturally large eyes. The skeleton is wrong.",
+				"require":"g.w_fazbitknowledge>=500",
+				"mod":{
+					"crafting.rate":50,
+					"anatomy.max":2
 				}
 			},
 			{
-				"id": "w_fazbit3",
-				"name": "cheerful recording",
-				"desc": "An old crystal, still holding a clear recording of a man's laughter. Just hearing it makes you smile.",
-				"require": "g.w_fazbitknowledge>=1500",
-				"mod": {
-					"crafting.rate": "50%",
-					"spiritlore.max": 2
+				"id":"w_fazbit3",
+				"name":"cheerful recording",
+				"desc":"An old crystal, still holding a clear recording of a man's laughter. Just hearing it makes you smile.",
+				"require":"g.w_fazbitknowledge>=1500",
+				"mod":{
+					"crafting.rate":"50%",
+					"spiritlore.max":2
 				}
 			},
 			{
-				"id": "w_fazbit4",
-				"name": "alchemical formula",
-				"desc": "A formula for producing a thick, firm, yet easily yielding coating.",
-				"require": "g.w_fazbitknowledge>=5000",
-				"mod": {
-					"alchemy.max": 2,
-					"potions.max": 2
+				"id":"w_fazbit4",
+				"name":"alchemical formula",
+				"desc":"A formula for producing a thick, firm, yet easily yielding coating.",
+				"require":"g.w_fazbitknowledge>=5000",
+				"mod":{
+					"alchemy.max":2,
+					"potions.max":2
 				}
 			},
 			{
-				"id": "w_fazbit5",
-				"name": "battered ledger",
-				"desc": "A ledger detailing the payments for shipments. It appears the products were shipped out to arrive at a specific date.",
-				"require": "g.w_fazbitknowledge>=10000",
-				"mod": {
-					"concentrate.max": 1,
-					"history.max": 2
+				"id":"w_fazbit5",
+				"name":"battered ledger",
+				"desc":"A ledger detailing the payments for shipments. It appears the products were shipped out to arrive at a specific date.",
+				"require":"g.w_fazbitknowledge>=10000",
+				"mod":{
+					"concentrate.max":1,
+					"history.max":2
 				}
 			},
 			{
-				"id": "w_fazbit6",
-				"name": "odd spellchart",
-				"desc": "A spellchart detailing a superbly efficient spell for animating a small golem. Multiple flaws prevent the golem from applying any dangerous force.",
-				"require": "g.w_fazbitknowledge>=15000",
-				"mod": {
-					"summoning.max": 1,
-					"conjuration.max": 2
+				"id":"w_fazbit6",
+				"name":"odd spellchart",
+				"desc":"A spellchart detailing a superbly efficient spell for animating a small golem. Multiple flaws prevent the golem from applying any dangerous force.",
+				"require":"g.w_fazbitknowledge>=15000",
+				"mod":{
+					"summoning.max":1,
+					"conjuration.max":2
 				}
 			},
 			{
-				"id": "w_fazbit7",
-				"name": "transportation sigils",
-				"desc": "Your investigation reveals multiple sigils woven into the walls and floors of the workshop. They appear to be designed to transport materials in an automated fashion. Warning spells are included, to compel anyone in the way to step aside.",
-				"require": "g.w_fazbitknowledge>=25000",
-				"mod": {
-					"summoning.max": 1,
-					"runelore.max": 2
+				"id":"w_fazbit7",
+				"name":"transportation sigils",
+				"desc":"Your investigation reveals multiple sigils woven into the walls and floors of the workshop. They appear to be designed to transport materials in an automated fashion. Warning spells are included, to compel anyone in the way to step aside.",
+				"require":"g.w_fazbitknowledge>=25000",
+				"mod":{
+					"summoning.max":1,
+					"runelore.max":2
 				}
 			},
 			{
-				"id": "w_fazbit8",
-				"name": "letter of request",
-				"desc": "A letter from a few centuries ago, requesting the aid of Fazbit in producing a large amount of items for an unknown festivity. The designs are supposed to be enclosed, but are clearly missing.",
-				"require": "g.w_fazbitknowledge>=40000",
-				"mod": {
-					"history.rate": "100%",
-					"history.max": 5
+				"id":"w_fazbit8",
+				"name":"letter of request",
+				"desc":"A letter from a few centuries ago, requesting the aid of Fazbit in producing a large amount of items for an unknown festivity. The designs are supposed to be enclosed, but are clearly missing.",
+				"require":"g.w_fazbitknowledge>=40000",
+				"mod":{
+					"history.rate":"100%",
+					"history.max":5
 				}
 			},
 			{
-				"id": "w_fazbit9",
-				"name": "discarded missives",
-				"desc": "A large bin full of paper dust. There are traces of long-decayed ink and paint.",
-				"require": "g.w_fazbitknowledge>=60000",
-				"mod": {
-					"lore.rate": "100%",
-					"history.max": 5
+				"id":"w_fazbit9",
+				"name":"discarded missives",
+				"desc":"A large bin full of paper dust. There are traces of long-decayed ink and paint.",
+				"require":"g.w_fazbitknowledge>=60000",
+				"mod":{
+					"lore.rate":"100%",
+					"history.max":5
 				}
 			},
 			{
-				"id": "w_fazbit10",
-				"name": "the purpose",
-				"desc": "The entire facility was created by Fazbit to provide large amounts of what must be animated toys for multiple settlements, to be used in an unknown festivity. Perhaps, one day, this tradition may be revived.",
-				"require": "g.w_fazbitknowledge>=100000",
-				"mod": {
-					"crafting.max": 5,
-					"history.max": 5,
-					"allies.max": 25
+				"id":"w_fazbit10",
+				"name":"the purpose",
+				"desc":"The entire facility was created by Fazbit to provide large amounts of what must be animated toys for multiple settlements, to be used in an unknown festivity. Perhaps, one day, this tradition may be revived.",
+				"require":"g.w_fazbitknowledge>=100000",
+				"mod":{
+					"crafting.max":5,
+					"history.max":5,
+					"allies.max":25
 				}
 			},
 			{
@@ -305,7 +305,7 @@
         "name":"workforce",
         "desc":"Use your Snow Double as an extension of yourself",
         "cost":{
-				"ice": 2
+				"ice":2
 				},
 		"require":"g.evt_snowcopy>=1",
 		"warn":true,
@@ -320,7 +320,7 @@
         "id":"w_fame",
         "name":"donate copy",
         "desc":"Donate your Snow Double to a wizarding academy",
-		"cost":{"gold": 100},
+		"cost":{"gold":100},
 		"warn":true,
         "require":"g.evt_snowcopy>=1",
         "disable":["w_multitask","w_scholar"],
@@ -335,7 +335,7 @@
         "id":"w_scholar",
         "name":"cold calculation",
         "desc":"Dedicate your Snow Double to arcane studies.",
-		"cost":{"arcana": 2},
+		"cost":{"arcana":2},
 		"warn":true,
         "require":"g.evt_snowcopy>=1",
         "disable":["w_fame","w_multitask"],
@@ -405,7 +405,7 @@
         "cost":{
           "livingsnow":50,
 		  "snowman":20,
-		  "watergem": 75
+		  "watergem":75
         },
         "mod":{
           "waterlore2.max":1,
@@ -420,11 +420,11 @@
         "cost":{
           "livingsnow":60,
 		  "snowman":25,
-		  "watergem": 100,
-		  "waterrune": 20
+		  "watergem":100,
+		  "waterrune":20
         },
         "mod":{
-          "icelore.max": 10,
+          "icelore.max":10,
 		  "icelore.rate":"200%"
         }
       },
@@ -434,10 +434,10 @@
         "desc":"You spread the joy of the cold far and wide, for the winter has come",
         "require":"g.winteressence>=5000",
         "cost":{
-		  "livingsnow": 80,
-		  "snowman": 30,
-		  "watergem": 150,
-		  "waterrune": 25
+		  "livingsnow":80,
+		  "snowman":30,
+		  "watergem":150,
+		  "waterrune":25
         },
         "mod":{
           "iceshard.attack.damage.min":10,
@@ -538,62 +538,62 @@
         }
       },
 	  {
-		"id": "iceshard0",
-		"name": "improve ice shard",
-		"desc": "After a few preliminary tests of the spell, you feel the potential in it.",
-		"require": "g.iceshard>=10",
-		"cost": {
-			"ice": 2,
-			"research": 100
+		"id":"iceshard0",
+		"name":"improve ice shard",
+		"desc":"After a few preliminary tests of the spell, you feel the potential in it.",
+		"require":"g.iceshard>=10",
+		"cost":{
+			"ice":2,
+			"research":100
 		},
-		"mod": {
-			"frost.rate": 2,
-			"icelore.max": 1,
-			"player.bonuses.ice": 0.5,
-			"player.hits.ice": 0.5
+		"mod":{
+			"frost.rate":2,
+			"icelore.max":1,
+			"player.bonuses.ice":0.5,
+			"player.hits.ice":0.5
 		}
 	  },
 	  {
-		"id": "iceshard1",
-		"name": "ice proficiency",
-		"desc": "As you use ice magic more and more, it starts to resonate with you. Maybe, you can push it little further",
-		"require": "g.iceshard>=100&&g.iceshard0>0",
-		"cost": {
-			"ice": 3,
-			"research": 250
+		"id":"iceshard1",
+		"name":"ice proficiency",
+		"desc":"As you use ice magic more and more, it starts to resonate with you. Maybe, you can push it little further",
+		"require":"g.iceshard>=100&&g.iceshard0>0",
+		"cost":{
+			"ice":3,
+			"research":250
 		},
-		"mod": {
-			"frost.rate": 5,
-			"icelore.max": 1,
-			"player.bonuses.ice": 1.5,
-			"player.hits.ice": 1.5
+		"mod":{
+			"frost.rate":5,
+			"icelore.max":1,
+			"player.bonuses.ice":1.5,
+			"player.hits.ice":1.5
 		},
-		"log": {
-			"name": "ice shard proficiency",
-			"desc": "With each Ice Shard cast you feel your power grow, but your warmth begins to fade as well."
+		"log":{
+			"name":"ice shard proficiency",
+			"desc":"With each Ice Shard cast you feel your power grow, but your warmth begins to fade as well."
 		}
 	  },
 	  {
-		"id": "iceshard2",
-		"name": "ice mastery",
-		"desc": "You feel like imbuing yourself with Ice can push your power even further.",
-		"require": "g.iceshard>=1000&&g.iceshard1>0",
+		"id":"iceshard2",
+		"name":"ice mastery",
+		"desc":"You feel like imbuing yourself with Ice can push your power even further.",
+		"require":"g.iceshard>=1000&&g.iceshard1>0",
 		"warn": true,
-		"cost": {
-			"ice": 10,
-			"sp": 2,
-			"arcana": 5
+		"cost":{
+			"ice":10,
+			"sp":2,
+			"arcana":5
 		},
-		"mod": {
-			"hearth.mod.frost.rate": "-100%",
-			"icelore.max": 4,
-			"frost.mod.hp.rate": "-200%",
-			"player.bonuses.ice": 3,
-			"player.hits.ice": 3
+		"mod":{
+			"hearth.mod.frost.rate":"-100%",
+			"icelore.max":4,
+			"frost.mod.hp.rate":"-200%",
+			"player.bonuses.ice":3,
+			"player.hits.ice":3
 		},
-		"log": {
-			"name": "heart of ice",
-			"desc": "Your power is immeasurable, your veins suffused with cold. But something feels wrong. The warmth is gone."
+		"log":{
+			"name":"heart of ice",
+			"desc":"Your power is immeasurable, your veins suffused with cold. But something feels wrong. The warmth is gone."
 		}
 	  }
 	],
@@ -758,20 +758,20 @@
         }
 	  },
 	  {
-		"id": "fazbithearth",
+		"id":"fazbithearth",
 		"name":"fazbit's hearth",
-		"desc": "Originally used to warm the entire workshop, can be repurposed for home use.",
-		"require": "w_fazbit9",
-		"max": 1,
-		"cost": {
-			"firegem": 100,
-			"firerune": 25
+		"desc":"Originally used to warm the entire workshop, can be repurposed for home use.",
+		"require":"w_fazbit9",
+		"max":1,
+		"cost":{
+			"firegem":100,
+			"firerune":25
 		},
-		"mod": {
+		"mod":{
 			"frost.rate": -100,
-			"fire.rate": 0.5,
-			"firelore.max": 5,
-			"iceflame.attack.dot.duration": 5
+			"fire.rate":0.5,
+			"firelore.max":5,
+			"iceflame.attack.dot.duration":5
 		}
 	},
       {
@@ -792,17 +792,17 @@
     ],
     "skills":[
 		{
-			"id": "winterlore",
-			"name": "winter lore",
-			"desc": "Study of winter legends",
-			"require": "evt_w_legend",
-			"buy": {
-				"research": 100
+			"id":"winterlore",
+			"name":"winter lore",
+			"desc":"Study of winter legends",
+			"require":"evt_w_legend",
+			"buy":{
+				"research":100
 			},
-			"mod": {
-				"livingsnow.max": 1,
-				"snowman.max": 0.35,
-				"research.max": 5
+			"mod":{
+				"livingsnow.max":1,
+				"snowman.max":0.35,
+				"research.max":5
 			}
 		},
       {
@@ -846,7 +846,7 @@
       	"result":{
       		"emblemofice":1,
       		"title":"winter's heart",
-			"winteressence": 5
+			"winteressence":5
       	},
       	"loot":{
       		"maxlevel":5
@@ -866,21 +866,21 @@
       	]
 	  },
 	  {
-		"id": "w_chillforge",
-		"name": "chilled forge",
-		"desc": "An old citadel of the icy craft, where wizards wrought artifacts of snow and ice.",
-		"require": "g.evt_w_chillforge>0&&g.winterlore>=7",
-		"level": 8,
-		"run": {
-			"stamina": 2
+		"id":"w_chillforge",
+		"name":"chilled forge",
+		"desc":"An old citadel of the icy craft, where wizards wrought artifacts of snow and ice.",
+		"require":"g.evt_w_chillforge>0&&g.winterlore>=7",
+		"level":8,
+		"run":{
+			"stamina":2
 		},
-		"effect": {
-			"frost": 1
+		"effect":{
+			"frost":1
 		},
       	"result":{
-			"winteressence": 10
+			"winteressence":10
       	},
-		"length": 100,
+		"length":100,
 		"loot":"iceorb",
 		"boss":"frostgiant",
 		"spawns": [
@@ -955,25 +955,25 @@
         }
 	  },
 	  {
-		"id": "w_blizzardguardian",
-		"name": "blizzard guardian",
-		"level": 9,
-		"kind": "elemental",
-		"desc": "Winter holds its own secrets, and summons guardians to watch them.",
-		"tohit": 12,
-		"hp": 50,
-		"defense": 55,
-		"attack": {
+		"id":"w_blizzardguardian",
+		"name":"blizzard guardian",
+		"level":9,
+		"kind":"elemental",
+		"desc":"Winter holds its own secrets, and summons guardians to watch them.",
+		"tohit":12,
+		"hp":50,
+		"defense":55,
+		"attack":{
 			"targets":"enemies",
 			"name":"freeze",
 			"kind":"ice",
 			"dmg":"10~20"
 		},
-		"loot": {
-			"livingsnow": "0~5",
+		"loot":{
+			"livingsnow":"0~5",
 			"winteressence":0.03
 		},
-		"immune": "ice,water,air"
+		"immune":"ice,water,air"
 	},
       {
         "id":"icywinds",
@@ -1055,7 +1055,7 @@
 		},
         "result":{
           "livingsnow":10,
-		  "winteressence": 5
+		  "winteressence":5
         },
         "loot":{
           "snowman":"0~2"
@@ -1069,17 +1069,17 @@
         ]
 	  },
 	  {
-		"id": "w_fazbitshop",
-		"name": "fazbit's workshop?",
-		"level": 3,
-		"length": 100,
-		"require": "g.fazbitshop>0&&g.tier3>0",
-		"desc": "Travelers have reported unusual activity in the long-abandoned workshop. Deep, unsettling laughing and the loud clanking of metal can be heard throughout the day.",
-		"run": {
-			"stamina": 2
+		"id":"w_fazbitshop",
+		"name":"fazbit's workshop?",
+		"level":3,
+		"length":100,
+		"require":"g.fazbitshop>0&&g.tier3>0",
+		"desc":"Travelers have reported unusual activity in the long-abandoned workshop. Deep, unsettling laughing and the loud clanking of metal can be heard throughout the day.",
+		"run":{
+			"stamina":2
 		},
-		"result": {
-			"w_fazbitknowledge": 200
+		"result":{
+			"w_fazbitknowledge":200
 		},
 		"encs": [
 			"enc_w_faz_nothingthere",
@@ -1109,7 +1109,7 @@
           "frost":1
         },
         "result":{
-		  "winteressence": 5
+		  "winteressence":5
         },
         "encs":[
           "movingsnow",
@@ -1125,21 +1125,21 @@
         ]
 	  },
 	  {
-		"id": "arctictower",
-		"name": "tower of nixifer",
-		"level": 3,
-		"length": 50,
-		"require": "g.winterlore>=4&&g.tier3>0",
-		"desc": "The frozen tower once belonged to a wizard who mastered the mysteries of ice",
-		"run": {
-			"stamina": 0.5
+		"id":"arctictower",
+		"name":"tower of nixifer",
+		"level":3,
+		"length":50,
+		"require":"g.winterlore>=4&&g.tier3>0",
+		"desc":"The frozen tower once belonged to a wizard who mastered the mysteries of ice",
+		"run":{
+			"stamina":0.5
 		},
-		"effect": {
-			"frost": 1
+		"effect":{
+			"frost":1
 		},
         "result":{
-      "title": "nixifer's disciple",
-		  "winteressence": 5
+      "title":"nixifer's disciple",
+		  "winteressence":5
         },
 
 		"encs": [
@@ -1200,181 +1200,181 @@
         }
 	  },
 	  {
-		"id": "enc_w_faz_nothingthere",
-		"name": "behind you",
-		"desc": "Nothing there.",
-		"effect": {
-			"madness": "2~3",
-			"unease": "3~5"
+		"id":"enc_w_faz_nothingthere",
+		"name":"behind you",
+		"desc":"Nothing there.",
+		"effect":{
+			"madness":"2~3",
+			"unease":"3~5"
 		},
-		"result": {
-			"w_fazbitknowledge": "1~3",
-			"winteressence": 0.1
+		"result":{
+			"w_fazbitknowledge":"1~3",
+			"winteressence":0.1
 		}
 	},
 	{
-		"id": "enc_w_faz_tinyskeletons",
-		"name": "tiny skeletons",
-		"desc": "Tiny, malformed metal skeletons litter the floor.",
-		"effect": {
-			"weary": "2~3",
-			"unease": "3~5"
+		"id":"enc_w_faz_tinyskeletons",
+		"name":"tiny skeletons",
+		"desc":"Tiny, malformed metal skeletons litter the floor.",
+		"effect":{
+			"weary":"2~3",
+			"unease":"3~5"
 		},
-		"result": {
-			"w_fazbitknowledge": "1~3",
-			"winteressence": 0.1
+		"result":{
+			"w_fazbitknowledge":"1~3",
+			"winteressence":0.1
 		}
 	},
 	{
-		"id": "enc_w_faz_blobs",
-		"name": "blob maker",
-		"desc": "The machine throws chunks of metal into a cauldron. Round, bouncy balls emerge.",
-		"effect": {
-			"bf": "2~3",
-			"unease": "3~5"
+		"id":"enc_w_faz_blobs",
+		"name":"blob maker",
+		"desc":"The machine throws chunks of metal into a cauldron. Round, bouncy balls emerge.",
+		"effect":{
+			"bf":"2~3",
+			"unease":"3~5"
 		},
-		"result": {
-			"w_fazbitknowledge": "1~3",
-			"winteressence": 0.1
+		"result":{
+			"w_fazbitknowledge":"1~3",
+			"winteressence":0.1
 		}
 	},
 	{
-		"id": "enc_w_faz_paint",
-		"name": "sudden blindness",
-		"desc": "As you clear your eyes, you realize you've been meticulously covered in magical paint.",
-		"effect": {
-			"bf": "2~3",
-			"unease": "3~5"
+		"id":"enc_w_faz_paint",
+		"name":"sudden blindness",
+		"desc":"As you clear your eyes, you realize you've been meticulously covered in magical paint.",
+		"effect":{
+			"bf":"2~3",
+			"unease":"3~5"
 		},
-		"result": {
-			"w_fazbitknowledge": "1~3",
-			"winteressence": 0.1
+		"result":{
+			"w_fazbitknowledge":"1~3",
+			"winteressence":0.1
 		}
 	},
 	{
-		"id": "enc_w_faz_somethingthere",
-		"name": "behind you",
-		"desc": "Tangled metal skeletons hover behind you.",
-		"effect": {
-			"bf": "2~3",
-			"unease": "3~5"
+		"id":"enc_w_faz_somethingthere",
+		"name":"behind you",
+		"desc":"Tangled metal skeletons hover behind you.",
+		"effect":{
+			"bf":"2~3",
+			"unease":"3~5"
 		},
-		"result": {
-			"w_fazbitknowledge": "1~3",
-			"winteressence": 0.1
+		"result":{
+			"w_fazbitknowledge":"1~3",
+			"winteressence":0.1
 		}
 	},
 	{
-		"id": "enc_w_faz_boominglaugh",
-		"name": "booming laugh",
-		"desc": "Deep, metallic laugh echoes through the facility.",
-		"effect": {
-			"madness": "2~3",
-			"unease": "3~5"
+		"id":"enc_w_faz_boominglaugh",
+		"name":"booming laugh",
+		"desc":"Deep, metallic laugh echoes through the facility.",
+		"effect":{
+			"madness":"2~3",
+			"unease":"3~5"
 		},
-		"result": {
-			"w_fazbitknowledge": "1~3",
-			"winteressence": 0.1
+		"result":{
+			"w_fazbitknowledge":"1~3",
+			"winteressence":0.1
 		}
 	},
 	{
-		"id": "enc_w_faz_creepylaugh",
-		"name": "creepy laugh",
-		"desc": "A hysterical, repeating laugh fills the halls.",
-		"effect": {
-			"madness": "2~3",
-			"unease": "3~5"
+		"id":"enc_w_faz_creepylaugh",
+		"name":"creepy laugh",
+		"desc":"A hysterical, repeating laugh fills the halls.",
+		"effect":{
+			"madness":"2~3",
+			"unease":"3~5"
 		},
-		"result": {
-			"w_fazbitknowledge": "1~3",
-			"winteressence": 0.1
+		"result":{
+			"w_fazbitknowledge":"1~3",
+			"winteressence":0.1
 		}
 	},
 	{
-		"id": "enc_w_faz_auditlog",
-		"name": "audit log",
-		"desc": "The crumbling pages reveal little.",
-		"effect": {
-			"rage": "2~3",
-			"unease": "3~5"
+		"id":"enc_w_faz_auditlog",
+		"name":"audit log",
+		"desc":"The crumbling pages reveal little.",
+		"effect":{
+			"rage":"2~3",
+			"unease":"3~5"
 		},
-		"result": {
-			"w_fazbitknowledge": "1~3",
-			"winteressence": 0.1
+		"result":{
+			"w_fazbitknowledge":"1~3",
+			"winteressence":0.1
 		}
 	},
 	{
-		"id": "enc_w_faz_prototype",
-		"name": "screeching skeleton",
-		"desc": "A calmly sitting skeleton suddenly reaches for you, screeching.",
-		"effect": {
-			"madness": "2~3",
-			"unease": "3~5"
+		"id":"enc_w_faz_prototype",
+		"name":"screeching skeleton",
+		"desc":"A calmly sitting skeleton suddenly reaches for you, screeching.",
+		"effect":{
+			"madness":"2~3",
+			"unease":"3~5"
 		},
-		"result": {
-			"w_fazbitknowledge": "1~3",
-			"winteressence": 0.1
+		"result":{
+			"w_fazbitknowledge":"1~3",
+			"winteressence":0.1
 		}
 	},
 	{
-		"id": "enc_w_faz_stockpile",
-		"name": "materials stockpile",
-		"desc": "You happen upon a store of valuable materials.",
-		"effect": {
-			"unease": "4~6"
+		"id":"enc_w_faz_stockpile",
+		"name":"materials stockpile",
+		"desc":"You happen upon a store of valuable materials.",
+		"effect":{
+			"unease":"4~6"
 		},
-		"result": {
-			"w_fazbitknowledge": "1~3",
-			"winteressence": 0.1
+		"result":{
+			"w_fazbitknowledge":"1~3",
+			"winteressence":0.1
 		},
-		"loot": {
-			"gems": "2~5",
-			"gold": "100~250"
+		"loot":{
+			"gems":"2~5",
+			"gold":"100~250"
 		}
 	},
 	  {
-		"id": "enc_icestudy",
-		"name": "ebin's notes",
+		"id":"enc_icestudy",
+		"name":"ebin's notes",
 		"desc":"A detailed study of the properties of ice.",
-		"effect": {
-			"bf": "1~3",
-			"icelore.exp": 1,
-			"icelore.max": 0.001
+		"effect":{
+			"bf":"1~3",
+			"icelore.exp":1,
+			"icelore.max":0.001
 		},
 		"result":{
 			"winteressence":0.1,
-			"evt_w_chillforge": "10%"
+			"evt_w_chillforge":"10%"
 
 		}
 	}, {
-		"id": "enc_winterstudy",
+		"id":"enc_winterstudy",
 		"name":"tome of winters past",
-		"desc": "The year's coldest season is also known for its dark legends.",
-		"effect": {
-			"bf": "1~2",
-			"rage": "0~3",
-			"winterlore.rate": 0.04
+		"desc":"The year's coldest season is also known for its dark legends.",
+		"effect":{
+			"bf":"1~2",
+			"rage":"0~3",
+			"winterlore.rate":0.04
 		},
-		"loot": {
+		"loot":{
 			"winteressence":0.1,
-			"codices": "80%",
-			"evt_w_chillforge": "15%"
+			"codices":"80%",
+			"evt_w_chillforge":"15%"
 		}
 	}, {
-		"id": "frozenbookcase",
-		"name": "frozen bookcase",
-		"desc": "The cracked pages of the books are fused with ice",
-		"effect": {
-			"madness": "1~2",
+		"id":"frozenbookcase",
+		"name":"frozen bookcase",
+		"desc":"The cracked pages of the books are fused with ice",
+		"effect":{
+			"madness":"1~2",
 			"fire":-0.1,
-			"weary": "1~3",
-			"frost": "0~2",
-			"icelore.exp": 0.5
+			"weary":"1~3",
+			"frost":"0~2",
+			"icelore.exp":0.5
 		},
-		"loot": {
+		"loot":{
 			"winteressence":0.1,
-			"codices": "2~5",
-			"tomes": "20%"
+			"codices":"2~5",
+			"tomes":"20%"
 		}
 	},
       {
@@ -1600,64 +1600,64 @@
       }
 	],
 	"materials": [{
-		"id": "crimsonice",
-		"priceMod": 20,
-		"tohit": 10,
-		"bonus": 3,
-		"kind": "ice",
-		"level": 5
+		"id":"crimsonice",
+		"priceMod":20,
+		"tohit":10,
+		"bonus":3,
+		"kind":"ice",
+		"level":5
 	}, {
-		"id": "coldsteel",
-		"kind": "metal",
-		"priceMod": 30,
-		"tohit": 9,
-		"bonus": 7,
-		"level": 5
+		"id":"coldsteel",
+		"kind":"metal",
+		"priceMod":30,
+		"tohit":9,
+		"bonus":7,
+		"level":5
 	}, {
 		"id":"permafrost",
-		"priceMod": 80,
-		"bonus": 10,
-		"tohit": 11,
-		"kind": "ice",
-		"level": 7
+		"priceMod":80,
+		"bonus":10,
+		"tohit":11,
+		"kind":"ice",
+		"level":7
 	}
 ],
     "rares":[
       {
-		"id": "iceorb",
-		"name": "orb of winters",
-		"desc": "A snowglobe with magical powers. It reminds you of colder days.",
-		"level": 10,
+		"id":"iceorb",
+		"name":"orb of winters",
+		"desc":"A snowglobe with magical powers. It reminds you of colder days.",
+		"level":10,
 		"save": true,
 		"unique": true,
-		"type": "weapon",
-		"tohit": 5,
-		"cost": {
+		"type":"weapon",
+		"tohit":5,
+		"cost":{
 			"gold":100
 		},
-		"attack": {
-			"name": "blizzard",
-			"damage": "5~12",
-			"kind": "water",
-			"targets": "enemies",
-			"dot": {
-				"duration": 20,
-				"kind": "water",
-				"dmg": "5~12",
-				"mod": {
+		"attack":{
+			"name":"blizzard",
+			"damage":"5~12",
+			"kind":"water",
+			"targets":"enemies",
+			"dot":{
+				"duration":20,
+				"kind":"water",
+				"dmg":"5~12",
+				"mod":{
 					"speed": -5
 				}
 			}
 		},
-		"mod": {
-			"ice.rate": "20%",
-			"ice.max": "20%",
-			"icelore.rate": 2,
-			"water.rate": "20%",
-			"water.max": "20%",
-			"waterlore.rate": 2,
-			"fire.rate": "-80%",
-			"fire.max": "-80%"
+		"mod":{
+			"ice.rate":"20%",
+			"ice.max":"20%",
+			"icelore.rate":2,
+			"water.rate":"20%",
+			"water.max":"20%",
+			"waterlore.rate":2,
+			"fire.rate":"-80%",
+			"fire.max":"-80%"
 		}
       }
     ]
