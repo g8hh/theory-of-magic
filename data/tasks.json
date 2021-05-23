@@ -1085,10 +1085,8 @@
 		"effect":{
 			"research":1.75,
 			"sp":0.0001,
-			"arcana":{
-				"value":0.002,
-				"max":0.001
-			}
+			"arcana.max":0.001,
+			"arcana":0.002
 		}
 	},
 	{

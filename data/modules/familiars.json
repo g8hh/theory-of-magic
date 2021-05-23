@@ -1,0 +1,168 @@
+{
+
+	"name":"familiars",
+	"isolate":true,
+
+	"data":{
+
+		"monsters":[
+
+			{
+				"id":"familiar",
+				"level":0,
+				"slot":"familiar",
+				"keep":true,
+				"kind":"familiar",
+				"nospace":true,
+				"hp":2,
+				"defense":1,
+				"attack":{
+					"name":"claws",
+					"kind":"slash",
+					"dmg":"1~2"
+				}
+
+			}
+
+		],
+
+		"alters":[
+
+			{
+				"id":"fam_cat",
+				"name":"cat",
+				"require":"lore",
+				"tags":"t_familiartype,t_cat",
+				"lock":"t_familiartype",
+				"alter":{
+					"defense":2,
+					"hp.max":10,
+					"tohit":7,
+					"speed":4
+				}
+			},
+			{
+				"id":"fam_owl",
+				"name":"owl",
+				"require":"lore",
+				"tags":"t_familiartype",
+				"lock":"t_familiartype",
+				"alter":{
+					"defense":2,
+					"hp.max":5,
+					"tohit":4,
+					"speed":3
+				}
+			},
+			{
+				"id":"fam_toad",
+				"name":"toad",
+				"require":"lore",
+				"tags":"t_familiartype",
+				"lock":"t_familiartype",
+				"alter":{
+					"defense":4,
+					"hp.max":15,
+					"tohit":1,
+					"speed":1
+				}
+			},
+			{
+				"id":"f_loremaster",
+				"name":"lore master",
+				"only":"fam_owl",
+				"desc":"A wise familiar can aid in your studies.",
+				"cost":{
+					"codices":10,
+					"managems":5
+				},
+				"alter":{
+					"mod.lore.rate":"10%",
+					"tohit":1
+				}
+
+			},
+			{
+				"id":"f_thick_hide",
+				"name":"thick hide",
+				"only":"fam_toad",
+				"desc":"A magic toad is far more durable than meets the eye.",
+				"cost":{
+					"codices":5,
+					"bloodgems":5
+				},
+				"alter":{
+					"defense":2,
+					"hp.max":5
+				}
+			},
+			{
+				"id":"f_cat_ref",
+				"name":"Cat-like reflexes",
+				"only":"t_cat",
+				"desc":"Appropriate enough.",
+				"cost":{
+					"codiex":10,
+					"airgem":10
+				},
+				"alter":{
+					"tohit":1,
+					"speed":1
+				}
+			}
+
+		],
+		"tasks":[
+
+			{
+				"id":"train_reflexes",
+				"require":"t_familiartype",
+				"name":"Arcane Speed",
+				"desc":"Increase your familiar's reflexes.",
+				"max":5,
+				"length":10,
+				"alter":{
+					"tohit":1
+				}
+			},
+			{
+				"id":"train_attack",
+				"require":"t_familiartype",
+				"name":"Magic Claws",
+				"desc":"Increase your familiar's power.",
+				"max":5,
+				"length":30,
+				"alter":{
+					"damage":1
+				}
+			},
+			{
+				"id":"train_defense",
+				"require":"t_familiartype",
+				"name":"Thick Hide",
+				"desc":"Increase your familiar's defense.",
+				"max":3,
+				"length":30,
+				"alter":{
+					"defense":1
+				}
+			},
+			{
+				"id":"train_hp",
+				"require":"t_familiartype",
+				"name":"Familiar Growth",
+				"desc":"Increase your familiar's size.",
+				"max":3,
+				"length":30,
+				"alter":{
+					"hp.max":"10%"
+				}
+			}
+
+		]
+
+
+	}
+
+
+}

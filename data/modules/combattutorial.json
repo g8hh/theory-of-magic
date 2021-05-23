@@ -81,7 +81,7 @@
                     "id":"trainingdart",
                     "name":"homing dart",
                     "level":0,
-                    "tohit":20,
+                    "tohit":100,
                     "type":"weapon",
                     "material":"wood",
                     "attack":{
