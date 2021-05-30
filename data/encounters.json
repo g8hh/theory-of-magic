@@ -365,7 +365,7 @@
 			"madness":"1~2",
 			"waterlore.exp":2,
 			"shadowlore.exp":1,
-			"arcana.max":0.05
+			"arcana_max":0.05
 		}
 	},
 	{

@@ -1320,7 +1320,7 @@ var cnItems = {
     'time siphon': '时间虹吸',
     'titan\'s hammer': '泰坦之锤',
     'somber candle': '阴沉的蜡烛',
-	"Pace your home as you contemplate the arcane.": "在家里一边踱步一边思考奥秘（目前版本有bug，无法获得奥秘上限）",
+	"Pace your home as you contemplate the arcane.": "在家里一边踱步一边思考奥秘（已修复，可获得奥秘上限）",
     '': '',
     '': '',
     '': '',

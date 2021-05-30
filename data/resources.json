@@ -17,6 +17,15 @@
 		"max":0
 	},
 	{
+		"id":"arcana_max",
+		"desc":"从持续行为中获得的奥秘上限效果(为修复bug临时增加的资源)",
+		"group":"fix_items",
+		"max":999999,
+		"mod":{
+			"arcana.max":1
+		}
+	},
+	{
 		"id":"scrolls",
 		"group":"books",
 		"desc":"Scroll of arcane lore",
