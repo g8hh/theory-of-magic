@@ -1,13 +1,15 @@
 [
 	{
 		"id":"gold",
-		"desc":"Gold Coins",
+		"name":"金币",
+		"desc":"金币",
 		"locked":false,
 		"max":5
 	},
 	{
 		"id":"research",
-		"desc":"Research into the Arcane",
+		"name":"研究",
+		"desc":"探索奥术之秘",
 		"max":10
 	},
 	{
@@ -15,15 +17,6 @@
 		"school":"arcane",
 		"desc":"Profound mystical knowledge",
 		"max":0
-	},
-	{
-		"id":"arcana_max",
-		"desc":"从持续行为中获得的奥秘上限效果(为修复bug临时增加的资源)",
-		"group":"fix_items",
-		"max":999999,
-		"mod":{
-			"arcana.max":1
-		}
 	},
 	{
 		"id":"scrolls",
@@ -38,7 +31,7 @@
 	{
 
 		"id":"starcharts",
-		"desc":"A map of the stars",
+		"desc":"星星的地图",
 		"max":10,
 		"mod":{
 			"research.max":1,
@@ -392,6 +385,17 @@
 		"reverse":true,
 		"max":0
 
+	},
+	{
+		"id":"arcana_max",
+		"name":"奥秘上限",
+		"desc":"从持续行为中获得的奥秘上限效果(为修复bug临时增加的资源)",
+		"group":"fix_items",
+		"hide":true,
+		"max":999999,
+		"mod":{
+			"arcana.max":1
+		}
 	},
 	{
 		"id":"mana",
