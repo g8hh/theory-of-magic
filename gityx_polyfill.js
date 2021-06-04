@@ -2,8 +2,23 @@
 //勿随便套用到其它游戏！
 
 delete window.JSON;
+let delNullValue = function delNullValue(obj) {
+	if (typeof(obj) !== "object") {return}
+	for (let k in obj) {
+		if (obj[k] === null && Array.isArray(obj) === false) {
+			delete obj[k]
+		} else if (typeof(obj) === "object") {
+			delNullValue(obj[k])
+		}
+	}
+}
 window.JSON = {
-	parse: function(sJSON) { return eval('(' + sJSON + ')'); },
+	parse: function(sJSON) {
+		let ret = eval('(' + sJSON + ')');
+		//修复之前的stringify导致的格式错误存档
+		delNullValue(ret);
+		return ret
+	},
 	stringify: (function () {
 		var toString = Object.prototype.toString;
 		var isArray = Array.isArray || function (a) { return toString.call(a) === '[object Array]'; };
@@ -28,7 +43,7 @@ window.JSON = {
 				} else if (toString.call(value) === '[object Object]') {
 					var tmp = [];
 					for (var k in value) {
-						if (value.hasOwnProperty(k))
+						if (value.hasOwnProperty(k) && value[k] !== undefined)
 							tmp.push(stringify(k) + ': ' + stringify(value[k]));
 					}
 					return '{' + tmp.join(', ') + '}';
