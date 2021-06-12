@@ -146,6 +146,8 @@
 				"locked":false,
 				"val":0,
 				"mod":{
+					"prestigeFuckSkillRate":1,
+					"prestigeFuckStressMax":1,
 					"prestige":1
 				}
 
@@ -157,7 +159,25 @@
 				"val":0,
 				"locked":false,
 				"mod":{
-					"skill.rate":"0.1%",
+					"prestigeFuckSkillRate":1,
+					"prestigeFuckStressMax":1
+				}
+			},
+			{
+				"id":"prestigeFuckSkillRate",
+				"name":"技能学习速度",
+				"hide":true,
+				"locked":false,
+				"mod":{
+					"skill.rate":"0.1%"
+				}
+			},
+			{
+				"id":"prestigeFuckStressMax",
+				"name":"压力上限",
+				"hide":true,
+				"locked":false,
+				"mod":{
 					"stress.max":"0.1%"
 				}
 			}
