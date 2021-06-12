@@ -1359,7 +1359,7 @@ var cnItems = {
     'skulls': '头骨',
     'unending codex': '无尽抄本',
     'unending scroll': '无尽滚动',
-    'Leaving 🌳sands of orrem': '离开🌳的奥林沙',
+    'Leaving 🌳sands of orrem': '离开🌳奥雷姆之沙',
     'machinae': '机械',
     'ritual of air': '空气仪式',
     'ritual of cultivation': '栽培仪式',
