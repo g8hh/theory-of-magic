@@ -1,0 +1,315 @@
+[
+
+	{
+		"id":"pot_poisonward",
+		"name":"poison ward",
+		"require":"potions",
+		"level":1,
+		"buy":{
+			"gold":25,
+			"research":50
+		},
+		"cost":{
+			"herbs":10
+		},
+		"use":"poisonward"
+	},
+	{
+		"id":"pot_breath1",
+		"name":"portion of waterbreathing",
+		"require":"g.potions>1",
+		"buy":{
+			"gold":25,
+			"research":50
+		},
+		"cost":{
+			"herbs":10
+		},
+		"use":{
+			"dot":{
+				"duration":120,
+				"effect":{
+					"breath":3,
+					"water":0.1
+				}
+			}
+		}
+	},
+	{
+		"id":"pot_mana1",
+		"name":"draught of mana",
+		"require":"potions",
+		"buy":{
+			"gold":25,
+			"research":50
+		},
+		"cost":{
+			"herbs":10
+		},
+		"use":{
+			"mana":5
+		}
+	},
+	{
+
+		"id":"pot_cparalysis",
+		"name":"cure paralysis",
+		"level":5,
+		"cost":{
+			"herbs":1,
+			"managem":1
+		},
+		"use":"cureparalyze"
+
+	},
+	{
+
+		"id":"pot_csilence",
+		"name":"cure silence",
+		"level":7,
+		"cost":{
+			"herbs":1,
+			"airgem":1
+		},
+		"use":"speak"
+
+	},
+	{
+		"id":"pot_heal1",
+		"buy":{
+			"gold":25,
+			"research":50
+		},
+		"level":1,
+		"cost":{
+			"herbs":10
+		},
+		"name":"minor healing",
+		"require":"g.potions>0",
+		"use":"heal1"
+	},
+	{
+		"id":"pot_stam1",
+		"name":"draught of stamina",
+		"require":"g.potions>0",
+		"level":1,
+		"buy":{
+			"gold":25,
+			"research":50
+		},
+		"cost":{
+			"herbs":10
+		},
+		"use":{
+			"stamina":10
+		}
+
+	},
+	{
+		"id":"pot_stam2",
+		"name":"potion of stamina",
+		"require":"g.potions>=5",
+		"level":5,
+		"buy":{
+			"gold":300,
+			"research":500,
+			"codices":30
+		},
+		"cost":{
+			"herbs":30,
+			"watergem":1
+		},
+		"use":{
+			"stamina":50
+		}
+
+	},
+	{
+		"id":"pot_ironskin",
+		"name":"ironskin salve",
+		"require":"g.potions>0",
+		"level":2,
+		"buy":{
+			"gold":400,
+			"research":500,
+			"codices":10
+		},
+		"cost":{
+			"herbs":10
+		},"use":"ironskin"
+
+	},
+	{
+		"id":"pot_adamant",
+		"name":"adamant salve",
+		"level":10,
+		"buy":{
+			"gold":1000,
+			"tomes":5,
+			"earthgem":5
+		},
+		"cost":{
+			"herbs":30,
+			"gems":1
+		},"use":"adamantshell"
+
+	},
+	{
+		"id":"hestiabrew",
+		"name":"hestia's homebrew",
+		"require":"witch",
+		"level":4,
+		"buy":{
+			"gold":25,
+			"research":150
+		},
+		"cost":{
+			"herbs":20
+		},
+		"use":{
+			"dot":{
+				"duration":50,
+				"effect":{
+					"hp":2,
+					"nature":0.5
+				}
+			}
+		}
+	},
+	{
+		"id":"pot_waterward",
+		"name":"water ward",
+		"require":"g.potions>0",
+		"level":2,
+		"buy":{
+			"gold":300,
+			"research":200
+		},
+		"cost":{
+			"herbs":10
+		},
+		"use":"prowater"
+	},
+	{
+		"id":"pot_fireward",
+		"name":"fire ward",
+		"level":2,
+		"buy":{
+			"gold":300,
+			"research":200
+		},
+		"cost":{
+			"herbs":10
+		},
+		"use":"profire"
+	},
+	{
+		"id":"pot_heal3",
+		"name":"healing potion",
+		"buy":{
+			"gold":100,
+			"lightgem":1,
+			"research":500
+		},
+		"level":7,
+		"cost":{
+			"herbs":20,
+			"gems":1
+		},
+		"use":"heal3"
+	},
+	{
+		"id":"pot_truestrike",
+		"name":"true striking",
+		"level":10,
+		"buy":{
+			"gold":500,
+			"tomes":3,
+			"research":500
+		},
+		"cost":{
+			"spiritgem":1,
+			"ichor":1
+		},
+		"use":{
+			"dot":{
+				"mod":{
+					"player.tohit":25
+				},
+				"duration":1800
+			}
+		}
+
+	},
+	{
+		"id":"pot_serenity",
+		"name":"serenity",
+		"level":11,
+		"buy":{
+			"gold":500,
+			"tomes":5,
+			"research":500
+		},
+		"cost":{
+			"lightgem":1,
+			"ichor":1
+		},
+		"use":{
+			"dot":{
+				"mod":{
+					"stress.rate":-2
+				},
+				"duration":1800
+			}
+		}
+
+	},
+	{
+		"id":"pot_godspeed",
+		"name":"godspeed",
+		"level":15,
+		"buy":{
+			"gold":500,
+			"tomes":5,
+			"research":500
+		},
+		"cost":{
+			"airgem":1,
+			"ichor":1
+		},
+		"use":{
+			"dot":{
+				"mod":{
+					"speed":25
+				},
+				"duration":1800
+			}
+		}
+
+	},
+	{
+		"id":"pot_godsblood",
+		"name":"god's blood",
+		"level":12,
+		"buy":{
+			"gold":500,
+			"tomes":5,
+			"research":500
+		},
+		"cost":{
+			"herbs":50,
+			"ichor":1
+		},
+		"use":{
+			"dot":{
+				"mod":{
+					"hp.max":300
+				},
+				"duration":3600
+			}
+		}
+
+	}
+
+
+]

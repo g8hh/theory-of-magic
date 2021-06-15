@@ -1,0 +1,63 @@
+{
+
+	"name":"minions",
+	"isolate":true,
+
+	"data":{
+
+		"alters":[
+		],
+		"tasks":[
+
+			{
+				"id":"train_reflexes",
+				"require":"t_familiartype",
+				"name":"Arcane Speed",
+				"desc":"Increase your familiar's reflexes.",
+				"max":5,
+				"length":10,
+				"alter":{
+					"tohit":1
+				}
+			},
+			{
+				"id":"train_attack",
+				"require":"t_familiartype",
+				"name":"Magic Claws",
+				"desc":"Increase your familiar's power.",
+				"max":5,
+				"length":30,
+				"alter":{
+					"damage":1
+				}
+			},
+			{
+				"id":"train_defense",
+				"require":"t_familiartype",
+				"name":"Thick Hide",
+				"desc":"Increase your familiar's defense.",
+				"max":3,
+				"length":30,
+				"alter":{
+					"defense":1
+				}
+			},
+			{
+				"id":"train_hp",
+				"require":"t_familiartype",
+				"name":"Familiar Growth",
+				"desc":"Increase your familiar's size.",
+				"max":3,
+				"length":30,
+				"alter":{
+					"hp.max":"10%"
+				}
+			}
+
+		]
+
+
+	}
+
+
+}
